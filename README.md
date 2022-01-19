@@ -8,4 +8,4 @@ oliverforral.com
 
 #### [CLI](tutorials/rust/cli)
 
-[Tic Tac Toe](tutorials/rust/cli/tic-tac-toe.md)
+[Tic Tac Toe](tutorials/rust/cli/tic-tac-toe)

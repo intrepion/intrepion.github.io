@@ -1,9 +1,9 @@
-[oliverforral.com](../README.md) -> tutorials
+[oliverforral.com](..) -> tutorials
 
 # tutorials
 
-## Rust
+## [Rust](rust)
 
-### CLI
+### [CLI](rust/cli)
 
-[Tic Tac Toe](rust/cli/tic-tac-toe.md)
+[Tic Tac Toe](rust/cli/tic-tac-toe)

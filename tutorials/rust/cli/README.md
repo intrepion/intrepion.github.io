@@ -1,5 +1,5 @@
-[oliverforral.com](../../../README.md) -> [tutorials](../../README.md) -> [Rust](../README.md) -> CLI
+[oliverforral.com](../../..) -> [tutorials](../..) -> [Rust](..) -> CLI
 
 # CLI
 
-[Tic Tac Toe](tic-tac-toe.md)
+[Tic Tac Toe](tic-tac-toe)
