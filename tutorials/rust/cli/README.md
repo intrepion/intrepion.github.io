@@ -2,4 +2,5 @@
 
 # CLI
 
+[Hello World](hello-world)
 [Tic Tac Toe](tic-tac-toe)
