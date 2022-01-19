@@ -4,5 +4,5 @@
 
 ## [CLI](cli)
 
-[Hello World](cli/hello-world)
-[Tic Tac Toe](cli/tic-tac-toe)
+- [Hello World](cli/hello-world)
+- [Tic Tac Toe](cli/tic-tac-toe)

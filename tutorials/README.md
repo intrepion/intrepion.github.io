@@ -6,5 +6,5 @@
 
 ### [CLI](rust/cli)
 
-[Hello World](rust/cli/hello-world)
-[Tic Tac Toe](rust/cli/tic-tac-toe)
+- [Hello World](rust/cli/hello-world)
+- [Tic Tac Toe](rust/cli/tic-tac-toe)
