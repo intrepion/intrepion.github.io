@@ -1,4 +1,4 @@
-(oliverforral.com)[../../README.md] -> (tutorials)[../README.md] -> Rust
+[oliverforral.com](../../README.md] -> (tutorials](../README.md) -> Rust
 
 # Rust
 

@@ -1,4 +1,4 @@
-(oliverforral.com)[../../../README.md] -> (tutorials)[../../README.md] -> (Rust)[../README.md] -> CLI
+[oliverforral.com](../../../README.md) -> [tutorials](../../README.md) -> [Rust](../README.md) -> CLI
 
 # CLI
 

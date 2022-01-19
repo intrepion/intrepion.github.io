@@ -1,4 +1,4 @@
-(oliverforral.com)[../README.md] -> tutorials
+[oliverforral.com](../README.md) -> tutorials
 
 # tutorials
 
