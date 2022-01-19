@@ -2,10 +2,10 @@ oliverforral.com
 
 # Oliver Forral
 
-## tutorials
+## [tutorials](tutorials)
 
-### Rust
+### [Rust](tutorials/rust)
 
-#### CLI
+#### [CLI](tutorials/rust/cli)
 
 [Tic Tac Toe](tutorials/rust/cli/tic-tac-toe.md)
