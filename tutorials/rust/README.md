@@ -2,6 +2,6 @@
 
 # Rust
 
-## CLI
+## [CLI](cli)
 
 [Tic Tac Toe](cli/tic-tac-toe)
