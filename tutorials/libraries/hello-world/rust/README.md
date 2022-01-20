@@ -1,6 +1,8 @@
-[oliverforral.com](../../..) -> [tutorials](../..) -> [Rust](..) -> [libraries](.) -> Hello World
+[oliverforral.com](../../../../README.md) -> [tutorials](../../../README.md) -> [libraries](../../README.md) -> [Hello World library](../README.md) -> Hello World library in Rust
 
-# Hello World
+# Hello World library in Rust
+
+- [Rust](../../../languages/rust/README.md)
 
 ## Testing empty input
 

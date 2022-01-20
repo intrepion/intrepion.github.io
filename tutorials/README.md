@@ -1,4 +1,4 @@
-[oliverforral.com](..) -> tutorials
+[oliverforral.com](../README.md) -> tutorials
 
 # tutorials
 
@@ -8,13 +8,13 @@ It will be in the following form:
 
 ### Red
 
-#### hello-world/src/lib.rs
+#### project-name/source-folder/file.name
 
-```rust
+```language
 
 ```
 
-#### cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
+#### test command;
 
 ```bash
 
@@ -22,13 +22,13 @@ It will be in the following form:
 
 ### Green
 
-#### hello-world/src/lib.rs
+#### project-name/source-folder/file.name
 
-```rust
+```language
 
 ```
 
-#### cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
+#### test command;
 
 ```bash
 
@@ -36,17 +36,17 @@ It will be in the following form:
 
 ### Refactor
 
-#### hello-world/src/lib.rs
+#### project-name/source-folder/file.name
 
-```rust
+```language
 
 ```
 
-#### cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
+#### test command;
 
 ```bash
 
 ```
 
-## [Rust](rust)
-### [libraries](rust/libraries)
+## [languages](languages/README.md)
+## [libraries](libraries/README.md)

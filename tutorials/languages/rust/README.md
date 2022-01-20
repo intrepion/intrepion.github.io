@@ -1,6 +1,23 @@
-[oliverforral.com](../../..) -> [tutorials](../..) -> [Rust](..) -> libraries
+[oliverforral.com](../../../README.md) -> [tutorials](../../README.md) -> [languages](../README.md) -> Rust
 
-# libraries
+# Rust
+
+[https://www.rust-lang.org/](https://www.rust-lang.org/)
+
+## Installation
+
+### Linux
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
+```
+
+### Helpful Tools
+
+```bash
+rustup component add clippy;
+cargo install cargo-watch;
+```
 
 ## First steps before each tutorial
 
@@ -16,13 +33,13 @@ Cargo.lock
 ### bash
 
 ```bash
-cargo new --lib project-name;
+cargo new --lib unique-project-name;
 ```
 
 ### bash output
 
 ```bash
-     Created library `project-name` package
+     Created library `unique-project-name` package
 ```
 
 ### .github/workflows/rust.yml
@@ -47,18 +64,24 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Format
-      run: cd hello-world && cargo fmt -- --check
+      run: cd unique-project-name && cargo fmt -- --check
     - name: Check
-      run: cd hello-world && cargo check
+      run: cd unique-project-name && cargo check
     - name: Run tests
-      run: cd hello-world && cargo test --verbose
+      run: cd unique-project-name && cargo test --verbose
 
+```
+
+### README.md
+
+```markdown
+![Rust](https://github.com/username/unique-project-name/actions/workflows/rust.yml/badge.svg?branch=main)
 ```
 
 ### bash
 
 ```bash
-cd project-name/;
+cd unique-project-name/;
 cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
 ```
 
@@ -66,20 +89,20 @@ cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
 
 ```bash
 [Running 'cargo fmt && cargo check && cargo clippy -- -D warnings && cargo test']
-    Checking project-name v0.1.0 (/home/intrepion/code/github/intrepion/rust-lib-named-hello-world/project-name)
+    Checking unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
-    Checking project-name v0.1.0 (/home/intrepion/code/github/intrepion/rust-lib-named-hello-world/project-name)
+    Checking unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
-   Compiling project-name v0.1.0 (/home/intrepion/code/github/intrepion/rust-lib-named-hello-world/project-name)
+   Compiling unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
     Finished test [unoptimized + debuginfo] target(s) in 0.76s
-     Running unittests (target/debug/deps/project_name-0123456789abcdef)
+     Running unittests (target/debug/deps/unique_project_name-0123456789abcdef)
 
 running 1 test
 test tests::it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-   Doc-tests project-name
+   Doc-tests unique-project-name
 
 running 0 tests
 
@@ -90,14 +113,14 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
     Finished dev [unoptimized + debuginfo] target(s) in 0.00s
     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
     Finished test [unoptimized + debuginfo] target(s) in 0.37s
-     Running unittests (target/debug/deps/project_name-0123456789abcdef)
+     Running unittests (target/debug/deps/unique_project_name-0123456789abcdef)
 
 running 1 test
 test tests::it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-   Doc-tests project-name
+   Doc-tests unique-project-name
 
 running 0 tests
 
@@ -106,4 +129,6 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 [Finished running. Exit status: 0]
 ```
 
-- [Hello World](hello-world)
+## Libraries
+
+- [Hello World library in Rust](../../libraries/hello-world/rust/README.md)
