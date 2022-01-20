@@ -4,4 +4,4 @@ oliverforral.com
 
 ## [tutorials](tutorials)
 ### [Rust](tutorials/rust)
-#### [CLI](tutorials/rust/cli)
+#### [libraries](tutorials/rust/libraries)
