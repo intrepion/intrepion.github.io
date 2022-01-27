@@ -1,4 +1,4 @@
-use std::env;
+use std::{env, fs};
 use std::process;
 use std::process::Command;
 
@@ -24,9 +24,7 @@ fn main() {
     println!("{:?}", args);
 
     let username = args[1].to_lowercase();
-
     let program_name = args[2].to_lowercase();
-
     let args3 = args[3].to_lowercase();
     let language = if args3 == "rust" {
         "rust"
@@ -45,8 +43,14 @@ fn main() {
         process::exit(1);
     };
 
-    let folder_name = format!("{program_name}-{language}-{program_type}");
+    let path_name = format!("repos/github/{username}");
 
+    println!("making path name: {path_name}");
+
+    fs::create_dir_all(&path_name).expect("unable to create path name");
+    env::set_current_dir(&path_name).expect("changing directory failed");
+
+    let folder_name = format!("{program_name}-{language}-{program_type}");
     let repo_name = format!("{username}/{folder_name}");
 
     println!("rm -rf {folder_name}");
