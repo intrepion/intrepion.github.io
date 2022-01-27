@@ -1,6 +1,6 @@
-use std::{env, fs};
 use std::process;
 use std::process::Command;
+use std::{env, fs};
 
 fn main() {
     let usage = r#"tutorial-maker <username> <program-name> <language> <program-type>
@@ -99,4 +99,27 @@ fn main() {
     }
 
     env::set_current_dir(&folder_name).expect("changing directory failed");
+
+    println!("git rev-list --all --reverse");
+
+    let rev_list_output = Command::new("git")
+        .arg("rev-list")
+        .arg("--all")
+        .arg("--reverse")
+        .output()
+        .expect("rev-list failed");
+
+    if rev_list_output.status.success() {
+        println!(
+            "rev-list stdout: {}",
+            String::from_utf8_lossy(&rev_list_output.stdout)
+        );
+    } else {
+        println!(
+            "rev-list stderr: {}",
+            String::from_utf8_lossy(&rev_list_output.stderr)
+        );
+
+        process::exit(1);
+    }
 }
