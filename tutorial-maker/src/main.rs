@@ -94,5 +94,5 @@ fn main() {
         process::exit(1);
     }
 
-    env::set_current_dir(&folder_name).expect("changing directory failed");    
+    env::set_current_dir(&folder_name).expect("changing directory failed");
 }
