@@ -142,6 +142,29 @@ fn main() {
                     process::exit(1);
                 }
 
+                println!("git show --no-patch --format='%s'");
+
+                let show_output = Command::new("git")
+                    .arg("show")
+                    .arg("--no-patch")
+                    .arg("--format='%s'")
+                    .output()
+                    .expect("show failed");
+
+                if show_output.status.success() {
+                    println!(
+                        "show stdout: {}",
+                        String::from_utf8_lossy(&show_output.stdout)
+                    );
+                } else {
+                    println!(
+                        "show stderr: {}",
+                        String::from_utf8_lossy(&show_output.stderr)
+                    );
+
+                    process::exit(1);
+                }
+
                 let mut path = env::current_dir().expect("getting current directory failed");
                 path.push(&app_name);
                 let metadata = fs::metadata(path);
