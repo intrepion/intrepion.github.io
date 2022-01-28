@@ -144,22 +144,45 @@ fn main() {
 
                 println!("git show --no-patch --format='%s'");
 
-                let show_output = Command::new("git")
+                let show_s_output = Command::new("git")
                     .arg("show")
                     .arg("--no-patch")
                     .arg("--format='%s'")
                     .output()
                     .expect("show failed");
 
-                if show_output.status.success() {
+                if show_s_output.status.success() {
                     println!(
                         "show stdout: {}",
-                        String::from_utf8_lossy(&show_output.stdout)
+                        String::from_utf8_lossy(&show_s_output.stdout)
                     );
                 } else {
                     println!(
                         "show stderr: {}",
-                        String::from_utf8_lossy(&show_output.stderr)
+                        String::from_utf8_lossy(&show_s_output.stderr)
+                    );
+
+                    process::exit(1);
+                }
+
+                println!("git show --no-patch --format='%b'");
+
+                let show_b_output = Command::new("git")
+                    .arg("show")
+                    .arg("--no-patch")
+                    .arg("--format='%b'")
+                    .output()
+                    .expect("show failed");
+
+                if show_b_output.status.success() {
+                    println!(
+                        "show stdout: {}",
+                        String::from_utf8_lossy(&show_b_output.stdout)
+                    );
+                } else {
+                    println!(
+                        "show stderr: {}",
+                        String::from_utf8_lossy(&show_b_output.stderr)
                     );
 
                     process::exit(1);
