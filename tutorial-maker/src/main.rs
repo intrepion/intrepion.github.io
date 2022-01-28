@@ -142,6 +142,16 @@ fn main() {
                     process::exit(1);
                 }
 
+                let mut path = env::current_dir().expect("getting current directory failed");
+                path.push(&app_name);
+                let metadata = fs::metadata(path);
+                match metadata {
+                  Ok(_) => {},
+                  Err(_) => {
+                      continue;
+                  }
+                };
+
                 println!("cd {app_name}");
 
                 env::set_current_dir(&app_name).expect("changing directory failed");
