@@ -45,11 +45,15 @@ fn main() {
 
     let path_name = format!("repos/github/{username}");
 
-    println!("making path name: {path_name}");
+    println!("mkdir -p path_name: {path_name}");
 
     fs::create_dir_all(&path_name).expect("unable to create path name");
+
+    println!("cd {path_name}");
+
     env::set_current_dir(&path_name).expect("changing directory failed");
 
+    let app_name = format!("{program_name}-{program_type}");
     let folder_name = format!("{program_name}-{language}-{program_type}");
     let repo_name = format!("{username}/{folder_name}");
 
@@ -98,6 +102,8 @@ fn main() {
         process::exit(1);
     }
 
+    println!("cd {folder_name}");
+
     env::set_current_dir(&folder_name).expect("changing directory failed");
 
     println!("git rev-list --all --reverse");
@@ -110,6 +116,59 @@ fn main() {
         .expect("rev-list failed");
 
     if rev_list_output.status.success() {
+        let rev_list_output_cow = String::from_utf8_lossy(&rev_list_output.stdout).to_string();
+
+        for (_, commit_hash) in rev_list_output_cow.split("\n").enumerate() {
+            if !commit_hash.is_empty() {
+                println!("git checkout {commit_hash}");
+
+                let checkout_output = Command::new("git")
+                    .arg("checkout")
+                    .arg(commit_hash)
+                    .output()
+                    .expect("checkout failed");
+
+                if checkout_output.status.success() {
+                    println!(
+                        "checkout stdout: {}",
+                        String::from_utf8_lossy(&checkout_output.stdout)
+                    );
+                } else {
+                    println!(
+                        "checkout stderr: {}",
+                        String::from_utf8_lossy(&checkout_output.stderr)
+                    );
+
+                    process::exit(1);
+                }
+
+                println!("cd {app_name}");
+
+                env::set_current_dir(&app_name).expect("changing directory failed");
+
+                println!("cargo test");
+
+                let test_output = Command::new("cargo")
+                    .arg("test")
+                    .output()
+                    .expect("test failed");
+
+                if test_output.status.success() {
+                    println!(
+                        "test stdout: {}",
+                        String::from_utf8_lossy(&test_output.stdout)
+                    );
+                } else {
+                    println!(
+                        "test stderr: {}",
+                        String::from_utf8_lossy(&test_output.stderr)
+                    );
+
+                    process::exit(1);
+                }
+            }
+        }
+
         println!(
             "rev-list stdout: {}",
             String::from_utf8_lossy(&rev_list_output.stdout)
