@@ -118,7 +118,8 @@ fn main() {
     if rev_list_output.status.success() {
         let rev_list_output_cow = String::from_utf8_lossy(&rev_list_output.stdout).to_string();
 
-        for (_, commit_hash) in rev_list_output_cow.split("\n").enumerate() {
+        for (i, commit_hash) in rev_list_output_cow.split("\n").enumerate() {
+            println!("i: {i}");
             if !commit_hash.is_empty() {
                 println!("git checkout {commit_hash}");
 
