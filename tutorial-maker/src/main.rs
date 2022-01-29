@@ -108,82 +108,58 @@ fn main() {
 
     println!("git rev-list --all --reverse");
 
-    let rev_list_output = Command::new("git")
+    let git_rev_list_output = Command::new("git")
         .arg("rev-list")
         .arg("--all")
         .arg("--reverse")
         .output()
         .expect("rev-list failed");
 
-    if rev_list_output.status.success() {
-        let rev_list_output_cow = String::from_utf8_lossy(&rev_list_output.stdout).to_string();
+    if git_rev_list_output.status.success() {
+        let git_rev_list_output_cow =
+            String::from_utf8_lossy(&git_rev_list_output.stdout).to_string();
 
-        for (i, commit_hash) in rev_list_output_cow.split("\n").enumerate() {
+        for (i, commit_hash) in git_rev_list_output_cow.split("\n").enumerate() {
             println!("i: {i}");
             if !commit_hash.is_empty() {
                 println!("git checkout {commit_hash}");
 
-                let checkout_output = Command::new("git")
+                let git_checkout_output = Command::new("git")
                     .arg("checkout")
                     .arg(commit_hash)
                     .output()
                     .expect("checkout failed");
 
-                if checkout_output.status.success() {
+                if git_checkout_output.status.success() {
                     println!(
-                        "checkout stdout: {}",
-                        String::from_utf8_lossy(&checkout_output.stdout)
+                        "git checkout stdout: {}",
+                        String::from_utf8(git_checkout_output.stdout).unwrap()
                     );
                 } else {
                     println!(
-                        "checkout stderr: {}",
-                        String::from_utf8_lossy(&checkout_output.stderr)
+                        "git checkout stderr: {}",
+                        String::from_utf8(git_checkout_output.stderr).unwrap()
                     );
 
                     process::exit(1);
                 }
 
-                println!("git show --no-patch --format='%s'");
+                println!("git show");
 
-                let show_s_output = Command::new("git")
+                let git_show_output = Command::new("git")
                     .arg("show")
-                    .arg("--no-patch")
-                    .arg("--format='%s'")
                     .output()
                     .expect("show failed");
 
-                if show_s_output.status.success() {
+                if git_show_output.status.success() {
                     println!(
-                        "show stdout: {}",
-                        String::from_utf8_lossy(&show_s_output.stdout)
+                        "git show stdout: {}",
+                        String::from_utf8(git_show_output.stdout).unwrap()
                     );
                 } else {
                     println!(
-                        "show stderr: {}",
-                        String::from_utf8_lossy(&show_s_output.stderr)
-                    );
-
-                    process::exit(1);
-                }
-
-                println!("git show --no-patch --format='%b'");
-
-                let show_b_output = Command::new("git")
-                    .arg("show")
-                    .arg("--no-patch")
-                    .arg("--format='%b'")
-                    .output()
-                    .expect("show failed");
-
-                if show_b_output.status.success() {
-                    println!(
-                        "show stdout: {}",
-                        String::from_utf8_lossy(&show_b_output.stdout)
-                    );
-                } else {
-                    println!(
-                        "show stderr: {}",
-                        String::from_utf8_lossy(&show_b_output.stderr)
+                        "git show stderr: {}",
+                        String::from_utf8(git_show_output.stderr).unwrap()
                     );
 
                     process::exit(1);
@@ -193,10 +169,10 @@ fn main() {
                 path.push(&app_name);
                 let metadata = fs::metadata(path);
                 match metadata {
-                  Ok(_) => {},
-                  Err(_) => {
-                      continue;
-                  }
+                    Ok(_) => {}
+                    Err(_) => {
+                        continue;
+                    }
                 };
 
                 println!("cd {app_name}");
@@ -205,20 +181,20 @@ fn main() {
 
                 println!("cargo test");
 
-                let test_output = Command::new("cargo")
+                let cargo_test_output = Command::new("cargo")
                     .arg("test")
                     .output()
                     .expect("test failed");
 
-                if test_output.status.success() {
+                if cargo_test_output.status.success() {
                     println!(
-                        "test stdout: {}",
-                        String::from_utf8_lossy(&test_output.stdout)
+                        "cargo test stdout: {}",
+                        String::from_utf8(cargo_test_output.stdout).unwrap()
                     );
                 } else {
                     println!(
-                        "test stderr: {}",
-                        String::from_utf8_lossy(&test_output.stderr)
+                        "cargo test stderr: {}",
+                        String::from_utf8(cargo_test_output.stderr).unwrap()
                     );
 
                     process::exit(1);
@@ -228,12 +204,12 @@ fn main() {
 
         println!(
             "rev-list stdout: {}",
-            String::from_utf8_lossy(&rev_list_output.stdout)
+            String::from_utf8(git_rev_list_output.stdout).unwrap()
         );
     } else {
         println!(
             "rev-list stderr: {}",
-            String::from_utf8_lossy(&rev_list_output.stderr)
+            String::from_utf8(git_rev_list_output.stderr).unwrap()
         );
 
         process::exit(1);
