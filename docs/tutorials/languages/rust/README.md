@@ -141,24 +141,6 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
 [Finished running. Exit status: 0]
-[Running 'cargo fmt && cargo check && cargo clippy -- -D warnings && cargo test']
-    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
-    Finished dev [unoptimized + debuginfo] target(s) in 0.21s
-    Finished test [unoptimized + debuginfo] target(s) in 0.37s
-     Running unittests (target/debug/deps/unique_project_name-0123456789abcdef)
-
-running 1 test
-test tests::it_works ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-   Doc-tests unique-project-name
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-[Finished running. Exit status: 0]
 ```
 
 ## Libraries
