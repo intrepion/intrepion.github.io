@@ -33,13 +33,13 @@ Cargo.lock
 ### bash
 
 ```bash
-cargo new --lib unique-project-name;
+cargo new --lib unique-project-name-library;
 ```
 
 ### bash output
 
 ```bash
-     Created library `unique-project-name` package
+     Created library `unique-project-name-library` package
 ```
 
 ### .github/workflows/rust.yml
@@ -62,31 +62,31 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Format
-      run: cd unique-project-name && cargo fmt -- --check
+      run: cd unique-project-name-library && cargo fmt -- --check
   check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Check
-      run: cd unique-project-name && cargo check
+      run: cd unique-project-name-library && cargo check
   lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Lint
-      run: cd unique-project-name && cargo clippy -- -D warnings
+      run: cd unique-project-name-library && cargo clippy -- -D warnings
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Test
-      run: cd unique-project-name && cargo test --verbose
+      run: cd unique-project-name-library && cargo test --verbose
   audit:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Audit
-      run: cd unique-project-name && cargo audit
+      run: cd unique-project-name-library && cargo audit
   unused:
     runs-on: ubuntu-latest
     steps:
@@ -101,19 +101,19 @@ jobs:
         args: cargo-udeps --locked
     - uses: actions/checkout@v2
     - name: Unused
-      run: cd unique-project-name && cargo +nightly udeps
+      run: cd unique-project-name-library && cargo +nightly udeps
 ```
 
 ### README.md
 
 ```markdown
-![Rust](https://github.com/username/unique-project-name/actions/workflows/rust.yml/badge.svg?branch=main)
+[![main](https://github.com/username/unique-project-name-library/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/username/unique-project-name-library/actions/workflows/main.yml)
 ```
 
 ### bash
 
 ```bash
-cd unique-project-name/;
+cd unique-project-name-library/;
 cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
 ```
 
@@ -121,11 +121,11 @@ cargo watch -x fmt -x check -x "clippy -- -D warnings" -x test;
 
 ```bash
 [Running 'cargo fmt && cargo check && cargo clippy -- -D warnings && cargo test']
-    Checking unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
+    Checking unique-project-name-library v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name-library)
     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
-    Checking unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
+    Checking unique-project-name-library v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name-library)
     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
-   Compiling unique-project-name v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name)
+   Compiling unique-project-name-library v0.1.0 (/home/username/code/github/username/repo-name/unique-project-name-library)
     Finished test [unoptimized + debuginfo] target(s) in 0.76s
      Running unittests (target/debug/deps/unique_project_name-0123456789abcdef)
 
@@ -134,7 +134,7 @@ test tests::it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-   Doc-tests unique-project-name
+   Doc-tests unique-project-name-library
 
 running 0 tests
 

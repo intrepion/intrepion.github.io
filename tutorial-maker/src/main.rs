@@ -169,8 +169,11 @@ fn main() {
                 path.push(&app_name);
                 let metadata = fs::metadata(path);
                 match metadata {
-                    Ok(_) => {}
+                    Ok(_) => {
+                        println!("{app_name} found");
+                    }
                     Err(_) => {
+                        println!("{app_name} not found");
                         continue;
                     }
                 };
