@@ -45,7 +45,7 @@ cargo new --lib unique-project-name;
 ### .github/workflows/rust.yml
 
 ```yaml
-name: Rust
+name: main
 
 on:
   push:
@@ -57,19 +57,51 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-
+  format:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Format
       run: cd unique-project-name && cargo fmt -- --check
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
     - name: Check
       run: cd unique-project-name && cargo check
-    - name: Run tests
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Lint
+      run: cd unique-project-name && cargo clippy -- -D warnings
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test
       run: cd unique-project-name && cargo test --verbose
-
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Audit
+      run: cd unique-project-name && cargo audit
+  unused:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install latest nightly
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: nightly
+    - name: "Udeps Installation"
+      uses: actions-rs/cargo@v1
+      with:
+        command: install
+        args: cargo-udeps --locked
+    - uses: actions/checkout@v2
+    - name: Unused
+      run: cd unique-project-name && cargo +nightly udeps
 ```
 
 ### README.md
