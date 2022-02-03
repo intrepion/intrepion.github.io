@@ -11,7 +11,7 @@ fn main() {
 
     <program-type> can only be the following:
 
-    - library
+    - default-library
 "#;
     let args: Vec<String> = env::args().collect();
 
@@ -35,8 +35,8 @@ fn main() {
     };
 
     let args4 = args[4].to_lowercase();
-    let program_type = if args4 == "library" {
-        "library"
+    let program_type = if args4 == "default-library" {
+        "default-library"
     } else {
         println!("{usage}");
 
@@ -54,7 +54,7 @@ fn main() {
     env::set_current_dir(&path_name).expect("changing directory failed");
 
     let app_name = format!("{program_name}-{program_type}");
-    let folder_name = format!("{program_name}-{language}-{program_type}");
+    let folder_name = format!("{program_name}-using-{language}-{program_type}");
     let repo_name = format!("{username}/{folder_name}");
 
     println!("rm -rf {folder_name}");
