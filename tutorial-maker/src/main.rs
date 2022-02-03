@@ -115,6 +115,12 @@ fn main() {
         .output()
         .expect("rev-list failed");
 
+    
+    println!(
+        "rev-list stdout: {}",
+        String::from_utf8(git_rev_list_output.stdout.clone()).unwrap()
+    );
+
     if git_rev_list_output.status.success() {
         let git_rev_list_output_cow =
             String::from_utf8_lossy(&git_rev_list_output.stdout).to_string();
@@ -209,11 +215,6 @@ fn main() {
                 env::set_current_dir(parent_path).expect("changing directory failed");
             }
         }
-
-        println!(
-            "rev-list stdout: {}",
-            String::from_utf8(git_rev_list_output.stdout).unwrap()
-        );
     } else {
         println!(
             "rev-list stderr: {}",
