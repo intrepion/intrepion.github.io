@@ -26,4 +26,5 @@ struct GitHubRepository {
     app_name: String,
     language: ProgrammingLanguage,
     program_type: ProgramType,
+    user: String,
 }
