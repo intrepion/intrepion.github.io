@@ -115,7 +115,6 @@ fn main() {
         .output()
         .expect("rev-list failed");
 
-    
     println!(
         "rev-list stdout: {}",
         String::from_utf8(git_rev_list_output.stdout.clone()).unwrap()
