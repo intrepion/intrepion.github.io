@@ -9,6 +9,7 @@ mod get_repos_should {
             app_name: "hello-world-library".to_string(),
             language: ProgrammingLanguage::Rust,
             program_type: ProgramType::Library,
+            server: None,
             user: "intrepion".to_string(),
         }];
     }
