@@ -7,6 +7,7 @@ mod get_repos_should {
     ) {
         let expected = vec![Repo {
             app_name: "hello-world-library".to_string(),
+            language: ProgrammingLanguage::Rust,
         }];
     }
 }
