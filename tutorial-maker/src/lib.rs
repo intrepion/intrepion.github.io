@@ -9,7 +9,7 @@ mod get_repos_should {
             app_name: "hello-world-library".to_string(),
             language: ProgrammingLanguage::Rust,
             program_type: ProgramType::Library,
-            server: None,
+            server_type: None,
             user: "intrepion".to_string(),
         }];
     }
@@ -27,5 +27,6 @@ struct GitHubRepository {
     app_name: String,
     language: ProgrammingLanguage,
     program_type: ProgramType,
+    server_type: Option<String>,
     user: String,
 }
