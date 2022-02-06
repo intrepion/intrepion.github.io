@@ -12,6 +12,11 @@ mod get_repos_should {
     }
 }
 
+enum ProgrammingLanguage {
+    Rust,
+}
+
 struct Repo {
     app_name: String,
+    language: ProgrammingLanguage,
 }
