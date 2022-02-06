@@ -7,6 +7,7 @@ mod get_repos_should {
     ) {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_string(),
+            client: None,
             language: ProgrammingLanguage::Rust,
             program_type: ProgramType::Library,
             server_type: None,
