@@ -11,4 +11,6 @@ mod get_repos_should {
     }
 }
 
-struct Repo {}
+struct Repo {
+    app_name: String,
+}
