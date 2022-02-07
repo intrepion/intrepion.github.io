@@ -3,7 +3,7 @@ mod get_repos_should {
     use super::*;
 
     #[test]
-    fn return_repos_with_app_name_hello_world_library_and_language_rust_and_program_type_lib_and_user_intrepion(
+    fn return_repos_with_app_name_hello_world_and_language_rust_and_program_type_lib_and_user_intrepion(
     ) {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_string(),
@@ -17,6 +17,27 @@ mod get_repos_should {
         let actual = get_repos(
             "intrepion",
             "hello-world",
+            ProgrammingLanguage::Rust,
+            ProgramType::Library,
+        );
+
+        assert_eq!(actual, expected);
+    }
+
+    #[test]
+    fn return_repos_with_app_name_fizz_buzz_and_language_rust_and_program_type_lib_and_user_intrepion() {
+        let expected = vec![GitHubRepository {
+            app_name: "fizz-buzz-library".to_string(),
+            client_type: None,
+            language: ProgrammingLanguage::Rust,
+            program_type: ProgramType::Library,
+            server_type: None,
+            user: "intrepion".to_string(),
+        }];
+
+        let actual = get_repos(
+            "intrepion",
+            "fizz-buzz",
             ProgrammingLanguage::Rust,
             ProgramType::Library,
         );
