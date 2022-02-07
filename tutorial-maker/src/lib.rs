@@ -44,6 +44,28 @@ mod get_repos_should {
 
         assert_eq!(actual, expected);
     }
+
+    #[test]
+    fn return_repos_with_app_name_hello_world_and_language_typescript_and_program_type_lib_and_user_intrepion(
+    ) {
+        let expected = vec![GitHubRepository {
+            app_name: "hello-world-library".to_string(),
+            client_type: None,
+            language: ProgrammingLanguage::TypeScript,
+            program_type: ProgramType::Library,
+            server_type: None,
+            user: "intrepion".to_string(),
+        }];
+
+        let actual = get_repos(
+            "intrepion",
+            "hello-world",
+            ProgrammingLanguage::TypeScript,
+            ProgramType::Library,
+        );
+
+        assert_eq!(actual, expected);
+    }
 }
 
 #[derive(Debug, PartialEq)]
