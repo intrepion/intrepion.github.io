@@ -68,7 +68,7 @@ struct GitHubRepository {
 
 fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_type: ProgramType) -> Vec<GitHubRepository> {
     vec![GitHubRepository {
-        app_name: "hello-world-library".to_string(),
+        app_name: format!("{app_name}-library"),
         client_type: None,
         language: ProgrammingLanguage::Rust,
         program_type: ProgramType::Library,
