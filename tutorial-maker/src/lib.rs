@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod get_repos_should {
+mod new_github_repository_should {
     use super::*;
 
     #[test]
@@ -14,7 +14,7 @@ mod get_repos_should {
             user: "intrepion".to_owned(),
         }];
 
-        let actual = get_repos(
+        let actual = new_github_repository(
             "intrepion",
             "hello-world",
             Language::Rust,
@@ -36,7 +36,7 @@ mod get_repos_should {
             user: "intrepion".to_owned(),
         }];
 
-        let actual = get_repos(
+        let actual = new_github_repository(
             "intrepion",
             "fizz-buzz",
             Language::Rust,
@@ -58,7 +58,7 @@ mod get_repos_should {
             user: "intrepion".to_owned(),
         }];
 
-        let actual = get_repos(
+        let actual = new_github_repository(
             "intrepion",
             "hello-world",
             Language::TypeScript,
@@ -80,7 +80,7 @@ mod get_repos_should {
             user: "intrepion".to_owned(),
         }];
 
-        let actual = get_repos(
+        let actual = new_github_repository(
             "intrepion",
             "hello-world",
             Language::Rust,
@@ -113,7 +113,7 @@ struct GitHubRepository {
     user: String,
 }
 
-fn get_repos(
+fn new_github_repository(
     user: &str,
     app_name: &str,
     language: Language,
