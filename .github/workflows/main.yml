@@ -15,31 +15,31 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Format
-      run: cd unique-project-name-library && cargo fmt -- --check
+      run: cd intrepion.github.io && cargo fmt -- --check
   check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Check
-      run: cd unique-project-name-library && cargo check
+      run: cd intrepion.github.io && cargo check
   lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Lint
-      run: cd unique-project-name-library && cargo clippy -- -D warnings
+      run: cd intrepion.github.io && cargo clippy -- -D warnings
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Test
-      run: cd unique-project-name-library && cargo test --verbose
+      run: cd intrepion.github.io && cargo test --verbose
   audit:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Audit
-      run: cd unique-project-name-library && cargo audit
+      run: cd intrepion.github.io && cargo audit
   unused:
     runs-on: ubuntu-latest
     steps:
@@ -54,4 +54,4 @@ jobs:
         args: cargo-udeps --locked
     - uses: actions/checkout@v2
     - name: Unused
-      run: cd unique-project-name-library && cargo +nightly udeps
+      run: cd intrepion.github.io && cargo +nightly udeps
