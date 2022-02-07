@@ -14,7 +14,12 @@ mod get_repos_should {
             user: "intrepion".to_string(),
         }];
 
-        let actual = get_repos("intrepion", "hello-world-library", ProgrammingLanguage::Rust, ProgramType::Library);
+        let actual = get_repos(
+            "intrepion",
+            "hello-world",
+            ProgrammingLanguage::Rust,
+            ProgramType::Library,
+        );
     }
 }
 
@@ -33,4 +38,7 @@ struct GitHubRepository {
     program_type: ProgramType,
     server_type: Option<String>,
     user: String,
+}
+
+fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_type: ProgramType) {
 }
