@@ -3,7 +3,7 @@ mod new_github_repository_should {
     use super::*;
 
     #[test]
-    fn return_repos_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_intrepion(
     ) {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_owned(),
@@ -25,7 +25,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_repos_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion(
     ) {
         let expected = vec![GitHubRepository {
             app_name: "fizz-buzz-library".to_owned(),
@@ -47,7 +47,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_repos_with_app_name_hello_world_and_language_typescript_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_typescript_and_program_type_library_and_user_intrepion(
     ) {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_owned(),
@@ -69,7 +69,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_repos_with_app_name_hello_world_and_language_rust_and_program_type_console_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_console_and_user_intrepion(
     ) {
         let expected = vec![GitHubRepository {
             app_name: "hello-world".to_owned(),
