@@ -25,7 +25,8 @@ mod get_repos_should {
     }
 
     #[test]
-    fn return_repos_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion() {
+    fn return_repos_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion(
+    ) {
         let expected = vec![GitHubRepository {
             app_name: "fizz-buzz-library".to_owned(),
             client_type: None,
@@ -112,7 +113,12 @@ struct GitHubRepository {
     user: String,
 }
 
-fn get_repos(user: &str, app_name: &str, language: Language, program_type: ProgramType) -> Vec<GitHubRepository> {
+fn get_repos(
+    user: &str,
+    app_name: &str,
+    language: Language,
+    program_type: ProgramType,
+) -> Vec<GitHubRepository> {
     vec![GitHubRepository {
         app_name: match program_type {
             ProgramType::Library => format!("{app_name}-library"),
@@ -122,6 +128,6 @@ fn get_repos(user: &str, app_name: &str, language: Language, program_type: Progr
         language,
         program_type,
         server_type: None,
-        user: "intrepion".to_owned()
+        user: "intrepion".to_owned(),
     }]
 }
