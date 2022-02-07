@@ -8,7 +8,7 @@ mod get_repos_should {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_string(),
             client_type: None,
-            language: ProgrammingLanguage::Rust,
+            language: Language::Rust,
             program_type: ProgramType::Library,
             server_type: None,
             user: "intrepion".to_string(),
@@ -17,7 +17,7 @@ mod get_repos_should {
         let actual = get_repos(
             "intrepion",
             "hello-world",
-            ProgrammingLanguage::Rust,
+            Language::Rust,
             ProgramType::Library,
         );
 
@@ -29,7 +29,7 @@ mod get_repos_should {
         let expected = vec![GitHubRepository {
             app_name: "fizz-buzz-library".to_string(),
             client_type: None,
-            language: ProgrammingLanguage::Rust,
+            language: Language::Rust,
             program_type: ProgramType::Library,
             server_type: None,
             user: "intrepion".to_string(),
@@ -38,7 +38,7 @@ mod get_repos_should {
         let actual = get_repos(
             "intrepion",
             "fizz-buzz",
-            ProgrammingLanguage::Rust,
+            Language::Rust,
             ProgramType::Library,
         );
 
@@ -51,7 +51,7 @@ mod get_repos_should {
         let expected = vec![GitHubRepository {
             app_name: "hello-world-library".to_string(),
             client_type: None,
-            language: ProgrammingLanguage::TypeScript,
+            language: Language::TypeScript,
             program_type: ProgramType::Library,
             server_type: None,
             user: "intrepion".to_string(),
@@ -60,7 +60,7 @@ mod get_repos_should {
         let actual = get_repos(
             "intrepion",
             "hello-world",
-            ProgrammingLanguage::TypeScript,
+            Language::TypeScript,
             ProgramType::Library,
         );
 
@@ -69,7 +69,7 @@ mod get_repos_should {
 }
 
 #[derive(Debug, PartialEq)]
-enum ProgrammingLanguage {
+enum Language {
     Rust,
     TypeScript,
 }
@@ -83,13 +83,13 @@ enum ProgramType {
 struct GitHubRepository {
     app_name: String,
     client_type: Option<String>,
-    language: ProgrammingLanguage,
+    language: Language,
     program_type: ProgramType,
     server_type: Option<String>,
     user: String,
 }
 
-fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_type: ProgramType) -> Vec<GitHubRepository> {
+fn get_repos(user: &str, app_name: &str, language: Language, program_type: ProgramType) -> Vec<GitHubRepository> {
     vec![GitHubRepository {
         app_name: format!("{app_name}-library"),
         client_type: None,
