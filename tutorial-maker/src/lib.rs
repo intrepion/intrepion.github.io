@@ -13,6 +13,8 @@ mod get_repos_should {
             server_type: None,
             user: "intrepion".to_string(),
         }];
+
+        let actual = get_repos("intrepion", "hello-world-library", ProgrammingLanguage::Rust, ProgramType::Library);
     }
 }
 
