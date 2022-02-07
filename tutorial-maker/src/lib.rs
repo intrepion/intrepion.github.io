@@ -20,6 +20,8 @@ mod get_repos_should {
             ProgrammingLanguage::Rust,
             ProgramType::Library,
         );
+
+        assert_eq!(actual, expected);
     }
 }
 
