@@ -42,7 +42,7 @@ cargo new --lib unique-project-name-library;
      Created library `unique-project-name-library` package
 ```
 
-### .github/workflows/rust.yml
+### .github/workflows/main.yml
 
 ```yaml
 name: main
