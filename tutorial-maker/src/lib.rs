@@ -6,7 +6,7 @@ mod new_github_repository_should {
     fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_intrepion(
     ) {
         let expected = GitHubRepository {
-            app_name: "hello-world-library".to_owned(),
+            app_name: "intrepion-hello-world-library".to_owned(),
             client_type: None,
             language: Language::Rust,
             program_type: ProgramType::Library,
@@ -28,7 +28,7 @@ mod new_github_repository_should {
     fn return_github_repository_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion(
     ) {
         let expected = GitHubRepository {
-            app_name: "fizz-buzz-library".to_owned(),
+            app_name: "intrepion-fizz-buzz-library".to_owned(),
             client_type: None,
             language: Language::Rust,
             program_type: ProgramType::Library,
@@ -50,7 +50,7 @@ mod new_github_repository_should {
     fn return_github_repository_with_app_name_hello_world_and_language_typescript_and_program_type_library_and_user_intrepion(
     ) {
         let expected = GitHubRepository {
-            app_name: "hello-world-library".to_owned(),
+            app_name: "intrepion-hello-world-library".to_owned(),
             client_type: None,
             language: Language::TypeScript,
             program_type: ProgramType::Library,
@@ -72,7 +72,7 @@ mod new_github_repository_should {
     fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_console_and_user_intrepion(
     ) {
         let expected = GitHubRepository {
-            app_name: "hello-world".to_owned(),
+            app_name: "intrepion-hello-world-console".to_owned(),
             client_type: None,
             language: Language::Rust,
             program_type: ProgramType::Console,
