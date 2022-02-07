@@ -98,6 +98,7 @@ enum Language {
 
 #[derive(Debug, PartialEq)]
 enum ProgramType {
+    Console,
     Library,
 }
 
@@ -113,10 +114,13 @@ struct GitHubRepository {
 
 fn get_repos(user: &str, app_name: &str, language: Language, program_type: ProgramType) -> Vec<GitHubRepository> {
     vec![GitHubRepository {
-        app_name: format!("{app_name}-library"),
+        app_name: match program_type {
+            ProgramType::Library => format!("{app_name}-library"),
+            _ => app_name.to_string(),
+        },
         client_type: None,
         language,
-        program_type: ProgramType::Library,
+        program_type,
         server_type: None,
         user: "intrepion".to_string()
     }]
