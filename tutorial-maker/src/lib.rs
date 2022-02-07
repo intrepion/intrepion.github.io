@@ -71,6 +71,7 @@ mod get_repos_should {
 #[derive(Debug, PartialEq)]
 enum ProgrammingLanguage {
     Rust,
+    TypeScript,
 }
 
 #[derive(Debug, PartialEq)]
@@ -92,7 +93,7 @@ fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_
     vec![GitHubRepository {
         app_name: format!("{app_name}-library"),
         client_type: None,
-        language: ProgrammingLanguage::Rust,
+        language,
         program_type: ProgramType::Library,
         server_type: None,
         user: "intrepion".to_string()
