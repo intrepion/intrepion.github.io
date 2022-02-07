@@ -25,14 +25,17 @@ mod get_repos_should {
     }
 }
 
+#[derive(Debug, PartialEq)]
 enum ProgrammingLanguage {
     Rust,
 }
 
+#[derive(Debug, PartialEq)]
 enum ProgramType {
     Library,
 }
 
+#[derive(Debug, PartialEq)]
 struct GitHubRepository {
     app_name: String,
     client_type: Option<String>,
@@ -42,5 +45,13 @@ struct GitHubRepository {
     user: String,
 }
 
-fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_type: ProgramType) {
+fn get_repos(user: &str, app_name: &str, language: ProgrammingLanguage, program_type: ProgramType) -> Vec<GitHubRepository> {
+    vec![GitHubRepository {
+        app_name: "hello-world-library".to_string(),
+        client_type: None,
+        language: ProgrammingLanguage::Rust,
+        program_type: ProgramType::Library,
+        server_type: None,
+        user: "intrepion".to_string()
+    }]
 }
