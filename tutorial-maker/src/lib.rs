@@ -89,6 +89,28 @@ mod new_github_repository_should {
 
         assert_eq!(actual, expected);
     }
+
+    #[test]
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_oliverforral(
+    ) {
+        let expected = GitHubRepository {
+            app_name: "intrepion-hello-world-library".to_owned(),
+            client_type: None,
+            language: Language::Rust,
+            program_type: ProgramType::Library,
+            server_type: None,
+            user: "oliverforral".to_owned(),
+        };
+
+        let actual = new_github_repository(
+            "intrepion",
+            "hello-world",
+            Language::Rust,
+            ProgramType::Library,
+        );
+
+        assert_eq!(actual, expected);
+    }
 }
 
 #[derive(Debug, PartialEq)]
