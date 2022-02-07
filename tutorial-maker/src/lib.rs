@@ -3,7 +3,7 @@ mod new_github_repository_should {
     use super::*;
 
     #[test]
-    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_name_intrepion(
     ) {
         let expected = GitHubRepository {
             app_name: "intrepion-hello-world-library".to_owned(),
@@ -11,7 +11,7 @@ mod new_github_repository_should {
             language: Language::Rust,
             program_type: ProgramType::Library,
             server_type: None,
-            user: "intrepion".to_owned(),
+            user_name: "intrepion".to_owned(),
         };
 
         let actual = new_github_repository(
@@ -25,7 +25,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_github_repository_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_fizz_buzz_and_language_rust_and_program_type_library_and_user_name_intrepion(
     ) {
         let expected = GitHubRepository {
             app_name: "intrepion-fizz-buzz-library".to_owned(),
@@ -33,7 +33,7 @@ mod new_github_repository_should {
             language: Language::Rust,
             program_type: ProgramType::Library,
             server_type: None,
-            user: "intrepion".to_owned(),
+            user_name: "intrepion".to_owned(),
         };
 
         let actual = new_github_repository(
@@ -47,7 +47,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_github_repository_with_app_name_hello_world_and_language_typescript_and_program_type_library_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_typescript_and_program_type_library_and_user_name_intrepion(
     ) {
         let expected = GitHubRepository {
             app_name: "intrepion-hello-world-library".to_owned(),
@@ -55,7 +55,7 @@ mod new_github_repository_should {
             language: Language::TypeScript,
             program_type: ProgramType::Library,
             server_type: None,
-            user: "intrepion".to_owned(),
+            user_name: "intrepion".to_owned(),
         };
 
         let actual = new_github_repository(
@@ -69,7 +69,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_console_and_user_intrepion(
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_console_and_user_name_intrepion(
     ) {
         let expected = GitHubRepository {
             app_name: "intrepion-hello-world-console".to_owned(),
@@ -77,7 +77,7 @@ mod new_github_repository_should {
             language: Language::Rust,
             program_type: ProgramType::Console,
             server_type: None,
-            user: "intrepion".to_owned(),
+            user_name: "intrepion".to_owned(),
         };
 
         let actual = new_github_repository(
@@ -91,7 +91,7 @@ mod new_github_repository_should {
     }
 
     #[test]
-    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_oliverforral(
+    fn return_github_repository_with_app_name_hello_world_and_language_rust_and_program_type_library_and_user_name_oliverforral(
     ) {
         let expected = GitHubRepository {
             app_name: "oliverforral-hello-world-library".to_owned(),
@@ -99,7 +99,7 @@ mod new_github_repository_should {
             language: Language::Rust,
             program_type: ProgramType::Library,
             server_type: None,
-            user: "oliverforral".to_owned(),
+            user_name: "oliverforral".to_owned(),
         };
 
         let actual = new_github_repository(
@@ -132,24 +132,24 @@ struct GitHubRepository {
     language: Language,
     program_type: ProgramType,
     server_type: Option<String>,
-    user: String,
+    user_name: String,
 }
 
 fn new_github_repository(
-    user: &str,
+    user_name: &str,
     app_name: &str,
     language: Language,
     program_type: ProgramType,
 ) -> GitHubRepository {
     GitHubRepository {
         app_name: match program_type {
-            ProgramType::Library => format!("{user}-{app_name}-library"),
-            ProgramType::Console => format!("{user}-{app_name}-console"),
+            ProgramType::Library => format!("{user_name}-{app_name}-library"),
+            ProgramType::Console => format!("{user_name}-{app_name}-console"),
         },
         client_type: None,
         language,
         program_type,
         server_type: None,
-        user: user.to_owned(),
+        user_name: user_name.to_owned(),
     }
 }
