@@ -121,8 +121,8 @@ fn new_github_repository(
 ) -> GitHubRepository {
     GitHubRepository {
         app_name: match program_type {
-            ProgramType::Library => format!("{app_name}-library"),
-            _ => app_name.to_owned(),
+            ProgramType::Library => format!("{user}-{app_name}-library"),
+            ProgramType::Console => format!("{user}-{app_name}-console"),
         },
         client_type: None,
         language,
