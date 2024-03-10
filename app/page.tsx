@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="bg-gray-100">
+    <div>
       <header className="bg-gray-800 text-white py-6">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl font-bold">Oliver Forral</h1>
