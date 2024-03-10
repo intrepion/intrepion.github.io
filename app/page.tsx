@@ -9,7 +9,7 @@ export default function Page() {
       </header>
       <main className="container mx-auto py-8">
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">About Me</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">About Me</h2>
           <p className="text-lg">
             Highly motivated and results-oriented Software Engineer with 16+
             years of experience in designing, developing, and maintaining
