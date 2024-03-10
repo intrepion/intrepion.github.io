@@ -22,8 +22,71 @@ export default function Page() {
           </p>
         </section>
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Experience</h2>
-          <div className="experience mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">Skills</h2>
+          <div className="mb-4">
+            <ul>
+              <li>
+                <span className="text-xl font-bold">Technologies:</span>
+                <span> Git, Docker, NGINX, Let's Encrypt</span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Languages:</span>
+                <span> C#, TypeScript, JavaScript, PHP, Rust</span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Frameworks:</span>
+                <span> .NET, Symfony, Laravel, React, jQuery, Bootstrap</span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Databases:</span>
+                <span>
+                  {" "}
+                  PostgreSQL, SQL Server, MySQL, Redis, SQLite, RavenDB
+                </span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Methodologies:</span>
+                <span>
+                  {" "}
+                  Agile (Scrum, Kanban), TDD, BDD, Ensemble Programming, Pair
+                  Programming
+                </span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">CI/CD Tools:</span>
+                <span>
+                  {" "}
+                  GitHub Actions, TeamCity, Octopus Deploy, AWS CodePipeline,
+                  Travis CI, Circle CI
+                </span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Testing Tools:</span>
+                <span> Cypress, Specflow, Reqnroll, Selenium</span>
+              </li>
+              <li>
+                <span className="text-xl font-bold">Soft Skills:</span>
+                <span>
+                  {" "}
+                  Communication, Collaboration, Problem-Solving, Attention to
+                  Detail, Mentorship, Teamwork
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">
+            Certifications
+          </h2>
+          <div className="mb-4">
+            <h3 className="text-xl font-bold">Amazon Web Services</h3>
+            <p>AWS Certified Cloud Practitioner</p>
+          </div>
+        </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">Experience</h2>
+          <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - ICF</h3>
             <ul>
               <li>
@@ -58,7 +121,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="experience mb-4">
+          <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - Freelance</h3>
             <ul>
               <li>
@@ -71,7 +134,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="experience mb-4">
+          <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - Enerflo</h3>
             <ul>
               <li>
@@ -88,7 +151,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="experience mb-4">
+          <div className="mb-4">
             <h3 className="text-xl font-bold">
               Software Engineer - InComm InCentives
             </h3>
@@ -139,7 +202,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="experience mb-4">
+          <div className="mb-4">
             <h3 className="text-xl font-bold">
               Web Developer - Multnomah Education Services District
             </h3>
@@ -185,7 +248,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="experience mb-4">
+          <div className="mb-4">
             <h3 className="text-xl font-bold">
               Web Developer Intern - Miles Consulting, Inc.
             </h3>
@@ -204,7 +267,7 @@ export default function Page() {
           </div>
         </section>
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Education</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Education</h2>
           <div className="education">
             <h3 className="text-xl font-bold">
               Bachelor of Science in Computer Science
@@ -213,7 +276,7 @@ export default function Page() {
           </div>
         </section>
         <section>
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Contact</h2>
           <p>Email: intrepion@gmail.com</p>
           <p>Phone: 503-750-4562</p>
           <p>
