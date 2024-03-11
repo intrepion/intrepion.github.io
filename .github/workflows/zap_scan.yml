@@ -1,14 +1,13 @@
 on:
   schedule:
-    # Runs every day At 01:00.
-    - cron:  '0 1 * * *'
+    - cron:  '0/15 * * * *'
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan ZAP website
+    name: Scan Oliver Forral's website
     steps:
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.11.0
         with:
           target: 'https://oliverforral.com/'
