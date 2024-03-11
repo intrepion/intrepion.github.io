@@ -4,12 +4,32 @@ export default function Page() {
       <header className="bg-gray-800 text-white py-6">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl font-bold">Oliver Forral</h1>
-          <p className="text-xl">Software Engineer</p>
+          <p>Meridian, ID - (503) 750-4562</p>
+          <p>
+            <a
+              className="text-blue-500 hover:underline"
+              href="mailto:intrepion@gmail.com"
+            >
+              intrepion@gmail.com
+            </a>
+          </p>
+          <p>
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://www.linkedin.com/in/intrepion"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              linkedin.com/in/intrepion
+            </a>
+          </p>
         </div>
       </header>
       <main className="container mx-auto py-8">
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">About Me</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">
+            Senior Software Engineer
+          </h2>
           <p className="text-lg">
             Highly motivated and results-oriented Software Engineer with 16+
             years of experience in designing, developing, and maintaining
@@ -24,7 +44,7 @@ export default function Page() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Skills</h2>
           <div className="mb-4">
-            <ul>
+            <ul className="list-disc">
               <li>
                 <span className="text-xl font-bold">Technologies:</span>
                 <span> Git, Docker, NGINX, Let's Encrypt</span>
@@ -88,7 +108,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold mb-4 text-center">Experience</h2>
           <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - ICF</h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Collaborated with team members to design, develop, and maintain
                 software solutions.
@@ -123,7 +143,7 @@ export default function Page() {
           </div>
           <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - Freelance</h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Provided freelance work for small local companies that needed
                 web development and custom-made systems tools.
@@ -136,7 +156,7 @@ export default function Page() {
           </div>
           <div className="mb-4">
             <h3 className="text-xl font-bold">Software Engineer - Enerflo</h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Utilized a wide range of full-stack capabilities at a startup
                 with a very lean team.
@@ -155,7 +175,7 @@ export default function Page() {
             <h3 className="text-xl font-bold">
               Software Engineer - InComm InCentives
             </h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Collaborated with a team of engineers to implement several REST
                 microservices in C# and .NET Core, ensuring efficient and
@@ -206,7 +226,7 @@ export default function Page() {
             <h3 className="text-xl font-bold">
               Web Developer - Multnomah Education Services District
             </h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Maintained legacy applications in jQuery and updated some
                 applications to React and Ember.
@@ -252,7 +272,7 @@ export default function Page() {
             <h3 className="text-xl font-bold">
               Web Developer Intern - Miles Consulting, Inc.
             </h3>
-            <ul>
+            <ul className="list-disc">
               <li>
                 Constructed and maintained an enterprise web application in
                 JavaScript, which requests API calls to a C# and ASP.Net backend
@@ -274,20 +294,6 @@ export default function Page() {
             </h3>
             <p>Oregon State University, Graduated 2009</p>
           </div>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold mb-4 text-center">Contact</h2>
-          <p>Email: intrepion@gmail.com</p>
-          <p>Phone: 503-750-4562</p>
-          <p>
-            LinkedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/intrepion"
-              className="text-blue-500 hover:underline"
-            >
-              linkedin.com/in/intrepion
-            </a>
-          </p>
         </section>
       </main>
     </div>
