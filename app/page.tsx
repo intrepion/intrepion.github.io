@@ -16,7 +16,27 @@ export default function Page() {
           <p>
             <a
               className="text-blue-500 hover:underline"
-              href="https://www.linkedin.com/in/intrepion"
+              href="https://oliverforral.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              oliverforral.com
+            </a>
+          </p>
+          <p>
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://github.com/intrepion"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              github.com/intrepion
+            </a>
+          </p>
+          <p>
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://linkedin.com/in/intrepion"
               rel="noopener noreferrer"
               target="_blank"
             >
