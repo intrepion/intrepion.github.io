@@ -1,0 +1,16 @@
+{
+  "name": "intrepion-kata-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.13.0" },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check && node scripts/validate-catalog.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --test scripts/catalog.test.mjs"
+  },
+  "dependencies": { "astro": "7.4.2" },
+  "devDependencies": { "@astrojs/check": "0.9.12", "typescript": "~5.9.3" }
+}
