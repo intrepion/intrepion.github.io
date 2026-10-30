@@ -1056,6 +1056,17 @@
     "evidence": "Prior verified gameplay; current HTTP 200"
   },
   {
+    "id": "kata-inspired-by-tetris-codex-dot",
+    "title": "Stacklight",
+    "inspiration": "Tetris",
+    "category": "Puzzles & playthings",
+    "repo": "https://github.com/intrepion/kata-inspired-by-tetris-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-tetris-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-30",
+    "evidence": "Verified desktop gameplay and current Pages deployment"
+  },
+  {
     "id": "kata-rhythm-heaven-clone-codex-openai-gpt-5.5-light",
     "title": "Stamp Shift",
     "inspiration": "Rhythm Heaven",
