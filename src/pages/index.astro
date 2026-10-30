@@ -5,6 +5,20 @@ const playable = games.filter(game => game.play);
 const sourceOnly = games.filter(game => !game.play);
 const categories = [...new Set(playable.map(game => game.category))].sort();
 const featured = ['kata-inspired-by-wordle-codex-dot', 'kata-minecraft-clone-gpt-6-luna-extra-high', 'kata-inspired-by-baba-is-you-codex-dot'].map(id => playable.find(game => game.id === id)!);
+// Only aliases that unambiguously name the same original are combined.
+const inspirationAliases: Record<string, string> = {
+  'Diablo 2 Lord Of Destruction': 'Diablo II: Lord of Destruction',
+  'Diablo II Lord Of Destruction': 'Diablo II: Lord of Destruction',
+  'Final Fantasy X': 'Final Fantasy X', 'Final Fantasy 10': 'Final Fantasy X',
+  'The Legend Of Zelda Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
+  'Legend Of Zelda Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
+  'Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
+  'The Legend Of Zelda Breath Of The While': 'The Legend of Zelda: Breath of the Wild',
+  'The Oregon Trail': 'The Oregon Trail', 'Oregon Trail': 'The Oregon Trail',
+};
+const groups = [...Map.groupBy(playable, game => inspirationAliases[game.inspiration] || game.inspiration)]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([inspiration, versions]) => ({ inspiration, versions: versions.sort((a, b) => a.title.localeCompare(b.title)) }));
 const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm & arcade': '↗', 'Worlds & adventures': '✳', 'Strategy & tabletop': '♟', 'Platform & co-op': '⌘' };
 ---
 <!doctype html>
@@ -59,17 +73,20 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
         <div class="featured-grid">{featured.map((game, index) => <a class={`featured featured-${index}`} href={game.play!}><span class="featured-number">0{index+1} / START HERE</span><svg class="featured-symbol" aria-hidden="true" focusable="false" viewBox="0 0 140 110"><text x="0" y="90" fill="currentColor">{['Aa', '▦', '✳'][index]}</text></svg><div><p>{['A daily word dispatch', 'A world made of possibility', 'Change the rules. Find a way.'][index]}</p><h3>{game.title} <span aria-hidden="true">↗</span></h3></div></a>)}</div>
       </section>
       <section class="collection wrap" id="collection" aria-labelledby="collection-title">
-        <div class="collection-heading"><div><p class="eyebrow">PICK UP & PLAY</p><h2 id="collection-title">The collection<span>.</span></h2><p>Something for your next five minutes. Or your next fifty.</p></div><button class="button random-button" id="random" type="button" hidden>Surprise me <span aria-hidden="true">↗</span></button></div>
+        <div class="collection-heading"><div><p class="eyebrow">PICK UP & PLAY</p><h2 id="collection-title">The collection<span>.</span></h2><p>Explore by the game that inspired each experiment.</p></div><button class="button random-button" id="random" type="button" hidden>Surprise me <span aria-hidden="true">↗</span></button></div>
         <form class="controls" id="controls" role="search" hidden>
           <div class="search-field"><span aria-hidden="true">⌕</span><label class="sr-only" for="search">Search games, inspirations, or editions</label><input id="search" type="search" placeholder="Find a game, an inspiration, a little escape…" autocomplete="off" /><button id="clear" type="button" aria-label="Clear search" hidden>×</button></div>
-          <div class="sort-field"><label for="sort">Sort by</label><select id="sort"><option value="az">Name: A–Z</option><option value="za">Name: Z–A</option><option value="inspiration">Inspiration</option></select></div>
+          <div class="sort-field"><label for="sort">Sort by</label><select id="sort"><option value="az">Inspiration: A–Z</option><option value="za">Inspiration: Z–A</option></select></div>
         </form>
         <div class="filters" role="group" aria-label="Filter by game category" id="filters" hidden><button type="button" data-filter="All" aria-pressed="true">All games <span>{playable.length}</span></button>{categories.map(category => <button type="button" data-filter={category} aria-pressed="false">{category}</button>)}</div>
         <div class="results-bar"><p id="results" role="status" aria-live="polite" aria-atomic="true">Showing all {playable.length} games</p><span>OPEN A GAME. MAKE A DISCOVERY.</span></div>
-        <div class="game-grid" id="games">{playable.map((game, index) => <article class="game-card" data-title={game.title} data-inspiration={game.inspiration} data-category={game.category} data-search={`${game.title} ${game.inspiration} ${game.edition} ${game.id}`.toLowerCase()}>
-          <div class={`card-art art-${index % 6}`} aria-hidden="true"><div class="card-grid"></div><span class="art-category">{game.category.split(' & ')[0].toUpperCase()}</span><span class="card-symbol">{symbols[game.category]}</span><span class="art-index">{String(index+1).padStart(3,'0')}</span><i class="art-circle"></i></div>
-          <div class="card-body"><p class="card-edition">{game.edition}</p><h3>{game.title}</h3><p class="inspiration">Inspired by {game.inspiration}</p><div class="card-footer"><a class="source-link" href={game.repo} aria-label={`Source for ${game.title}, ${game.edition}`}>Source <span aria-hidden="true">↗</span></a><a class="play-link" href={game.play!} aria-label={`Play ${game.title}, ${game.edition}`}>Play <span aria-hidden="true">↗</span></a></div></div>
-        </article>)}</div>
+        <div class="game-groups" id="games">{groups.map((group, groupIndex) => <section class="inspiration-group" data-inspiration={group.inspiration} aria-labelledby={`inspiration-${groupIndex}`}>
+          <div class="group-heading"><div><p class="eyebrow">INSPIRED BY</p><h3 id={`inspiration-${groupIndex}`}>{group.inspiration}</h3></div><span class="group-count">{group.versions.length} {group.versions.length === 1 ? 'experiment' : 'experiments'}</span></div>
+          <div class="game-grid">{group.versions.map((game, index) => <article class="game-card" data-title={game.title} data-inspiration={group.inspiration} data-category={game.category} data-search={`${game.title} ${game.inspiration} ${group.inspiration} ${game.edition} ${game.id}`.toLowerCase()}>
+            <div class={`card-art art-${(groupIndex + index) % 6}`} aria-hidden="true"><div class="card-grid"></div><span class="art-category">{game.category.split(' & ')[0].toUpperCase()}</span><span class="card-symbol">{symbols[game.category]}</span><span class="art-index">{String(index+1).padStart(3,'0')}</span><i class="art-circle"></i></div>
+            <div class="card-body"><p class="card-edition">{game.edition}</p><h4>{game.title}</h4><p class="inspiration">Inspired by {game.inspiration}</p><div class="card-footer"><a class="source-link" href={game.repo} aria-label={`Source for ${game.title}, ${game.edition}`}>Source <span aria-hidden="true">↗</span></a><a class="play-link" href={game.play!} aria-label={`Play ${game.title}, ${game.edition}`}>Play <span aria-hidden="true">↗</span></a></div></div>
+          </article>)}</div>
+        </section>)}</div>
         <div class="empty-state" id="empty" hidden><span aria-hidden="true">⌕</span><h3>No games found. A fresh start?</h3><p>Try a different name or reset your filters to explore everything.</p><button type="button" class="button primary" id="reset">Show all games</button></div>
         <noscript><p class="noscript">All games are available below. Enable JavaScript to search, filter, sort, or pick a random game.</p></noscript>
       </section>
@@ -105,6 +122,7 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
       const empty = document.querySelector<HTMLElement>('#empty')!;
       const clear = document.querySelector<HTMLButtonElement>('#clear')!;
       const grid = document.querySelector<HTMLElement>('#games')!;
+      const groups = Array.from(document.querySelectorAll<HTMLElement>('.inspiration-group'));
       let activeCategory = 'All';
       function update() {
         const words = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -114,7 +132,13 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
           card.hidden = !matches;
           if (matches) count++;
         });
-        cards.sort((a, b) => sort.value === 'inspiration' ? a.dataset.inspiration!.localeCompare(b.dataset.inspiration!) || a.dataset.title!.localeCompare(b.dataset.title!) : (sort.value === 'za' ? -1 : 1) * a.dataset.title!.localeCompare(b.dataset.title!)).forEach(card => grid.append(card));
+        groups.forEach(group => {
+          const groupCards = Array.from(group.querySelectorAll<HTMLElement>('.game-card'));
+          const visible = groupCards.filter(card => !card.hidden).length;
+          group.hidden = visible === 0;
+          group.querySelector<HTMLElement>('.group-count')!.textContent = `${visible} ${visible === 1 ? 'experiment' : 'experiments'}`;
+        });
+        groups.sort((a, b) => (sort.value === 'za' ? -1 : 1) * a.dataset.inspiration!.localeCompare(b.dataset.inspiration!)).forEach(group => grid.append(group));
         results.textContent = `Showing ${count} of ${cards.length} games${activeCategory === 'All' ? '' : ` · ${activeCategory}`}`;
         empty.hidden = count !== 0;
         clear.hidden = search.value.length === 0;
