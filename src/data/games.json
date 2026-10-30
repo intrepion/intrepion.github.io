@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-combat-codex-dot",
+    "title": "Crossfire Field",
+    "inspiration": "Combat",
+    "category": "Rhythm & arcade",
+    "repo": "https://github.com/intrepion/kata-inspired-by-combat-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-combat-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-30",
+    "evidence": "Verified live launch, controls, and Pages deployment"
+  },
+  {
     "id": "kata-inspired-by-pong-codex-dot",
     "title": "Rallylight",
     "inspiration": "Pong",
