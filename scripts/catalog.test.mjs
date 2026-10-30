@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
 test('catalog includes every reconciled game with separate source-only entries', () => {
-  assert.deepEqual(validate(games), { total: 132, playable: 115, sourceOnly: 17 });
+  assert.deepEqual(validate(games), { total: 133, playable: 116, sourceOnly: 17 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {

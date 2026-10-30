@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-mario-kart-8-codex-dot",
+    "title": "Sunset Circuit",
+    "inspiration": "Mario Kart 8",
+    "category": "Rhythm & arcade",
+    "repo": "https://github.com/intrepion/kata-inspired-by-mario-kart-8-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-mario-kart-8-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-30",
+    "evidence": "Logic smoke test and Pages deployment"
+  },
+  {
     "id": "kata-inspired-by-combat-codex-dot",
     "title": "Crossfire Field",
     "inspiration": "Combat",
