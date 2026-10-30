@@ -2,7 +2,7 @@
 
 [**Play Online →**](https://intrepion.github.io/)
 
-A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **110 hosted games** and **17 source-only game repositories**. Search by title, inspiration, repository, or edition; filter by category; sort; or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
+A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **111 hosted games** and **17 source-only game repositories**. Search by title, inspiration, repository, or edition; filter by category; sort; or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
 
 ## Develop and verify
 
@@ -17,13 +17,13 @@ npm run build
 npm run preview
 ```
 
-`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 110 game cards remain available without JavaScript; JavaScript adds local search, category filters, sorting, and random selection.
+`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 111 game cards remain available without JavaScript; JavaScript adds local search, category filters, sorting, and random selection.
 
 ## Maintain the collection
 
 Edit `src/data/games.json`. Each record contains the actual published title, inspiration, category, edition, repository URL, optional `play` URL, and verification date/evidence. Keep one entry per repository, including independently built editions of the same inspiration. Do not infer playability from a repository name or a successful build alone.
 
-The initial reconciliation used the October 25–26, 2026 hosted-game manifest (109 previously verified games), its companion hosted-games inventory, and all current public game-kata repositories/Pages metadata. All 110 current hosted entry points returned HTTP 200 on October 26. Lexi Conquest adds the 110th entry; its title was read from the live site (the repository description still used its former name). Blockbound’s prior gameplay evidence includes the user’s confirmation. Existing gameplay verification was reused; this gallery migration does not assert a new complete gameplay test of each game.
+The initial reconciliation used the October 25–26, 2026 hosted-game manifest (109 previously verified games), its companion hosted-games inventory, and all current public game-kata repositories/Pages metadata. All 110 current hosted entry points returned HTTP 200 on October 26. Common Thread adds the 111th entry, verified with a live practice solve on October 30. Lexi Conquest added the 110th entry; its title was read from the live site (the repository description still used its former name). Blockbound’s prior gameplay evidence includes the user’s confirmation. Existing gameplay verification was reused; this gallery migration does not assert a new complete gameplay test of each game.
 
 To add a playable entry, confirm its public Pages deployment and rendered game, use the current title, test an ordinary gameplay action, and record evidence. Set `play` and `verified` to `null` for projects without a verified hosted game. They appear only in the workbench. Todo applications and unrelated non-game kata repositories are outside this collection. Update count assertions, page metadata, featured selections if appropriate, and the catalog date when changing the inventory. Run checks and test search, filters, empty results, keyboard navigation, and mobile layout before publishing. Original category artwork is decorative and does not claim to be a game screenshot.
 

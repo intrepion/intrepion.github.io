@@ -539,6 +539,17 @@
     "evidence": "Current Pages metadata and HTTP 200"
   },
   {
+    "id": "kata-inspired-by-connections-codex-dot",
+    "title": "Common Thread",
+    "inspiration": "Connections",
+    "category": "Puzzles & playthings",
+    "repo": "https://github.com/intrepion/kata-inspired-by-connections-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-connections-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-30",
+    "evidence": "Pages deployment for 36a6b16; live practice group solved"
+  },
+  {
     "id": "kata-animal-crossing-clone-astra-6-ultra",
     "title": "Little Isle",
     "inspiration": "Animal Crossing",
