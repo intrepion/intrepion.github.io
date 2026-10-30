@@ -11,6 +11,14 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>
+      (() => {
+        let choice = null;
+        try { choice = localStorage.getItem('kata-arcade-theme'); } catch (_) {}
+        const dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A collection of 111 playable browser game experiments by intrepion. Find a puzzle, explore a little world, or try something unexpected." />
     <meta name="theme-color" content="#183e37" />
@@ -26,7 +34,7 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
     <a class="skip-link" href="#collection">Skip to games</a>
     <header class="site-header wrap">
       <a class="brand" href="/" aria-label="intrepion, Kata Arcade home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>intrepion<span class="brand-divider">/</span><span class="brand-label">the kata arcade</span></a>
-      <nav aria-label="Main navigation"><a href="#collection">The collection</a><a href="https://github.com/intrepion" class="github-link">GitHub <span aria-hidden="true">↗</span></a></nav>
+      <nav aria-label="Main navigation"><a href="#collection">The collection</a><a href="https://github.com/intrepion" class="github-link">GitHub <span aria-hidden="true">↗</span></a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button></nav>
     </header>
     <main>
       <section class="hero wrap" aria-labelledby="hero-title">
@@ -70,6 +78,25 @@ const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm
     </main>
     <footer class="wrap"><a class="footer-brand" href="/">intrepion / the kata arcade</a><p>Made for the joy of figuring it out.</p><a href="#hero-title">Back to top ↑</a><p class="legal">Independent learning projects. Referenced game names belong to their respective owners; no affiliation or endorsement. Gallery artwork is original. Catalog checked October 26, 2026.</p></footer>
     <script>
+      const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle')!;
+      const preference = window.matchMedia('(prefers-color-scheme: dark)');
+      let explicitTheme: string | null = null;
+      try { explicitTheme = localStorage.getItem('kata-arcade-theme'); } catch (_) {}
+      if (explicitTheme !== 'dark' && explicitTheme !== 'light') explicitTheme = null;
+      function setTheme(theme: string) {
+        const dark = theme === 'dark';
+        document.documentElement.dataset.theme = theme;
+        themeToggle.setAttribute('aria-pressed', String(dark));
+        themeToggle.querySelector<HTMLElement>('[aria-hidden]')!.textContent = dark ? '☀' : '☾';
+      }
+      setTheme(document.documentElement.dataset.theme || (preference.matches ? 'dark' : 'light'));
+      themeToggle.hidden = false;
+      themeToggle.addEventListener('click', () => {
+        explicitTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(explicitTheme);
+        try { localStorage.setItem('kata-arcade-theme', explicitTheme); } catch (_) {}
+      });
+      preference.addEventListener('change', event => { if (!explicitTheme) setTheme(event.matches ? 'dark' : 'light'); });
       const cards = Array.from(document.querySelectorAll<HTMLElement>('.game-card'));
       const search = document.querySelector<HTMLInputElement>('#search')!;
       const sort = document.querySelector<HTMLSelectElement>('#sort')!;

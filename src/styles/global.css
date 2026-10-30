@@ -7,3 +7,33 @@
 
 /* Decorative SVG motifs have no semantic text content. */
 .featured-symbol{width:140px;height:110px}@media(max-width:800px){.featured-symbol{width:110px;height:95px}}
+
+/* The switch stays visible and announces its on/off state to assistive technology. */
+.site-header nav{align-items:center}.theme-toggle{display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:7px 11px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font-size:11px;font-weight:700;white-space:nowrap}.theme-toggle:hover{background:#e8edda}.theme-toggle [aria-hidden]{font-size:17px;line-height:1}
+:root[data-theme=dark]{color-scheme:dark;color:#e9f1e5;background:#101b18;--ink:#e9f1e5;--line:#40534b;--muted:#bccdc0;--lime:#def58a}
+[data-theme=dark] .brand-divider{color:#a8b8aa}
+[data-theme=dark] h1 em{color:#c7df9a}
+[data-theme=dark] .status-dot{background:#bce785}
+[data-theme=dark] .primary,[data-theme=dark] .filters button[aria-pressed=true]{background:#d5ee9e;border-color:#d5ee9e;color:#14241a}
+[data-theme=dark] .primary:hover,[data-theme=dark] .filters button[aria-pressed=true]:hover{background:#e9ffb8}
+[data-theme=dark] .button:hover,[data-theme=dark] .theme-toggle:hover{background:#344b3d;color:#f3f8ef}
+[data-theme=dark] .primary:hover{background:#e9ffb8;color:#14241a}
+[data-theme=dark] .hero-art{background:#25392e;border-color:#4d6150;color:#e9f1e5}
+[data-theme=dark] .art-grid{background-image:linear-gradient(#e9f1e514 1px,transparent 1px),linear-gradient(90deg,#e9f1e514 1px,transparent 1px)}
+[data-theme=dark] .orbit{border-color:#78957c}
+[data-theme=dark] .art-plus{color:#b3d2ad}
+[data-theme=dark] .featured{border-color:#4b5e51}
+[data-theme=dark] .featured-0{background:#2d4230;color:#edf5e8}
+[data-theme=dark] .featured-1{background:#234d40;color:#f3f5e9}
+[data-theme=dark] .featured-2{background:#51382e;color:#fff0df}
+[data-theme=dark] .collection h2 span{color:#b9dc80}
+[data-theme=dark] .search-field,[data-theme=dark] .game-card{background:#1d2c25}
+[data-theme=dark] input::placeholder{color:#bccdc0}
+[data-theme=dark] .filters button{color:#dce9db}
+[data-theme=dark] .card-footer{border-color:var(--line)}
+[data-theme=dark] .play-link{background:#d8e9c0;color:#183124}
+[data-theme=dark] .play-link:hover{background:#eaffc8}
+[data-theme=dark] .skip-link{background:#e9f1e5;color:#101b18}
+[data-theme=dark] :is(button,a,input,select,summary):focus-visible{outline-color:#f5c679}
+[data-theme=dark] .noscript{color:#14241a}
+@media(max-width:540px){.site-header nav{gap:10px}.theme-toggle{min-width:42px;justify-content:center;padding:8px}.theme-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
