@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-pong-codex-dot",
+    "title": "Rallylight",
+    "inspiration": "Pong",
+    "category": "Rhythm & arcade",
+    "repo": "https://github.com/intrepion/kata-inspired-by-pong-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-pong-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-30",
+    "evidence": "Verified local gameplay and current Pages deployment"
+  },
+  {
     "id": "kata-4d-toys-clone-codex-openai-gpt-5.5-light",
     "title": "4D Toybox",
     "inspiration": "4D Toys",
