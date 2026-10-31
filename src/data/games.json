@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-peggle-2-codex-dot",
+    "title": "Peglight Party",
+    "inspiration": "Peggle 2",
+    "category": "Rhythm & arcade",
+    "repo": "https://github.com/intrepion/kata-inspired-by-peggle-2-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-peggle-2-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-31",
+    "evidence": "Local keyboard shot and physics tests; Pages deployment"
+  },
+  {
     "id": "kata-inspired-by-mario-kart-8-codex-dot",
     "title": "Sunset Circuit",
     "inspiration": "Mario Kart 8",
@@ -167,7 +178,7 @@
   {
     "id": "kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "title": "Briarbrook League",
-    "inspiration": "Pokémon",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "play": "https://intrepion.github.io/kata-pokemon-clone-codex-openai-gpt-5.5-light/",
@@ -200,7 +211,7 @@
   {
     "id": "kata-inspired-by-rubiks-cube-codex-dot",
     "title": "Chromatic",
-    "inspiration": "Rubik’s Cube",
+    "inspiration": "Rubik\u2019s Cube",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-rubiks-cube-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-rubiks-cube-codex-dot/",
@@ -750,7 +761,7 @@
   {
     "id": "kata-pokemon-clone-gpt-6-luna-extra-high",
     "title": "Mosswood Field Club",
-    "inspiration": "Pokémon",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-gpt-6-luna-extra-high",
     "play": "https://intrepion.github.io/kata-pokemon-clone-gpt-6-luna-extra-high/",
@@ -936,8 +947,8 @@
   },
   {
     "id": "kata-pokemon-clone-astra-6-ultra",
-    "title": "Pokémon Verdant",
-    "inspiration": "Pokémon",
+    "title": "Pok\u00e9mon Verdant",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-astra-6-ultra",
     "play": "https://intrepion.github.io/kata-pokemon-clone-astra-6-ultra/",
@@ -1311,7 +1322,7 @@
   {
     "id": "kata-inspired-by-pokemon-blue-codex-dot",
     "title": "Tidebound",
-    "inspiration": "Pokémon Blue",
+    "inspiration": "Pok\u00e9mon Blue",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-pokemon-blue-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-pokemon-blue-codex-dot/",
