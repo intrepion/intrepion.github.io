@@ -1483,5 +1483,16 @@
     "edition": "GPT-6 Luna",
     "verified": null,
     "evidence": "No current Pages deployment"
+  },
+  {
+    "id": "kata-inspired-by-yokus-island-express-codex-dot",
+    "title": "Lantern Tide",
+    "inspiration": "Yoku's Island Express",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-yokus-island-express-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-yokus-island-express-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-31",
+    "evidence": "Local full gameplay verified; Pages deployment and HTTP 200"
   }
 ]
