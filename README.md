@@ -2,7 +2,7 @@
 
 [**Play Online →**](https://intrepion.github.io/)
 
-A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **117 hosted games** and **17 source-only game repositories**. Search by title, inspiration, repository, or edition; filter by category; sort; or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
+A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **118 hosted games** and **17 source-only game repositories**. Search by title, inspiration, repository, or edition; filter by category; sort; or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
 
 ## Develop and verify
 
@@ -17,7 +17,7 @@ npm run build
 npm run preview
 ```
 
-`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 117 game cards remain available without JavaScript; JavaScript adds local search, category filters, sorting, and random selection.
+`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 118 game cards remain available without JavaScript; JavaScript adds local search, category filters, sorting, and random selection.
 
 ## Maintain the collection
 

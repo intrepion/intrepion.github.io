@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-warioware-smooth-moves-codex-dot",
+    "title": "Wiggle Ritual",
+    "inspiration": "WarioWare: Smooth Moves",
+    "category": "Rhythm & arcade",
+    "repo": "https://github.com/intrepion/kata-inspired-by-warioware-smooth-moves-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-warioware-smooth-moves-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-10-31",
+    "evidence": "Local keyboard and on-screen microgame wins; Pages deployment"
+  },
+  {
     "id": "kata-inspired-by-peggle-2-codex-dot",
     "title": "Peglight Party",
     "inspiration": "Peggle 2",
