@@ -1,159 +1,25 @@
 ---
+import Base from '../layouts/Base.astro';
 import games from '../data/games.json';
-import screenshotData from '../data/screenshots.json';
-const screenshots: Record<string, { file: string; source: string }> = screenshotData;
-import '../styles/global.css';
+import screenshots from '../data/screenshots.json';
+import {genreDetails, slugify} from '../data/genres.mjs';
 const playable = games.filter(game => game.play);
 const sourceOnly = games.filter(game => !game.play);
-const genres = [...new Set(playable.flatMap(game => game.genres))].sort();
-const featured = ['kata-inspired-by-wordle-codex-dot', 'kata-minecraft-clone-gpt-6-luna-extra-high', 'kata-inspired-by-baba-is-you-codex-dot'].map(id => playable.find(game => game.id === id)!);
-// Only aliases that unambiguously name the same original are combined.
-const inspirationAliases: Record<string, string> = {
-  'Diablo 2 Lord Of Destruction': 'Diablo II: Lord of Destruction',
-  'Diablo II Lord Of Destruction': 'Diablo II: Lord of Destruction',
-  'Final Fantasy X': 'Final Fantasy X', 'Final Fantasy 10': 'Final Fantasy X',
-  'The Legend Of Zelda Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
-  'Legend Of Zelda Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
-  'Breath Of The Wild': 'The Legend of Zelda: Breath of the Wild',
-  'The Legend Of Zelda Breath Of The While': 'The Legend of Zelda: Breath of the Wild',
-  'The Oregon Trail': 'The Oregon Trail', 'Oregon Trail': 'The Oregon Trail',
+const genres = Object.keys(genreDetails);
+const images: Record<string, {file: string}> = screenshots;
+const picks: Record<string, string> = {
+  'Action':'kata-grand-theft-auto-astra-6-ultra', 'Adventure':'kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot',
+  'Arcade':'kata-inspired-by-full-tilt-pinball-codex-dot', 'Board & card':'kata-inspired-by-uno-codex-dot',
+  'Party':'kata-inspired-by-pico-park-codex-dot', 'Platformer':'kata-inspired-by-braid-codex-dot',
+  'Puzzle':'kata-inspired-by-baba-is-you-codex-dot', 'Racing & sports':'kata-inspired-by-ssx-3-codex-dot',
+  'Rhythm':'', 'Role-playing':'kata-diablo-clone-astra-6-ultra',
+  'Simulation & creative':'kata-inspired-by-minecraft-codex-dot', 'Strategy':'kata-inspired-by-starcraft-brood-war-codex-dot',
 };
-const groups = [...Map.groupBy(playable, game => inspirationAliases[game.inspiration] || game.inspiration)]
-  .sort(([a], [b]) => a.localeCompare(b))
-  .map(([inspiration, versions]) => ({ inspiration, versions: versions.sort((a, b) => a.title.localeCompare(b.title)) }));
-const symbols: Record<string, string> = { 'Puzzles & playthings': '◈', 'Rhythm & arcade': '↗', 'Worlds & adventures': '✳', 'Strategy & tabletop': '♟', 'Platform & co-op': '⌘' };
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script is:inline>
-      (() => {
-        let choice = null;
-        try { choice = localStorage.getItem('kata-arcade-theme'); } catch (_) {}
-        const dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
-        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-      })();
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A collection of playable browser game experiments by intrepion. Find a puzzle, explore a little world, or try something unexpected." />
-    <meta name="theme-color" content="#183e37" />
-    <meta property="og:title" content="The Kata Arcade — intrepion" />
-    <meta property="og:description" content="Small experiments. Endless ways to play. Explore intrepion’s browser game collection." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://intrepion.github.io/" />
-    <link rel="canonical" href="https://intrepion.github.io/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>The Kata Arcade — intrepion</title>
-  </head>
-  <body>
-    <a class="skip-link" href="#collection">Skip to games</a>
-    <header class="site-header wrap">
-      <a class="brand" href="/" aria-label="intrepion, Kata Arcade home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>intrepion<span class="brand-divider">/</span><span class="brand-label">the kata arcade</span></a>
-      <nav aria-label="Main navigation"><a href="#collection">The collection</a><a href="https://github.com/intrepion" class="github-link">GitHub <span aria-hidden="true">↗</span></a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button></nav>
-    </header>
-    <main>
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> AN INDEPENDENT PLAYGROUND</p>
-          <h1 id="hero-title">Small experiments.<br /><em>Endless play.</em></h1>
-          <p class="hero-description">Familiar ideas, fresh little worlds. A growing collection of browser games, built one coding kata at a time.</p>
-          <div class="hero-actions"><a class="button primary" href="#collection">Find your next game <span aria-hidden="true">↓</span></a><a class="text-link" href={featured[0].play!}>Try Lexi Conquest <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-stats"><span><strong>{playable.length}</strong> playable experiments</span><span><strong>{genres.length}</strong> genres to explore</span><span class="browser-note">Just a browser. Just for fun.</span></div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-grid"></div><span class="art-label">INSERT A LITTLE CURIOSITY</span>
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="tile tile-green"><span>✳</span><small>EXPLORE</small></div>
-          <div class="tile tile-yellow"><span>◈</span><small>DISCOVER</small></div>
-          <div class="tile tile-orange"><span>↗</span><small>ONE MORE TRY</small></div>
-          <span class="art-plus plus-one">+</span><span class="art-plus plus-two">+</span><span class="art-bottom">SIDE QUESTS ENCOURAGED. <span>001 — ∞</span></span>
-        </div>
-      </section>
-      <section class="spotlight wrap" aria-labelledby="spotlight-title">
-        <div class="section-heading"><h2 id="spotlight-title">A good place to start</h2><span class="small-note">THREE LITTLE RABBIT HOLES</span></div>
-        <div class="featured-grid">{featured.map((game, index) => <a class={`featured featured-${index}`} href={game.play!}><span class="featured-number">0{index+1} / START HERE</span><svg class="featured-symbol" aria-hidden="true" focusable="false" viewBox="0 0 140 110"><text x="0" y="90" fill="currentColor">{['Aa', '▦', '✳'][index]}</text></svg><div><p>{['A daily word dispatch', 'A world made of possibility', 'Change the rules. Find a way.'][index]}</p><h3>{game.title} <span aria-hidden="true">↗</span></h3></div></a>)}</div>
-      </section>
-      <section class="collection wrap" id="collection" aria-labelledby="collection-title">
-        <div class="collection-heading"><div><p class="eyebrow">PICK UP & PLAY</p><h2 id="collection-title">The collection<span>.</span></h2><p>Browse by genre or explore the games that inspired each experiment.</p></div><button class="button random-button" id="random" type="button" hidden>Surprise me <span aria-hidden="true">↗</span></button></div>
-        <form class="controls" id="controls" role="search" hidden>
-          <div class="search-field"><span aria-hidden="true">⌕</span><label class="sr-only" for="search">Search games, inspirations, or editions</label><input id="search" type="search" placeholder="Find a game, an inspiration, a little escape…" autocomplete="off" /><button id="clear" type="button" aria-label="Clear search" hidden>×</button></div>
-          <div class="sort-field"><label for="sort">Sort by</label><select id="sort"><option value="az">Inspiration: A–Z</option><option value="za">Inspiration: Z–A</option></select></div>
-        </form>
-        <div class="filters" role="group" aria-label="Filter by genre" id="filters" hidden><button type="button" data-filter="All" aria-pressed="true">All games <span>{playable.length}</span></button>{genres.map(genre => <button type="button" data-filter={genre} aria-pressed="false">{genre} <span>{playable.filter(game => game.genres.includes(genre)).length}</span></button>)}</div>
-        <div class="results-bar"><p id="results" role="status" aria-live="polite" aria-atomic="true">Showing all {playable.length} games</p><span>OPEN A GAME. MAKE A DISCOVERY.</span></div>
-        <div class="game-groups" id="games">{groups.map((group, groupIndex) => <section class="inspiration-group" data-inspiration={group.inspiration} aria-labelledby={`inspiration-${groupIndex}`}>
-          <div class="group-heading"><div><p class="eyebrow">INSPIRED BY</p><h3 id={`inspiration-${groupIndex}`}>{group.inspiration}</h3></div><span class="group-count">{group.versions.length} {group.versions.length === 1 ? 'experiment' : 'experiments'}</span></div>
-          <div class="game-grid">{group.versions.map((game, index) => <article class="game-card" data-title={game.title} data-inspiration={group.inspiration} data-genres={JSON.stringify(game.genres)} data-search={`${game.title} ${game.inspiration} ${group.inspiration} ${game.edition} ${game.id} ${game.genres.join(' ')}`.toLowerCase()}>
-            <div class={`card-art art-${(groupIndex + index) % 6}`} aria-hidden="true">{screenshots[game.id] ? <img src={screenshots[game.id].file} alt="" loading="lazy" width="720" height="450" /> : <><div class="card-grid"></div><span class="art-category">{game.category.split(' & ')[0].toUpperCase()}</span><span class="card-symbol">{symbols[game.category]}</span><span class="art-index">{String(index+1).padStart(3,'0')}</span><i class="art-circle"></i></>}</div>
-            <div class="card-body"><p class="card-edition">{game.edition}</p><h4>{game.title}</h4><p class="inspiration">Inspired by {game.inspiration}</p><p class="card-genres">{game.genres.join(' · ')}</p><div class="card-footer"><a class="source-link" href={game.repo} aria-label={`Source for ${game.title}, ${game.edition}`}>Source <span aria-hidden="true">↗</span></a><a class="play-link" href={game.play!} aria-label={`Play ${game.title}, ${game.edition}`}>Play <span aria-hidden="true">↗</span></a></div></div>
-          </article>)}</div>
-        </section>)}</div>
-        <div class="empty-state" id="empty" hidden><span aria-hidden="true">⌕</span><h3>No games found. A fresh start?</h3><p>Try a different name or reset your filters to explore everything.</p><button type="button" class="button primary" id="reset">Show all games</button></div>
-        <noscript><p class="noscript">All games are available below. Enable JavaScript to search, filter, sort, or pick a random game.</p></noscript>
-      </section>
-      <section class="workshop wrap" aria-labelledby="workshop-title"><details><summary><span><span class="eyebrow">ON THE WORKBENCH</span><span id="workshop-title" class="workshop-title">More experiments, still taking shape <small>{sourceOnly.length} repositories</small></span></span><span class="details-plus" aria-hidden="true">+</span></summary><p>Source code to explore. These projects have no current GitHub Pages deployment and aren’t listed as playable games.</p><ul class="source-list">{sourceOnly.map(game => <li><a href={game.repo}>{game.title} <span aria-hidden="true">↗</span></a><span>{game.edition} · Inspired by {game.inspiration}</span></li>)}</ul></details></section>
-      <section class="about wrap" aria-labelledby="about-title"><p class="eyebrow">PRACTICE, WITH A PLAY BUTTON</p><h2 id="about-title">A kata is a small exercise.<br />This is where they come to play.</h2><p>I’m Oliver, also known as intrepion. This arcade brings my game experiments together: different tools, different approaches, and plenty of curiosity. Choose an inspiration you love, or meet something new.</p><a class="text-link" href="https://github.com/intrepion/intrepion.github.io">Explore the gallery source <span aria-hidden="true">↗</span></a></section>
-    </main>
-    <footer class="wrap"><a class="footer-brand" href="/">intrepion / the kata arcade</a><p>Made for the joy of figuring it out.</p><a href="#hero-title">Back to top ↑</a><p class="legal">Independent learning projects. Referenced game names belong to their respective owners; no affiliation or endorsement. Some cards show gameplay; other artwork is decorative. Catalog updated November 1, 2026.</p></footer>
-    <script>
-      const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle')!;
-      const preference = window.matchMedia('(prefers-color-scheme: dark)');
-      let explicitTheme: string | null = null;
-      try { explicitTheme = localStorage.getItem('kata-arcade-theme'); } catch (_) {}
-      if (explicitTheme !== 'dark' && explicitTheme !== 'light') explicitTheme = null;
-      function setTheme(theme: string) {
-        const dark = theme === 'dark';
-        document.documentElement.dataset.theme = theme;
-        themeToggle.setAttribute('aria-pressed', String(dark));
-        themeToggle.querySelector<HTMLElement>('[aria-hidden]')!.textContent = dark ? '☀' : '☾';
-      }
-      setTheme(document.documentElement.dataset.theme || (preference.matches ? 'dark' : 'light'));
-      themeToggle.hidden = false;
-      themeToggle.addEventListener('click', () => {
-        explicitTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-        setTheme(explicitTheme);
-        try { localStorage.setItem('kata-arcade-theme', explicitTheme); } catch (_) {}
-      });
-      preference.addEventListener('change', event => { if (!explicitTheme) setTheme(event.matches ? 'dark' : 'light'); });
-      const cards = Array.from(document.querySelectorAll<HTMLElement>('.game-card'));
-      const search = document.querySelector<HTMLInputElement>('#search')!;
-      const sort = document.querySelector<HTMLSelectElement>('#sort')!;
-      const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-filter]'));
-      const results = document.querySelector<HTMLElement>('#results')!;
-      const empty = document.querySelector<HTMLElement>('#empty')!;
-      const clear = document.querySelector<HTMLButtonElement>('#clear')!;
-      const grid = document.querySelector<HTMLElement>('#games')!;
-      const groups = Array.from(document.querySelectorAll<HTMLElement>('.inspiration-group'));
-      let activeCategory = 'All';
-      function update() {
-        const words = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-        let count = 0;
-        cards.forEach(card => {
-          const matches = (activeCategory === 'All' || JSON.parse(card.dataset.genres!).includes(activeCategory)) && words.every(word => card.dataset.search!.includes(word));
-          card.hidden = !matches;
-          if (matches) count++;
-        });
-        groups.forEach(group => {
-          const groupCards = Array.from(group.querySelectorAll<HTMLElement>('.game-card'));
-          const visible = groupCards.filter(card => !card.hidden).length;
-          group.hidden = visible === 0;
-          group.querySelector<HTMLElement>('.group-count')!.textContent = `${visible} ${visible === 1 ? 'experiment' : 'experiments'}`;
-        });
-        groups.sort((a, b) => (sort.value === 'za' ? -1 : 1) * a.dataset.inspiration!.localeCompare(b.dataset.inspiration!)).forEach(group => grid.append(group));
-        results.textContent = `Showing ${count} of ${cards.length} games${activeCategory === 'All' ? '' : ` · ${activeCategory}`}`;
-        empty.hidden = count !== 0;
-        clear.hidden = search.value.length === 0;
-        filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === activeCategory)));
-      }
-      document.querySelector<HTMLFormElement>('#controls')!.addEventListener('submit', event => event.preventDefault());
-      search.addEventListener('input', update);
-      sort.addEventListener('change', update);
-      filterButtons.forEach(button => button.addEventListener('click', () => { activeCategory = button.dataset.filter!; update(); }));
-      clear.addEventListener('click', () => { search.value = ''; update(); search.focus(); });
-      document.querySelector('#reset')!.addEventListener('click', () => { search.value = ''; activeCategory = 'All'; sort.value = 'az'; update(); search.focus(); });
-      document.querySelector('#random')!.addEventListener('click', () => { const visible = cards.filter(card => !card.hidden); if (visible.length) window.location.assign(visible[Math.floor(Math.random()*visible.length)].querySelector<HTMLAnchorElement>('.play-link')!.href); });
-      ['controls', 'filters', 'random'].forEach(id => document.getElementById(id)!.hidden = false);
-    </script>
-  </body>
-</html>
+<Base title="The Kata Arcade" description="Browse intrepion’s browser game experiments by genre.">
+<section class="hero wrap"><div class="hero-copy"><p class="eyebrow"><span class="dot"></span> AN INDEPENDENT PLAYGROUND</p><h1>Find your<br /><em>kind of play.</em></h1><p>Little worlds, clever puzzles, and everything in between. Pick a genre and see where curiosity takes you.</p><a class="button button-light" href="#genres">Explore the genres <span aria-hidden="true">↓</span></a><div class="hero-meta"><span><b>{playable.length}</b> playable experiments</span><span><b>{genres.length}</b> ways to play</span></div></div><div class="hero-visual" aria-hidden="true"><div class="hero-grid"></div><span class="hero-stamp">THE KATA ARCADE / EST. WITH CURIOSITY</span><div class="hero-shape shape-one">✳</div><div class="hero-shape shape-two">↗</div><div class="hero-shape shape-three">◈</div><span class="hero-caption">CHOOSE YOUR OWN<br />LITTLE ADVENTURE <b>↗</b></span><span class="hero-index">001 — ∞</span></div></section>
+<section class="genre-section wrap" id="genres"><div class="section-intro"><div><p class="eyebrow">THE COLLECTION / EXPLORE BY GENRE</p><h2>What are you<br /><em>in the mood for?</em></h2></div><p>From quick diversions to worlds worth getting lost in. Games can live in more than one genre, so follow whatever catches your eye.</p></div>
+<div class="genre-grid">{genres.map((genre, index) => { const count = playable.filter(g => g.genres.includes(genre)).length; const pick = picks[genre]; return <a class={`genre-card genre-tone-${index % 6}`} href={`/genres/${slugify(genre)}/`}><div class="genre-art" aria-hidden="true">{pick && images[pick] ? <img src={images[pick].file} alt="" loading="lazy" width="720" height="450" /> : <div class="genre-pattern"><span>♫</span><i>♪</i></div>}<span class="genre-number">{genreDetails[genre][1]} / 12</span><span class="genre-arrow">↗</span></div><div class="genre-card-copy"><div><p>{genreDetails[genre][0]}</p><h3>{genre}</h3></div><span class="genre-count">{count} games</span></div></a>})}</div></section>
+<section class="workshop wrap" aria-labelledby="workshop-title"><details><summary><span><span class="eyebrow">ON THE WORKBENCH</span><span id="workshop-title" class="workshop-title">More experiments, still taking shape <small>{sourceOnly.length} repositories</small></span></span><span aria-hidden="true">+</span></summary><p>Source code to explore. These projects have no current GitHub Pages deployment and aren’t listed as playable games.</p><ul class="source-list">{sourceOnly.map(game => <li><a href={game.repo}>{game.title} ↗</a><span>{game.edition} · Inspired by {game.inspiration}</span></li>)}</ul></details></section>
+<section class="about wrap" id="about"><p class="eyebrow">PRACTICE, WITH A PLAY BUTTON</p><h2>A kata is a small exercise.<br /><em>This is where they come to play.</em></h2><p>I’m Oliver, also known as intrepion. This arcade brings my game experiments together: different tools, different approaches, and plenty of curiosity. Choose an inspiration you love, or meet something new.</p><a href="https://github.com/intrepion/intrepion.github.io">Explore the gallery source ↗</a></section>
+</Base>

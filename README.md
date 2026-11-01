@@ -2,7 +2,7 @@
 
 [**Play Online →**](https://intrepion.github.io/)
 
-A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **125 hosted games** and **17 source-only game repositories**. Search by title, inspiration, repository, or edition; filter by genre; sort; or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
+A responsive Astro gallery of intrepion’s browser game experiments. The catalog currently contains **125 hosted games** and **17 source-only game repositories**. Explore the genre gallery, then search by title, inspiration, repository, or edition within a genre; sort or pick a random visible game. Every card links to its source. Games run at their existing project URLs.
 
 ## Develop and verify
 
@@ -17,7 +17,7 @@ npm run build
 npm run preview
 ```
 
-`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 125 game cards remain available without JavaScript; JavaScript adds local search, genre filters, sorting, and random selection.
+`check` runs Astro’s strict TypeScript diagnostics and catalog validation. Tests enforce catalog integrity and important project URLs. Astro generates a static `dist/` directory. The browser makes no runtime catalog API requests and loads no third-party fonts, images, or game iframes. All 125 games remain available across their genre pages without JavaScript; JavaScript adds search, sorting, theme preference, and random selection within each genre.
 
 ## Maintain the collection
 
@@ -25,7 +25,7 @@ Edit `src/data/games.json`. Each record contains the actual published title, ins
 
 The initial reconciliation used the October 25–26, 2026 hosted-game manifest (109 previously verified games), its companion hosted-games inventory, and all current public game-kata repositories/Pages metadata. All 110 current hosted entry points returned HTTP 200 on October 26. Puddle Trouble adds the 112th entry, with its Pages deployment and automated objective flow verified on October 30. Common Thread adds the 111th entry, verified with a live practice solve on October 30. Lexi Conquest added the 110th entry; its title was read from the live site (the repository description still used its former name). Blockbound’s prior gameplay evidence includes the user’s confirmation. Existing gameplay verification was reused; this gallery migration does not assert a new complete gameplay test of each game.
 
-To add a playable entry, confirm its public Pages deployment and rendered game, use the current title, test an ordinary gameplay action, and record evidence. Set `play` and `verified` to `null` for projects without a verified hosted game. They appear only in the workbench. Todo applications and unrelated non-game kata repositories are outside this collection. Update count assertions, page metadata, featured selections if appropriate, and the catalog date when changing the inventory. Run checks and test search, filters, empty results, keyboard navigation, and mobile layout before publishing. Genres are descriptive and may overlap; assign at least one to every entry. Currently 42 of the 125 playable games have screenshots; the other cards use decorative category artwork. `src/data/screenshots.json` records each image's original path in the corresponding game repository. These captures were inspected for gameplay content and optimized to 720 × 450 JPEGs, with padding where needed to preserve their aspect ratio. Verify both the game and capture before adding more images.
+To add a playable entry, confirm its public Pages deployment and rendered game, use the current title, test an ordinary gameplay action, and record evidence. Set `play` and `verified` to `null` for projects without a verified hosted game. They appear only in the workbench. Todo applications and unrelated non-game kata repositories are outside this collection. Update count assertions, page metadata, featured selections if appropriate, and the catalog date when changing the inventory. Run checks and test genre routes, search, empty results, keyboard navigation, and mobile layout before publishing. Genres are descriptive and may overlap; assign at least one to every entry. Currently 42 of the 125 playable games have screenshots; the other cards use decorative category artwork. `src/data/screenshots.json` records each image's original path in the corresponding game repository. These captures were inspected for gameplay content and optimized to 720 × 450 JPEGs, with padding where needed to preserve their aspect ratio. Verify both the game and capture before adding more images.
 
 
 ## Publish to GitHub Pages

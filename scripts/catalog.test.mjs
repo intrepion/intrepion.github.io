@@ -40,3 +40,13 @@ test('screenshots point to unique local assets for playable games', async () => 
   }
   assert.equal(files.size, 42);
 });
+
+test('every playable genre has a unique route and every route has games', async () => {
+  const { genreDetails, slugify } = await import('../src/data/genres.mjs');
+  const genres = Object.keys(genreDetails);
+  assert.equal(new Set(genres.map(slugify)).size, genres.length);
+  const playable = games.filter(game => game.play);
+  for (const game of playable) for (const genre of game.genres) assert.ok(genreDetails[genre], `Missing route for ${genre}`);
+  for (const genre of genres) assert.ok(playable.some(game => game.genres.includes(genre)), `Empty genre: ${genre}`);
+  assert.equal(slugify('Board & card'), 'board-and-card');
+});
