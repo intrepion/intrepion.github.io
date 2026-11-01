@@ -1538,5 +1538,16 @@
     "edition": "Codex Dot",
     "verified": "2026-10-31",
     "evidence": "Local full gameplay verified; Pages deployment and HTTP 200"
+  },
+  {
+    "id": "kata-inspired-by-skyjo-codex-dot",
+    "title": "Low Tide",
+    "inspiration": "Skyjo",
+    "category": "Strategy & tabletop",
+    "repo": "https://github.com/intrepion/kata-inspired-by-skyjo-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-skyjo-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-11-01",
+    "evidence": "Local HTTP gameplay checked; Pages build and HTTP 200"
   }
 ]
