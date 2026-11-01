@@ -1,5 +1,16 @@
 [
   {
+    "id": "kata-inspired-by-super-mario-maker-codex-dot",
+    "title": "Sproutworks — Course Foundry",
+    "inspiration": "Super Mario Maker",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-super-mario-maker-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-super-mario-maker-codex-dot/",
+    "edition": "Codex Dot · Early approximation",
+    "verified": "2026-11-01",
+    "evidence": "Local browser editor, keyboard smoke test and automated rules and simulation tests"
+  },
+  {
     "id": "kata-inspired-by-binding-of-issac-rebirth-codex-dot",
     "title": "Below the Floorboards",
     "inspiration": "The Binding of Isaac: Rebirth",
