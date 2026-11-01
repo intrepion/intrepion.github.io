@@ -6,6 +6,8 @@ export function validate(catalog) {
   const urls = new Set();
   for (const game of catalog) {
     assert.ok(game.title && game.inspiration && game.category && game.edition, 'Each game needs descriptive metadata');
+    assert.ok(Array.isArray(game.genres) && game.genres.length > 0 && game.genres.every(genre => typeof genre === 'string' && genre.trim()), 'Each game needs genres');
+    assert.equal(new Set(game.genres).size, game.genres.length, 'Genres must be unique');
     assert.ok(!ids.has(game.id), `Duplicate repository: ${game.id}`);
     ids.add(game.id);
     assert.equal(game.repo, `https://github.com/intrepion/${game.id}`);

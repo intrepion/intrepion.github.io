@@ -18,3 +18,25 @@ test('rejects duplicate games and unverified or misplaced play links', () => {
   assert.throws(() => validate([{ ...hosted, play: 'https://intrepion.github.io/' }]));
   assert.throws(() => validate([{ ...hosted, verified: null }]));
 });
+
+test('genres cover the catalog and support overlapping games', () => {
+  assert.ok(games.every(game => game.genres.length));
+  const braid = games.find(game => game.inspiration === 'Braid');
+  assert.ok(braid.genres.includes('Puzzle') && braid.genres.includes('Platformer'));
+  assert.throws(() => validate([{ ...games[0], genres: [] }]));
+  assert.throws(() => validate([{ ...games[0], genres: ['Puzzle', 'Puzzle'] }]));
+});
+
+test('screenshots point to unique local assets for playable games', async () => {
+  const { readFile, stat } = await import('node:fs/promises');
+  const screenshots = JSON.parse(await readFile(new URL('../src/data/screenshots.json', import.meta.url), 'utf8'));
+  const files = new Set();
+  for (const [id, image] of Object.entries(screenshots)) {
+    assert.ok(games.find(game => game.id === id && game.play), `${id} must be playable`);
+    assert.match(image.file, /^\/screenshots\/[a-z0-9-]+\.jpg$/);
+    assert.ok(image.source && !files.has(image.file));
+    files.add(image.file);
+    assert.ok((await stat(new URL(`../public${image.file}`, import.meta.url))).size > 0);
+  }
+  assert.equal(files.size, 42);
+});

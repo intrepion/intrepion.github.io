@@ -39,3 +39,5 @@
 @media(max-width:540px){.site-header nav{gap:10px}.theme-toggle{min-width:42px;justify-content:center;padding:8px}.theme-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
 
 .game-groups{display:grid;gap:46px}.group-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}.group-heading .eyebrow{margin:0 0 5px;color:var(--muted);font-size:9px}.group-heading h3{font-size:25px;font-weight:500;letter-spacing:-.7px;line-height:1.2;margin:0}.group-count{font-size:11px;color:var(--muted);white-space:nowrap}.inspiration-group .game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:800px){.inspiration-group .game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){.game-groups{gap:36px}.group-heading h3{font-size:22px}.inspiration-group .game-grid{grid-template-columns:1fr}}
+
+.card-art img{width:100%;height:100%;object-fit:contain;display:block;background:#183e37}.card-genres{font-size:10px;color:var(--muted);line-height:1.5;margin:0 0 14px}

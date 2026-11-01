@@ -8,7 +8,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-super-mario-maker-codex-dot/",
     "edition": "Codex Dot · Early approximation",
     "verified": "2026-11-01",
-    "evidence": "Local browser editor, keyboard smoke test and automated rules and simulation tests"
+    "evidence": "Local browser editor, keyboard smoke test and automated rules and simulation tests",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-inspired-by-binding-of-issac-rebirth-codex-dot",
@@ -17,9 +20,12 @@
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-binding-of-issac-rebirth-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-binding-of-issac-rebirth-codex-dot/",
-    "edition": "Codex Dot \u00b7 Early approximation",
+    "edition": "Codex Dot · Early approximation",
     "verified": "2026-11-01",
-    "evidence": "Local keyboard smoke test and fixture-assisted systems tests; deployed game launch verified"
+    "evidence": "Local keyboard smoke test and fixture-assisted systems tests; deployed game launch verified",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-inspired-by-marble-madness-codex-dot",
@@ -30,7 +36,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-marble-madness-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-11-01",
-    "evidence": "Local full six-course run and phone-size pointer controls; Pages deployment verified"
+    "evidence": "Local full six-course run and phone-size pointer controls; Pages deployment verified",
+    "genres": [
+      "Arcade"
+    ]
   },
   {
     "id": "kata-inspired-by-excitebike-codex-dot",
@@ -41,7 +50,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-excitebike-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-31",
-    "evidence": "Local complete race and touch controls; deployed files match locally tested game"
+    "evidence": "Local complete race and touch controls; deployed files match locally tested game",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-inspired-by-just-dance-codex-dot",
@@ -52,7 +64,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-just-dance-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-31",
-    "evidence": "Live Pages launch and timed keyboard score; local full track and motion simulation tests"
+    "evidence": "Live Pages launch and timed keyboard score; local full track and motion simulation tests",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-inspired-by-warioware-smooth-moves-codex-dot",
@@ -63,7 +78,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-warioware-smooth-moves-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-31",
-    "evidence": "Local keyboard and on-screen microgame wins; Pages deployment"
+    "evidence": "Local keyboard and on-screen microgame wins; Pages deployment",
+    "genres": [
+      "Arcade",
+      "Party"
+    ]
   },
   {
     "id": "kata-inspired-by-peggle-2-codex-dot",
@@ -74,7 +93,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-peggle-2-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-31",
-    "evidence": "Local keyboard shot and physics tests; Pages deployment"
+    "evidence": "Local keyboard shot and physics tests; Pages deployment",
+    "genres": [
+      "Arcade"
+    ]
   },
   {
     "id": "kata-inspired-by-mario-kart-8-codex-dot",
@@ -85,7 +107,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-mario-kart-8-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Logic smoke test and Pages deployment"
+    "evidence": "Logic smoke test and Pages deployment",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-inspired-by-combat-codex-dot",
@@ -96,7 +121,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-combat-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Verified live launch, controls, and Pages deployment"
+    "evidence": "Verified live launch, controls, and Pages deployment",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-inspired-by-pong-codex-dot",
@@ -107,7 +135,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-pong-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Verified local gameplay and current Pages deployment"
+    "evidence": "Verified local gameplay and current Pages deployment",
+    "genres": [
+      "Arcade"
+    ]
   },
   {
     "id": "kata-4d-toys-clone-codex-openai-gpt-5.5-light",
@@ -118,7 +149,10 @@
     "play": "https://intrepion.github.io/kata-4d-toys-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-4d-toys-clone-astra-6-ultra",
@@ -129,7 +163,10 @@
     "play": "https://intrepion.github.io/kata-4d-toys-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-ssx-3-codex-dot",
@@ -140,7 +177,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-ssx-3-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-diablo-2-lord-of-destruction-clone-codex-openai-gpt-5.5-light",
@@ -151,7 +191,11 @@
     "play": "https://intrepion.github.io/kata-diablo-2-lord-of-destruction-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-diablo-2-clone-gpt-6-luna-extra-high-",
@@ -162,7 +206,11 @@
     "play": "https://intrepion.github.io/kata-diablo-2-clone-gpt-6-luna-extra-high-/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-diablo-clone-astra-6-ultra",
@@ -173,7 +221,11 @@
     "play": "https://intrepion.github.io/kata-diablo-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot",
@@ -184,7 +236,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-inspired-by-baba-is-you-codex-dot",
@@ -195,7 +250,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-baba-is-you-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-minecraft-clone-gpt-6-luna-extra-high",
@@ -206,7 +264,10 @@
     "play": "https://intrepion.github.io/kata-minecraft-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-minecraft-clone-astra-6-ultra",
@@ -217,7 +278,10 @@
     "play": "https://intrepion.github.io/kata-minecraft-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-candy-crush-codex-dot",
@@ -228,7 +292,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-factorio-codex-dot",
@@ -239,18 +306,25 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "title": "Briarbrook League",
-    "inspiration": "Pok\u00e9mon",
+    "inspiration": "Pokémon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "play": "https://intrepion.github.io/kata-pokemon-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-worms-armageddon-codex-dot",
@@ -261,7 +335,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-worms-armageddon-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy"
+    ]
   },
   {
     "id": "kata-inspired-by-california-games-codex-dot",
@@ -272,18 +349,24 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-rubiks-cube-codex-dot",
     "title": "Chromatic",
-    "inspiration": "Rubik\u2019s Cube",
+    "inspiration": "Rubik’s Cube",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-rubiks-cube-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-rubiks-cube-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-starcraft-brood-war-codex-dot",
@@ -294,7 +377,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-starcraft-brood-war-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy"
+    ]
   },
   {
     "id": "kata-inspired-by-road-rash-2-codex-dot",
@@ -305,7 +391,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot",
@@ -316,7 +405,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-chips-challenge-clone-codex-openai-gpt-5.5-light",
@@ -327,7 +420,10 @@
     "play": "https://intrepion.github.io/kata-chips-challenge-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-the-incredible-machine-clone-codex-openai-gpt-5.5-light",
@@ -338,7 +434,10 @@
     "play": "https://intrepion.github.io/kata-the-incredible-machine-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-super-mario-64-codex-dot",
@@ -349,7 +448,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-cookie-clicker-clone-gpt-6-luna-extra-high",
@@ -360,7 +462,10 @@
     "play": "https://intrepion.github.io/kata-cookie-clicker-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-cookie-clicker-clone-codex-openai-gpt-5.5-light",
@@ -371,7 +476,10 @@
     "play": "https://intrepion.github.io/kata-cookie-clicker-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-the-incredible-machine-codex-dot",
@@ -382,7 +490,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-incredible-machine-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-human-resource-machine-codex-dot",
@@ -393,7 +504,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-animal-crossing-new-horizons-codex-dot",
@@ -404,7 +518,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-animal-crossing-new-horizons-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-4d-toys-clone-gpt-5.6-sol-light",
@@ -415,7 +532,10 @@
     "play": "https://intrepion.github.io/kata-4d-toys-clone-gpt-5.6-sol-light/",
     "edition": "GPT-5.6 Sol",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-4d-toys-codex-dot",
@@ -426,7 +546,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-4d-toys-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-minesweeper-codex-dot",
@@ -437,7 +560,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-minesweeper-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-filipino-mahjongg-game-codex-openai-gpt-5.5-light",
@@ -448,7 +574,10 @@
     "play": null,
     "edition": "GPT-5.5 Light",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-4d-toys-clone-gpt-6-luna-extra-high",
@@ -459,7 +588,10 @@
     "play": "https://intrepion.github.io/kata-4d-toys-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-final-fantasy-x-codex-dot",
@@ -470,7 +602,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-final-fantasy-x-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-go-game-codex-openai-gpt-5.5-light",
@@ -481,7 +617,11 @@
     "play": "https://intrepion.github.io/kata-go-game-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy",
+      "Board & card"
+    ]
   },
   {
     "id": "kata-animal-crossing-new-horizons-clone-codex-openai-gpt-5.5-light",
@@ -492,7 +632,10 @@
     "play": "https://intrepion.github.io/kata-animal-crossing-new-horizons-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-the-sims-4-codex-dot",
@@ -503,7 +646,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-minecraft-codex-dot",
@@ -514,7 +660,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-minecraft-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-minesweeper-clone-gpt-6-luna-extra-high",
@@ -525,7 +674,10 @@
     "play": "https://intrepion.github.io/kata-minesweeper-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-pico-park-clone-gpt-6-luna-extra-high",
@@ -536,7 +688,11 @@
     "play": "https://intrepion.github.io/kata-pico-park-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer",
+      "Party"
+    ]
   },
   {
     "id": "kata-klondike-game-codex-openai-gpt-5.5-light",
@@ -547,7 +703,10 @@
     "play": "https://intrepion.github.io/kata-klondike-game-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-slay-the-spire-codex-dot",
@@ -558,7 +717,11 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Strategy",
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-everyday-genius-squarelogic-codex-dot",
@@ -569,7 +732,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-everyday-genius-squarelogic-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-cookie-clicker-codex-dot",
@@ -580,7 +746,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-cookie-clicker-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-super-mario-bros-3-codex-dot",
@@ -591,7 +760,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-super-mario-bros-3-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-inspired-by-chips-challenge-codex-dot",
@@ -602,7 +774,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-chips-challenge-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-plants-vs-zombies-codex-dot",
@@ -613,7 +788,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-plants-vs-zombies-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy"
+    ]
   },
   {
     "id": "kata-inspired-by-fire-emblem-awakening-codex-dot",
@@ -624,7 +802,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-fire-emblem-awakening-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-secret-of-mana-codex-dot",
@@ -635,7 +817,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-secret-of-mana-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-wordle-codex-dot",
@@ -646,7 +832,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-wordle-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Current Pages metadata and HTTP 200"
+    "evidence": "Current Pages metadata and HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-connections-codex-dot",
@@ -657,7 +846,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-connections-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Pages deployment for 36a6b16; live practice group solved"
+    "evidence": "Pages deployment for 36a6b16; live practice group solved",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-untitled-goose-game-codex-dot",
@@ -668,7 +860,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-untitled-goose-game-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Pages deployment for c2e957d; live entry point returned HTTP 200; automated objective flow passed"
+    "evidence": "Pages deployment for c2e957d; live entry point returned HTTP 200; automated objective flow passed",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-animal-crossing-clone-astra-6-ultra",
@@ -679,7 +874,10 @@
     "play": "https://intrepion.github.io/kata-animal-crossing-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-rube-goldberg-game-gpt-6-luna-extra-high",
@@ -690,7 +888,10 @@
     "play": "https://intrepion.github.io/kata-rube-goldberg-game-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-number-munchers-codex-dot",
@@ -701,7 +902,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-rhythm-nation-codex-dot",
@@ -712,7 +916,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-rhythm-nation-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-meccha-chameleon-clone-astra-6-ultra",
@@ -723,7 +930,10 @@
     "play": "https://intrepion.github.io/kata-meccha-chameleon-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-meccha-chameleon-clone-codex-openai-gpt-5.5-light",
@@ -734,7 +944,10 @@
     "play": "https://intrepion.github.io/kata-meccha-chameleon-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-meccha-chameleon-clone-gpt-6-luna-extra-high",
@@ -745,7 +958,10 @@
     "play": "https://intrepion.github.io/kata-meccha-chameleon-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer"
+    ]
   },
   {
     "id": "kata-filipino-mahjongg-astra-6-ultra",
@@ -756,7 +972,10 @@
     "play": "https://intrepion.github.io/kata-filipino-mahjongg-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-comet-busters-clone-codex-openai-gpt-5.5-light",
@@ -767,7 +986,10 @@
     "play": "https://intrepion.github.io/kata-comet-busters-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-inspired-by-full-tilt-pinball-codex-dot",
@@ -778,7 +1000,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-full-tilt-pinball-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Arcade"
+    ]
   },
   {
     "id": "kata-minecraft-clone-codex-openai-gpt-5.5-light",
@@ -789,7 +1014,10 @@
     "play": null,
     "edition": "GPT-5.5 Light",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-minesweeper-clone-codex-openai-gpt-5.5-light",
@@ -800,7 +1028,10 @@
     "play": "https://intrepion.github.io/kata-minesweeper-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-lemmings-codex-dot",
@@ -811,7 +1042,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-lemmings-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-animal-crossing-clone-gpt-6-luna-extra-high",
@@ -822,18 +1056,25 @@
     "play": "https://intrepion.github.io/kata-animal-crossing-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-pokemon-clone-gpt-6-luna-extra-high",
     "title": "Mosswood Field Club",
-    "inspiration": "Pok\u00e9mon",
+    "inspiration": "Pokémon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-gpt-6-luna-extra-high",
     "play": "https://intrepion.github.io/kata-pokemon-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-beat-saber-clone-gpt-6-luna-extra-high",
@@ -844,7 +1085,10 @@
     "play": "https://intrepion.github.io/kata-beat-saber-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-grand-theft-auto-vice-city-clone-codex-openai-gpt-5.5-light-",
@@ -855,7 +1099,10 @@
     "play": "https://intrepion.github.io/kata-grand-theft-auto-vice-city-clone-codex-openai-gpt-5.5-light-/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-inspired-by-grand-theft-auto-vice-city-codex-dot",
@@ -866,7 +1113,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-grand-theft-auto-vice-city-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-grand-theft-auto-vice-city-clone-gpt-6-luna-extra-high",
@@ -877,7 +1127,10 @@
     "play": "https://intrepion.github.io/kata-grand-theft-auto-vice-city-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-beat-saber-clone-codex-openai-gpt-5.5-light",
@@ -888,7 +1141,10 @@
     "play": "https://intrepion.github.io/kata-beat-saber-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-dance-dance-revolution-clone-codex-openai-gpt-5.5-light",
@@ -899,7 +1155,10 @@
     "play": "https://intrepion.github.io/kata-dance-dance-revolution-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-sudoku-game-codex-openai-gpt-5.5-light",
@@ -910,7 +1169,10 @@
     "play": "https://intrepion.github.io/kata-sudoku-game-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-rube-goldberg-puzzle-game-astra-6-ultra",
@@ -921,7 +1183,10 @@
     "play": "https://intrepion.github.io/kata-rube-goldberg-puzzle-game-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-theme-hospital-codex-dot",
@@ -932,7 +1197,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-theme-hospital-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-portal-clone-astra-6-ultra",
@@ -943,7 +1211,10 @@
     "play": "https://intrepion.github.io/kata-portal-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-portal-codex-dot",
@@ -954,7 +1225,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-portal-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-filipino-mahjongg-game-gpt-6-luna-extra-high-",
@@ -965,7 +1239,10 @@
     "play": "https://intrepion.github.io/kata-filipino-mahjongg-game-gpt-6-luna-extra-high-/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-rhythm-heaven-clone-gpt-6-luna-extra-high",
@@ -976,7 +1253,10 @@
     "play": "https://intrepion.github.io/kata-rhythm-heaven-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-pico-park-clone-astra-6-ultra",
@@ -987,7 +1267,11 @@
     "play": "https://intrepion.github.io/kata-pico-park-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer",
+      "Party"
+    ]
   },
   {
     "id": "kata-pico-park-clone-codex-openai-gpt-5.5-light",
@@ -998,7 +1282,11 @@
     "play": "https://intrepion.github.io/kata-pico-park-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer",
+      "Party"
+    ]
   },
   {
     "id": "kata-inspired-by-tiny-toon-adventures-cartoon-workshop-codex-dot",
@@ -1009,18 +1297,25 @@
     "play": "https://intrepion.github.io/kata-inspired-by-tiny-toon-adventures-cartoon-workshop-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-pokemon-clone-astra-6-ultra",
-    "title": "Pok\u00e9mon Verdant",
-    "inspiration": "Pok\u00e9mon",
+    "title": "Pokémon Verdant",
+    "inspiration": "Pokémon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-astra-6-ultra",
     "play": "https://intrepion.github.io/kata-pokemon-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-mario-paint-codex-dot",
@@ -1031,7 +1326,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-portal-clone-codex-openai-gpt-5.5-light",
@@ -1042,7 +1340,10 @@
     "play": null,
     "edition": "GPT-5.5 Light",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-skifree-clone-gpt-6-luna-extra-high",
@@ -1053,7 +1354,10 @@
     "play": "https://intrepion.github.io/kata-skifree-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-inspired-by-splendor-codex-dot",
@@ -1064,7 +1368,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-splendor-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-dr-mario-codex-dot",
@@ -1075,7 +1382,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-dr-mario-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-uno-codex-dot",
@@ -1086,7 +1396,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-uno-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-dance-dance-revolution-clone-gpt-6-luna-extra-high",
@@ -1097,7 +1410,10 @@
     "play": "https://intrepion.github.io/kata-dance-dance-revolution-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-chess-game-codex-openai-gpt-5.5-light",
@@ -1108,7 +1424,11 @@
     "play": "https://intrepion.github.io/kata-chess-game-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy",
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-battleship-codex-dot",
@@ -1119,7 +1439,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-battleship-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-skifree-codex-dot",
@@ -1130,7 +1453,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-skifree-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-inspired-by-one-must-fall-2097-codex-dot",
@@ -1141,7 +1467,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-skifree-clone-codex-openai-gpt-5.5-light",
@@ -1152,7 +1481,10 @@
     "play": "https://intrepion.github.io/kata-skifree-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Racing & sports"
+    ]
   },
   {
     "id": "kata-rhythm-game-astra-6-ultra",
@@ -1163,7 +1495,10 @@
     "play": "https://intrepion.github.io/kata-rhythm-game-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-inspired-by-tetris-codex-dot",
@@ -1174,7 +1509,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-tetris-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-30",
-    "evidence": "Verified desktop gameplay and current Pages deployment"
+    "evidence": "Verified desktop gameplay and current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-rhythm-heaven-clone-codex-openai-gpt-5.5-light",
@@ -1185,7 +1523,10 @@
     "play": "https://intrepion.github.io/kata-rhythm-heaven-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-inspired-by-the-witness-codex-dot",
@@ -1196,7 +1537,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-witness-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-sudoku-game-astra-6-ultra",
@@ -1207,7 +1551,10 @@
     "play": "https://intrepion.github.io/kata-sudoku-game-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-sudoku-game-gpt-6-luna-extra-high",
@@ -1218,7 +1565,10 @@
     "play": "https://intrepion.github.io/kata-sudoku-game-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-dance-dance-revolution-codex-dot",
@@ -1229,7 +1579,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-dance-dance-revolution-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Rhythm"
+    ]
   },
   {
     "id": "kata-inspired-by-simcity-2000-codex-dot",
@@ -1240,7 +1593,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-simcity-2000-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Simulation & creative"
+    ]
   },
   {
     "id": "kata-inspired-by-braid-codex-dot",
@@ -1251,7 +1607,12 @@
     "play": "https://intrepion.github.io/kata-inspired-by-braid-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Puzzle",
+      "Adventure",
+      "Platformer"
+    ]
   },
   {
     "id": "kata-inspired-by-castle-of-the-winds-codex-dot",
@@ -1262,7 +1623,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-castle-of-the-winds-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-guess-who-codex-dot",
@@ -1273,7 +1638,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-guess-who-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-the-secret-of-monkey-island-codex-dot",
@@ -1284,7 +1652,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-secret-of-monkey-island-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-inspired-by-prince-of-persia-sands-of-time-codex-dot",
@@ -1295,7 +1666,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-prince-of-persia-sands-of-time-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Platformer"
+    ]
   },
   {
     "id": "kata-inspired-by-the-oregon-trail-codex-dot",
@@ -1306,7 +1681,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-oregon-trail-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-inspired-by-the-elder-scrolls-oblivion-codex-dot",
@@ -1317,7 +1695,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-the-elder-scrolls-oblivion-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-legend-of-zelda-breath-of-the-wild-clone-gpt-6-luna-extra-high",
@@ -1328,7 +1710,10 @@
     "play": "https://intrepion.github.io/kata-legend-of-zelda-breath-of-the-wild-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-castle-of-the-winds-clone-gpt-6-luna-extra-high",
@@ -1339,7 +1724,11 @@
     "play": "https://intrepion.github.io/kata-castle-of-the-winds-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-order-of-the-sinking-star-codex-dot",
@@ -1350,7 +1739,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-pente-codex-dot",
@@ -1361,7 +1753,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-pente-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy",
+      "Board & card"
+    ]
   },
   {
     "id": "kata-final-fantasy-10-clone-astra-6-ultra",
@@ -1372,7 +1768,11 @@
     "play": "https://intrepion.github.io/kata-final-fantasy-10-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-final-fantasy-10-clone-gpt-6-luna-extra-high",
@@ -1383,18 +1783,26 @@
     "play": "https://intrepion.github.io/kata-final-fantasy-10-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-pokemon-blue-codex-dot",
     "title": "Tidebound",
-    "inspiration": "Pok\u00e9mon Blue",
+    "inspiration": "Pokémon Blue",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-pokemon-blue-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-pokemon-blue-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-final-fantasy-10-clone-codex-openai-gpt-5.5-light",
@@ -1405,7 +1813,11 @@
     "play": "https://intrepion.github.io/kata-final-fantasy-10-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-inspired-by-pico-park-codex-dot",
@@ -1416,7 +1828,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-pico-park-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Platformer",
+      "Party"
+    ]
   },
   {
     "id": "kata-oregon-trail-clone-codex-openai-gpt-5.5-light",
@@ -1427,7 +1843,10 @@
     "play": "https://intrepion.github.io/kata-oregon-trail-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-inspired-by-stratego-codex-dot",
@@ -1438,7 +1857,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-stratego-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Strategy",
+      "Board & card"
+    ]
   },
   {
     "id": "kata-inspired-by-fibbage-3-codex-dot",
@@ -1449,7 +1872,10 @@
     "play": null,
     "edition": "Codex Dot",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Party"
+    ]
   },
   {
     "id": "kata-inspired-by-comet-busters-codex-dot",
@@ -1460,7 +1886,10 @@
     "play": "https://intrepion.github.io/kata-inspired-by-comet-busters-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-grand-theft-auto-astra-6-ultra",
@@ -1471,7 +1900,10 @@
     "play": "https://intrepion.github.io/kata-grand-theft-auto-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Action"
+    ]
   },
   {
     "id": "kata-oregon-trail-clone-astra-6-ultra",
@@ -1482,7 +1914,10 @@
     "play": "https://intrepion.github.io/kata-oregon-trail-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-oregon-trail-clone-gpt-6-luna-extra-high",
@@ -1493,7 +1928,10 @@
     "play": "https://intrepion.github.io/kata-oregon-trail-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-breath-of-the-wild-clone-astra-6-ultra",
@@ -1504,7 +1942,10 @@
     "play": "https://intrepion.github.io/kata-breath-of-the-wild-clone-astra-6-ultra/",
     "edition": "Astra 6 Ultra",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-the-legend-of-zelda-breath-of-the-while-clone-codex-openai-gpt-5.5-light",
@@ -1515,7 +1956,10 @@
     "play": "https://intrepion.github.io/kata-the-legend-of-zelda-breath-of-the-while-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure"
+    ]
   },
   {
     "id": "kata-castle-of-the-winds-clone-codex-openai-gpt-5.5-light",
@@ -1526,7 +1970,11 @@
     "play": "https://intrepion.github.io/kata-castle-of-the-winds-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
     "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200"
+    "evidence": "Prior verified gameplay; current HTTP 200",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
   },
   {
     "id": "kata-wordle-clone-gpt-6-luna-extra-high",
@@ -1537,7 +1985,10 @@
     "play": null,
     "edition": "GPT-6 Luna",
     "verified": null,
-    "evidence": "No current Pages deployment"
+    "evidence": "No current Pages deployment",
+    "genres": [
+      "Puzzle"
+    ]
   },
   {
     "id": "kata-inspired-by-yokus-island-express-codex-dot",
@@ -1548,7 +1999,11 @@
     "play": "https://intrepion.github.io/kata-inspired-by-yokus-island-express-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-10-31",
-    "evidence": "Local full gameplay verified; Pages deployment and HTTP 200"
+    "evidence": "Local full gameplay verified; Pages deployment and HTTP 200",
+    "genres": [
+      "Platformer",
+      "Arcade"
+    ]
   },
   {
     "id": "kata-inspired-by-skyjo-codex-dot",
@@ -1559,6 +2014,9 @@
     "play": "https://intrepion.github.io/kata-inspired-by-skyjo-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-11-01",
-    "evidence": "Local HTTP gameplay checked; Pages build and HTTP 200"
+    "evidence": "Local HTTP gameplay checked; Pages build and HTTP 200",
+    "genres": [
+      "Board & card"
+    ]
   }
 ]
