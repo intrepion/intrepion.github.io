@@ -1,6 +1,6 @@
 ---
-import screenshotData from '../data/screenshots.json';
-const screenshots: Record<string, {file: string}> = screenshotData;
+import {screenshotsFor} from '../data/screenshot-catalog';
 const {game} = Astro.props;
+const image = screenshotsFor(game.id)[0];
 ---
-<a class="game-card game-card-link" href={`/games/${game.id}/`}><div class="game-image" aria-hidden="true">{screenshots[game.id] ? <img src={screenshots[game.id].file} alt="" loading="lazy" width="720" height="450" /> : <div class="game-placeholder"><span>✳</span><small>THE KATA ARCADE</small></div>}</div><div class="game-body"><p class="game-edition">{game.edition}</p><h2>{game.title}</h2><p class="game-inspiration">Inspired by {game.inspiration}</p><span class="card-action">View game <span aria-hidden="true">↗</span></span></div></a>
+<a class="game-card game-card-link" href={`/games/${game.id}/`}><div class="game-image" aria-hidden="true">{image ? <img src={image.file} alt="" loading="lazy" width="720" height="450" /> : <div class="game-placeholder"><span>✳</span><small>THE KATA ARCADE</small></div>}</div><div class="game-body"><p class="game-edition">{game.edition}</p><h2>{game.title}</h2><p class="game-inspiration">Inspired by {game.inspiration}</p><span class="card-action">View game <span aria-hidden="true">↗</span></span></div></a>

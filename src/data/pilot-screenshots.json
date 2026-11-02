@@ -1,0 +1,41 @@
+{
+  "kata-inspired-by-braid-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-braid-codex-dot/38129ee182fac79cfa737a73539651857af43559504922041a24595aea678c54-view-01.jpg",
+      "source": "artifacts/gameplay.jpg",
+      "alt": "A character among moonlit platforms",
+      "sha256": "38129ee182fac79cfa737a73539651857af43559504922041a24595aea678c54",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-braid-codex-dot/21173c47db45e18716d8816b88818f8668c03ea36937098f679d3fdf67f4af4c-view-02.jpg",
+      "source": "artifacts/rewind-return.jpg",
+      "alt": "A moonlit platform scene during a rewind",
+      "sha256": "21173c47db45e18716d8816b88818f8668c03ea36937098f679d3fdf67f4af4c",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-portal-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-portal-codex-dot/db1d8cc821e3772622782776b9e5d077dad18ab581670e09a79bef9d612ed59d-view-01.jpg",
+      "source": "docs/screenshots/linked-view.jpg",
+      "alt": "A linked portal view in a test chamber",
+      "sha256": "db1d8cc821e3772622782776b9e5d077dad18ab581670e09a79bef9d612ed59d",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-portal-codex-dot/f62392f60bf3135d101dc392eedd36af6d7e45fe54ef764bdd8a63b62114bbbd-view-02.jpg",
+      "source": "docs/screenshots/receiver-powered.jpg",
+      "alt": "A powered receiver in a test chamber",
+      "sha256": "f62392f60bf3135d101dc392eedd36af6d7e45fe54ef764bdd8a63b62114bbbd",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-portal-codex-dot/293ea452d61984cbd400beb5428bea83cc5632549a81597ea2d7bcd485ccce72-view-03.jpg",
+      "source": "docs/screenshots/first-chamber.jpg",
+      "alt": "A test chamber with a doorway",
+      "sha256": "293ea452d61984cbd400beb5428bea83cc5632549a81597ea2d7bcd485ccce72",
+      "provenance": "existing_repository_capture"
+    }
+  ]
+}

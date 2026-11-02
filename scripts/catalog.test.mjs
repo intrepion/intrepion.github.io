@@ -92,3 +92,48 @@ test('home search indexes genres, inspirations, and individual games with distin
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
 });
+
+test('game-owned pilot snapshots validate and failed sync preserves the previous index', async () => {
+  const { mkdtemp, mkdir, readFile, writeFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { createHash } = await import('node:crypto');
+  const { pilotIds, syncPilot } = await import('./pilot-sync.mjs');
+  const tmp = await mkdtemp(join(tmpdir(), 'arcade-pilot-'));
+  const bytes = await readFile(new URL('../public/screenshots/vice-district.jpg', import.meta.url));
+  const hash = createHash('sha256').update(bytes).digest('hex');
+  try {
+    for (const id of pilotIds) {
+      const root = join(tmp, 'games', id, 'public', 'arcade');
+      await mkdir(join(root, 'screenshots'), {recursive:true});
+      await writeFile(join(root, 'screenshots', 'view-01.jpg'), bytes);
+      await writeFile(join(root, 'manifest.json'), JSON.stringify({schemaVersion:1, gameId:id, playUrl:`https://intrepion.github.io/${id}/`, screenshots:[{path:'arcade/screenshots/view-01.jpg', sha256:hash, alt:'Gameplay view', provenance:{kind:'existing_repository_capture',sourcePath:'original.jpg',deployedBuild:null,captureDate:null}}]}));
+    }
+    const target = join(tmp, 'gallery');
+    const first = await syncPilot(join(tmp, 'games'), target);
+    assert.equal(Object.keys(first).length, 2);
+    const index = join(target, 'src/data/pilot-screenshots.json');
+    const before = await readFile(index, 'utf8');
+    await syncPilot(join(tmp, 'games'), target);
+    assert.equal(await readFile(index, 'utf8'), before, 'sync is deterministic');
+    await writeFile(join(tmp,'games',pilotIds[1],'public','arcade','screenshots','view-01.jpg'), 'corrupt');
+    await assert.rejects(syncPilot(join(tmp, 'games'), target), /hash or format mismatch/);
+    assert.equal(await readFile(index, 'utf8'), before, 'invalid input must not replace the snapshot');
+  } finally { await rm(tmp,{recursive:true,force:true}); }
+});
+
+test('checked-in game-owned snapshots match their hashes and remain existing captures', async () => {
+  const {readFile} = await import('node:fs/promises');
+  const {createHash} = await import('node:crypto');
+  const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
+  assert.equal(Object.keys(snapshot).length, 2);
+  for (const [id, images] of Object.entries(snapshot)) {
+    assert.ok(games.some(game => game.id === id && game.play));
+    for (const image of images) {
+      assert.equal(image.provenance, 'existing_repository_capture');
+      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9-]+\/[a-f0-9]{64}-view-\d{2}\.jpg$/);
+      const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
+    }
+  }
+});
