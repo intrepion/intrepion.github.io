@@ -1,5 +1,20 @@
 [
   {
+    "id": "kata-inspired-by-rogue-legacy-2-codex-dot",
+    "title": "Heirs of the Hollow",
+    "inspiration": "Rogue Legacy 2",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-rogue-legacy-2-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-rogue-legacy-2-codex-dot/",
+    "edition": "Codex Dot · Early approximation",
+    "verified": "2026-11-02",
+    "evidence": "Local browser combat and chamber smoke test; automated core tests",
+    "genres": [
+      "Platformer",
+      "Action"
+    ]
+  },
+  {
     "id": "kata-inspired-by-super-mario-maker-codex-dot",
     "title": "Sproutworks — Course Foundry",
     "inspiration": "Super Mario Maker",
