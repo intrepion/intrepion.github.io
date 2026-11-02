@@ -6741,5 +6741,52 @@
       }
     }
   ],
-  "kata-inspired-by-rogue-legacy-2-codex-dot": []
+  "kata-inspired-by-rogue-legacy-2-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-rogue-legacy-2-codex-dot/79fc13b8a346d056779c1f1530222ca94be4a3d14efb4e6af609c6f564b86117-ci-20261102-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261102-01.png",
+      "alt": "Heirs of the Hollow gameplay, sword combat",
+      "sha256": "79fc13b8a346d056779c1f1530222ca94be4a3d14efb4e6af609c6f564b86117",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-01.png",
+        "sourceSha256": "fb75b9b21fefc982e24e373b32a1495e1d20aff9e25837e9893cb7aa8881b15a",
+        "captureCommit": "eb42177400f04613e5f968ff874b06db12688d1f",
+        "workflowRunId": "41512046235",
+        "inputHashes": {
+          "index.html": "98a8c846fc289e0f3bdc22c688a280050d299d2d4bd28feb1a8c0883d58edceb",
+          "style.css": "73a148a7505a65634a79cbe0d81e530b284aa9fd5c1ff462c54279b8d8ec4e4d",
+          "game/main.js": "49f1b88ba44190cbf2f32a6d3e0d998984305aab1eb71529505ab2d934cb2ab6",
+          "game/core.js": "1b399fa9cfff3e8cd6d48320c8e8ee67627cbdd1ee42741d27946d059aea61b5"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:46:27Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "5db1ed4d6262cc14d66ae8dae26a82ec42b5924b9c9b2b51cfb3c00b85b2b777"
+      }
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-rogue-legacy-2-codex-dot/e5226be05b3af2237b6aa6a09c73a57bc0a1e7a5f0cadac50ffb9eca100520bb-ci-20261102-02.jpg",
+      "source": "arcade/capture-evidence/ci-20261102-02.png",
+      "alt": "Heirs of the Hollow gameplay, spellcasting",
+      "sha256": "e5226be05b3af2237b6aa6a09c73a57bc0a1e7a5f0cadac50ffb9eca100520bb",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-02.png",
+        "sourceSha256": "6d61d27bf5f7acbeecaff92c43fa2925eaebb1fb5711b044a00940df968ab5e2",
+        "captureCommit": "eb42177400f04613e5f968ff874b06db12688d1f",
+        "workflowRunId": "41512046235",
+        "inputHashes": {
+          "index.html": "98a8c846fc289e0f3bdc22c688a280050d299d2d4bd28feb1a8c0883d58edceb",
+          "style.css": "73a148a7505a65634a79cbe0d81e530b284aa9fd5c1ff462c54279b8d8ec4e4d",
+          "game/main.js": "49f1b88ba44190cbf2f32a6d3e0d998984305aab1eb71529505ab2d934cb2ab6",
+          "game/core.js": "1b399fa9cfff3e8cd6d48320c8e8ee67627cbdd1ee42741d27946d059aea61b5"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:46:27Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "5db1ed4d6262cc14d66ae8dae26a82ec42b5924b9c9b2b51cfb3c00b85b2b777"
+      }
+    }
+  ]
 }
