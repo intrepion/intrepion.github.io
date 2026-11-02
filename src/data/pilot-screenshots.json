@@ -661,5 +661,16 @@
       "provenance": "existing_repository_capture"
     }
   ],
-  "kata-inspired-by-untitled-goose-game-codex-dot": []
+  "kata-inspired-by-untitled-goose-game-codex-dot": [],
+  "kata-animal-crossing-new-horizons-clone-codex-openai-gpt-5.5-light": [],
+  "kata-final-fantasy-10-clone-codex-openai-gpt-5.5-light": [],
+  "kata-inspired-by-wordle-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-wordle-codex-dot/51c06e2045f803968ac7f7e29965a19d78c1342955d257431fbb6cf3df2b5f2f-view-01.jpg",
+      "source": "docs/screenshots/desktop-repeat.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "51c06e2045f803968ac7f7e29965a19d78c1342955d257431fbb6cf3df2b5f2f",
+      "provenance": "existing_repository_capture"
+    }
+  ]
 }

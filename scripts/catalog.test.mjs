@@ -139,6 +139,12 @@ test('checked-in game-owned snapshots match their hashes and remain existing cap
   }
 });
 
+test('every playable game has a registered game-owned manifest', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const ids = JSON.parse(await readFile(new URL('../src/data/game-owned-ids.json', import.meta.url), 'utf8'));
+  assert.deepEqual([...ids].sort(), games.filter(game => game.play).map(game => game.id).sort());
+});
+
 test('game-owned sync accepts an explicit empty screenshot list', async () => {
   const {mkdtemp, mkdir, writeFile, readFile, rm} = await import('node:fs/promises');
   const {tmpdir} = await import('node:os');
