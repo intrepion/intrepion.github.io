@@ -37,5 +37,58 @@
       "sha256": "293ea452d61984cbd400beb5428bea83cc5632549a81597ea2d7bcd485ccce72",
       "provenance": "existing_repository_capture"
     }
+  ],
+  "kata-4d-toys-clone-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-4d-toys-clone-astra-6-ultra/66e7d1a8e6d9169017c847b25f5815268e5940635b79656a33af09e3595f6150-view-01.jpg",
+      "source": "artifacts/playground-desktop.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "66e7d1a8e6d9169017c847b25f5815268e5940635b79656a33af09e3595f6150",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-animal-crossing-clone-astra-6-ultra": [],
+  "kata-breath-of-the-wild-clone-astra-6-ultra": [],
+  "kata-filipino-mahjongg-astra-6-ultra": [],
+  "kata-final-fantasy-10-clone-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-final-fantasy-10-clone-astra-6-ultra/f83b4629471e306bae7e9e4ff38d50b11927bc34d0a38d968a93e30987a2eb6c-view-01.jpg",
+      "source": "docs/tideborn.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "f83b4629471e306bae7e9e4ff38d50b11927bc34d0a38d968a93e30987a2eb6c",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-grand-theft-auto-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-grand-theft-auto-astra-6-ultra/4e64d5e5a42ab52ff8c2f5f251b8616807ffe482d23d5497b36ea3533e86b6b5-view-01.jpg",
+      "source": "artifacts/gameplay.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "4e64d5e5a42ab52ff8c2f5f251b8616807ffe482d23d5497b36ea3533e86b6b5",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-grand-theft-auto-astra-6-ultra/b11f89e16f0b95519a783dd7310d775a412270394c46920c7f1a7071c86416a8-view-02.jpg",
+      "source": "artifacts/driving.png",
+      "alt": "Gameplay capture 2",
+      "sha256": "b11f89e16f0b95519a783dd7310d775a412270394c46920c7f1a7071c86416a8",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-minecraft-clone-astra-6-ultra": [],
+  "kata-oregon-trail-clone-astra-6-ultra": [],
+  "kata-pico-park-clone-astra-6-ultra": [],
+  "kata-pokemon-clone-astra-6-ultra": [],
+  "kata-portal-clone-astra-6-ultra": [],
+  "kata-rhythm-game-astra-6-ultra": [],
+  "kata-rube-goldberg-puzzle-game-astra-6-ultra": [],
+  "kata-sudoku-game-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-sudoku-game-astra-6-ultra/683e77c6e5ffec5346280775cc8903b3f77008191837d46678b9f7a0ff7d59a7-view-01.jpg",
+      "source": "artifacts/sudoku-desktop.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "683e77c6e5ffec5346280775cc8903b3f77008191837d46678b9f7a0ff7d59a7",
+      "provenance": "existing_repository_capture"
+    }
   ]
 }

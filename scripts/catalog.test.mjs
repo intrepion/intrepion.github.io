@@ -126,7 +126,8 @@ test('checked-in game-owned snapshots match their hashes and remain existing cap
   const {readFile} = await import('node:fs/promises');
   const {createHash} = await import('node:crypto');
   const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
-  assert.equal(Object.keys(snapshot).length, 2);
+  const ids = JSON.parse(await readFile(new URL('../src/data/game-owned-ids.json', import.meta.url), 'utf8'));
+  assert.deepEqual(Object.keys(snapshot), ids);
   for (const [id, images] of Object.entries(snapshot)) {
     assert.ok(games.some(game => game.id === id && game.play));
     for (const image of images) {
@@ -136,4 +137,21 @@ test('checked-in game-owned snapshots match their hashes and remain existing cap
       assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     }
   }
+});
+
+test('game-owned sync accepts an explicit empty screenshot list', async () => {
+  const {mkdtemp, mkdir, writeFile, readFile, rm} = await import('node:fs/promises');
+  const {tmpdir} = await import('node:os');
+  const {join} = await import('node:path');
+  const {syncGames} = await import('./pilot-sync.mjs');
+  const tmp = await mkdtemp(join(tmpdir(),'arcade-empty-'));
+  const id = 'kata-example';
+  try {
+    const dir=join(tmp,'games',id,'public','arcade'); await mkdir(dir,{recursive:true});
+    await writeFile(join(dir,'manifest.json'),JSON.stringify({schemaVersion:1,gameId:id,playUrl:`https://intrepion.github.io/${id}/`,screenshots:[]}));
+    const snapshot=await syncGames(join(tmp,'games'),[id],join(tmp,'gallery'));
+    assert.deepEqual(snapshot[id],[]);
+    assert.deepEqual(JSON.parse(await readFile(join(tmp,'gallery','src/data/pilot-screenshots.json'),'utf8'))[id],[]);
+    await assert.rejects(syncGames(join(tmp,'games'),[id,id],join(tmp,'gallery')),/Invalid game IDs/);
+  } finally {await rm(tmp,{recursive:true,force:true});}
 });

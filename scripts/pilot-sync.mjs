@@ -8,7 +8,7 @@ const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export async function loadPilot(gameRoot, id) {
  const publicDir = resolve(gameRoot, 'public');
  const manifest = JSON.parse(await readFile(resolve(publicDir, 'arcade/manifest.json'), 'utf8'));
- if (manifest.schemaVersion !== 1 || manifest.gameId !== id || manifest.playUrl !== `https://intrepion.github.io/${id}/` || !Array.isArray(manifest.screenshots) || !manifest.screenshots.length) throw new Error(`Invalid manifest for ${id}`);
+ if (manifest.schemaVersion !== 1 || manifest.gameId !== id || manifest.playUrl !== `https://intrepion.github.io/${id}/` || !Array.isArray(manifest.screenshots)) throw new Error(`Invalid manifest for ${id}`);
  const seen = new Set();
  const images = [];
  for (const image of manifest.screenshots) {
@@ -22,9 +22,10 @@ export async function loadPilot(gameRoot, id) {
  }
  return {schemaVersion:manifest.schemaVersion,gameId:id,playUrl:manifest.playUrl,images};
 }
-export async function syncPilot(root, destination = arcade) {
+export async function syncGames(root, ids, destination = arcade) {
  // Validate everything before writing; a failed sync leaves the last snapshot available.
- const loaded = await Promise.all(pilotIds.map(id => loadPilot(resolve(root,id), id)));
+ if (!Array.isArray(ids) || new Set(ids).size !== ids.length || ids.some(id => !/^kata-[a-z0-9.-]+$/.test(id))) throw new Error('Invalid game IDs');
+ const loaded = await Promise.all(ids.map(id => loadPilot(resolve(root,id), id)));
  const snapshot = {};
  for (const game of loaded) {
   snapshot[game.gameId] = game.images.map(({bytes,...meta}) => meta);
@@ -34,7 +35,8 @@ export async function syncPilot(root, destination = arcade) {
  const output = resolve(destination,'src/data/pilot-screenshots.json'); const temporary = `${output}.tmp`; await writeFile(temporary, JSON.stringify(snapshot,null,2)+'\n'); await rename(temporary,output);
  return snapshot;
 }
+export async function syncPilot(root, destination = arcade) { return syncGames(root, pilotIds, destination); }
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
  const root = resolve(process.argv[2] || resolve(arcade, '../pilot-games'));
- await syncPilot(root); console.log(`Synced ${pilotIds.length} game-owned manifests from ${root}`);
+ const ids = JSON.parse(await readFile(resolve(arcade,'src/data/game-owned-ids.json'),'utf8')); await syncGames(root, ids); console.log(`Synced ${ids.length} game-owned manifests from ${root}`);
 }

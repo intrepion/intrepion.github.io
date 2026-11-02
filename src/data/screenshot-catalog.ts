@@ -5,6 +5,7 @@ export type Screenshot = {file:string; source:string; label?:string; alt?:string
 const primary: Record<string,Screenshot> = primaryData;
 const extras: Record<string,Screenshot[]> = extraData;
 const pilot: Record<string,Screenshot[]> = pilotData;
+export function hasGameOwnedManifest(id:string): boolean { return Object.hasOwn(pilot, id); }
 export function screenshotsFor(id:string): Screenshot[] {
   return pilot[id] ?? [...(primary[id] ? [primary[id]] : []), ...(extras[id] || [])];
 }
