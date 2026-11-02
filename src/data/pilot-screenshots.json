@@ -589,5 +589,77 @@
   "kata-inspired-by-splendor-codex-dot": [],
   "kata-inspired-by-super-mario-maker-codex-dot": [],
   "kata-inspired-by-warioware-smooth-moves-codex-dot": [],
-  "kata-inspired-by-yokus-island-express-codex-dot": []
+  "kata-inspired-by-yokus-island-express-codex-dot": [],
+  "kata-chips-challenge-clone-codex-openai-gpt-5.5-light": [],
+  "kata-inspired-by-animal-crossing-new-horizons-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-animal-crossing-new-horizons-codex-dot/c2117814f782c9958eea1de0dc6dd7cdaccd707ac8e5d8ac1f3d7c13685c07a9-view-01.jpg",
+      "source": "docs/screenshots/desktop.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "c2117814f782c9958eea1de0dc6dd7cdaccd707ac8e5d8ac1f3d7c13685c07a9",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-animal-crossing-new-horizons-codex-dot/da18e9407b48d82d91ea55e0c52f904404a9e9c3b915b15fdee2c6ba8ecdae08-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/caught-sunfin.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "da18e9407b48d82d91ea55e0c52f904404a9e9c3b915b15fdee2c6ba8ecdae08",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-binding-of-issac-rebirth-codex-dot": [],
+  "kata-inspired-by-excitebike-codex-dot": [],
+  "kata-inspired-by-grand-theft-auto-vice-city-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-grand-theft-auto-vice-city-codex-dot/f8929ed77eb00ee4df873a635e8af90a1c5bdaa5355648fb3bb07cf2e2ca379e-view-01.jpg",
+      "source": "docs/evidence/marina.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "f8929ed77eb00ee4df873a635e8af90a1c5bdaa5355648fb3bb07cf2e2ca379e",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-just-dance-codex-dot": [],
+  "kata-inspired-by-peggle-2-codex-dot": [],
+  "kata-inspired-by-prince-of-persia-sands-of-time-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-prince-of-persia-sands-of-time-codex-dot/ba71625b989ca16404564ac7d55d49a27762da680422f0ffd20e815cd4eccf1a-view-01.jpg",
+      "source": "docs/screenshots/brass-lung.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "ba71625b989ca16404564ac7d55d49a27762da680422f0ffd20e815cd4eccf1a",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-ssx-3-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-ssx-3-codex-dot/c74667a2f6f981e8629f1fff52dbcd03d370499de9c2a07e7f710b46a6e0dbf2-view-01.jpg",
+      "source": "docs/screenshots/aurora-outer-line.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "c74667a2f6f981e8629f1fff52dbcd03d370499de9c2a07e7f710b46a6e0dbf2",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-ssx-3-codex-dot/604d0d2cab59d929f66fe16b00ed6e110ac36562b9429b08a3ea1375e803490e-view-02.jpg",
+      "source": "docs/screenshots/aurora-outer-jump.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "604d0d2cab59d929f66fe16b00ed6e110ac36562b9429b08a3ea1375e803490e",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-the-witness-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-witness-codex-dot/931bcba4fab64d07e5db08bd1a1eb76a02b20a122d100db92293d9c3d73adc95-view-01.jpg",
+      "source": "docs/qa/walk-lantern.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "931bcba4fab64d07e5db08bd1a1eb76a02b20a122d100db92293d9c3d73adc95",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-witness-codex-dot/9fc001f282fce91a41aad5e32e11f586fa221a76c72bd4594890115dde5eacaa-view-02.jpg",
+      "source": "docs/qa/walk-three-bells.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "9fc001f282fce91a41aad5e32e11f586fa221a76c72bd4594890115dde5eacaa",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-untitled-goose-game-codex-dot": []
 }
