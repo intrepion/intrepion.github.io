@@ -563,5 +563,31 @@
   "kata-skifree-clone-codex-openai-gpt-5.5-light": [],
   "kata-sudoku-game-codex-openai-gpt-5.5-light": [],
   "kata-the-incredible-machine-clone-codex-openai-gpt-5.5-light": [],
-  "kata-the-legend-of-zelda-breath-of-the-while-clone-codex-openai-gpt-5.5-light": []
+  "kata-the-legend-of-zelda-breath-of-the-while-clone-codex-openai-gpt-5.5-light": [],
+  "kata-diablo-clone-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-diablo-clone-astra-6-ultra/359a7e6a490b8f21acd4962aa0eeebcfc43ea5e161d02d6870d052d862e201ff-view-01.jpg",
+      "source": "docs/ashveil.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "359a7e6a490b8f21acd4962aa0eeebcfc43ea5e161d02d6870d052d862e201ff",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-battleship-codex-dot": [],
+  "kata-inspired-by-combat-codex-dot": [],
+  "kata-inspired-by-connections-codex-dot": [],
+  "kata-inspired-by-guess-who-codex-dot": [],
+  "kata-inspired-by-rubiks-cube-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-rubiks-cube-codex-dot/1505753e80a4f4e8081ab34536459f8b818ab022892ed1170ce50f94f3d5bbb1-view-01.jpg",
+      "source": "docs/screenshots/desktop.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "1505753e80a4f4e8081ab34536459f8b818ab022892ed1170ce50f94f3d5bbb1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-splendor-codex-dot": [],
+  "kata-inspired-by-super-mario-maker-codex-dot": [],
+  "kata-inspired-by-warioware-smooth-moves-codex-dot": [],
+  "kata-inspired-by-yokus-island-express-codex-dot": []
 }
