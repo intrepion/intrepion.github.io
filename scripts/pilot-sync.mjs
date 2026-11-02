@@ -8,17 +8,27 @@ const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export async function loadPilot(gameRoot, id) {
  const publicDir = resolve(gameRoot, 'public');
  const manifest = JSON.parse(await readFile(resolve(publicDir, 'arcade/manifest.json'), 'utf8'));
- if (manifest.schemaVersion !== 1 || manifest.gameId !== id || manifest.playUrl !== `https://intrepion.github.io/${id}/` || !Array.isArray(manifest.screenshots)) throw new Error(`Invalid manifest for ${id}`);
+ if (![1, 2].includes(manifest.schemaVersion) || manifest.gameId !== id || manifest.playUrl !== `https://intrepion.github.io/${id}/` || !Array.isArray(manifest.screenshots)) throw new Error(`Invalid manifest for ${id}`);
  const seen = new Set();
  const images = [];
  for (const image of manifest.screenshots) {
-  if (typeof image.path !== 'string' || !/^arcade\/screenshots\/[a-z0-9-]+\.jpg$/.test(image.path) || seen.has(image.path) || !/^[a-f0-9]{64}$/.test(image.sha256) || typeof image.alt !== 'string' || !image.alt.trim() || image.provenance?.kind !== 'existing_repository_capture' || typeof image.provenance.sourcePath !== 'string' || !image.provenance.sourcePath.trim() || image.provenance.deployedBuild !== null || image.provenance.captureDate !== null) throw new Error(`Invalid screenshot metadata for ${id}`);
+  const provenance = image.provenance;
+  const legacy = provenance?.kind === 'existing_repository_capture' && typeof provenance.sourcePath === 'string' && !!provenance.sourcePath.trim() && provenance.deployedBuild === null && provenance.captureDate === null;
+  const hashes = provenance?.inputHashes;
+  const captured = manifest.schemaVersion === 2 && provenance?.kind === 'ci_gameplay_capture' && /^arcade\/capture-evidence\/[a-z0-9-]+\.png$/.test(provenance.sourcePath || '') && /^[a-f0-9]{64}$/.test(provenance.sourceSha256 || '') && /^[a-f0-9]{40}$/.test(provenance.captureCommit || '') && /^[0-9]+$/.test(provenance.workflowRunId || '') && typeof provenance.publishedFilesVerifiedAt === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/.test(provenance.publishedFilesVerifiedAt) && !Number.isNaN(Date.parse(provenance.publishedFilesVerifiedAt)) && hashes && Object.keys(hashes).length > 0 && Object.entries(hashes).every(([name, hash]) => /^[a-zA-Z0-9._/-]+$/.test(name) && !name.startsWith('/') && !name.split('/').includes('..') && /^[a-f0-9]{64}$/.test(hash));
+  if (typeof image.path !== 'string' || !/^arcade\/screenshots\/[a-z0-9-]+\.jpg$/.test(image.path) || seen.has(image.path) || !/^[a-f0-9]{64}$/.test(image.sha256) || typeof image.alt !== 'string' || !image.alt.trim() || !(legacy || captured)) throw new Error(`Invalid screenshot metadata for ${id}`);
+  if (captured) {
+   const evidencePath = await realpath(resolve(publicDir, provenance.sourcePath)); const rel = relative(await realpath(publicDir), evidencePath);
+   if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('Evidence outside public directory');
+   const original = await readFile(evidencePath);
+   if (original.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' || digest(original) !== provenance.sourceSha256) throw new Error(`Capture evidence hash or format mismatch: ${id}`);
+  }
   seen.add(image.path);
   const path = await realpath(resolve(publicDir, image.path)); const rel = relative(await realpath(publicDir), path);
   if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('Image outside public directory');
   const bytes = await readFile(path);
   if (bytes[0] !== 0xff || bytes[1] !== 0xd8 || digest(bytes) !== image.sha256) throw new Error(`Screenshot hash or format mismatch: ${id}/${image.path}`);
-  images.push({file:`/screenshots/game-owned/${id}/${image.sha256}-${image.path.split('/').at(-1)}`, source:image.provenance.sourcePath, alt:image.alt, sha256:image.sha256, provenance:image.provenance.kind, bytes});
+  images.push({file:`/screenshots/game-owned/${id}/${image.sha256}-${image.path.split('/').at(-1)}`, source:image.provenance.sourcePath, alt:image.alt, sha256:image.sha256, provenance:image.provenance.kind, ...(captured ? {capture:provenance} : {}), bytes});
  }
  return {schemaVersion:manifest.schemaVersion,gameId:id,playUrl:manifest.playUrl,images};
 }

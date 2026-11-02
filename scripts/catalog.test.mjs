@@ -122,7 +122,7 @@ test('game-owned pilot snapshots validate and failed sync preserves the previous
   } finally { await rm(tmp,{recursive:true,force:true}); }
 });
 
-test('checked-in game-owned snapshots match their hashes and remain existing captures', async () => {
+test('checked-in game-owned snapshots match their hashes and preserve provenance', async () => {
   const {readFile} = await import('node:fs/promises');
   const {createHash} = await import('node:crypto');
   const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
@@ -131,7 +131,8 @@ test('checked-in game-owned snapshots match their hashes and remain existing cap
   for (const [id, images] of Object.entries(snapshot)) {
     assert.ok(games.some(game => game.id === id && game.play));
     for (const image of images) {
-      assert.equal(image.provenance, 'existing_repository_capture');
+      assert.ok(['existing_repository_capture', 'ci_gameplay_capture'].includes(image.provenance));
+      if (image.provenance === 'ci_gameplay_capture') { assert.match(image.capture.captureCommit, /^[a-f0-9]{40}$/); assert.match(image.capture.workflowRunId, /^[0-9]+$/); }
       assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9-]+\/[a-f0-9]{64}-view-\d{2}\.jpg$/);
       const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
@@ -159,5 +160,30 @@ test('game-owned sync accepts an explicit empty screenshot list', async () => {
     assert.deepEqual(snapshot[id],[]);
     assert.deepEqual(JSON.parse(await readFile(join(tmp,'gallery','src/data/pilot-screenshots.json'),'utf8'))[id],[]);
     await assert.rejects(syncGames(join(tmp,'games'),[id,id],join(tmp,'gallery')),/Invalid game IDs/);
+  } finally {await rm(tmp,{recursive:true,force:true});}
+});
+
+
+test('CI captures require valid provenance and untampered original evidence', async () => {
+  const {mkdtemp, mkdir, writeFile, rm} = await import('node:fs/promises');
+  const {tmpdir} = await import('node:os');
+  const {join} = await import('node:path');
+  const {createHash} = await import('node:crypto');
+  const {syncGames} = await import('./pilot-sync.mjs');
+  const tmp = await mkdtemp(join(tmpdir(), 'arcade-ci-')); const id = 'kata-example';
+  const dir = join(tmp, 'games', id, 'public', 'arcade');
+  const hash = b => createHash('sha256').update(b).digest('hex');
+  try {
+    await mkdir(join(dir, 'screenshots'), {recursive:true}); await mkdir(join(dir, 'capture-evidence'), {recursive:true});
+    const jpg = Buffer.from([255,216,255,217]); const png = Buffer.from('89504e470d0a1a0a00000000', 'hex');
+    await writeFile(join(dir, 'screenshots/view-01.jpg'), jpg); await writeFile(join(dir, 'capture-evidence/rally-01.png'), png);
+    const image = {path:'arcade/screenshots/view-01.jpg',sha256:hash(jpg),alt:'Game',provenance:{kind:'ci_gameplay_capture',sourcePath:'arcade/capture-evidence/rally-01.png',sourceSha256:hash(png),captureCommit:'a'.repeat(40),workflowRunId:'123',inputHashes:{'index.html':'b'.repeat(64)},publishedFilesVerifiedAt:'2026-11-02T02:26:25Z'}};
+    const manifest = {schemaVersion:2,gameId:id,playUrl:`https://intrepion.github.io/${id}/`,screenshots:[image]};
+    const save = () => writeFile(join(dir,'manifest.json'),JSON.stringify(manifest)); await save();
+    const result = await syncGames(join(tmp,'games'),[id],join(tmp,'gallery')); assert.equal(result[id][0].capture.captureCommit,'a'.repeat(40));
+    manifest.schemaVersion=1; await save(); await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Invalid screenshot metadata/);
+    manifest.schemaVersion=2; image.provenance.captureCommit='bad'; await save(); await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Invalid screenshot metadata/);
+    image.provenance.captureCommit='a'.repeat(40); await save(); await writeFile(join(dir,'capture-evidence/rally-01.png'),'tampered');
+    await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/evidence hash or format mismatch/);
   } finally {await rm(tmp,{recursive:true,force:true});}
 });
