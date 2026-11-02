@@ -1,10 +1,6 @@
 ---
 import screenshotData from '../data/screenshots.json';
-import { slugify } from '../data/genres.mjs';
 const screenshots: Record<string, {file: string}> = screenshotData;
 const {game} = Astro.props;
 ---
-<article class="game-card" data-title={game.title} data-inspiration={game.inspiration} data-search={`${game.title} ${game.inspiration} ${game.edition} ${game.id} ${game.genres.join(' ')}`.toLowerCase()}>
-  <div class="game-image" aria-hidden="true">{screenshots[game.id] ? <img src={screenshots[game.id].file} alt="" loading="lazy" width="720" height="450" /> : <div class="game-placeholder"><span>✳</span><small>THE KATA ARCADE</small></div>}</div>
-  <div class="game-body"><p class="game-edition">{game.edition}</p><h2>{game.title}</h2><p class="game-inspiration">Inspired by {game.inspiration}</p><div class="game-tags" aria-label="Genres">{game.genres.map((genre: string) => <a href={`/genres/${slugify(genre)}/`}>{genre}</a>)}</div><div class="game-links"><a href={game.repo} aria-label={`Source for ${game.title}, ${game.edition}`}>Source ↗</a><a class="play-link" href={game.play} aria-label={`Play ${game.title}, ${game.edition}`}>Play game <span aria-hidden="true">↗</span></a></div></div>
-</article>
+<a class="game-card game-card-link" href={`/games/${game.id}/`}><div class="game-image" aria-hidden="true">{screenshots[game.id] ? <img src={screenshots[game.id].file} alt="" loading="lazy" width="720" height="450" /> : <div class="game-placeholder"><span>✳</span><small>THE KATA ARCADE</small></div>}</div><div class="game-body"><p class="game-edition">{game.edition}</p><h2>{game.title}</h2><p class="game-inspiration">Inspired by {game.inspiration}</p><span class="card-action">View game <span aria-hidden="true">↗</span></span></div></a>

@@ -1,0 +1,48 @@
+{
+  "kata-grand-theft-auto-astra-6-ultra": [
+    {
+      "file": "/screenshots/kata-grand-theft-auto-astra-6-ultra-2.jpg",
+      "source": "artifacts/driving.png"
+    }
+  ],
+  "kata-inspired-by-braid-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-braid-codex-dot-2.jpg",
+      "source": "artifacts/rewind-return.jpg"
+    }
+  ],
+  "kata-inspired-by-portal-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-portal-codex-dot-2.jpg",
+      "source": "docs/screenshots/receiver-powered.jpg"
+    },
+    {
+      "file": "/screenshots/kata-inspired-by-portal-codex-dot-3.jpg",
+      "source": "docs/screenshots/first-chamber.jpg"
+    }
+  ],
+  "kata-inspired-by-skifree-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-skifree-codex-dot-2.jpg",
+      "source": "docs/screenshots/freestyle.jpg"
+    }
+  ],
+  "kata-inspired-by-ssx-3-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-ssx-3-codex-dot-2.jpg",
+      "source": "docs/screenshots/aurora-outer-jump.jpg"
+    }
+  ],
+  "kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot-2.jpg",
+      "source": "docs/screenshots/heartspire-desktop.jpg"
+    }
+  ],
+  "kata-inspired-by-starcraft-brood-war-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-starcraft-brood-war-codex-dot-2.jpg",
+      "source": "docs/screenshots/assault.jpg"
+    }
+  ]
+}

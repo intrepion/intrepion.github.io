@@ -50,3 +50,32 @@ test('every playable genre has a unique route and every route has games', async 
   for (const genre of genres) assert.ok(playable.some(game => game.genres.includes(genre)), `Empty genre: ${genre}`);
   assert.equal(slugify('Board & card'), 'board-and-card');
 });
+
+test('inspiration routes are unique, canonical, and cover all playable editions', async () => {
+  const { groupInspirations, canonicalInspiration } = await import('../src/data/inspirations.mjs');
+  const groups = groupInspirations(games);
+  assert.equal(new Set(groups.map(group => group.slug)).size, groups.length, 'inspiration slugs must not collide');
+  const playable = games.filter(game => game.play);
+  assert.equal(groups.flatMap(group => group.games).length, playable.length);
+  assert.equal(new Set(groups.flatMap(group => group.games.map(game => game.id))).size, playable.length);
+  assert.equal(canonicalInspiration('Final Fantasy 10'), 'Final Fantasy X');
+  assert.ok(groups.find(group => group.name === 'Final Fantasy X').games.length > 1);
+  assert.ok(groups.find(group => group.name === 'Braid').games[0].genres.includes('Puzzle'));
+  assert.ok(groups.find(group => group.name === 'Braid').games[0].genres.includes('Platformer'));
+});
+
+test('additional captures have valid sources and unique local files', async () => {
+  const { readFile, stat } = await import('node:fs/promises');
+  const extras = JSON.parse(await readFile(new URL('../src/data/extra-screenshots.json', import.meta.url), 'utf8'));
+  const primary = JSON.parse(await readFile(new URL('../src/data/screenshots.json', import.meta.url), 'utf8'));
+  const files = new Set(Object.values(primary).map(image => image.file));
+  for (const [id, images] of Object.entries(extras)) {
+    assert.ok(games.some(game => game.id === id && game.play));
+    for (const image of images) {
+      assert.match(image.file, /^\/screenshots\/[a-z0-9-]+\.jpg$/);
+      assert.ok(image.source && !files.has(image.file)); files.add(image.file);
+      assert.ok((await stat(new URL(`../public${image.file}`, import.meta.url))).size > 0);
+    }
+  }
+  assert.equal(files.size, 50);
+});

@@ -1,0 +1,7 @@
+---
+import screenshotData from '../data/screenshots.json';
+const screenshots: Record<string, {file: string}> = screenshotData;
+const {group, count} = Astro.props;
+const imageGame = group.games.find((game: {id:string}) => screenshots[game.id]);
+---
+<a class="genre-card inspiration-card" data-search={`${group.name} ${group.games.map((g: {title:string; edition:string; id:string}) => `${g.title} ${g.edition} ${g.id}`).join(' ')}`.toLowerCase()} href={`/inspirations/${group.slug}/`}><div class="genre-art" aria-hidden="true">{imageGame ? <img src={screenshots[imageGame.id].file} alt="" loading="lazy" width="720" height="450" /> : <div class="game-placeholder"><span>✳</span><small>THE KATA ARCADE</small></div>}<span class="genre-arrow">↗</span></div><div class="genre-card-copy"><div><p>{imageGame ? 'INSPIRED BY · EXPERIMENT PREVIEW' : 'INSPIRED BY'}</p><h3>{group.name}</h3></div><span class="genre-count">{count} {count === 1 ? 'game' : 'games'}</span></div></a>
