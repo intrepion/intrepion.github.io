@@ -90,5 +90,430 @@
       "sha256": "683e77c6e5ffec5346280775cc8903b3f77008191837d46678b9f7a0ff7d59a7",
       "provenance": "existing_repository_capture"
     }
+  ],
+  "kata-inspired-by-4d-toys-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-4d-toys-codex-dot/a96f6389050f2b8a6383fe6f9f9f2801c7b5d432609110b4733954a85723efeb-view-01.jpg",
+      "source": "docs/screenshots/tesseract-xw45.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "a96f6389050f2b8a6383fe6f9f9f2801c7b5d432609110b4733954a85723efeb",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-4d-toys-codex-dot/70ce8bfc4d7870cd27441df2f5bd431c98446e57a2cd91518e70d74426c643de-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/live-gravity.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "70ce8bfc4d7870cd27441df2f5bd431c98446e57a2cd91518e70d74426c643de",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-baba-is-you-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-baba-is-you-codex-dot/713704e5c5690928d0a10534cce41a63a92a3f8235a82d8714ffbabeebd2586f-view-01.jpg",
+      "source": "docs/preview.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "713704e5c5690928d0a10534cce41a63a92a3f8235a82d8714ffbabeebd2586f",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-castle-of-the-winds-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-castle-of-the-winds-codex-dot/67f7ba691da8f045c839f08060583dbda925a769fce3950a70ed7e2830624ef3-view-01.jpg",
+      "source": "docs/screenshots/starting-game.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "67f7ba691da8f045c839f08060583dbda925a769fce3950a70ed7e2830624ef3",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-castle-of-the-winds-codex-dot/55f1b197c7eeeb918929c033180306f16edb698f64e10df08bcac14eec10c432-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/ward-enemy-response.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "55f1b197c7eeeb918929c033180306f16edb698f64e10df08bcac14eec10c432",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-chips-challenge-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-chips-challenge-codex-dot/63e850ed7bfd029060a4e6098b601ffb1078b4c58f25c7a8e50f61529c4abec7-view-01.jpg",
+      "source": "docs/screenshots/desktop.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "63e850ed7bfd029060a4e6098b601ffb1078b4c58f25c7a8e50f61529c4abec7",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-cookie-clicker-codex-dot": [],
+  "kata-inspired-by-dance-dance-revolution-codex-dot": [],
+  "kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot/7a38ddb93c7ba91dd17a09290e7f9c692a0ec6b1fbce473ee4c29bebfe606cda-view-01.jpg",
+      "source": "docs/screenshots/desktop-sanctuary.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "7a38ddb93c7ba91dd17a09290e7f9c692a0ec6b1fbce473ee4c29bebfe606cda",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot/c05a669eb6329817f2e2abd6fa807e672ac9ab5ef3d4ac3d6aada59b5634da69-view-02.jpg",
+      "source": "docs/screenshots/hollow-king.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "c05a669eb6329817f2e2abd6fa807e672ac9ab5ef3d4ac3d6aada59b5634da69",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-dr-mario-codex-dot": [],
+  "kata-inspired-by-everyday-genius-squarelogic-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-everyday-genius-squarelogic-codex-dot/2b908dcde8c89a6dda6574c94445463157c5df408dbb11ff320e15533bf71b0c-view-01.jpg",
+      "source": "docs/screenshots/contradiction.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "2b908dcde8c89a6dda6574c94445463157c5df408dbb11ff320e15533bf71b0c",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-everyday-genius-squarelogic-codex-dot/26d78f6137d6443da93bea70c7b1c440822c7f26ef0439dfaf30a18264b792d8-view-02.jpg",
+      "source": "docs/screenshots/first-light-complete.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "26d78f6137d6443da93bea70c7b1c440822c7f26ef0439dfaf30a18264b792d8",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-final-fantasy-x-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-final-fantasy-x-codex-dot/0833cc4d61ff361589ff30b7b0c26a3809b0ed7c9cc411099bd9d6390d694ee5-view-01.jpg",
+      "source": "docs/screenshots/battle.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "0833cc4d61ff361589ff30b7b0c26a3809b0ed7c9cc411099bd9d6390d694ee5",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-fire-emblem-awakening-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-fire-emblem-awakening-codex-dot/99ac48dc125f2a5009f5875f15cabdb283c6b1080df4c591e416612a1298bae4-view-01.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/dual-strike.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "99ac48dc125f2a5009f5875f15cabdb283c6b1080df4c591e416612a1298bae4",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-fire-emblem-awakening-codex-dot/71699dfcb4e104e0cf3abdfaf8539fac04e0176e062b5e6b93398f86764922ca-view-02.jpg",
+      "source": "evidence/final-forecast.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "71699dfcb4e104e0cf3abdfaf8539fac04e0176e062b5e6b93398f86764922ca",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-full-tilt-pinball-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-full-tilt-pinball-codex-dot/b64748c093689b6e24dc013ad4fa066f99a7d89eb6255374697e7b13afa720a3-view-01.jpg",
+      "source": "docs/qa/table.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "b64748c093689b6e24dc013ad4fa066f99a7d89eb6255374697e7b13afa720a3",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-full-tilt-pinball-codex-dot/0a43f96efbacbce9f97c466bb6276a704616b0a296eefc840163660810729df1-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/dock-locked.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "0a43f96efbacbce9f97c466bb6276a704616b0a296eefc840163660810729df1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-lemmings-codex-dot": [],
+  "kata-inspired-by-minecraft-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-minecraft-codex-dot/103efcb0f7480e5ca505ad2167e016faa7bca14b932a09f73dbb5a749df19b9b-view-01.jpg",
+      "source": "docs/screenshots/built-glade.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "103efcb0f7480e5ca505ad2167e016faa7bca14b932a09f73dbb5a749df19b9b",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-minesweeper-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-minesweeper-codex-dot/07b0315a6b7e4d3b0eedf980b01732f7f19680eab82e4bc7e218743343d0d229-view-01.jpg",
+      "source": "docs/screenshots/win.jpg",
+      "alt": "Completed game",
+      "sha256": "07b0315a6b7e4d3b0eedf980b01732f7f19680eab82e4bc7e218743343d0d229",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-minesweeper-codex-dot/966dfd091e5e2588d6fc278ec191c5015c0c0770878e169169cc438c41a87e55-view-02.jpg",
+      "source": "docs/screenshots/loss.jpg",
+      "alt": "Game over",
+      "sha256": "966dfd091e5e2588d6fc278ec191c5015c0c0770878e169169cc438c41a87e55",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-pente-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-pente-codex-dot/22214c56b034a13ab3510d1d7b69250c2f764a9c23b1e14b627134f0d890fb41-view-01.jpg",
+      "source": "docs/qa/capture-win.jpg",
+      "alt": "Completed game",
+      "sha256": "22214c56b034a13ab3510d1d7b69250c2f764a9c23b1e14b627134f0d890fb41",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-pente-codex-dot/3d0528e49c724d13e1ebd1c527e737a4758bc3544e72d0300c66f60a5475ef2f-view-02.jpg",
+      "source": "docs/qa/line-win.jpg",
+      "alt": "Completed game",
+      "sha256": "3d0528e49c724d13e1ebd1c527e737a4758bc3544e72d0300c66f60a5475ef2f",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-pico-park-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-pico-park-codex-dot/e276471c3e13f51d91d42f0f1cdafa229d827d355b175cd91c79ee2dc35da0f4-view-01.jpg",
+      "source": "docs/evidence/co-op.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "e276471c3e13f51d91d42f0f1cdafa229d827d355b175cd91c79ee2dc35da0f4",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-pico-park-codex-dot/08e5c05b7594ec2dc16aa7c86df5f0743f1d8d77ca8968f0118e8ea70304af62-view-02.jpg",
+      "source": "docs/evidence/planter.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "08e5c05b7594ec2dc16aa7c86df5f0743f1d8d77ca8968f0118e8ea70304af62",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-plants-vs-zombies-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-plants-vs-zombies-codex-dot/e967b79320c61c3421a8a6d00a209daec4726a3d4a39349b0edb4a0a2f88758f-view-01.jpg",
+      "source": "docs/screenshots/desktop-harbor.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "e967b79320c61c3421a8a6d00a209daec4726a3d4a39349b0edb4a0a2f88758f",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-pokemon-blue-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-pokemon-blue-codex-dot/d94f16b611228e48bf818ade670530096bd5aa37a37a0e8c4aeeecbc0481d547-view-01.jpg",
+      "source": "docs/screenshots/lantern-trial.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "d94f16b611228e48bf818ade670530096bd5aa37a37a0e8c4aeeecbc0481d547",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-rhythm-nation-codex-dot": [],
+  "kata-inspired-by-secret-of-mana-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-secret-of-mana-codex-dot/4a7ea886e40b566b76d534485af102eb8b583c201bbcd801838e73122c95b114-view-01.jpg",
+      "source": "qa/chrome-cinder-combat.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "4a7ea886e40b566b76d534485af102eb8b583c201bbcd801838e73122c95b114",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-secret-of-mana-codex-dot/e94e2e9cae1ec83f2c2e0db4688032c7ca444c5f8682b5a1e237ec3886df9048-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/charge-release.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "e94e2e9cae1ec83f2c2e0db4688032c7ca444c5f8682b5a1e237ec3886df9048",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-simcity-2000-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-simcity-2000-codex-dot/120ace08d5fda7dab5f5b042ad33bb723a1a77ca4277b65540e0b4210a620cba-view-01.jpg",
+      "source": "qa/sandbox-city.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "120ace08d5fda7dab5f5b042ad33bb723a1a77ca4277b65540e0b4210a620cba",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-simcity-2000-codex-dot/376cea5d5ace491d213ca6b813e1acb9ffbe21f0e59fe4eb3e748af07e76e74f-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/underground-served.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "376cea5d5ace491d213ca6b813e1acb9ffbe21f0e59fe4eb3e748af07e76e74f",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-skifree-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-skifree-codex-dot/c9af87d23a16b9bc51af67bb46f6d5fa335b65425cf360576f85427dda6bdc99-view-01.jpg",
+      "source": "docs/screenshots/chase.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "c9af87d23a16b9bc51af67bb46f6d5fa335b65425cf360576f85427dda6bdc99",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-skifree-codex-dot/cd7de1d49154126ee0f675da4a1833c109a5bdc30532af88e3609eadc3df66a1-view-02.jpg",
+      "source": "docs/screenshots/freestyle.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "cd7de1d49154126ee0f675da4a1833c109a5bdc30532af88e3609eadc3df66a1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-starcraft-brood-war-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-starcraft-brood-war-codex-dot/e9e105d7197b7accffb59a5e6ac0d74c1ca7d585764f2e4c6ac12e45a2525982-view-01.jpg",
+      "source": "docs/screenshots/combat.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "e9e105d7197b7accffb59a5e6ac0d74c1ca7d585764f2e4c6ac12e45a2525982",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-starcraft-brood-war-codex-dot/8776fc224ae4d844387d6e23b94cfb2800917f83398514fb39432939a63ce9d2-view-02.jpg",
+      "source": "docs/screenshots/assault.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "8776fc224ae4d844387d6e23b94cfb2800917f83398514fb39432939a63ce9d2",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-stratego-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-stratego-codex-dot/b3fca5a15874d24527207d79772a278aa9b4e41ef5bb928c5e70e31512a303ce-view-01.jpg",
+      "source": "docs/screenshots/drill-victory.jpg",
+      "alt": "Completed game",
+      "sha256": "b3fca5a15874d24527207d79772a278aa9b4e41ef5bb928c5e70e31512a303ce",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-stratego-codex-dot/c049384e4be480e7d70ac65be8e21a766c88788c0a262c29053c739007f783e1-view-02.jpg",
+      "source": "docs/screenshots/full-battle-victory.jpg",
+      "alt": "Completed game",
+      "sha256": "c049384e4be480e7d70ac65be8e21a766c88788c0a262c29053c739007f783e1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-super-mario-bros-3-codex-dot": [],
+  "kata-inspired-by-the-elder-scrolls-oblivion-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-elder-scrolls-oblivion-codex-dot/b6b1f28260913ef203c4e675abbe2d20407d1fdfc838edbccfd5a9d3db477caf-view-01.jpg",
+      "source": "docs/screenshots/valley.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "b6b1f28260913ef203c4e675abbe2d20407d1fdfc838edbccfd5a9d3db477caf",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-the-incredible-machine-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-incredible-machine-codex-dot/48aaa984ed92501995665f528a2d4b8f33a6fe0f872e27f3d5cf4f80e4f0ed10-view-01.jpg",
+      "source": "docs/qa/airflow.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "48aaa984ed92501995665f528a2d4b8f33a6fe0f872e27f3d5cf4f80e4f0ed10",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-incredible-machine-codex-dot/e528db71d64af8a4374d38330f4a0a32c4bd85bf76daf37dfb3b5bd89f437ee3-view-02.jpg",
+      "source": "docs/qa/sandbox.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "e528db71d64af8a4374d38330f4a0a32c4bd85bf76daf37dfb3b5bd89f437ee3",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot/9c3340f207245a04401ff5bfa2f2f5f52ef1b9aad35f23ec3a2b46a7f96416d7-view-01.jpg",
+      "source": "docs/screenshots/valley-desktop.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "9c3340f207245a04401ff5bfa2f2f5f52ef1b9aad35f23ec3a2b46a7f96416d7",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot/916d6cae22a18535d247e2bbf25ee29c27ef743c642f7e2106e8aecc860a32e9-view-02.jpg",
+      "source": "docs/screenshots/heartspire-desktop.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "916d6cae22a18535d247e2bbf25ee29c27ef743c642f7e2106e8aecc860a32e9",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-the-oregon-trail-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-oregon-trail-codex-dot/efe67f28831e2e4a575bd023629497e3efb5cf14bd66183b92cc4ac3e092b120-view-01.jpg",
+      "source": "evidence/river-decision.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "efe67f28831e2e4a575bd023629497e3efb5cf14bd66183b92cc4ac3e092b120",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-oregon-trail-codex-dot/dbc10df1add7135b02152765ca9163b73badd672d6eccd64b6ee2b8204c58c10-view-02.jpg",
+      "source": "evidence/river-accident.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "dbc10df1add7135b02152765ca9163b73badd672d6eccd64b6ee2b8204c58c10",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-the-secret-of-monkey-island-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-secret-of-monkey-island-codex-dot/e98e0da583bfbc510839549d147885ccb44d8839ce7208297f413f811ff61932-view-01.jpg",
+      "source": "docs/qa/tavern.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "e98e0da583bfbc510839549d147885ccb44d8839ce7208297f413f811ff61932",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-secret-of-monkey-island-codex-dot/9ca654b0504f407b2171cf37f57304feb34226f7d3a1b4939939e10b2a37b5e1-view-02.jpg",
+      "source": "docs/qa/market.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "9ca654b0504f407b2171cf37f57304feb34226f7d3a1b4939939e10b2a37b5e1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-theme-hospital-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-theme-hospital-codex-dot/5df9ff1f16d8e571219ffdcf1a805017cb576cbb0a5d3211e853be98da0372ad-view-01.jpg",
+      "source": "docs/qa/desktop-hospital.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "5df9ff1f16d8e571219ffdcf1a805017cb576cbb0a5d3211e853be98da0372ad",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-theme-hospital-codex-dot/9e497dcc71fd2466cbbf7bf4ac89589cdf9603c77c3a54b380e53fab98e73e6b-view-02.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/in-treatment.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "9e497dcc71fd2466cbbf7bf4ac89589cdf9603c77c3a54b380e53fab98e73e6b",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-tiny-toon-adventures-cartoon-workshop-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-tiny-toon-adventures-cartoon-workshop-codex-dot/38771beb019d762a64fcd3265147ccd4084d8edfcd2a4aacbc10d09dd3506fd1-view-01.jpg",
+      "source": "docs/workshop-mac.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "38771beb019d762a64fcd3265147ccd4084d8edfcd2a4aacbc10d09dd3506fd1",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-uno-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-uno-codex-dot/27847b9fa398531b4e62c88f0fb26fccae0855e62013572a36dd43012bab2ef7-view-01.jpg",
+      "source": "docs/screenshots/fresh-table.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "27847b9fa398531b4e62c88f0fb26fccae0855e62013572a36dd43012bab2ef7",
+      "provenance": "existing_repository_capture"
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-uno-codex-dot/4305306c48da4934b7b5d896de672197f9f262bd7bbad4d493758f4c62810f6c-view-02.jpg",
+      "source": "docs/screenshots/relay-declaration.jpg",
+      "alt": "Gameplay capture 2",
+      "sha256": "4305306c48da4934b7b5d896de672197f9f262bd7bbad4d493758f4c62810f6c",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-worms-armageddon-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-worms-armageddon-codex-dot/13e622fc0ecf2eb13aa6f118f1feb3860fc52c06ad9c90f003382ac22f0c713c-view-01.jpg",
+      "source": "docs/qa/final-desktop.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "13e622fc0ecf2eb13aa6f118f1feb3860fc52c06ad9c90f003382ac22f0c713c",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-meccha-chameleon-clone-astra-6-ultra": [
+    {
+      "file": "/screenshots/game-owned/kata-meccha-chameleon-clone-astra-6-ultra/e769b0a69cb98d334c33f76bf45be5903520595aa764ca182be0150890253bb0-view-01.jpg",
+      "source": "docs/hider-third-person.png",
+      "alt": "Gameplay capture 1",
+      "sha256": "e769b0a69cb98d334c33f76bf45be5903520595aa764ca182be0150890253bb0",
+      "provenance": "existing_repository_capture"
+    }
+  ],
+  "kata-inspired-by-comet-busters-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-comet-busters-codex-dot/b7c86474f0f48733d65d47622c71875fabf4b32b36da59918bf4a1236a63bae4-view-01.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/two-pilot-movement.jpg",
+      "alt": "Gameplay capture 1",
+      "sha256": "b7c86474f0f48733d65d47622c71875fabf4b32b36da59918bf4a1236a63bae4",
+      "provenance": "existing_repository_capture"
+    }
   ]
 }
