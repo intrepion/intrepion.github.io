@@ -38,7 +38,7 @@ test('screenshots point to unique local assets for playable games', async () => 
     files.add(image.file);
     assert.ok((await stat(new URL(`../public${image.file}`, import.meta.url))).size > 0);
   }
-  assert.equal(files.size, 42);
+  assert.equal(files.size, 45);
 });
 
 test('every playable genre has a unique route and every route has games', async () => {
@@ -77,5 +77,18 @@ test('additional captures have valid sources and unique local files', async () =
       assert.ok((await stat(new URL(`../public${image.file}`, import.meta.url))).size > 0);
     }
   }
-  assert.equal(files.size, 50);
+  assert.equal(files.size, 72);
+});
+
+test('home search indexes genres, inspirations, and individual games with distinct routes', async () => {
+  const { makeSearchIndex, matchesSearch } = await import('../src/data/search.mjs');
+  const { genreDetails } = await import('../src/data/genres.mjs');
+  const index = makeSearchIndex(games, Object.keys(genreDetails));
+  for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
+    assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
+  }
+  assert.equal(index.filter(item => item.type === 'Game').length, 125);
+  assert.equal(matchesSearch('Braid', '  '), false);
+  assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
+  assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
 });

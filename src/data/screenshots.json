@@ -166,5 +166,20 @@
   "kata-inspired-by-wordle-codex-dot": {
     "file": "/screenshots/kata-inspired-by-wordle-codex-dot.jpg",
     "source": "docs/screenshots/desktop-repeat.jpg"
+  },
+  "kata-inspired-by-minesweeper-codex-dot": {
+    "file": "/screenshots/kata-inspired-by-minesweeper-codex-dot-1.jpg",
+    "source": "docs/screenshots/win.jpg",
+    "label": "Completed game"
+  },
+  "kata-inspired-by-pente-codex-dot": {
+    "file": "/screenshots/kata-inspired-by-pente-codex-dot-1.jpg",
+    "source": "docs/qa/capture-win.jpg",
+    "label": "Completed game"
+  },
+  "kata-inspired-by-stratego-codex-dot": {
+    "file": "/screenshots/kata-inspired-by-stratego-codex-dot-1.jpg",
+    "source": "docs/screenshots/drill-victory.jpg",
+    "label": "Completed game"
   }
 }

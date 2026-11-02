@@ -44,5 +44,122 @@
       "file": "/screenshots/kata-inspired-by-starcraft-brood-war-codex-dot-2.jpg",
       "source": "docs/screenshots/assault.jpg"
     }
+  ],
+  "kata-inspired-by-minesweeper-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-minesweeper-codex-dot-2.jpg",
+      "source": "docs/screenshots/loss.jpg",
+      "label": "Game over"
+    }
+  ],
+  "kata-inspired-by-pente-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-pente-codex-dot-2.jpg",
+      "source": "docs/qa/line-win.jpg",
+      "label": "Completed game"
+    }
+  ],
+  "kata-inspired-by-stratego-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-stratego-codex-dot-2.jpg",
+      "source": "docs/screenshots/full-battle-victory.jpg",
+      "label": "Completed game"
+    }
+  ],
+  "kata-inspired-by-4d-toys-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-4d-toys-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/live-gravity.jpg"
+    }
+  ],
+  "kata-inspired-by-uno-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-uno-codex-dot-2.jpg",
+      "source": "docs/screenshots/relay-declaration.jpg"
+    }
+  ],
+  "kata-inspired-by-fire-emblem-awakening-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-fire-emblem-awakening-codex-dot-2.jpg",
+      "source": "evidence/final-forecast.jpg"
+    }
+  ],
+  "kata-inspired-by-simcity-2000-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-simcity-2000-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/underground-served.jpg"
+    }
+  ],
+  "kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot-2.jpg",
+      "source": "docs/screenshots/hollow-king.jpg"
+    }
+  ],
+  "kata-inspired-by-the-witness-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-the-witness-codex-dot-2.jpg",
+      "source": "docs/qa/walk-three-bells.jpg"
+    }
+  ],
+  "kata-inspired-by-the-secret-of-monkey-island-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-the-secret-of-monkey-island-codex-dot-2.jpg",
+      "source": "docs/qa/market.jpg"
+    }
+  ],
+  "kata-inspired-by-everyday-genius-squarelogic-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-everyday-genius-squarelogic-codex-dot-2.jpg",
+      "source": "docs/screenshots/first-light-complete.jpg"
+    }
+  ],
+  "kata-inspired-by-theme-hospital-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-theme-hospital-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/in-treatment.jpg"
+    }
+  ],
+  "kata-inspired-by-pico-park-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-pico-park-codex-dot-2.jpg",
+      "source": "docs/evidence/planter.jpg"
+    }
+  ],
+  "kata-inspired-by-castle-of-the-winds-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-castle-of-the-winds-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/ward-enemy-response.jpg"
+    }
+  ],
+  "kata-inspired-by-the-incredible-machine-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-the-incredible-machine-codex-dot-2.jpg",
+      "source": "docs/qa/sandbox.jpg"
+    }
+  ],
+  "kata-inspired-by-the-oregon-trail-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-the-oregon-trail-codex-dot-2.jpg",
+      "source": "evidence/river-accident.jpg"
+    }
+  ],
+  "kata-inspired-by-animal-crossing-new-horizons-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-animal-crossing-new-horizons-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/caught-sunfin.jpg"
+    }
+  ],
+  "kata-inspired-by-full-tilt-pinball-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-full-tilt-pinball-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/dock-locked.jpg"
+    }
+  ],
+  "kata-inspired-by-secret-of-mana-codex-dot": [
+    {
+      "file": "/screenshots/kata-inspired-by-secret-of-mana-codex-dot-2.jpg",
+      "source": "docs/qa/fidelity-2026-10-15/charge-release.jpg"
+    }
   ]
 }
