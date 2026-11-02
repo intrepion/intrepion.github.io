@@ -18,6 +18,15 @@ export async function loadPilot(gameRoot, id) {
   const captured = manifest.schemaVersion === 2 && provenance?.kind === 'ci_gameplay_capture' && /^arcade\/capture-evidence\/[a-z0-9-]+\.png$/.test(provenance.sourcePath || '') && /^[a-f0-9]{64}$/.test(provenance.sourceSha256 || '') && /^[a-f0-9]{40}$/.test(provenance.captureCommit || '') && /^[0-9]+$/.test(provenance.workflowRunId || '') && typeof provenance.publishedFilesVerifiedAt === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/.test(provenance.publishedFilesVerifiedAt) && !Number.isNaN(Date.parse(provenance.publishedFilesVerifiedAt)) && hashes && Object.keys(hashes).length > 0 && Object.entries(hashes).every(([name, hash]) => /^[a-zA-Z0-9._/-]+$/.test(name) && !name.startsWith('/') && !name.split('/').includes('..') && /^[a-f0-9]{64}$/.test(hash));
   if (typeof image.path !== 'string' || !/^arcade\/screenshots\/[a-z0-9-]+\.jpg$/.test(image.path) || seen.has(image.path) || !/^[a-f0-9]{64}$/.test(image.sha256) || typeof image.alt !== 'string' || !image.alt.trim() || !(legacy || captured)) throw new Error(`Invalid screenshot metadata for ${id}`);
   if (captured) {
+   if (provenance.captureRecordPath !== undefined || provenance.captureRecordSha256 !== undefined) {
+    if (!/^arcade\/capture-evidence\/[a-z0-9-]+\.json$/.test(provenance.captureRecordPath || '') || !/^[a-f0-9]{64}$/.test(provenance.captureRecordSha256 || '')) throw new Error(`Invalid capture record metadata: ${id}`);
+    const recordPath = await realpath(resolve(publicDir, provenance.captureRecordPath)); const recordRel = relative(await realpath(publicDir), recordPath);
+    if (recordRel.startsWith('..') || isAbsolute(recordRel)) throw new Error('Capture record outside public directory');
+    const rawRecord = await readFile(recordPath);
+    if (digest(rawRecord) !== provenance.captureRecordSha256) throw new Error(`Capture record hash mismatch: ${id}`);
+    const record = JSON.parse(rawRecord);
+    if (record.sourceCommit !== provenance.captureCommit || String(record.runId) !== provenance.workflowRunId || JSON.stringify(record.inputs) !== JSON.stringify(provenance.inputHashes)) throw new Error(`Capture record provenance mismatch: ${id}`);
+   }
    const evidencePath = await realpath(resolve(publicDir, provenance.sourcePath)); const rel = relative(await realpath(publicDir), evidencePath);
    if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('Evidence outside public directory');
    const original = await readFile(evidencePath);

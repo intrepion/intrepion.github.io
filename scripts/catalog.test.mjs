@@ -133,7 +133,7 @@ test('checked-in game-owned snapshots match their hashes and preserve provenance
     for (const image of images) {
       assert.ok(['existing_repository_capture', 'ci_gameplay_capture'].includes(image.provenance));
       if (image.provenance === 'ci_gameplay_capture') { assert.match(image.capture.captureCommit, /^[a-f0-9]{40}$/); assert.match(image.capture.workflowRunId, /^[0-9]+$/); }
-      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9-]+\/[a-f0-9]{64}-view-\d{2}\.jpg$/);
+      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|ci-20261102-\d{2})\.jpg$/);
       const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     }
@@ -181,6 +181,16 @@ test('CI captures require valid provenance and untampered original evidence', as
     const manifest = {schemaVersion:2,gameId:id,playUrl:`https://intrepion.github.io/${id}/`,screenshots:[image]};
     const save = () => writeFile(join(dir,'manifest.json'),JSON.stringify(manifest)); await save();
     const result = await syncGames(join(tmp,'games'),[id],join(tmp,'gallery')); assert.equal(result[id][0].capture.captureCommit,'a'.repeat(40));
+    const record = Buffer.from(JSON.stringify({sourceCommit:'a'.repeat(40),runId:'123',inputs:{'index.html':'b'.repeat(64)}}));
+    await writeFile(join(dir,'capture-evidence/record.json'),record);
+    image.provenance.captureRecordPath='arcade/capture-evidence/record.json'; image.provenance.captureRecordSha256=hash(record); await save();
+    await syncGames(join(tmp,'games'),[id],join(tmp,'gallery'));
+    await writeFile(join(dir,'capture-evidence/record.json'),'tampered');
+    await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Capture record hash mismatch/);
+    const wrongRecord = Buffer.from(JSON.stringify({sourceCommit:'c'.repeat(40),runId:'123',inputs:{'index.html':'b'.repeat(64)}}));
+    await writeFile(join(dir,'capture-evidence/record.json'),wrongRecord); image.provenance.captureRecordSha256=hash(wrongRecord); await save();
+    await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Capture record provenance mismatch/);
+    await writeFile(join(dir,'capture-evidence/record.json'),record); image.provenance.captureRecordSha256=hash(record); await save();
     manifest.schemaVersion=1; await save(); await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Invalid screenshot metadata/);
     manifest.schemaVersion=2; image.provenance.captureCommit='bad'; await save(); await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/Invalid screenshot metadata/);
     image.provenance.captureCommit='a'.repeat(40); await save(); await writeFile(join(dir,'capture-evidence/rally-01.png'),'tampered');

@@ -21,3 +21,5 @@ Establish and test a capture workflow per game before replacing any existing cap
 ## Staged rollout
 
 The registered IDs in `src/data/game-owned-ids.json` are the game manifests included in the checked-in snapshot. Each is added only after its deployment and image hashes have been verified. The registry covers the playable catalog; source-only entries have no deployed game manifest. Empty game-owned manifests preserve the no-screenshot state.
+
+Reviewed CI captures may also include a capture-record path and SHA-256. The sync validates the record against the capture commit, run ID, and input hashes before accepting it; records preserve browser and capture details as well as any documented external-runtime or font limitations. The timestamp is the time the published files were checked, not a guarantee that they remain unchanged.
