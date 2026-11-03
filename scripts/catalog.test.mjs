@@ -133,7 +133,7 @@ test('checked-in game-owned snapshots match their hashes and preserve provenance
     for (const image of images) {
       assert.ok(['existing_repository_capture', 'ci_gameplay_capture'].includes(image.provenance));
       if (image.provenance === 'ci_gameplay_capture') { assert.match(image.capture.captureCommit, /^[a-f0-9]{40}$/); assert.match(image.capture.workflowRunId, /^[0-9]+$/); }
-      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|ci-\d{8}-\d{2})\.jpg$/);
+      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|(?:ci|review)-\d{8}-\d{2})\.jpg$/);
       const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     }

@@ -6,7 +6,7 @@
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-rogue-legacy-2-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-rogue-legacy-2-codex-dot/",
-    "edition": "Codex Dot · Early approximation",
+    "edition": "Codex Dot \u00b7 Early approximation",
     "verified": "2026-11-02",
     "evidence": "Local browser combat and chamber smoke test; automated core tests",
     "genres": [
@@ -16,12 +16,12 @@
   },
   {
     "id": "kata-inspired-by-super-mario-maker-codex-dot",
-    "title": "Sproutworks — Course Foundry",
+    "title": "Sproutworks \u2014 Course Foundry",
     "inspiration": "Super Mario Maker",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-super-mario-maker-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-super-mario-maker-codex-dot/",
-    "edition": "Codex Dot · Early approximation",
+    "edition": "Codex Dot \u00b7 Early approximation",
     "verified": "2026-11-01",
     "evidence": "Local browser editor, keyboard smoke test and automated rules and simulation tests",
     "genres": [
@@ -35,7 +35,7 @@
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-binding-of-issac-rebirth-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-binding-of-issac-rebirth-codex-dot/",
-    "edition": "Codex Dot · Early approximation",
+    "edition": "Codex Dot \u00b7 Early approximation",
     "verified": "2026-11-01",
     "evidence": "Local keyboard smoke test and fixture-assisted systems tests; deployed game launch verified",
     "genres": [
@@ -50,8 +50,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-marble-madness-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-marble-madness-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-11-01",
-    "evidence": "Local full six-course run and phone-size pointer controls; Pages deployment verified",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Arcade"
     ]
@@ -64,8 +64,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-excitebike-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-excitebike-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-31",
-    "evidence": "Local complete race and touch controls; deployed files match locally tested game",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Racing & sports"
     ]
@@ -107,8 +107,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-peggle-2-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-peggle-2-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-31",
-    "evidence": "Local keyboard shot and physics tests; Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Arcade"
     ]
@@ -135,8 +135,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-combat-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-combat-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-30",
-    "evidence": "Verified live launch, controls, and Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Action"
     ]
@@ -250,8 +250,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-the-legend-of-zelda-breath-of-the-wild-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure"
     ]
@@ -321,7 +321,7 @@
     "play": "https://intrepion.github.io/kata-inspired-by-factorio-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-11-03",
-    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Simulation & creative"
     ]
@@ -329,7 +329,7 @@
   {
     "id": "kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "title": "Briarbrook League",
-    "inspiration": "Pokémon",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-codex-openai-gpt-5.5-light",
     "play": "https://intrepion.github.io/kata-pokemon-clone-codex-openai-gpt-5.5-light/",
@@ -349,8 +349,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-worms-armageddon-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-worms-armageddon-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Strategy"
     ]
@@ -372,7 +372,7 @@
   {
     "id": "kata-inspired-by-rubiks-cube-codex-dot",
     "title": "Chromatic",
-    "inspiration": "Rubik’s Cube",
+    "inspiration": "Rubik\u2019s Cube",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-rubiks-cube-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-rubiks-cube-codex-dot/",
@@ -391,8 +391,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-starcraft-brood-war-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-starcraft-brood-war-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Strategy"
     ]
@@ -419,8 +419,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-diablo-ii-lord-of-destruction-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Action",
       "Role-playing"
@@ -532,8 +532,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-animal-crossing-new-horizons-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-animal-crossing-new-horizons-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Simulation & creative"
     ]
@@ -616,8 +616,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-final-fantasy-x-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-final-fantasy-x-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure",
       "Role-playing"
@@ -674,8 +674,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-minecraft-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-minecraft-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Simulation & creative"
     ]
@@ -816,8 +816,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-fire-emblem-awakening-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-fire-emblem-awakening-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Strategy",
       "Role-playing"
@@ -874,8 +874,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-untitled-goose-game-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-untitled-goose-game-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-30",
-    "evidence": "Pages deployment for c2e957d; live entry point returned HTTP 200; automated objective flow passed",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure"
     ]
@@ -1056,8 +1056,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-lemmings-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-lemmings-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Puzzle"
     ]
@@ -1079,7 +1079,7 @@
   {
     "id": "kata-pokemon-clone-gpt-6-luna-extra-high",
     "title": "Mosswood Field Club",
-    "inspiration": "Pokémon",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-gpt-6-luna-extra-high",
     "play": "https://intrepion.github.io/kata-pokemon-clone-gpt-6-luna-extra-high/",
@@ -1319,8 +1319,8 @@
   },
   {
     "id": "kata-pokemon-clone-astra-6-ultra",
-    "title": "Pokémon Verdant",
-    "inspiration": "Pokémon",
+    "title": "Pok\u00e9mon Verdant",
+    "inspiration": "Pok\u00e9mon",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-pokemon-clone-astra-6-ultra",
     "play": "https://intrepion.github.io/kata-pokemon-clone-astra-6-ultra/",
@@ -1410,8 +1410,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-uno-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-uno-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Board & card"
     ]
@@ -1637,8 +1637,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-castle-of-the-winds-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-castle-of-the-winds-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure",
       "Role-playing"
@@ -1680,8 +1680,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-prince-of-persia-sands-of-time-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-prince-of-persia-sands-of-time-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure",
       "Platformer"
@@ -1709,8 +1709,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-the-elder-scrolls-oblivion-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-the-elder-scrolls-oblivion-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-26",
-    "evidence": "Prior verified gameplay; current HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Adventure",
       "Role-playing"
@@ -1754,7 +1754,7 @@
     "play": "https://intrepion.github.io/kata-inspired-by-order-of-the-sinking-star-codex-dot/",
     "edition": "Codex Dot",
     "verified": "2026-11-03",
-    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Role-playing"
     ]
@@ -1807,7 +1807,7 @@
   {
     "id": "kata-inspired-by-pokemon-blue-codex-dot",
     "title": "Tidebound",
-    "inspiration": "Pokémon Blue",
+    "inspiration": "Pok\u00e9mon Blue",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-pokemon-blue-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-pokemon-blue-codex-dot/",
@@ -2013,8 +2013,8 @@
     "repo": "https://github.com/intrepion/kata-inspired-by-yokus-island-express-codex-dot",
     "play": "https://intrepion.github.io/kata-inspired-by-yokus-island-express-codex-dot/",
     "edition": "Codex Dot",
-    "verified": "2026-10-31",
-    "evidence": "Local full gameplay verified; Pages deployment and HTTP 200",
+    "verified": "2026-11-03",
+    "evidence": "Automated mechanics tests and build; genuine CI browser gameplay capture on 127.0.0.1; deployed runtime hashes matched capture; live launch verified. Focused checks, not exhaustive gameplay.",
     "genres": [
       "Platformer",
       "Arcade"
