@@ -6788,5 +6788,399 @@
         "captureRecordSha256": "5db1ed4d6262cc14d66ae8dae26a82ec42b5924b9c9b2b51cfb3c00b85b2b777"
       }
     }
+  ],
+  "kata-filipino-mahjongg-game-codex-openai-gpt-5.5-light": [
+    {
+      "file": "/screenshots/game-owned/kata-filipino-mahjongg-game-codex-openai-gpt-5.5-light/02b300c6e350dd184df94a91ddd8fa16ce3b1cd03d2761efb30ea33c96a1dd87-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Filipino Mahjongg gameplay",
+      "sha256": "02b300c6e350dd184df94a91ddd8fa16ce3b1cd03d2761efb30ea33c96a1dd87",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "5fc73052198455b3c982d0876244a3c705cf6300e5771da500baae07215907cc",
+        "captureCommit": "6b6c58ec9eea142738f5e0382d6d2e9e1e424bf1",
+        "workflowRunId": "41618864203",
+        "inputHashes": {
+          "game-core.js": "47cfbdff442ab84e61dc42e486f24b83c3f805708a39e50c04bb3c98d43706a6",
+          "game.js": "9749b247b326106f721b76e81d97e3dd923d19cc5eb47ca3008f1961f73834fe",
+          "index.html": "90a4e410c348f2cf9d7c713b481d99ca24b8194e71f0802b19f24a0ba0de2f96",
+          "styles.css": "642991700faf7fd334adaf9b36f28d55d2df307c8046360efb211635043c0f8d"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:05Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "097b7aaa81b1c17f131c221c33d1e6ca0d605578f6e8c45d207c9d298f1e42dd"
+      }
+    }
+  ],
+  "kata-inspired-by-california-games-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-california-games-codex-dot/096880c62c8feb0400a154f3035c31fc3606ed4faf31cdf38a143a6c92e1c8a2-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "California gameplay",
+      "sha256": "096880c62c8feb0400a154f3035c31fc3606ed4faf31cdf38a143a6c92e1c8a2",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "e21050248d6f28932f1e3ae22c37447b72930055f6d119d5d9b8c64c88888c86",
+        "captureCommit": "b8a0b2a69e61c39289f71b682ff829106df755b4",
+        "workflowRunId": "41618864183",
+        "inputHashes": {
+          "assets/index-DgLN411W.css": "26f38f73b61f690bd0164d39fa1e14dba166a86669434ba48255a5582edce301",
+          "assets/index-czAskYy0.js": "806cf83c566e819fb5efafd23576d1adba91ec1c53ab49463341a4c95a9127eb",
+          "index.html": "122cd7a999ab6adb64cffdf46fef9b8531a3b77fccb476179af5d902dc554e6a"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:04Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "7839288a71531fa7f8a131b695ce6a57b01d1808143cd012b8c99b8abc9270f2"
+      }
+    }
+  ],
+  "kata-inspired-by-candy-crush-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-candy-crush-codex-dot/3ba033417a2e131f6453fe624675e0213ceb07c9fb360c4d7a6b78c4db287d12-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Bonbon Borough gameplay",
+      "sha256": "3ba033417a2e131f6453fe624675e0213ceb07c9fb360c4d7a6b78c4db287d12",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "259ae415287e9187694a3a91dedb23e188f537cfd2275926c1296ef96ac0f5f7",
+        "captureCommit": "79014fbdfd2b52e48e06e6f72b1aa9374297374b",
+        "workflowRunId": "41618864068",
+        "inputHashes": {
+          "assets/index-COp63yPX.css": "859fb9bf8a7385c380b3ed84b570b9bad0383ca592557ac2f589ff8566314f8f",
+          "assets/index-DFnHP-r-.js": "c03a1f630a532e4f79683fb1bf5233b4accf3f94d71017106e337c9e172a3247",
+          "index.html": "90c543756c04890a5bc9ebbffbe9c61c917624dd7eae0224c5336bd0c0aae247"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:24:28Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "f75bd34b435c2c9c45fd5480e831a8999d7088c17f12a8bec4b95b678d95d4de"
+      }
+    }
+  ],
+  "kata-inspired-by-factorio-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-factorio-codex-dot/f8e63c11c8237a483abd3442a8a397d36252c67382158407d5444e556412bf07-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Brasswake gameplay",
+      "sha256": "f8e63c11c8237a483abd3442a8a397d36252c67382158407d5444e556412bf07",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "c30a867e434af929a4e2674e9296e05433df6aad1044540a5c3129dec5ba8333",
+        "captureCommit": "393f16d40b885bb2078bc2e00c6e2003ee256c92",
+        "workflowRunId": "41618864337",
+        "inputHashes": {
+          "assets/index-B_MiVbfW.js": "2bcb2ea67734d2d3a09b05ebadf50ddcf87bea3bc19b4a129507ecf51ca8fa29",
+          "assets/index-Bke7zSeo.css": "275a96cae1a3a4fa515de9d4ee3b8a5a8b16dcf71b8376cf4c493ea47b883cbb",
+          "index.html": "38b2e316928c2bccee15e65462c8547ddcd9ed180b74aee6bea320db3cebfbdc"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:04Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "bfb44da89957f4ffc72722fc672831a7d6313bb04d01ab517ddcfd7cf0dd2994"
+      }
+    }
+  ],
+  "kata-inspired-by-fibbage-3-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-fibbage-3-codex-dot/3062c2c45eebcb6ce628664ef8944d63485c2e9d2fc4c2b7bb4648239a8ce6fa-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Velvet Bluff gameplay",
+      "sha256": "3062c2c45eebcb6ce628664ef8944d63485c2e9d2fc4c2b7bb4648239a8ce6fa",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "5a4e460f4be8949bbfc968d12c75739fa30fd1c870a5271b8aed26e38207058d",
+        "captureCommit": "77b8501c24dc14914681c11c8fd3d598202ab6bb",
+        "workflowRunId": "41619193888",
+        "inputHashes": {
+          "game.js": "60c8374fd2656909e48135720bce5e961218fe37d585d5f4254d6824537bb422",
+          "index.html": "c34a09b48e22a527ad24b4721542047dccbb0926a34838f4d7ffb240125d0b6a",
+          "prompts.js": "5f05d0e5d6b707f1e03597d95a20a217bebcd7515a2c8d1984ffc11725729b18",
+          "solo.css": "179ee764ae5b405f09b24dcbdd3ab34e7d7ff80438c1db0400ff7e51cac9ab6d",
+          "solo.js": "022fb2425114b3d6b0abc748460b974d42460d72ab7d7ac5db1a73ad0d0c5e13",
+          "style.css": "241d3dabb2ba016d1f7acb57ca5978f780bd87073659678d01a122c6c1a45f17"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:27:47Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "5637124654a0d6fcebfdc544874fa5250cf3781eb1e2b02c6962d49c642a50fc"
+      }
+    }
+  ],
+  "kata-inspired-by-human-resource-machine-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-human-resource-machine-codex-dot/a7fa251beddb8e753862289bd4d67be50ea40a3429c0eafdbced6efcc8306cb7-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Copperline Dispatch gameplay",
+      "sha256": "a7fa251beddb8e753862289bd4d67be50ea40a3429c0eafdbced6efcc8306cb7",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "1b35ea18a54b56df0249b50a9f1c74221a1dca30e5da74f0710ee2230dc9d343",
+        "captureCommit": "10719e3ed36425a787a2e70a74a5e498ed20c5c2",
+        "workflowRunId": "41618865988",
+        "inputHashes": {
+          "assets/index-99XRFPbu.js": "dc80846e9c77efd0cc4e2a920b0403e5c45b836767aa9dc33cd0562fcc83fb3e",
+          "assets/index-aLf4l8CQ.css": "bf8b5048f7d1dcd1a2079aee965d0cb428bbb4336fe2abd20187c7f588219b20",
+          "index.html": "4b7712ea344786e30ae9a7aeaf6ead9c2b2407a53799d25750ccd487999c36f5"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:07Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "0497a33a664ba41c674f84cb55719e273c17516f2912cb4987d30a03908dd184"
+      }
+    }
+  ],
+  "kata-inspired-by-mario-paint-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-mario-paint-codex-dot/86cd6449f9c20b54f0056ac216a34ebf9cee50a88b1d1d3ad2d6a5219972e2c6-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Pollen & Paper gameplay",
+      "sha256": "86cd6449f9c20b54f0056ac216a34ebf9cee50a88b1d1d3ad2d6a5219972e2c6",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "3043621c8ea04cd1124f4b0a528299e9ee4dab066311af23da29f0d94b57a5e9",
+        "captureCommit": "d1e5c8c2640d52d749a296504325c305e0db5a48",
+        "workflowRunId": "41619730754",
+        "inputHashes": {
+          "assets/index-BpoVCOjX.js": "d6188ef14c1d6a7a830d9d2aac32f4790e1383d42f4cd62d0d9735ead1c466d3",
+          "assets/index-oHhxov-M.css": "8b540d337467909ac1288b35163ff4519ab549544f3a9422f9624721c8a52055",
+          "index.html": "e900b83f775257866d6a0285b7729e2d390ea17a5a56c5a26212b389f3618556"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:30:54Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "85e3d7074bbf598a6532d4c0ccce631eb126a4ef3533ecee80ab3e4be3d5f809"
+      }
+    }
+  ],
+  "kata-inspired-by-number-munchers-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-number-munchers-codex-dot/c66953f752a085ca210d3b52bc7e9452749a159357cf6ba15f5d5a705a9a0c3e-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Lumen Orchard gameplay",
+      "sha256": "c66953f752a085ca210d3b52bc7e9452749a159357cf6ba15f5d5a705a9a0c3e",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "a8c1143fbd5ecd74acc537677bb34f7b5e84d404e4e5244205b0bca221784fe8",
+        "captureCommit": "f299d453c36abafbd07d9b02a0913971aa15ca04",
+        "workflowRunId": "41619360682",
+        "inputHashes": {
+          "assets/index-LyNw0cdR.css": "ee6505d3194e85c909eefad9a042c5bd2f5cccdfe77d374579b411f4ed51f1a5",
+          "assets/index-sP0LgO5z.js": "4baa916c5a2844a2e9c4eade442fc35f35115b2ba7b05116595f7760ce150960",
+          "index.html": "62d46bec3c330199c91c49b5e464dfe8ed0ae1cd2c42ebf58f00233597f9cec3"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:27:49Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "6dd3b0be18f4f560e23f5809aa91552fe3dd4dd619340d7d4ba790fad63912ca"
+      }
+    }
+  ],
+  "kata-inspired-by-one-must-fall-2097-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-one-must-fall-2097-codex-dot/3b9f870dd4a6bc4aa9f9bd974f169456b9a3a74a3ff75c8ff48b535e1bd86429-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Rivet Circuit gameplay",
+      "sha256": "3b9f870dd4a6bc4aa9f9bd974f169456b9a3a74a3ff75c8ff48b535e1bd86429",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "938cbf41daca04ea963acd7f1b2c441fa5436e6fe74a9bb501e930af71a29e9f",
+        "captureCommit": "776cd0921a1abe585b811ef13a217f6dd76cbdc3",
+        "workflowRunId": "41619364019",
+        "inputHashes": {
+          "assets/index-1YcgZ7yE.js": "fd4f5bc92ed8896287ffebf24683bed97ae7b06cef9c1ceea0b86855b4455691",
+          "assets/index-Bl8ICnu-.css": "3d26fccef8762f2278b7484bcd4fb550f4f021664212aca4f6c8fa34261a5876",
+          "index.html": "95f9f00ff85cab107aeb83d3dff456b64e288d9aa63a0e22881bb4a898f911dd"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:28:47Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "cc2bf086c4a1587284d31ce44b1e22fe8c16eee638358d8d01ffa19c5f7877bb"
+      }
+    }
+  ],
+  "kata-inspired-by-order-of-the-sinking-star-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-order-of-the-sinking-star-codex-dot/afc872d46b4350daf87ea8c50a814c787b7745fba5099ecffa6d7cf765d947c7-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Threefold Passage gameplay",
+      "sha256": "afc872d46b4350daf87ea8c50a814c787b7745fba5099ecffa6d7cf765d947c7",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "7527745bea5027fc215ace19972cc9cd005f44c0dbef423c63de5b81d6eb6858",
+        "captureCommit": "c0a39fc7627f34a026719a8b4fa35ffa16062014",
+        "workflowRunId": "41618866502",
+        "inputHashes": {
+          "index.html": "61cd1b416e38248efbc217f17c03c61609795ca4bd2969f39bdb4debae1b904c",
+          "src/app.js": "5e898b84dbef45319d5c0f78f9d360856bf9e641ba37f6f421a8a1983afc1846",
+          "src/engine.js": "3dfb89fb8bd299a6ccef6169e5fd29463b30884e0ee9a56ba7f0d400b3748ce8",
+          "src/levels.js": "3f9769f6bfa0b0f3887592f167ed2263e7c13a224b0890873b4df662d933cf10",
+          "src/session.js": "51ad12b5f652026f945ecdd46ba17cc42ffd04479defef73bd71b83b060fde2f",
+          "style.css": "8b2bc5b23de9308d1c70fdbbbb9ef44fbaf80be81b78e4da261b4c0b55d5318d"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:09Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "796687a54b32992d670210c5cfbef2977f0cb0b579ba7ef736286138ae53ff91"
+      }
+    }
+  ],
+  "kata-inspired-by-road-rash-2-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-road-rash-2-codex-dot/7d403edac41080e71f35798be6d6b637147c7c40589cfe9958781f3fde111427-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Cinderline Run gameplay",
+      "sha256": "7d403edac41080e71f35798be6d6b637147c7c40589cfe9958781f3fde111427",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "9a086450a0d4be8b6bb6380da462d456652e413c37a378296416ce26d3b32123",
+        "captureCommit": "45c4bdccb0cf4ce9c6d09c947fe86e09c6801bb5",
+        "workflowRunId": "41619730482",
+        "inputHashes": {
+          "assets/index-B339_SRd.js": "8776ed40381d82d0559618e2d07b6c22fbd6a52682c6f2bda5cec5649ae58566",
+          "assets/index-Di9s9lOn.css": "bf542724dcd8b0d40220198b917ed2a0b19055396d2b43cb99675162ea18db70",
+          "index.html": "1e20dae0868e5b3013656a5d3a92d25c1ce94674b0c2377f1b6ffdbaa13a9587"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:31:41Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "235425a2c3600fc653739aaabd288026b0a0e0f50630694dc3c25b29c13809e6"
+      }
+    }
+  ],
+  "kata-inspired-by-slay-the-spire-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-slay-the-spire-codex-dot/0887d0f9a7f01c46511c13fd853aa8b5a41b80ee66ab69665c16636339d6fba8-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Lantern Ascent gameplay",
+      "sha256": "0887d0f9a7f01c46511c13fd853aa8b5a41b80ee66ab69665c16636339d6fba8",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "23c3af0facc119a5261c400b7f3e5df0676e90bc63a172c90fcb722d0a542134",
+        "captureCommit": "37c0e903ebfa4fd65d93f5014e3013b6c686b210",
+        "workflowRunId": "41618870743",
+        "inputHashes": {
+          "assets/index-8hSVS1xN.js": "b16d3c7387215ae3aede234bb46c5ece4707ade808f2196e35015ed006b63334",
+          "assets/index-CA4nZVlb.css": "bc65f77e16b1b8be3ef4dcb91ad97b251b2a5b3fcd8f25e5cd9b781f4f251211",
+          "index.html": "67880a5f6af3a087de3463be3cec94b9ff4c362be3e7d6baf1bfbe390d82a0b0"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:26:27Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "f76aea9812f8421895f71745bd4706f26ccbab2fa03dc9fc8b0a115f8f98883c"
+      }
+    }
+  ],
+  "kata-inspired-by-super-mario-64-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-super-mario-64-codex-dot/98ed122989b168f9a1d8e802dcd7f918cc932eec31f925f1b3f6dac57cc94e28-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Cloudpost Orchard gameplay",
+      "sha256": "98ed122989b168f9a1d8e802dcd7f918cc932eec31f925f1b3f6dac57cc94e28",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "1b5100617a1c230863ab81a6e40c6502a697a296700dcdae1e2efdcfb1213d1f",
+        "captureCommit": "c6a658c5c6d7c0737e280b9a95850a8e1bac3b24",
+        "workflowRunId": "41619361028",
+        "inputHashes": {
+          "assets/index-B9KzA_Ui.js": "f2a5ff14f3f9a4953cfc6171a745b1d67bfe1353427f34f49fccfc7bb4f55408",
+          "assets/index-Dw3CoXzo.css": "2a39eca9f3c6f8304baafde1ac18037d4f01d5cb5d4d12b4c9c5a9c4d6e2e941",
+          "index.html": "a4717057544799f8706066287bddc3bb779ce37117450a611d46d25bfd8243c2"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:28:50Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "83617c66858bd5ca90e7a71ff9278013fd3843c69973c78f1ebf62dff74620ef"
+      }
+    }
+  ],
+  "kata-inspired-by-the-sims-4-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-the-sims-4-codex-dot/709bd2c3a1023e9c1c8b392e32b421cdb94eb3b436f21e8894bb20b36af8fc2a-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Hearth & Hollow gameplay",
+      "sha256": "709bd2c3a1023e9c1c8b392e32b421cdb94eb3b436f21e8894bb20b36af8fc2a",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "0eb800c028ad6a85fcc8f92c16b0c9b9db6054ecd3f855b8a74e5a3b930861ac",
+        "captureCommit": "10603931280e21b26cc5717f86f39f4c15c99f66",
+        "workflowRunId": "41618870306",
+        "inputHashes": {
+          "assets/index-BoBO2X37.js": "c6a3f02973d4416e325c28ae22c8a1b6b888c6f6d66da0df08aeaaef46445d97",
+          "assets/index-z8eKAJFt.css": "a8256b890878832ad960c9a9398e76dbe5eb19801c6fc782ba407809b72f1b84",
+          "index.html": "aef1dd8dac2f9aca4705ea2e248771c1bb6f1e0390b5d7fd8c34cf95e82c2a80"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:26:28Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "5cd59ba4b9134f301f8f2dace577e302cec22a0c3d932342d7b9885b9770fdfc"
+      }
+    }
+  ],
+  "kata-minecraft-clone-codex-openai-gpt-5.5-light": [
+    {
+      "file": "/screenshots/game-owned/kata-minecraft-clone-codex-openai-gpt-5.5-light/28d2c28c61027048364155022f21f7589a4c94f01a10c60c5c221823d5cee589-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Minecraft gameplay",
+      "sha256": "28d2c28c61027048364155022f21f7589a4c94f01a10c60c5c221823d5cee589",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "7188f66fe671009f102e62fbf963567469badb315f068208518bef5d22ab997c",
+        "captureCommit": "849ab9ef9844586ad32653bba2c9a1fb5d2bb786",
+        "workflowRunId": "41619363824",
+        "inputHashes": {
+          "app.html": "f15d46f1bd279ee8c5ebafda7e434708be641b7a8e8454a5f57aef02d5dd375e",
+          "assets/app-Z_iFLJuM.css": "635d4cbd74910089bf9aca1d9c463d57f3b833bedc5ad160cc1246eb1f30b816",
+          "assets/app-sYAl7cR8.js": "fe68cf9afc30b5e5ba45cfca4e0419eaa3a50d9ba79ded4fd4e9508e8f6375c7",
+          "index.html": "f15d46f1bd279ee8c5ebafda7e434708be641b7a8e8454a5f57aef02d5dd375e"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:28:51Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "4c868971e6ae4e5e5413d1b79243aaf1dff745919d785f68b6a04be2862f143d"
+      }
+    }
+  ],
+  "kata-portal-clone-codex-openai-gpt-5.5-light": [],
+  "kata-wordle-clone-gpt-6-luna-extra-high": [
+    {
+      "file": "/screenshots/game-owned/kata-wordle-clone-gpt-6-luna-extra-high/e3f0641e12d32e63a1be9e88f8b47a740aa357cc21c11a9b177b6dfa357d08fc-ci-20261103-01.jpg",
+      "source": "arcade/capture-evidence/ci-20261103-01.png",
+      "alt": "Wordle gameplay",
+      "sha256": "e3f0641e12d32e63a1be9e88f8b47a740aa357cc21c11a9b177b6dfa357d08fc",
+      "provenance": "ci_gameplay_capture",
+      "capture": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "24af674874a77559b204648b79e57cae83a11dd6de65b46dabd21953ce68ff00",
+        "captureCommit": "0bfa822e3c4f3a077b38b3e83ab99912aa13edea",
+        "workflowRunId": "41619359973",
+        "inputHashes": {
+          "game.js": "871f665fac6f90c5291ff381937f0ebfeed20bc4307d67c951ceb9b6a86e80dc",
+          "index.html": "685dc01e4621ba287da2ebc22eb8b963e04ca486cfa8ced38aaf8afddf6969e3",
+          "styles.css": "7edf969a4dcc22ff7521c6002550bbca9e0cec232e15755802d797f3b410df17",
+          "word-bank.js": "a7e7a1c613e451cefffc7412e11acf83c0a0a2743394fbdf4a6bca7d9d7c8d3e"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:27:53Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "4739dc5ce4965efc1365e38131af0a017d415e71eda6389fa3debf8be13ba53b"
+      }
+    }
   ]
 }

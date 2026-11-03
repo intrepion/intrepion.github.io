@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
-test('catalog includes every reconciled game with separate source-only entries', () => {
-  assert.deepEqual(validate(games), { total: 143, playable: 126, sourceOnly: 17 });
+test('catalog includes every reconciled playable game', () => {
+  assert.deepEqual(validate(games), { total: 143, playable: 143, sourceOnly: 0 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {
@@ -87,7 +87,7 @@ test('home search indexes genres, inspirations, and individual games with distin
   for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
     assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
   }
-  assert.equal(index.filter(item => item.type === 'Game').length, 126);
+  assert.equal(index.filter(item => item.type === 'Game').length, 143);
   assert.equal(matchesSearch('Braid', '  '), false);
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
@@ -133,7 +133,7 @@ test('checked-in game-owned snapshots match their hashes and preserve provenance
     for (const image of images) {
       assert.ok(['existing_repository_capture', 'ci_gameplay_capture'].includes(image.provenance));
       if (image.provenance === 'ci_gameplay_capture') { assert.match(image.capture.captureCommit, /^[a-f0-9]{40}$/); assert.match(image.capture.workflowRunId, /^[0-9]+$/); }
-      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|ci-20261102-\d{2})\.jpg$/);
+      assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|ci-\d{8}-\d{2})\.jpg$/);
       const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     }

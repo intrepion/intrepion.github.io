@@ -304,10 +304,10 @@
     "inspiration": "Candy Crush",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-candy-crush-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-candy-crush-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Puzzle"
     ]
@@ -318,10 +318,10 @@
     "inspiration": "Factorio",
     "category": "Strategy & tabletop",
     "repo": "https://github.com/intrepion/kata-inspired-by-factorio-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-factorio-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Simulation & creative"
     ]
@@ -361,10 +361,10 @@
     "inspiration": "California",
     "category": "Rhythm & arcade",
     "repo": "https://github.com/intrepion/kata-inspired-by-california-games-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-california-games-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Simulation & creative"
     ]
@@ -403,10 +403,10 @@
     "inspiration": "Road Rash 2",
     "category": "Rhythm & arcade",
     "repo": "https://github.com/intrepion/kata-inspired-by-road-rash-2-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-road-rash-2-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Racing & sports"
     ]
@@ -460,10 +460,10 @@
     "inspiration": "Super Mario 64",
     "category": "Platform & co-op",
     "repo": "https://github.com/intrepion/kata-inspired-by-super-mario-64-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-super-mario-64-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Platformer"
     ]
@@ -516,10 +516,10 @@
     "inspiration": "Human Resource Machine",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-human-resource-machine-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-human-resource-machine-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Puzzle"
     ]
@@ -586,10 +586,10 @@
     "inspiration": "Filipino Mahjongg",
     "category": "Strategy & tabletop",
     "repo": "https://github.com/intrepion/kata-filipino-mahjongg-game-codex-openai-gpt-5.5-light",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-filipino-mahjongg-game-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Board & card"
     ]
@@ -658,10 +658,10 @@
     "inspiration": "The Sims 4",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-the-sims-4-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-the-sims-4-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Simulation & creative"
     ]
@@ -729,10 +729,10 @@
     "inspiration": "Slay The Spire",
     "category": "Strategy & tabletop",
     "repo": "https://github.com/intrepion/kata-inspired-by-slay-the-spire-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-slay-the-spire-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Strategy",
       "Board & card"
@@ -914,10 +914,10 @@
     "inspiration": "Number Munchers",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-number-munchers-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-number-munchers-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Puzzle"
     ]
@@ -1026,10 +1026,10 @@
     "inspiration": "Minecraft",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-minecraft-clone-codex-openai-gpt-5.5-light",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-minecraft-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Simulation & creative"
     ]
@@ -1338,10 +1338,10 @@
     "inspiration": "Mario Paint",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-mario-paint-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-mario-paint-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Simulation & creative"
     ]
@@ -1352,10 +1352,10 @@
     "inspiration": "Portal",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-portal-clone-codex-openai-gpt-5.5-light",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-portal-clone-codex-openai-gpt-5.5-light/",
     "edition": "GPT-5.5 Light",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Puzzle"
     ]
@@ -1479,10 +1479,10 @@
     "inspiration": "One Must Fall 2097",
     "category": "Rhythm & arcade",
     "repo": "https://github.com/intrepion/kata-inspired-by-one-must-fall-2097-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-one-must-fall-2097-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Action"
     ]
@@ -1751,10 +1751,10 @@
     "inspiration": "Order Of The Sinking Star",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-inspired-by-order-of-the-sinking-star-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-order-of-the-sinking-star-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Role-playing"
     ]
@@ -1884,10 +1884,10 @@
     "inspiration": "Fibbage 3",
     "category": "Strategy & tabletop",
     "repo": "https://github.com/intrepion/kata-inspired-by-fibbage-3-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-fibbage-3-codex-dot/",
     "edition": "Codex Dot",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; solo edition with computer opponents",
     "genres": [
       "Party"
     ]
@@ -1997,10 +1997,10 @@
     "inspiration": "Wordle",
     "category": "Puzzles & playthings",
     "repo": "https://github.com/intrepion/kata-wordle-clone-gpt-6-luna-extra-high",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-wordle-clone-gpt-6-luna-extra-high/",
     "edition": "GPT-6 Luna",
-    "verified": null,
-    "evidence": "No current Pages deployment",
+    "verified": "2026-11-03",
+    "evidence": "Published Pages deployment and local browser gameplay smoke test; game checks passed",
     "genres": [
       "Puzzle"
     ]
