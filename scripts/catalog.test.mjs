@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
 test('catalog includes every reconciled playable game', () => {
-  assert.deepEqual(validate(games), { total: 144, playable: 143, sourceOnly: 1 });
+  assert.deepEqual(validate(games), { total: 144, playable: 144, sourceOnly: 0 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {
@@ -87,7 +87,7 @@ test('home search indexes genres, inspirations, and individual games with distin
   for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
     assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
   }
-  assert.equal(index.filter(item => item.type === 'Game').length, 143);
+  assert.equal(index.filter(item => item.type === 'Game').length, 144);
   assert.equal(matchesSearch('Braid', '  '), false);
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);

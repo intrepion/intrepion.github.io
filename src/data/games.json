@@ -5,10 +5,10 @@
     "inspiration": "Noita",
     "category": "Worlds & adventures",
     "repo": "https://github.com/intrepion/kata-inspired-by-noita-codex-dot",
-    "play": null,
+    "play": "https://intrepion.github.io/kata-inspired-by-noita-codex-dot/",
     "edition": "Codex Dot \u00b7 Early approximation",
-    "verified": null,
-    "evidence": "Local prototype; hosted release not yet verified",
+    "verified": "2026-11-04",
+    "evidence": "Published Pages deployment and browser wand-editor smoke test; gameplay tests passed",
     "genres": [
       "Action",
       "Platformer"
