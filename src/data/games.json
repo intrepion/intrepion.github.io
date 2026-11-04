@@ -1,5 +1,20 @@
 [
   {
+    "id": "kata-inspired-by-noita-codex-dot",
+    "title": "Ember Below",
+    "inspiration": "Noita",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-noita-codex-dot",
+    "play": null,
+    "edition": "Codex Dot \u00b7 Early approximation",
+    "verified": null,
+    "evidence": "Local prototype; hosted release not yet verified",
+    "genres": [
+      "Action",
+      "Platformer"
+    ]
+  },
+  {
     "id": "kata-inspired-by-rogue-legacy-2-codex-dot",
     "title": "Heirs of the Hollow",
     "inspiration": "Rogue Legacy 2",
