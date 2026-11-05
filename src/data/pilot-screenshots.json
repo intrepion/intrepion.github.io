@@ -842,7 +842,7 @@
     {
       "file": "/screenshots/game-owned/kata-pokemon-clone-astra-6-ultra/14953b1e0ce17c967f3bfeacc5d173c59a6c0afae8e03b39568157df03adbc41-ci-20261102-01.jpg",
       "source": "arcade/capture-evidence/ci-20261102-01.png",
-      "alt": "Pok\u00e9mon Verdant gameplay, view 1",
+      "alt": "Pokémon Verdant gameplay, view 1",
       "sha256": "14953b1e0ce17c967f3bfeacc5d173c59a6c0afae8e03b39568157df03adbc41",
       "provenance": "ci_gameplay_capture",
       "capture": {
@@ -875,7 +875,7 @@
     {
       "file": "/screenshots/game-owned/kata-pokemon-clone-astra-6-ultra/0cadf51fbf6bc04b2990388fbe7a9dba3f1ffb806eb6b278c07fd128c3e87e4e-ci-20261102-02.jpg",
       "source": "arcade/capture-evidence/ci-20261102-02.png",
-      "alt": "Pok\u00e9mon Verdant gameplay, view 2",
+      "alt": "Pokémon Verdant gameplay, view 2",
       "sha256": "0cadf51fbf6bc04b2990388fbe7a9dba3f1ffb806eb6b278c07fd128c3e87e4e",
       "provenance": "ci_gameplay_capture",
       "capture": {
@@ -5730,7 +5730,7 @@
     {
       "file": "/screenshots/game-owned/kata-inspired-by-super-mario-maker-codex-dot/c49f2a0b7b87593511182978aafb0078f31a1903483fb9f4c1582d4b9cfe311f-ci-20261102-01.jpg",
       "source": "arcade/capture-evidence/ci-20261102-01.png",
-      "alt": "Sproutworks \u2014 Course Foundry gameplay, view 1",
+      "alt": "Sproutworks — Course Foundry gameplay, view 1",
       "sha256": "c49f2a0b7b87593511182978aafb0078f31a1903483fb9f4c1582d4b9cfe311f",
       "provenance": "ci_gameplay_capture",
       "capture": {
@@ -5754,7 +5754,7 @@
     {
       "file": "/screenshots/game-owned/kata-inspired-by-super-mario-maker-codex-dot/dba30489d5c2d2d7f6cbff91762ecdb27258321a799fc18792d4553bc7df5567-ci-20261102-02.jpg",
       "source": "arcade/capture-evidence/ci-20261102-02.png",
-      "alt": "Sproutworks \u2014 Course Foundry gameplay, view 2",
+      "alt": "Sproutworks — Course Foundry gameplay, view 2",
       "sha256": "dba30489d5c2d2d7f6cbff91762ecdb27258321a799fc18792d4553bc7df5567",
       "provenance": "ci_gameplay_capture",
       "capture": {
@@ -7067,8 +7067,99 @@
         "captureRecordSha256": "4739dc5ce4965efc1365e38131af0a017d415e71eda6389fa3debf8be13ba53b"
       }
     }
+  ],
+  "kata-inspired-by-noita-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-noita-codex-dot/142f3eec687f99c7757a480a45b67391217a7b853fa4bab70c4878c30cfa9130-review-20261105-01.jpg",
+      "source": "arcade/capture-evidence/review-20261105-01.png",
+      "alt": "Ember Below: casting a wand through the upper passage of a layered cave, with enemies, pickups and liquid chambers below.",
+      "sha256": "142f3eec687f99c7757a480a45b67391217a7b853fa4bab70c4878c30cfa9130",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/review-20261105-01.png",
+        "sourceSha256": "6dfde4629958b6a69a103bc7497afafdea3e7b66dbda374e3ff31f11d45ba24e",
+        "captureCommit": "0bb4e0d8b7f0cbdea5c179823894e2c9b2aef439",
+        "inputHashes": {
+          "index.html": "ff8dee1dab18d77a96be88818ed4b5e4c7780c62fad066e44d3eb5426fd45cc9",
+          "game.js": "f1b690c619e4fa5ab030e31e4e2fdf7e26858a423e52ea2a26773bc062412ac0",
+          "style.css": "2f8ce057d01654696ee9e2bf0be01992608d3802cc2724f46b35cd390d857d82"
+        },
+        "capturedAt": "2026-11-05T05:42:58Z",
+        "captureRecordPath": "arcade/capture-evidence/review-20261105-01.json",
+        "captureRecordSha256": "aca30eefd32919aeb46daf5303d3d70066f3f17d7f7f16e7d55e3638a46a820a"
+      }
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-noita-codex-dot/4000e76f5dde64a22f7cfb5616020566210d184c77d2fd65ed00745543774a30-review-20261105-02.jpg",
+      "source": "arcade/capture-evidence/review-20261105-02.png",
+      "alt": "Ember Below: the second wand equipped while descending toward the first enemy encounter and water chamber.",
+      "sha256": "4000e76f5dde64a22f7cfb5616020566210d184c77d2fd65ed00745543774a30",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/review-20261105-02.png",
+        "sourceSha256": "66fde2cd193a8d91f83b8e1e7f83840db52abc925dab78d09a3b9f389ae7b6c0",
+        "captureCommit": "0bb4e0d8b7f0cbdea5c179823894e2c9b2aef439",
+        "inputHashes": {
+          "index.html": "ff8dee1dab18d77a96be88818ed4b5e4c7780c62fad066e44d3eb5426fd45cc9",
+          "game.js": "f1b690c619e4fa5ab030e31e4e2fdf7e26858a423e52ea2a26773bc062412ac0",
+          "style.css": "2f8ce057d01654696ee9e2bf0be01992608d3802cc2724f46b35cd390d857d82"
+        },
+        "capturedAt": "2026-11-05T05:43:00Z",
+        "captureRecordPath": "arcade/capture-evidence/review-20261105-02.json",
+        "captureRecordSha256": "ccd5345416a7def64dc60513c27d6b391f69ab2a6575628321ab870e860ac926"
+      }
+    }
+  ],
+  "kata-inspired-by-farmville-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-farmville-codex-dot/8cafe68f168e822e181ec1dd594b05cab818341aec32d1013386c3aa93767309-review-20261105-01.jpg",
+      "source": "arcade/capture-evidence/review-20261105-01.png",
+      "alt": "Sprout & Soil Classic farm with an isometric field, two ripe crops, farming tools, and the seed store.",
+      "sha256": "8cafe68f168e822e181ec1dd594b05cab818341aec32d1013386c3aa93767309",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/review-20261105-01.png",
+        "sourceSha256": "842084eb9ba0d1d5016ec30b5cc0da4f7eff1fc45c0a3634ed5052869258ac39",
+        "captureCommit": "d9b8438751fc358f2ac9cc4d859a57e6c87200e2",
+        "inputHashes": {
+          "assets/index-3iKyU_Zo.js": "82c8c71e947a2e391d59dc961d97a51683a1d258fc1b8c731822041552c3867e",
+          "assets/index-DhE1l2kf.css": "1b0da67f6700d5e7c30a8606cea2fa428ef47fe7b7822f8ed573d39652a0561c",
+          "assets/three-CxzD95GI.js": "5e5392744d7a924c301a43061b3b3b014440d565b8390d476c6401ba900c8843",
+          "favicon.svg": "1cae780e1d690787caf06cf32346c1f60d5ac2afd6f44b9be63b0aefb4870ab7",
+          "index.html": "8cfacf0c9a969f40116022be6fc203f5b53bf4dbcb865d88a2aa37f41ad0fb14",
+          "licenses/three-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+        },
+        "capturedAt": "2026-11-05T05:42:33Z",
+        "captureRecordPath": "arcade/capture-evidence/review-20261105-01.json",
+        "captureRecordSha256": "794183a5c105b751af7c012ae23dece3d16914dc5b122966e15b6da88774a9db"
+      }
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-farmville-codex-dot/e0730012fab12355d782b81d7faa66f0409ac4659d84c32c38bc91dd663e8fd3-review-20261105-02.jpg",
+      "source": "arcade/capture-evidence/review-20261105-02.png",
+      "alt": "Sprout & Soil after two harvests and six strawberry plantings, showing eight growing crops and completed first-row goals.",
+      "sha256": "e0730012fab12355d782b81d7faa66f0409ac4659d84c32c38bc91dd663e8fd3",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/review-20261105-02.png",
+        "sourceSha256": "196d3a6b891f4d8bbb80dc599ce472285601c35a0f9136e96b968e9a1b08a7ef",
+        "captureCommit": "d9b8438751fc358f2ac9cc4d859a57e6c87200e2",
+        "inputHashes": {
+          "assets/index-3iKyU_Zo.js": "82c8c71e947a2e391d59dc961d97a51683a1d258fc1b8c731822041552c3867e",
+          "assets/index-DhE1l2kf.css": "1b0da67f6700d5e7c30a8606cea2fa428ef47fe7b7822f8ed573d39652a0561c",
+          "assets/three-CxzD95GI.js": "5e5392744d7a924c301a43061b3b3b014440d565b8390d476c6401ba900c8843",
+          "favicon.svg": "1cae780e1d690787caf06cf32346c1f60d5ac2afd6f44b9be63b0aefb4870ab7",
+          "index.html": "8cfacf0c9a969f40116022be6fc203f5b53bf4dbcb865d88a2aa37f41ad0fb14",
+          "licenses/three-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+        },
+        "capturedAt": "2026-11-05T05:42:33Z",
+        "captureRecordPath": "arcade/capture-evidence/review-20261105-02.json",
+        "captureRecordSha256": "076178a3986bd3d69817aba35ef4ea2e927cf9f3de3866e8cd746aecc656e0be"
+      }
+    }
   ]
-,
-  "kata-inspired-by-noita-codex-dot": [],
-  "kata-inspired-by-farmville-codex-dot": []
 }

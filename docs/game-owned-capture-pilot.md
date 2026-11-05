@@ -23,3 +23,26 @@ Establish and test a capture workflow per game before replacing any existing cap
 The registered IDs in `src/data/game-owned-ids.json` are the game manifests included in the checked-in snapshot. Each is added only after its deployment and image hashes have been verified. The registry covers the playable catalog; source-only entries have no deployed game manifest. Empty game-owned manifests preserve the no-screenshot state.
 
 Reviewed CI captures may also include a capture-record path and SHA-256. The sync validates the record against the capture commit, run ID, and input hashes before accepting it; records preserve browser and capture details as well as any documented external-runtime or font limitations. The timestamp is the time the published files were checked, not a guarantee that they remain unchanged.
+
+
+## Required screenshots for new playable entries
+
+A playable catalog addition now requires at least one reviewed gameplay image in its checked-in game-owned snapshot. `npm run check` runs `scripts/validate-screenshots.mjs`, and `npm test` covers the same invariant. Empty manifests remain valid input to the sync tool and retain the missing-image fallback, but they cannot silently ship as a playable catalog entry. Source-only entries are exempt. Do not remove play links to work around this check; complete the capture first.
+
+For the Ember Below and Sprout & Soil additions, pinned Playwright scripts in each game repository capture real public interactions against the built game served at a loopback HTTP URL. Schema version 3 records these as `local_gameplay_capture`, not as CI runs or claims about a deployed build. Each image retains its capture timestamp, source commit, original PNG hash, served input hashes, and a hashed capture record with the browser/tool versions, viewport, URL, and gameplay steps. The gallery displays the local-capture label and links to that record. The sync validates the record, source PNG, and optimized JPEG before accepting the image. Changing an input requires a new capture and review; publishing or syncing alone does not update capture provenance.
+
+The per-game workflow is:
+
+1. Build the game, then run its documented capture command against a loopback HTTP server.
+2. Review the original and optimized images. Confirm they show representative gameplay and contain no private data or browser chrome.
+3. Run the game's checks and screenshot/hash tests. Commit and publish the game-owned manifest, capture record, original captures, and optimized images through its existing deployment workflow.
+4. Verify the published manifest and each referenced asset match their committed hashes. Then sync only those registered games without replacing unrelated snapshots:
+
+   ```sh
+   node scripts/pilot-sync.mjs <parent-directory> --game kata-inspired-by-noita-codex-dot --game kata-inspired-by-farmville-codex-dot
+   ```
+
+   Checkouts passed to the sync expose their site files under `public/`; for static site-root games, stage verified files in that layout. Omitting `--game` still performs the full registry sync and requires all game roots.
+5. Run the Arcade's `npm run check`, `npm test`, and `npm run build`; inspect the game and inspiration pages through HTTP. Publish and verify the deployed pages and screenshot URLs.
+
+The requirement catches missing captures. Human review remains necessary to judge whether a screenshot is useful and representative.

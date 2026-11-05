@@ -131,7 +131,7 @@ test('checked-in game-owned snapshots match their hashes and preserve provenance
   for (const [id, images] of Object.entries(snapshot)) {
     assert.ok(games.some(game => game.id === id && game.play));
     for (const image of images) {
-      assert.ok(['existing_repository_capture', 'ci_gameplay_capture'].includes(image.provenance));
+      assert.ok(['existing_repository_capture', 'ci_gameplay_capture', 'local_gameplay_capture'].includes(image.provenance));
       if (image.provenance === 'ci_gameplay_capture') { assert.match(image.capture.captureCommit, /^[a-f0-9]{40}$/); assert.match(image.capture.workflowRunId, /^[0-9]+$/); }
       assert.match(image.file, /^\/screenshots\/game-owned\/kata-[a-z0-9.-]+\/[a-f0-9]{64}-(?:view-\d{2}|(?:ci|review)-\d{8}-\d{2})\.jpg$/);
       const bytes = await readFile(new URL(`../public${image.file}`,import.meta.url));
@@ -212,4 +212,67 @@ test('Sprout & Soil has verified play, genre, inspiration, and title search rout
     assert.ok(index.some(item => item.href === `/games/${id}/` && matchesSearch(item.search, query)));
   }
   assert.ok(index.some(item => item.href === '/inspirations/farmville/' && matchesSearch(item.search, 'FarmVille')));
+});
+
+test('publication rejects playable games without reviewed screenshots', async () => {
+  const { validateScreenshotCoverage } = await import('./validate-screenshots.mjs');
+  const { readFile } = await import('node:fs/promises');
+  const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
+  assert.equal(validateScreenshotCoverage(games, snapshot), games.filter(game => game.play).length);
+  const game = { id: 'kata-new-game', play: 'https://intrepion.github.io/kata-new-game/' };
+  assert.throws(() => validateScreenshotCoverage([game], {}), /kata-new-game/);
+  assert.throws(() => validateScreenshotCoverage([game], { [game.id]: [] }), /kata-new-game/);
+  assert.equal(validateScreenshotCoverage([{ ...game, play: null }], {}), 0);
+  assert.equal(validateScreenshotCoverage([game], { [game.id]: [{ file: 'reviewed.jpg' }] }), 1);
+});
+
+test('local captures require truthful HTTP provenance and intact evidence', async () => {
+  const { mkdtemp, mkdir, writeFile, readFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { createHash } = await import('node:crypto');
+  const { syncGames } = await import('./pilot-sync.mjs');
+  const tmp = await mkdtemp(join(tmpdir(), 'arcade-local-'));
+  const id = 'kata-local-example';
+  const dir = join(tmp, 'games', id, 'public', 'arcade');
+  const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+  try {
+    await mkdir(join(dir, 'screenshots'), { recursive: true });
+    await mkdir(join(dir, 'capture-evidence'), { recursive: true });
+    const jpg = Buffer.from([255, 216, 255, 217]);
+    const png = Buffer.from('89504e470d0a1a0a00000000', 'hex');
+    await writeFile(join(dir, 'screenshots/review-20261105-01.jpg'), jpg);
+    await writeFile(join(dir, 'capture-evidence/review-20261105-01.png'), png);
+    const provenance = { kind: 'local_gameplay_capture', sourcePath: 'arcade/capture-evidence/review-20261105-01.png', sourceSha256: hash(png), captureCommit: 'a'.repeat(40), capturedAt: '2026-11-05T05:00:00Z', inputHashes: { 'index.html': 'b'.repeat(64) }, captureRecordPath: 'arcade/capture-evidence/review-20261105-record.json', captureRecordSha256: '' };
+    const record = { sourceCommit: provenance.captureCommit, inputs: provenance.inputHashes, capturedAt: provenance.capturedAt, baseUrl: 'http://127.0.0.1:4173/', tool: { name: 'Playwright', version: '1.56.1' }, browser: { name: 'Chromium', version: '141' }, viewport: { width: 1280, height: 800 }, steps: ['Start a new game and make one ordinary move.'] };
+    const manifest = { schemaVersion: 3, gameId: id, playUrl: `https://intrepion.github.io/${id}/`, screenshots: [{ path: 'arcade/screenshots/review-20261105-01.jpg', sha256: hash(jpg), alt: 'A genuine gameplay capture', provenance }] };
+    const save = async () => {
+      const raw = JSON.stringify(record);
+      provenance.captureRecordSha256 = hash(raw);
+      await writeFile(join(dir, 'capture-evidence/review-20261105-record.json'), raw);
+      await writeFile(join(dir, 'manifest.json'), JSON.stringify(manifest));
+    };
+    await save();
+    const previous = { 'kata-existing': [{ file: '/screenshots/keep.jpg' }] };
+    const target = join(tmp, 'gallery');
+    const result = await syncGames(join(tmp, 'games'), [id], target, previous);
+    assert.deepEqual(result['kata-existing'], previous['kata-existing'], 'selected sync preserves other games');
+    assert.equal(result[id][0].capture.kind, 'local_gameplay_capture');
+    assert.equal(result[id][0].capture.workflowRunId, undefined, 'local capture must not claim CI');
+    const before = await readFile(join(target, 'src/data/pilot-screenshots.json'), 'utf8');
+    record.baseUrl = 'file:///tmp/game/index.html'; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target, previous), /Invalid local capture record/);
+    assert.equal(await readFile(join(target, 'src/data/pilot-screenshots.json'), 'utf8'), before);
+    record.baseUrl = 'https://example.com/'; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+    record.baseUrl = 'http://localhost:4173/'; record.capturedAt = '2026-11-04T05:00:00Z'; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+    record.capturedAt = provenance.capturedAt; record.steps = []; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+    record.steps = ['Make an ordinary gameplay move.']; provenance.workflowRunId = '123'; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid screenshot metadata/);
+    delete provenance.workflowRunId; await save();
+    await writeFile(join(dir, 'capture-evidence/review-20261105-01.png'), 'tampered');
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /evidence hash or format mismatch/);
+  } finally { await rm(tmp, { recursive: true, force: true }); }
 });
