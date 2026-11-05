@@ -1,5 +1,21 @@
 [
   {
+    "id": "kata-inspired-by-vampire-survivors-codex-dot",
+    "title": "Nightfall Reliquary",
+    "inspiration": "Vampire Survivors",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-vampire-survivors-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-vampire-survivors-codex-dot/",
+    "edition": "Codex Dot \u00b7 Classic-loop reconstruction",
+    "verified": "2026-11-05",
+    "evidence": "33 local tests, desktop/mobile-sized Chromium controls and production build passed. Two genuine local Classic gameplay captures with schema-v3 provenance. Researched base-weapon tables; original stage/characters and approximate wave/evolution balance. Pages commit 5200e5f153d211c267e732172a4111c8654dc2b7 and CI succeeded; all 12 live game/manifest/evidence files matched their hashes at 2026-11-05T06:25:27Z.",
+    "genres": [
+      "Action",
+      "Arcade",
+      "Role-playing"
+    ]
+  },
+  {
     "id": "kata-inspired-by-farmville-codex-dot",
     "title": "Sprout & Soil",
     "inspiration": "FarmVille",
