@@ -1,5 +1,20 @@
 [
   {
+    "id": "kata-inspired-by-farmville-codex-dot",
+    "title": "Sprout & Soil",
+    "inspiration": "FarmVille",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-farmville-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-farmville-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-11-05",
+    "evidence": "Pages deployment cdd54bbeb0d0a320e0fb78588200aad94f20c1ed succeeded; public HTML and manifest returned HTTP 200. Local HTTP production gameplay verified harvest, plow, plant, persistence, growth, withering, shop, and move; 59 regression tests passed. Focused checks, not exhaustive gameplay.",
+    "genres": [
+      "Simulation & creative",
+      "Strategy"
+    ]
+  },
+  {
     "id": "kata-inspired-by-noita-codex-dot",
     "title": "Ember Below",
     "inspiration": "Noita",

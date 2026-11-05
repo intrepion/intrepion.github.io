@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
 test('catalog includes every reconciled playable game', () => {
-  assert.deepEqual(validate(games), { total: 144, playable: 144, sourceOnly: 0 });
+  assert.deepEqual(validate(games), { total: 145, playable: 145, sourceOnly: 0 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {
@@ -87,7 +87,7 @@ test('home search indexes genres, inspirations, and individual games with distin
   for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
     assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
   }
-  assert.equal(index.filter(item => item.type === 'Game').length, 144);
+  assert.equal(index.filter(item => item.type === 'Game').length, 145);
   assert.equal(matchesSearch('Braid', '  '), false);
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
@@ -196,4 +196,20 @@ test('CI captures require valid provenance and untampered original evidence', as
     image.provenance.captureCommit='a'.repeat(40); await save(); await writeFile(join(dir,'capture-evidence/rally-01.png'),'tampered');
     await assert.rejects(syncGames(join(tmp,'games'),[id],join(tmp,'gallery')),/evidence hash or format mismatch/);
   } finally {await rm(tmp,{recursive:true,force:true});}
+});
+
+test('Sprout & Soil has verified play, genre, inspiration, and title search routes', async () => {
+  const id = 'kata-inspired-by-farmville-codex-dot';
+  const game = games.find(game => game.id === id);
+  assert.equal(game.title, 'Sprout & Soil');
+  assert.equal(game.play, `https://intrepion.github.io/${id}/`);
+  assert.equal(game.verified, '2026-11-05');
+  assert.deepEqual(game.genres, ['Simulation & creative', 'Strategy']);
+  const { makeSearchIndex, matchesSearch } = await import('../src/data/search.mjs');
+  const { genreDetails } = await import('../src/data/genres.mjs');
+  const index = makeSearchIndex(games, Object.keys(genreDetails));
+  for (const query of ['Sprout', 'Sprout Soil']) {
+    assert.ok(index.some(item => item.href === `/games/${id}/` && matchesSearch(item.search, query)));
+  }
+  assert.ok(index.some(item => item.href === '/inspirations/farmville/' && matchesSearch(item.search, 'FarmVille')));
 });
