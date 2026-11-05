@@ -31,6 +31,8 @@ A playable catalog addition now requires at least one reviewed gameplay image in
 
 For the Ember Below and Sprout & Soil additions, pinned Playwright scripts in each game repository capture real public interactions against the built game served at a loopback HTTP URL. Schema version 3 records these as `local_gameplay_capture`, not as CI runs or claims about a deployed build. Each image retains its capture timestamp, source commit, original PNG hash, served input hashes, and a hashed capture record with the browser/tool versions, viewport, URL, and gameplay steps. The gallery displays the local-capture label and links to that record. The sync validates the record, source PNG, and optimized JPEG before accepting the image. Changing an input requires a new capture and review; publishing or syncing alone does not update capture provenance.
 
+Schema version 3 also supports originals captured by `cua_repl`: the capture record must identify `tool: { "name": "cua_repl", "version": "browser-runtime" }`, and the original must be a genuine `.jpg` JPEG. Record the actual browser version separately. Playwright local captures retain their `.png` originals; CI capture validation remains unchanged. The sync checks the original signature against its extension, the tool/format pairing, both image hashes, and the hashed capture record. Never relabel a JPEG as PNG or claim Playwright produced a CUA capture.
+
 The per-game workflow is:
 
 1. Build the game, then run its documented capture command against a loopback HTTP server.

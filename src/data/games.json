@@ -1,5 +1,19 @@
 [
   {
+    "id": "kata-inspired-by-picross-codex-dot",
+    "title": "Quiet Grid",
+    "inspiration": "Picross",
+    "category": "Puzzles & playthings",
+    "repo": "https://github.com/intrepion/kata-inspired-by-picross-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-picross-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-11-05",
+    "evidence": "28 mechanics tests and build passed; desktop/mobile CUA gameplay through 127.0.0.1 including a complete solve; Pages workflow 41984405743 succeeded and all 11 deployed files matched capture hashes at 2026-11-05T07:04:09Z. Two reviewed local CUA gameplay captures. Focused checks, not exhaustive gameplay.",
+    "genres": [
+      "Puzzle"
+    ]
+  },
+  {
     "id": "kata-inspired-by-vampire-survivors-codex-dot",
     "title": "Nightfall Reliquary",
     "inspiration": "Vampire Survivors",

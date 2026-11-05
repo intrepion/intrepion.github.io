@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
 test('catalog includes every reconciled playable game', () => {
-  assert.deepEqual(validate(games), { total: 146, playable: 146, sourceOnly: 0 });
+  assert.deepEqual(validate(games), { total: 147, playable: 147, sourceOnly: 0 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {
@@ -87,7 +87,7 @@ test('home search indexes genres, inspirations, and individual games with distin
   for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
     assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
   }
-  assert.equal(index.filter(item => item.type === 'Game').length, 146);
+  assert.equal(index.filter(item => item.type === 'Game').length, 147);
   assert.equal(matchesSearch('Braid', '  '), false);
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
@@ -293,4 +293,71 @@ test('Nightfall Reliquary has play, search, inspiration and two reviewed gamepla
   const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
   assert.equal(snapshot[id].length, 2);
   assert.ok(snapshot[id].every(image => image.provenance === 'local_gameplay_capture'));
+});
+
+test('CUA local captures accept genuine JPEG originals and reject mislabeled evidence', async () => {
+  const { mkdtemp, mkdir, writeFile, readFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { createHash } = await import('node:crypto');
+  const { syncGames } = await import('./pilot-sync.mjs');
+  const tmp = await mkdtemp(join(tmpdir(), 'arcade-cua-'));
+  const id = 'kata-cua-example';
+  const dir = join(tmp, 'games', id, 'public', 'arcade');
+  const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+  try {
+    await mkdir(join(dir, 'screenshots'), { recursive: true });
+    await mkdir(join(dir, 'capture-evidence'), { recursive: true });
+    const jpg = await readFile(new URL('../public/screenshots/vice-district.jpg', import.meta.url));
+    const png = Buffer.from('89504e470d0a1a0a00000000', 'hex');
+    await writeFile(join(dir, 'screenshots/view-01.jpg'), jpg);
+    await writeFile(join(dir, 'capture-evidence/view-01.jpg'), jpg);
+    const provenance = { kind: 'local_gameplay_capture', sourcePath: 'arcade/capture-evidence/view-01.jpg', sourceSha256: hash(jpg), captureCommit: 'a'.repeat(40), capturedAt: '2026-11-05T05:00:00Z', inputHashes: { 'index.html': 'b'.repeat(64) }, captureRecordPath: 'arcade/capture-evidence/record.json', captureRecordSha256: '' };
+    const record = { sourceCommit: provenance.captureCommit, inputs: provenance.inputHashes, capturedAt: provenance.capturedAt, baseUrl: 'http://127.0.0.1:4173/', tool: { name: 'cua_repl', version: 'browser-runtime' }, browser: { name: 'Chrome', version: '141' }, viewport: { width: 1280, height: 800 }, steps: ['Make one ordinary gameplay move.'] };
+    const manifest = { schemaVersion: 3, gameId: id, playUrl: `https://intrepion.github.io/${id}/`, screenshots: [{ path: 'arcade/screenshots/view-01.jpg', sha256: hash(jpg), alt: 'JPEG gameplay capture', provenance }] };
+    const save = async () => {
+      const raw = JSON.stringify(record);
+      provenance.captureRecordSha256 = hash(raw);
+      await writeFile(join(dir, 'capture-evidence/record.json'), raw);
+      await writeFile(join(dir, 'manifest.json'), JSON.stringify(manifest));
+    };
+    await save();
+    const target = join(tmp, 'gallery');
+    const result = await syncGames(join(tmp, 'games'), [id], target);
+    assert.equal(result[id][0].capture.sourcePath, provenance.sourcePath);
+    assert.equal(result[id][0].capture.sourceSha256, hash(jpg));
+    const before = await readFile(join(target, 'src/data/pilot-screenshots.json'), 'utf8');
+    // Even a matching hash cannot turn PNG bytes into valid JPEG evidence.
+    await writeFile(join(dir, 'capture-evidence/view-01.jpg'), png);
+    provenance.sourceSha256 = hash(png); await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /evidence hash or format mismatch/);
+    assert.equal(await readFile(join(target, 'src/data/pilot-screenshots.json'), 'utf8'), before);
+    await writeFile(join(dir, 'capture-evidence/view-01.jpg'), jpg);
+    provenance.sourceSha256 = hash(jpg);
+    record.tool = { name: 'Playwright', version: '1.56.1' }; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+    record.tool = { name: 'cua_repl', version: 'invented-version' }; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+    record.tool.version = 'browser-runtime';
+    provenance.sourcePath = 'arcade/capture-evidence/view-01.png'; await save();
+    await assert.rejects(syncGames(join(tmp, 'games'), [id], target), /Invalid local capture record/);
+  } finally { await rm(tmp, { recursive: true, force: true }); }
+});
+
+test('Quiet Grid has Picross discovery routes and two reviewed local gameplay captures', async () => {
+  const id = 'kata-inspired-by-picross-codex-dot';
+  const game = games.find(game => game.id === id);
+  assert.equal(game.title, 'Quiet Grid');
+  assert.equal(game.play, `https://intrepion.github.io/${id}/`);
+  assert.equal(game.inspiration, 'Picross');
+  assert.deepEqual(game.genres, ['Puzzle']);
+  const { makeSearchIndex, matchesSearch } = await import('../src/data/search.mjs');
+  const { genreDetails } = await import('../src/data/genres.mjs');
+  const index = makeSearchIndex(games, Object.keys(genreDetails));
+  assert.ok(index.some(item => item.href === `/games/${id}/` && matchesSearch(item.search, 'Quiet Grid')));
+  assert.ok(index.some(item => item.href === '/inspirations/picross/' && matchesSearch(item.search, 'Picross')));
+  const { readFile } = await import('node:fs/promises');
+  const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
+  assert.equal(snapshot[id].length, 2);
+  assert.ok(snapshot[id].every(image => image.provenance === 'local_gameplay_capture' && image.capture.sourcePath.endsWith('.jpg')));
 });
