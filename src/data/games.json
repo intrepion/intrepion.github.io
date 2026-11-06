@@ -1,5 +1,21 @@
 [
   {
+    "id": "kata-inspired-by-runescape-codex-dot",
+    "title": "Embervale",
+    "description": "An OSRS-inspired 3D point-and-click skill adventure.",
+    "inspiration": "RuneScape",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-runescape-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-runescape-codex-dot/",
+    "edition": "Codex Dot",
+    "verified": "2026-11-06",
+    "evidence": "40 tests and full local HTTP browser gameplay passed; two reviewed schema-v3 local gameplay captures. Pages workflow 42269360289 deployed cdd6ac8f0c0396151a67d28d6de078236c7a331c successfully; all 12 published runtime, manifest, screenshot and evidence files matched their recorded hashes. Focused checks, not exhaustive gameplay.",
+    "genres": [
+      "Adventure",
+      "Role-playing"
+    ]
+  },
+  {
     "id": "kata-inspired-by-picross-codex-dot",
     "title": "Quiet Grid",
     "inspiration": "Picross",

@@ -7255,5 +7255,53 @@
         "captureRecordSha256": "c0ea58e1c3bba25877fc298fa0b182d689ad35de58059641d557c5eeb6d8fb10"
       }
     }
+  ],
+  "kata-inspired-by-runescape-codex-dot": [
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-runescape-codex-dot/456231d5a09f47844f8f2fe8de64d331e02a516f74262319e50c65b4f67a09b2-embervale-20261106-01.jpg",
+      "source": "arcade/capture-evidence/embervale-20261106-01.png",
+      "alt": "Embervale fishing beside the river in its original 3D valley, with gathered shrimps in the 28-slot backpack, village workshops and bank, and the active fishing action.",
+      "sha256": "456231d5a09f47844f8f2fe8de64d331e02a516f74262319e50c65b4f67a09b2",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/embervale-20261106-01.png",
+        "sourceSha256": "39804d9a853328e2c361d691d10f8527da440075a12c520cc483d47c25910fe2",
+        "captureCommit": "7a2c8fdd1038cd738e8ca1b46fbd4cf545f26842",
+        "inputHashes": {
+          "assets/index-Ca_V-wpJ.js": "9bd1d8ab2f970ab38bf3081a8fbc3f9e5158f8b938f0e67a8289e63c41acf2ab",
+          "assets/index-li5a_9vc.css": "5018212b4251ba0a50e352fea5b1858809cc0b78e5f55a80e2bf343515647587",
+          "assets/three-4Lz3Ykuz.js": "bfd6eda1b73116da5db3086d73bed5bbdd8fd1c6433a0ce54f7b9ca033ee21d4",
+          "index.html": "17abe2753c4adcccd7d1363d015387a3a5b6fa7c592805d305b600ff5d54d874",
+          "licenses/three-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+        },
+        "capturedAt": "2026-11-06T17:21:17Z",
+        "captureRecordPath": "arcade/capture-evidence/embervale-20261106-01.json",
+        "captureRecordSha256": "fe2e38b2a2f28607568303155c998a1983c31c516e3240cef0a597f78ce07725"
+      }
+    },
+    {
+      "file": "/screenshots/game-owned/kata-inspired-by-runescape-codex-dot/1ea3adf7e6452e72a833439295a2fd7071f7d3eaf52b539a4d4bbd6094b4b030-embervale-20261106-02.jpg",
+      "source": "arcade/capture-evidence/embervale-20261106-02.png",
+      "alt": "Embervale after completing its bronze smithing quest, showing naturally earned Mining, Fishing and Smithing progression and the original isometric village.",
+      "sha256": "1ea3adf7e6452e72a833439295a2fd7071f7d3eaf52b539a4d4bbd6094b4b030",
+      "provenance": "local_gameplay_capture",
+      "capture": {
+        "kind": "local_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/embervale-20261106-02.png",
+        "sourceSha256": "a3770abfb54c00477d71d4a9a910e695c69cc41668bce71d07e387304ff15513",
+        "captureCommit": "7a2c8fdd1038cd738e8ca1b46fbd4cf545f26842",
+        "inputHashes": {
+          "assets/index-Ca_V-wpJ.js": "9bd1d8ab2f970ab38bf3081a8fbc3f9e5158f8b938f0e67a8289e63c41acf2ab",
+          "assets/index-li5a_9vc.css": "5018212b4251ba0a50e352fea5b1858809cc0b78e5f55a80e2bf343515647587",
+          "assets/three-4Lz3Ykuz.js": "bfd6eda1b73116da5db3086d73bed5bbdd8fd1c6433a0ce54f7b9ca033ee21d4",
+          "index.html": "17abe2753c4adcccd7d1363d015387a3a5b6fa7c592805d305b600ff5d54d874",
+          "licenses/three-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+        },
+        "capturedAt": "2026-11-06T17:21:17Z",
+        "captureRecordPath": "arcade/capture-evidence/embervale-20261106-02.json",
+        "captureRecordSha256": "e4945f8ffc45f965a40347a57f4e0d2ef0e4daa6a34fd0029e3964e921e40cdb"
+      }
+    }
   ]
 }
