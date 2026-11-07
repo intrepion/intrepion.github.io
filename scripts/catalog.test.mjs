@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { games, validate } from './validate-catalog.mjs';
 test('catalog includes every reconciled playable game', () => {
-  assert.deepEqual(validate(games), { total: 148, playable: 148, sourceOnly: 0 });
+  assert.deepEqual(validate(games), { total: 149, playable: 149, sourceOnly: 0 });
   assert.equal(new Set(games.filter(game => game.play).map(game => game.category)).size, 5);
 });
 test('current names and protected project paths survive the root-site migration', () => {
@@ -87,7 +87,7 @@ test('home search indexes genres, inspirations, and individual games with distin
   for (const [query, type, href] of [['puzzle','Genre','/genres/puzzle/'], ['braid','Inspiration','/inspirations/braid/'], ['hours we keep','Game','/games/kata-inspired-by-braid-codex-dot/']]) {
     assert.ok(index.some(item => item.type === type && item.href === href && matchesSearch(item.search, query)), query);
   }
-  assert.equal(index.filter(item => item.type === 'Game').length, 148);
+  assert.equal(index.filter(item => item.type === 'Game').length, 149);
   assert.equal(matchesSearch('Braid', '  '), false);
   assert.equal(matchesSearch('The Hours We Keep', 'HOURS keep'), true);
   assert.equal(index.some(item => matchesSearch(item.search, 'zzzxqnone')), false);
@@ -380,4 +380,25 @@ test('Embervale has RuneScape discovery routes and reviewed local gameplay captu
   const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
   assert.equal(snapshot[id].length, 2);
   assert.ok(snapshot[id].every(image => image.provenance === 'local_gameplay_capture' && image.capture.sourcePath.endsWith('.png')));
+});
+
+
+test('Morrow Garden has Pikmin discovery routes and two reviewed local gameplay captures', async () => {
+  const id = 'kata-inspired-by-pikmin-codex-dot';
+  const game = games.find(game => game.id === id);
+  assert.equal(game.title, 'Morrow Garden');
+  assert.ok(!game.evidence.includes('PENDING'));
+  assert.ok(game.evidence.includes('42317682862'));
+  assert.equal(game.inspiration, 'Pikmin');
+  assert.deepEqual(game.genres, ['Strategy', 'Adventure']);
+  assert.equal(game.play, `https://intrepion.github.io/${id}/`);
+  assert.equal(game.verified, '2026-11-07');
+  const { makeSearchIndex, matchesSearch } = await import('../src/data/search.mjs');
+  const index = makeSearchIndex(games, []);
+  assert.ok(index.some(item => item.href === `/games/${id}/` && matchesSearch(item.search, 'Morrow Garden')));
+  assert.ok(index.some(item => item.href === '/inspirations/pikmin/' && matchesSearch(item.search, 'Pikmin')));
+  const {readFile} = await import('node:fs/promises');
+  const snapshot = JSON.parse(await readFile(new URL('../src/data/pilot-screenshots.json', import.meta.url), 'utf8'));
+  assert.equal(snapshot[id].length, 2);
+  assert.ok(snapshot[id].every(image => image.provenance === 'local_gameplay_capture' && image.capture.captureCommit === '1a885d283b4e8666ebf670eb83adfb71df06cbbb'));
 });

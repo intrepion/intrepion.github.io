@@ -1,5 +1,21 @@
 [
   {
+    "id": "kata-inspired-by-pikmin-codex-dot",
+    "title": "Morrow Garden",
+    "description": "An original 3D squad-command expedition inspired by Pikmin 1.",
+    "inspiration": "Pikmin",
+    "category": "Worlds & adventures",
+    "repo": "https://github.com/intrepion/kata-inspired-by-pikmin-codex-dot",
+    "play": "https://intrepion.github.io/kata-inspired-by-pikmin-codex-dot/",
+    "edition": "Codex Dot \u00b7 Core-loop reconstruction",
+    "verified": "2026-11-07",
+    "evidence": "29 core tests and real HTTP browser gameplay passed. Two reviewed schema-v3 local gameplay captures. Pages workflow 42317682862 deployed 447e9fa491473924889fb03a26c43ac9c39c6a12 successfully; check workflow 42317629324 passed. All 10 published runtime, manifest, screenshot and capture-evidence files returned HTTP 200 and matched their recorded hashes at 2026-11-07T00:22:14Z. Core-loop reconstruction with original maps and simpler AI, not full gameplay parity.",
+    "genres": [
+      "Strategy",
+      "Adventure"
+    ]
+  },
+  {
     "id": "kata-inspired-by-runescape-codex-dot",
     "title": "Embervale",
     "description": "An OSRS-inspired 3D point-and-click skill adventure.",
