@@ -9,7 +9,7 @@
     "check": "astro check && node scripts/validate-catalog.mjs && node scripts/validate-screenshots.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node --test scripts/catalog.test.mjs"
+    "test": "node --test scripts/*.test.mjs"
   },
   "dependencies": { "astro": "7.4.2" },
   "devDependencies": { "@astrojs/check": "0.9.12", "typescript": "~5.9.3" }
