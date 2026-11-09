@@ -15,7 +15,7 @@
 Development was served over `http://127.0.0.1:4329/`; the production build was served over `http://127.0.0.1:4332/`. No HTML file was opened through `file://`.
 
 - `npm run check`: zero Astro errors, warnings, or hints. Existing game catalog, game screenshot coverage, and new app-catalog checks pass.
-- `npm test`: 40 passing tests, including shared theme behavior, collection separation, preview/live URL safety, legacy anchors, and palette contrast.
+- `npm test`: 41 passing tests, including shared theme behavior, collection separation, preview/live URL safety, legacy anchors, and palette contrast.
 - `npm run build`: 264 static HTML pages; all local routes, image references, and anchors validate. Each generated page has one h1.
 - Browser review: 1440px desktop, 390px phone, and 320px narrow phone. No horizontal overflow on reviewed routes.
 - Browser flows: Home → Tool Shed → app detail → Arcade; Morrow Garden title search → unchanged game detail → Back restores query; unmatched search → empty state → Clear restores focus to search.
@@ -26,3 +26,13 @@ Development was served over `http://127.0.0.1:4329/`; the production build was s
 ## Publication boundary
 
 This branch is a local preview, not a deployment. Do not push to `main` without authorization: the repository's workflow publishes that branch to GitHub Pages. Publish the app only after approval and verify it before switching the catalog entry to `live`. Never infer a working app URL from the repository naming convention alone.
+
+
+## Sound Lab screenshots
+
+Two original, unedited Chromium/CUA full-page captures from `http://127.0.0.1:4173/`, captured on November 9, 2026 at 21:50:07 UTC, were imported into the app catalog. File hashes and actual image dimensions were checked after transfer. Both were visually reviewed through the local HTTP server before integration.
+
+- Desktop: viewport 1180 CSS px, image 1165 × 1185, SHA-256 `de53252a5f5bbbc1c3ddc95f7e7c35faa90beed1fd16deff299d13e3a4164a02`.
+- Narrow-screen: viewport 500 CSS px, image 485 × 1636, SHA-256 `0ed305c745959ef17aa347b1106ecde6774e83d30ec11e0575f2cd8794e901cc`. This is responsive browser emulation, not a physical-device test.
+
+Both show the Coin pickup preset. They preceded a final noise-only control-disable fix and documentation update in app commit `f972f1e84e5e53e6577e4bde3926cd5c420231cf`; they do not claim to be captures of that exact commit. The Coin preset screen was unchanged. App implementation checks reported 12 passing tests, syntax checks, a static build, WAV export, and JSON round-trip verification. The hub documents that settings are Sound Lab v1, not jsfxr compatible.

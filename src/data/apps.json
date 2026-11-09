@@ -11,11 +11,36 @@
     "launch": null,
     "verified": null,
     "features": [
-      "Sound-effect presets",
-      "Waveform and envelope controls",
+      "8 one-click presets",
+      "5 waveforms",
+      "Envelope and pitch controls",
       "Randomize and mutate",
-      "WAV and JSON export"
+      "WAV export · 44.1 kHz / 16-bit",
+      "Save/open Sound Lab settings",
+      "Undo and redo",
+      "Local session saving"
     ],
-    "screenshots": []
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-jsfxr-codex-dot/kata-sound-lab-desktop.jpg",
+        "alt": "Kata Sound Lab desktop workbench with the Coin pickup preset, waveform display, sound controls, and WAV and settings exports.",
+        "caption": "Coin pickup preset in the desktop layout.",
+        "width": 1165,
+        "height": 1185,
+        "capturedAt": "2026-11-09T21:50:07Z",
+        "sha256": "de53252a5f5bbbc1c3ddc95f7e7c35faa90beed1fd16deff299d13e3a4164a02",
+        "source": "Original Chromium/CUA full-page capture at http://127.0.0.1:4173/, viewport 1180 CSS px. Captured before the noise-only control fix included in f972f1e84e5e53e6577e4bde3926cd5c420231cf."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-jsfxr-codex-dot/kata-sound-lab-mobile.jpg",
+        "alt": "Kata Sound Lab responsive layout with eight preset buttons above the Coin pickup waveform, sound controls, and export options.",
+        "caption": "Coin pickup preset in the 500 CSS-pixel-wide responsive layout.",
+        "width": 485,
+        "height": 1636,
+        "capturedAt": "2026-11-09T21:50:07Z",
+        "sha256": "0ed305c745959ef17aa347b1106ecde6774e83d30ec11e0575f2cd8794e901cc",
+        "source": "Original Chromium/CUA full-page capture at http://127.0.0.1:4173/, viewport 500 CSS px; not a physical-device test. Captured before the noise-only control fix included in f972f1e84e5e53e6577e4bde3926cd5c420231cf."
+      }
+    ]
   }
 ]

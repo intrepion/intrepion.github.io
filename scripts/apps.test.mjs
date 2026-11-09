@@ -66,3 +66,16 @@ function contrast(a,b) { const l=[luminance(a),luminance(b)].sort((a,b)=>b-a);re
 test('fixed collection palettes retain readable text and keyboard focus in both themes', () => {
   for (const [ink,bg,min] of [['f7f8eb','193d33',4.5],['352719','f0be8c',4.5],['fff5e7','382c22',4.5],['e1d1c1','382c22',4.5],['ebc49b','382c22',4.5],['f4bd82','382c22',4.5],['352719','f3bd83',4.5],['fff3b9','193d33',3],['713a1a','f0be8c',3],['ffcf91','382c22',3]]) assert.ok(contrast(ink,bg)>=min, `${ink}/${bg}: ${contrast(ink,bg)}`);
 });
+
+
+test('Sound Lab includes two intact and truthfully labeled local screenshots', async () => {
+  const app = apps[0];
+  assert.equal(app.screenshots.length, 2);
+  assert.deepEqual(app.screenshots.map(shot => [shot.width,shot.height]), [[1165,1185],[485,1636]]);
+  assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4173/')));
+  assert.match(app.screenshots[1].caption, /500 CSS-pixel/);
+  assert.match(app.screenshots[1].source, /not a physical-device test/);
+  await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],sha256:'0'.repeat(64)}]}]), /Screenshot hash mismatch/);
+  await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],alt:''}]}]), /description and source/);
+  assert.match(await read('../src/pages/apps/[app].astro'), /jsfxr preset files are not compatible/);
+});
