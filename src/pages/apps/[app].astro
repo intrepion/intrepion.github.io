@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import appData from '../../data/apps.json';
+import type {AppEntry} from '../../data/apps';
+export function getStaticPaths() { return (appData as AppEntry[]).map(app => ({params: {app: app.id}, props: {app}})); }
+const {app} = Astro.props;
+---
+<Base title={app.title} description={app.description} section="tools">
+<section class="app-intro wrap"><a class="back-link" href="/tools/">← Kata Tool Shed</a><div class="app-detail-head"><div><p class="eyebrow">{app.category.toUpperCase()} / INSPIRED BY {app.inspiration.toUpperCase()}</p><h1>{app.title}<span>.</span></h1><p class="app-tagline">{app.tagline}</p><p>{app.description}</p></div><div class="app-actions">{app.launch ? <a class="button shed-button" href={app.launch}>Open app ↗</a> : <span class="app-status">Local preview</span>}{app.repo && <a href={app.repo}>View source ↗</a>}{!app.launch && <p>This app has not been published yet.<br />Screenshots below show the local build.</p>}</div></div></section>
+<section class="app-features wrap" aria-labelledby="features-title"><p class="eyebrow" id="features-title">IN THE TOOLBOX</p><ul>{app.features.map(feature => <li><span aria-hidden="true">＋</span>{feature}</li>)}</ul></section>
+<section class="app-screenshots wrap" aria-labelledby="screenshots-title"><div class="listing-heading"><div><p class="eyebrow">A CLOSER LOOK</p><h2 id="screenshots-title">Inside the Sound Lab</h2></div></div>{app.screenshots.length ? <><p class="listing-note">Actual app screenshots captured from a local HTTP server. These are previews, not evidence of a public deployment.</p><div class="app-screenshot-grid">{app.screenshots.map(shot => <figure><a href={shot.file} aria-label={`View full image: ${shot.alt}`}><img src={shot.file} alt={shot.alt} width={shot.width} height={shot.height} loading="lazy" /></a><figcaption>{shot.caption} · Local capture on {shot.capturedAt.slice(0, 10)}</figcaption></figure>)}</div></> : <p class="listing-note">Screenshots will be added after the first local build is tested.</p>}</section>
+<section class="app-project wrap"><p class="eyebrow">AN INDEPENDENT EXPERIMENT</p><h2>A familiar idea, a fresh exercise.</h2><p>Inspired by jsfxr’s playful approach to sound design. This is an original learning project, not an official jsfxr app or a claim of feature-for-feature compatibility.</p><dl><div><dt>Project</dt><dd>{app.id}</dd></div><div><dt>Collection</dt><dd><a href="/tools/">Kata Tool Shed</a></dd></div><div><dt>Availability</dt><dd>{app.launch ? 'Published app' : 'Unpublished local preview'}</dd></div></dl></section>
+</Base>

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "kata-app-inspired-by-jsfxr-codex-dot",
+    "title": "Kata Sound Lab",
+    "inspiration": "jsfxr",
+    "category": "Audio",
+    "tagline": "Small sounds. Big character.",
+    "description": "An original retro sound-effects workbench inspired by jsfxr. Start with a preset, shape a sound, and export a WAV for your next little world.",
+    "status": "preview",
+    "repo": null,
+    "launch": null,
+    "verified": null,
+    "features": [
+      "Sound-effect presets",
+      "Waveform and envelope controls",
+      "Randomize and mutate",
+      "WAV and JSON export"
+    ],
+    "screenshots": []
+  }
+]

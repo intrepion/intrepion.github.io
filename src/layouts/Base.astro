@@ -1,12 +1,15 @@
 ---
 import '../styles/global.css';
+import '../styles/collections.css';
 import themeScript from '../scripts/theme.js?raw';
-interface Props { title?: string; description?: string }
-const {title = 'The Kata Arcade', description = 'Small experiments. Endless ways to play.'} = Astro.props;
+interface Props { title?: string; description?: string; section?: 'home' | 'arcade' | 'tools' }
+const {title = 'The Kata Arcade', description = 'Small experiments. Endless ways to play.', section = 'arcade'} = Astro.props;
+const sectionName = section === 'tools' ? 'the kata tool shed' : section === 'arcade' ? 'the kata arcade' : 'small experiments';
+const sectionHome = section === 'tools' ? '/tools/' : section === 'arcade' ? '/arcade/' : '/';
 ---
 <!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content={description} /><meta name="color-scheme" content="light dark" /><meta name="theme-color" content="#f6f6ed" media="(prefers-color-scheme: light)" /><meta name="theme-color" content="#14231c" media="(prefers-color-scheme: dark)" /><script is:inline set:html={themeScript} /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /><title>{title} — intrepion</title></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header wrap"><a class="brand" href="/" aria-label="The Kata Arcade home"><span class="brand-mark" aria-hidden="true">✳</span><span>intrepion <i>/</i> <strong>the kata arcade</strong></span></a><nav aria-label="Main navigation"><a href="/#genres">Browse genres</a><a href="/#about">About</a><a href="https://github.com/intrepion">GitHub <span aria-hidden="true">↗</span></a><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Dark mode" aria-pressed="false" hidden>◐ <span>Theme</span></button></nav></header>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="intrepion experiments home"><span class="brand-mark" aria-hidden="true">✳</span><span>intrepion <i>/</i> <strong>{sectionName}</strong></span></a><nav aria-label="Main navigation"><a href="/arcade/" aria-current={section === 'arcade' ? (Astro.url.pathname === '/arcade/' ? 'page' : 'location') : undefined}>Kata Arcade</a><a href="/tools/" aria-current={section === 'tools' ? (Astro.url.pathname === '/tools/' ? 'page' : 'location') : undefined}>Kata Tool Shed</a><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Dark mode" aria-pressed="false" hidden>◐ <span>Theme</span></button></nav></header>
 <main id="main"><slot /></main>
-<footer class="site-footer wrap"><a class="footer-brand" href="/">intrepion / the kata arcade</a><p>Made for the joy of figuring it out.</p><a href="#main">Back to top ↑</a><p class="legal">Independent learning projects. Referenced game names belong to their respective owners; no affiliation or endorsement. Some cards show gameplay; other artwork is decorative. Catalog updated November 6, 2026.</p></footer>
+<footer class="site-footer wrap"><a class="footer-brand" href={sectionHome}>intrepion / {sectionName}</a><p>Made for the joy of figuring it out.</p><a href="https://github.com/intrepion">GitHub ↗</a><a href="#main">Back to top ↑</a><p class="legal">Independent learning projects. Referenced game and app names belong to their respective owners; no affiliation or endorsement. Screenshots show the builds identified in their captions. Other artwork is decorative.</p></footer>
 </body></html>
