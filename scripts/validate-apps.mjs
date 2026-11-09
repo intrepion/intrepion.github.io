@@ -21,6 +21,7 @@ export async function validateApps(apps, publicRoot = new URL('../public/', impo
       assert.ok(app.repo, 'Live apps need a published source repository');
       assert.match(app.verified ?? '', /^\d{4}-\d{2}-\d{2}$/, 'Live apps need a verification date');
       assert.ok(app.screenshots?.length, 'Live apps need reviewed screenshots');
+      assert.ok(app.verificationEvidence?.trim(), 'Live apps need verification evidence');
     }
     assert.ok(Array.isArray(app.screenshots), 'Screenshots must be an array');
     const files = new Set();

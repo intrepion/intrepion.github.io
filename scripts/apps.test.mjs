@@ -30,6 +30,7 @@ test('live app requires matching project URLs, verification, and screenshots', a
   await assert.rejects(validateApps([{...live, launch:'https://example.com/'}]), /match its project/);
   await assert.rejects(validateApps([{...live, repo:'https://github.com/intrepion/wrong'}]), /match its ID/);
   await assert.rejects(validateApps([{...live, verified:null}]), /verification date/);
+  await assert.rejects(validateApps([{...live, verificationEvidence:null}]), /verification evidence/);
 });
 
 test('root retains the old genre and about anchors without relying on JavaScript', async () => {
@@ -78,4 +79,13 @@ test('Sound Lab includes two intact and truthfully labeled local screenshots', a
   await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],sha256:'0'.repeat(64)}]}]), /Screenshot hash mismatch/);
   await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],alt:''}]}]), /description and source/);
   assert.match(await read('../src/pages/apps/[app].astro'), /jsfxr preset files are not compatible/);
+});
+
+
+test('published Sound Lab links point to the verified app and repository', () => {
+  assert.equal(apps[0].status, 'live');
+  assert.equal(apps[0].launch, 'https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/');
+  assert.equal(apps[0].repo, 'https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot');
+  assert.equal(apps[0].verified, '2026-11-09');
+  assert.match(apps[0].verificationEvidence, /42713404377/);
 });

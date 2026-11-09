@@ -19,6 +19,7 @@ export interface AppEntry {
   repo: string | null;
   launch: string | null;
   verified: string | null;
+  verificationEvidence: string | null;
   features: string[];
   screenshots: AppScreenshot[];
 }

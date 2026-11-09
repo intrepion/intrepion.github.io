@@ -6,10 +6,10 @@
     "category": "Audio",
     "tagline": "Small sounds. Big character.",
     "description": "An original retro sound-effects workbench inspired by jsfxr. Start with a preset, shape a sound, and export a WAV for your next little world.",
-    "status": "preview",
-    "repo": null,
-    "launch": null,
-    "verified": null,
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/",
+    "verified": "2026-11-09",
     "features": [
       "8 one-click presets",
       "5 waveforms",
@@ -41,6 +41,7 @@
         "sha256": "0ed305c745959ef17aa347b1106ecde6774e83d30ec11e0575f2cd8794e901cc",
         "source": "Original Chromium/CUA full-page capture at http://127.0.0.1:4173/, viewport 500 CSS px; not a physical-device test. Captured before the noise-only control fix included in f972f1e84e5e53e6577e4bde3926cd5c420231cf."
       }
-    ]
+    ],
+    "verificationEvidence": "Published commit 9b7d672be819a4bef334263c5185d20bf8efe5e4 via https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot/actions/runs/42713404377 . At 2026-11-09T22:37:46.832Z, public index.html, styles.css, src/app.js, src/synth.js, and app.json returned HTTP 200 and matched the final dist bytes. Both public screenshots also matched their saved hashes. Twelve tests, CI, local HTTP playback, export, JSON round-trip, and responsive checks passed."
   }
 ]
