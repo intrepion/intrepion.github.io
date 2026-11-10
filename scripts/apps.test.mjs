@@ -222,7 +222,7 @@ test('Fluxgrove includes verified publication and truthful procedural scope', as
 const creativeScopes = [
   ['blender', 'Kata Formyard', /40 objects/, /OBJ/],
   ['zbrush', 'Kata Claywell', /1,962 vertices/, /fixed-topology/],
-  ['character-creator-5', 'Kata Persona Forge', /stylized procedural human figure/, /static poses/],
+  ['character-creator-5', 'Kata Persona Forge', /weighted 53-bone skeleton/, /textured, rigged GLB/],
   ['substance-3d-painter', 'Kata Patina Lab', /not a physically based renderer/, /sphere-only/],
   ['maya', 'Kata Kinframe', /2D FK puppet/, /2D forward-kinematic/],
   ['cinema-4d', 'Kata Orbitweave', /Canvas 2D orthographic/, /3D coordinates/]
@@ -259,7 +259,7 @@ for (const [slug, title, scope, description] of creativeScopes) {
       }
     }
     assert.ok(app.screenshots.every(shot => /localhost HTTP capture/.test(shot.source)));
-    if (!revised) {
+    if (!revised && slug !== 'character-creator-5') {
       assert.match(app.screenshots[1].source, /iframe/);
       assert.match(app.screenshots[1].source, /not a physical-device test/);
     }
@@ -285,7 +285,7 @@ test('six creative releases record their final verified publication', () => {
 
 test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['anatomy-desktop.jpg', 'anatomy-face.jpg']);
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-foundation-desktop.jpg', 'persona-foundation-face.jpg']);
   assert.ok(persona.projectNotes.some(note => note.includes('WebGL/GPU rendering and low-powered-device performance remain unverified')));
   const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
   assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
@@ -303,4 +303,18 @@ test('revised Persona Forge and Kinframe releases have verified exact commit evi
     assert.ok(app.verificationEvidence.includes(run));
     assert.ok(app.screenshots.every(shot => shot.source.includes('not exact deployed-build provenance')));
   }
+});
+
+
+test('Persona human foundation describes rigged exports and approximate migration honestly', () => {
+  const persona = apps.find(app => app.inspiration === 'Character Creator 5');
+  const notes = persona.projectNotes.join(' ');
+  assert.match(notes, /CC0 anatomical adult/);
+  assert.match(notes, /ten morph targets/);
+  assert.match(notes, /Version-1 migration is explicitly approximate/);
+  assert.match(notes, /Blender 4.3.2/);
+  assert.match(notes, /zero errors and four documented warnings/);
+  assert.ok(persona.screenshots.every(shot => shot.source.includes('same-human software preview')));
+  assert.ok(persona.features.some(feature => feature.includes('rigged GLB')));
+  assert.ok(!persona.features.some(feature => feature.includes('OBJ')));
 });

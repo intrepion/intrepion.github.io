@@ -469,54 +469,56 @@
     "category": "3D & Animation",
     "tagline": "A character, from the inside out.",
     "features": [
-      "Procedural human figure with smooth shading",
-      "Six proportion controls",
-      "Three archetypes and hairstyles",
-      "Four static poses",
-      "Body and face camera views",
-      "Orbit camera",
+      "CC0 MakeHuman/MPFB anatomical adult",
+      "UV-mapped skin and eye textures",
+      "Weighted 53-bone skeleton",
+      "Five paired morph controls and overall height",
+      "Four bone-driven static poses",
+      "Separate fitted outfit and optional cropped hair",
+      "Body/face views and camera orbit",
       "Forty-edit undo and redo",
-      "OBJ vertex-color geometry export",
-      "PNG preview export",
-      "Editable project import and export",
+      "Editable textured, rigged GLB export",
+      "PNG snapshots and editable project files",
       "Best-effort browser autosave"
     ],
     "id": "kata-app-inspired-by-character-creator-5-codex-dot",
     "inspiration": "Character Creator 5",
-    "description": "A stylized character workshop. Shape a procedural human figure with six proportion controls, hairstyles, colors and static poses, then export a preview, OBJ or editable project.",
+    "description": "A human character workshop built on an anatomical MakeHuman/MPFB adult. Adjust body and face shape, colors and skeletal poses, then export a textured, rigged GLB, PNG or editable project.",
     "status": "live",
     "repo": "https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot",
     "launch": "https://intrepion.github.io/kata-app-inspired-by-character-creator-5-codex-dot/",
     "verified": "2026-11-10",
     "projectNotes": [
       "Inspired by Character Creator 5. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
-      "A stylized procedural human figure with separate surface sections and a depth-tested renderer, not a scan or photoreal digital human. Extreme morphs or bends can still reveal seams. Static poses reposition geometry; there is no skinning, rigging, facial animation, clothing simulation, external mesh import or Reallusion format support. OBJ exports independent RGB-colored triangles; importing applications may need to recalculate normals.",
-      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones.",
-      "The software depth-buffer renderer was browser-tested. WebGL/GPU rendering and low-powered-device performance remain unverified. Existing version-1 projects retain their parameters and regenerate the revised geometry."
+      "One CC0 anatomical adult with a 2048px skin texture, 1024px eyes, weighted 53-bone skeleton and ten morph targets. Five paired shape controls and overall height make modest variations of the same base human, not a demographic library or photoreal production character system.",
+      "Neutral, T-pose, Hello and Stride are bone-driven static poses, not a walk cycle. Outfit, trousers and optional solid cropped hair are separate meshes. No facial animation, face rig, strand hair, cloth simulation, external mesh import or Reallusion format support. Extreme shapes may need collision and rig-fit adjustment.",
+      "GLB export retains UV textures, shape keys, weights, bones, pose clips and the selected appearance. An actual app export was re-imported and edited in Blender 4.3.2; Khronos validation reported zero errors and four documented warnings.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Version-1 migration is explicitly approximate: validated original parameters and the old autosave are retained, but original geometry is not recreated.",
+      "The software preview renders the same textured, morphed and skinned human and was browser-tested. WebGL/GPU rendering and low-powered-device performance remain unverified. Software lighting and resolution are reduced; exported assets retain full detail. Narrow-layout checks are desktop-browser tests, not physical-device tests."
     ],
     "screenshots": [
       {
-        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/anatomy-desktop.jpg",
-        "alt": "Kata Persona Forge body view with revised human proportions and smooth shading.",
-        "caption": "Revised body view with anatomical proportions and smooth shading.",
-        "width": 1180,
-        "height": 763,
-        "capturedAt": "2026-11-10",
-        "sha256": "0cf24df83fe49f7c113cac61bea1768ad519c2982a96aac5b906c4c521348329",
-        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/. Recorded in docs/QA-ANATOMY.md on 2026-11-10. Local pre-publication capture of the anatomy revision, not exact deployed-build provenance. Original file: anatomy-desktop.jpg. Browser viewport capture."
-      },
-      {
-        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/anatomy-face.jpg",
-        "alt": "Kata Persona Forge face view showing the revised facial anatomy.",
-        "caption": "Face view of the revised procedural character.",
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/persona-foundation-desktop.jpg",
+        "alt": "Kata Persona Forge body view of its textured anatomical adult in a fitted outfit.",
+        "caption": "Anatomical adult with separate fitted clothing, shown in the software preview.",
         "width": 1165,
         "height": 753,
         "capturedAt": "2026-11-10",
-        "sha256": "2f120353eb88e3d546d146e08c96c51a09670d4576193bd3bb3e07fb080e0dc6",
-        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/. Recorded in docs/QA-ANATOMY.md on 2026-11-10. Local pre-publication capture of the anatomy revision, not exact deployed-build provenance. Original file: anatomy-face.jpg. Browser viewport capture."
+        "sha256": "1f6feb5643988583350cbc4a66a7e47778e1db0b32a83df5401100fdc702ed64",
+        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/persona-foundation-desktop.png. Recorded in docs/QA-FOUNDATION.md on 2026-11-10. Local pre-publication capture of the version-2 human foundation, not exact deployed-build provenance. The same-human software preview is shown; hardware WebGL was unavailable. Original .png filename contains JPEG bytes; copied unchanged with the correct .jpg extension."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/persona-foundation-face.jpg",
+        "alt": "Kata Persona Forge face view with textured skin, brown eyes and cropped hair.",
+        "caption": "Face inspection of the same textured human in the software preview.",
+        "width": 1165,
+        "height": 753,
+        "capturedAt": "2026-11-10",
+        "sha256": "1b2ebb0bf58d5a538c8104df3723c2fdb9719a6f5eeb4039396d17ea7e883c3f",
+        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/persona-foundation-face.png. Recorded in docs/QA-FOUNDATION.md on 2026-11-10. Local pre-publication capture of the version-2 human foundation, not exact deployed-build provenance. The same-human software preview is shown; hardware WebGL was unavailable. Original .png filename contains JPEG bytes; copied unchanged with the correct .jpg extension."
       }
     ],
-    "verificationEvidence": "Initial tested runtime commit b6ed1a3a64bc1b9dad4e9f924dfa6d94e5b245cb passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42748710341 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 9 Node tests, build and 16 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 3826ab42c349f15d40dfd9cc3fcc66753addd272 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42749030109 ; runtime unchanged from the initially tested release. Public browser smoke loaded the character workshop; additional interaction verification is not claimed. On localhost, normal native typing followed by Tab updated the heading and autosave; the Pilot preset loaded Orion and expected proportions. A programmatic-fill event mismatch was not an app defect. Anatomy revision 2e26ad7bcb5721adcb191f8db5c96273b84dac7f passed checks, build and Pages deployment in https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42760407167 . Public source assets byte-match the tested tree; live body and face views were browser-verified. Local revision QA: 17 Node tests, 19 browser assertions, build and diff checks passed. Software depth-buffer rendering was exercised; GPU/WebGL rendering remains unverified. New screenshots are original local pre-publication anatomy captures."
+    "verificationEvidence": "Initial tested runtime commit b6ed1a3a64bc1b9dad4e9f924dfa6d94e5b245cb passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42748710341 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 9 Node tests, build and 16 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 3826ab42c349f15d40dfd9cc3fcc66753addd272 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42749030109 ; runtime unchanged from the initially tested release. Public browser smoke loaded the character workshop; additional interaction verification is not claimed. On localhost, normal native typing followed by Tab updated the heading and autosave; the Pilot preset loaded Orion and expected proportions. A programmatic-fill event mismatch was not an app defect. Anatomy revision 2e26ad7bcb5721adcb191f8db5c96273b84dac7f passed checks, build and Pages deployment in https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42760407167 . Public source assets byte-match the tested tree; live body and face views were browser-verified. Local revision QA: 17 Node tests, 19 browser assertions, build and diff checks passed. Software depth-buffer rendering was exercised; GPU/WebGL rendering remains unverified. New screenshots are original local pre-publication anatomy captures. Human foundation local runtime e4bcb71a217f293876c03c95ab98d7e09e81d02d: 31 Node tests, 20 browser harness checks, 13 runtime exporter checks and production build passed. The exact UI-exported GLB passed 11 Blender 4.3.2 roundtrip checks and Khronos validation with zero errors, four documented warnings and two informational notices. Real PNG and version-2 project downloads were also verified. Actual software-preview body/face captures replace the old anatomy screenshots; hardware WebGL was unavailable. See the app’s docs/QA-FOUNDATION.md and docs/ASSET-LICENSES.md."
   },
   {
     "title": "Kata Patina Lab",
