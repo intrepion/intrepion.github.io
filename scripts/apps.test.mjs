@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 7);
+  assert.equal(count.total, 13);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -165,7 +165,7 @@ test('three approved apps have verified publication links and release evidence',
     ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
     ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
   ];
-  assert.equal(apps.filter(app => app.status === 'live').length, 7);
+  assert.equal(apps.filter(app => app.status === 'live').length, 13);
   for (const [id, title, sha, run] of expected) {
     const app = apps.find(app => app.id === id);
     assert.equal(app.title, title);
@@ -216,4 +216,49 @@ test('Fluxgrove includes verified publication and truthful procedural scope', as
   assert.match(app.screenshots[1].caption, /390 CSS-pixel-wide/);
   assert.ok(app.projectNotes.some(note => note.includes('not a branching node graph or a physical simulation')));
   await validateApps([app]);
+});
+
+
+const creativeScopes = [
+  ['blender', 'Kata Formyard', /40 objects/, /OBJ/],
+  ['zbrush', 'Kata Claywell', /1,962 vertices/, /fixed-topology/],
+  ['character-creator-5', 'Kata Persona Forge', /segmented stylized character/, /static poses/],
+  ['substance-3d-painter', 'Kata Patina Lab', /not a physically based renderer/, /sphere-only/],
+  ['maya', 'Kata Kinframe', /2D FK puppet/, /2D forward-kinematic/],
+  ['cinema-4d', 'Kata Orbitweave', /Canvas 2D orthographic/, /3D coordinates/]
+];
+for (const [slug, title, scope, description] of creativeScopes) {
+  test(`${title} retains accurate scope and intact localhost screenshots`, async () => {
+    const app = apps.find(app => app.id === `kata-app-inspired-by-${slug}-codex-dot`);
+    assert.equal(app.title, title);
+    assert.match(app.projectNotes.join(' '), scope);
+    assert.match(app.description, description);
+    assert.notEqual(app.description, app.tagline);
+    assert.equal(app.screenshots.length, 2);
+    assert.ok(app.screenshots.every(shot => shot.file.endsWith('.png')));
+    for (const shot of app.screenshots) {
+      const bytes = await readFile(new URL(`../public${shot.file}`, import.meta.url));
+      assert.equal(bytes.subarray(1,4).toString(), 'PNG');
+      assert.deepEqual([bytes.readUInt32BE(16), bytes.readUInt32BE(20)], [shot.width, shot.height]);
+    }
+    assert.ok(app.screenshots.every(shot => /localhost HTTP capture/.test(shot.source)));
+    assert.match(app.screenshots[1].source, /iframe/);
+    assert.match(app.screenshots[1].source, /not a physical-device test/);
+    assert.match(app.verificationEvidence, /native OS file pickers and downloaded-file round trips are not verified/);
+    await validateApps([app]);
+  });
+}
+
+
+test('six creative releases record their final verified publication', () => {
+  const releases = {"blender": ["a7406ea83d6a8691544f849027dfeb676e418c04", "42749065191"], "zbrush": ["8ead396b262afe2b4dafa6a5d3cb42629b9781f2", "42749037267"], "character-creator-5": ["3826ab42c349f15d40dfd9cc3fcc66753addd272", "42749030109"], "substance-3d-painter": ["b378469228d379549abe7087f2f74b530e97a3a9", "42749071856"], "maya": ["074d6fc60ea86078fc7abdc1395203c54006fce4", "42749049119"], "cinema-4d": ["9ecd7be7962037b677418ad33ebd70cf02f94930", "42749083158"]};
+  for (const [slug, [head, run]] of Object.entries(releases)) {
+    const app = apps.find(app => app.id === `kata-app-inspired-by-${slug}-codex-dot`);
+    assert.equal(app.status, 'live');
+    assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
+    assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
+    assert.equal(app.verified, '2026-11-10');
+    assert.ok(app.verificationEvidence.includes(head));
+    assert.ok(app.verificationEvidence.includes(run));
+  }
 });

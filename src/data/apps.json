@@ -358,5 +358,316 @@
       "The editable recipe is a sequential chain of point deformations, not a branching node graph or a physical simulation. No fluids, smoke, rigid-body solver, mesh export, or video export is included.",
       "Projects stay in the browser. Autosave is best-effort storage for one study; download project files for durable backups. Camera projection is orthographic and PNG export is a still image."
     ]
+  },
+  {
+    "title": "Kata Formyard",
+    "category": "3D & Creative",
+    "tagline": "A little space for big ideas.",
+    "features": [
+      "Five mesh primitives",
+      "40-object scene collection",
+      "XYZ position, rotation and scale",
+      "Surface colors and visibility",
+      "Orbit, pan, zoom and frame scene",
+      "Solid and wire overlay views",
+      "30-step undo and redo",
+      "Editable JSON project import/export",
+      "Geometry-only OBJ export",
+      "Local browser autosave"
+    ],
+    "id": "kata-app-inspired-by-blender-codex-dot",
+    "inspiration": "Blender",
+    "description": "A local-first primitive modeling studio. Arrange five kinds of 3D mesh, edit transforms and colors, and export a geometry-only OBJ or editable project.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-blender-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-blender-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by Blender. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "Five primitive types, up to 40 objects, and orthographic Canvas rendering. No vertex editing, modifiers, mesh import, animation, PBR materials or Blender file compatibility. OBJ exports geometry and names, not colors or materials.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-blender-codex-dot/desktop.png",
+        "alt": "Kata Formyard desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 1165,
+        "height": 959,
+        "capturedAt": "2026-11-10",
+        "sha256": "34f512268f7d79cefff63d88ff61867b0af87b2560145e386a292a0f74a3a03e",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-blender-codex-dot/narrow.png",
+        "alt": "Kata Formyard narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe, captured at a scaled 167-pixel image width; not a physical-device test.",
+        "width": 167,
+        "height": 763,
+        "capturedAt": "2026-11-10",
+        "sha256": "9c5c34087439edf4f8654d992d13431eea4fa05a05997afb2f71dc3320665e35",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe captured at a scaled 167-pixel image width; not a physical-device test."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit f7c7f523b1a83755e4458f3ec7080a27b92ceeaf passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-blender-codex-dot/actions/runs/42748676024 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 15 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit a7406ea83d6a8691544f849027dfeb676e418c04 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-blender-codex-dot/actions/runs/42749065191 ; runtime unchanged from the initially tested release. Public browser smoke loaded the studio and adding Cube reported Shape added."
+  },
+  {
+    "title": "Kata Claywell",
+    "category": "3D & Creative",
+    "tagline": "Find the form within.",
+    "features": [
+      "Build, carve and Laplacian smooth brushes",
+      "X-axis symmetry",
+      "Adjustable brush size and strength",
+      "Three original starter forms",
+      "Four studio materials",
+      "Orbit, zoom and wire overlay",
+      "Keyboard brush stamping",
+      "20-step undo and redo",
+      "Editable JSON project import/export",
+      "Geometry-only OBJ export",
+      "Local browser autosave"
+    ],
+    "id": "kata-app-inspired-by-zbrush-codex-dot",
+    "inspiration": "ZBrush",
+    "description": "A small mesh-sculpting studio. Build, carve and smooth a fixed-topology form with symmetry, undo, and editable project or geometry-only OBJ exports.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-zbrush-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-zbrush-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by ZBrush. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "A fixed-topology mesh with 1,962 vertices and 3,920 triangles, rendered orthographically on Canvas. No dynamic topology, subdivision, masks, mesh import, pressure sensitivity or ZBrush formats. OBJ exports geometry, not material colors.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-zbrush-codex-dot/desktop.png",
+        "alt": "Kata Claywell desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 884,
+        "height": 763,
+        "capturedAt": "2026-11-10",
+        "sha256": "eb31656e284f02daf784064a7f0d1274578510984ccbe915cb8aa5063af423bf",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-zbrush-codex-dot/narrow.png",
+        "alt": "Kata Claywell narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe, captured at a scaled 167-pixel image width; not a physical-device test.",
+        "width": 167,
+        "height": 763,
+        "capturedAt": "2026-11-10",
+        "sha256": "078f77c4f0bf4ee8c33695fa57ed8a6302a571cbb4a1031e5972cccf3e0138d9",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe captured at a scaled 167-pixel image width; not a physical-device test."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit 3eb77ff4cb0241c94e7f650d5ccfff4d4f367914 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-zbrush-codex-dot/actions/runs/42748693596 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 13 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 8ead396b262afe2b4dafa6a5d3cb42629b9781f2 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-zbrush-codex-dot/actions/runs/42749037267 ; runtime unchanged from the initially tested release. Public browser smoke loaded the studio and selected the sphere preset."
+  },
+  {
+    "title": "Kata Persona Forge",
+    "category": "3D & Animation",
+    "tagline": "A character, from the inside out.",
+    "features": [
+      "Original procedural 3D character mesh",
+      "Six proportion controls",
+      "Three archetypes and hairstyles",
+      "Four static poses",
+      "Orbit camera",
+      "Forty-edit undo and redo",
+      "OBJ vertex-color geometry export",
+      "PNG preview export",
+      "Editable project import and export",
+      "Best-effort browser autosave"
+    ],
+    "id": "kata-app-inspired-by-character-creator-5-codex-dot",
+    "inspiration": "Character Creator 5",
+    "description": "A stylized character workshop. Shape a segmented 3D figure with six proportion controls, hairstyles, colors and static poses, then export a preview, OBJ or editable project.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-character-creator-5-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by Character Creator 5. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "A segmented stylized character built from ellipsoids and capsule-like limbs, rendered with Canvas 2D triangles. Static poses reposition geometry; there is no skinning, rigging, facial animation, clothing simulation, external mesh import or Reallusion format support.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/desktop.png",
+        "alt": "Kata Persona Forge desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 1180,
+        "height": 920,
+        "capturedAt": "2026-11-10",
+        "sha256": "870982ed1888f80a83c2859c4a3086e18575b1c65787d3e57957e8559c9ee338",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/narrow.png",
+        "alt": "Kata Persona Forge narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width.",
+        "width": 390,
+        "height": 753,
+        "capturedAt": "2026-11-10",
+        "sha256": "bc5a7d1b3e05a6abc62520d2416d372896d2c48a518b45d88de2ac3b23558926",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit b6ed1a3a64bc1b9dad4e9f924dfa6d94e5b245cb passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42748710341 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 9 Node tests, build and 16 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 3826ab42c349f15d40dfd9cc3fcc66753addd272 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42749030109 ; runtime unchanged from the initially tested release. Public browser smoke loaded the character workshop; additional interaction verification is not claimed. On localhost, normal native typing followed by Tab updated the heading and autosave; the Pilot preset loaded Orion and expected proportions. A programmatic-fill event mismatch was not an app defect."
+  },
+  {
+    "title": "Kata Patina Lab",
+    "category": "3D & Animation",
+    "tagline": "Every surface tells a story.",
+    "features": [
+      "Direct sphere painting and linked UV canvas",
+      "Round and dry-grain brushes",
+      "Layer-local eraser",
+      "Six raster layers with visibility and opacity",
+      "Layer rename, reorder and removal",
+      "Twenty-edit undo and redo",
+      "Roughness and metallic shading preview",
+      "PNG base-color and uniform material maps",
+      "Editable layered project import and export",
+      "Best-effort browser autosave"
+    ],
+    "id": "kata-app-inspired-by-substance-3d-painter-codex-dot",
+    "inspiration": "Substance 3D Painter",
+    "description": "A sphere-only texture workshop. Paint on a shaded sphere or linked UV canvas, combine raster layers, and export base color and uniform roughness or metallic maps.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-substance-3d-painter-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-substance-3d-painter-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by Substance 3D Painter. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "Built-in sphere only, with a 512 × 512 UV texture and up to six raster layers. The lighting preview is not a physically based renderer. Roughness and metallic exports are uniform grayscale maps; no arbitrary mesh import, separate-channel painting, baking, masks, UDIMs or Substance formats.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-substance-3d-painter-codex-dot/desktop.png",
+        "alt": "Kata Patina Lab desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 1165,
+        "height": 994,
+        "capturedAt": "2026-11-10",
+        "sha256": "7b6e69eff7e3aa963cc54c5b8ffed4d99b1a9ab53329377b26b371235f916a2e",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-substance-3d-painter-codex-dot/narrow.png",
+        "alt": "Kata Patina Lab narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width.",
+        "width": 390,
+        "height": 753,
+        "capturedAt": "2026-11-10",
+        "sha256": "2918e68e851bde05ef5b7f563a245b3e9e15b3645118102e9fd973e2ed0cb84f",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit bef40ec7fa8e3e2a0a704961ce125c613da41469 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-substance-3d-painter-codex-dot/actions/runs/42748729636 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 11 Node tests, build and 15 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit b378469228d379549abe7087f2f74b530e97a3a9 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-substance-3d-painter-codex-dot/actions/runs/42749071856 ; runtime unchanged from the initially tested release. Public browser smoke loaded the workshop and the Metal preset set metallic to 92."
+  },
+  {
+    "title": "Kata Kinframe",
+    "category": "Art & Design",
+    "tagline": "Small moves. Big character.",
+    "features": [
+      "12-channel 2D FK puppet",
+      "Full-pose keyframes",
+      "Smooth, linear and hold interpolation",
+      "Ghost poses and timeline playback",
+      "Undo and redo",
+      "Validated project import and export",
+      "SVG frame export",
+      "Local autosave"
+    ],
+    "id": "kata-app-inspired-by-maya-codex-dot",
+    "inspiration": "Autodesk Maya",
+    "description": "A 2D forward-kinematic character-animation workshop. Pose a fixed vector puppet, set full-pose keys, preview interpolation, and export an SVG frame or editable project.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-maya-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by Autodesk Maya. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "A fixed 12-channel 2D FK puppet, not a 3D rigging application. Full-pose keys support Smooth, Linear and Hold interpolation. No IK, skinning, arbitrary skeletons, editable tangents, Maya files, FBX, video or audio export.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-maya-codex-dot/desktop.png",
+        "alt": "Kata Kinframe desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 1165,
+        "height": 1012,
+        "capturedAt": "2026-11-10",
+        "sha256": "8de139da85b80371e8436061ee5140c781e2aea917249885319cd3e1f01c3669",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-maya-codex-dot/narrow.png",
+        "alt": "Kata Kinframe narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background.",
+        "width": 1165,
+        "height": 1700,
+        "capturedAt": "2026-11-10",
+        "sha256": "1ad8b9351316606f2106aaedf075cc29ed93c9442548b5632ac315e2a4bdb591",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit 489adff8319c13bde5612bd6ca4d7a466958e692 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42748749104 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 10 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 074d6fc60ea86078fc7abdc1395203c54006fce4 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42749049119 ; runtime unchanged from the initially tested release. Public browser smoke loaded the animation workshop and moved to frame 96."
+  },
+  {
+    "title": "Kata Orbitweave",
+    "category": "Art & Design",
+    "tagline": "One shape. Endless rhythm.",
+    "features": [
+      "Grid, radial and helix cloners",
+      "Cubes and spheres",
+      "Wave, twist and scatter effectors",
+      "Radial falloff",
+      "Seamless loop playback",
+      "Orbit camera controls",
+      "Undo and redo",
+      "Validated project import and export",
+      "1800 × 1200 PNG export",
+      "Local autosave"
+    ],
+    "id": "kata-app-inspired-by-cinema-4d-codex-dot",
+    "inspiration": "Cinema 4D",
+    "description": "A procedural motion playground using 3D coordinates and Canvas 2D orthographic projection. Arrange clones, combine effectors, and export a still or editable composition.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-cinema-4d-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-cinema-4d-codex-dot/",
+    "verified": "2026-11-10",
+    "projectNotes": [
+      "Inspired by Cinema 4D. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
+      "A Canvas 2D orthographic rendering of a 3D-coordinate scene, not WebGL or a full 3D modeler. Depth sorting can show intersection artifacts. No mesh import, physics, editable keyframes, native C4D files or video export.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-cinema-4d-codex-dot/desktop.png",
+        "alt": "Kata Orbitweave desktop workbench.",
+        "caption": "Desktop workbench.",
+        "width": 1165,
+        "height": 1063,
+        "capturedAt": "2026-11-10",
+        "sha256": "8e0dfca9f7881b5a2c4f970fa1535ba52d98ca94acee3bb93807a0ba9c8241c7",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-cinema-4d-codex-dot/narrow.png",
+        "alt": "Kata Orbitweave narrow responsive workbench.",
+        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background.",
+        "width": 1180,
+        "height": 1700,
+        "capturedAt": "2026-11-10",
+        "sha256": "d96c3cad0ba7d47d454ff74c202b8a098fbdc5f7a75501eaa0c92cafb5f03be5",
+        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background."
+      }
+    ],
+    "verificationEvidence": "Initial tested runtime commit e822353487d17df8e1665fa91d02237788e61bd2 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-cinema-4d-codex-dot/actions/runs/42748771461 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 10 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 9ecd7be7962037b677418ad33ebd70cf02f94930 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-cinema-4d-codex-dot/actions/runs/42749083158 ; runtime unchanged from the initially tested release. Public browser smoke loaded the motion playground and selecting Coral orbit changed the composition heading."
   }
 ]
