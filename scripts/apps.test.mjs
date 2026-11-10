@@ -318,3 +318,11 @@ test('Persona human foundation describes rigged exports and approximate migratio
   assert.ok(persona.features.some(feature => feature.includes('rigged GLB')));
   assert.ok(!persona.features.some(feature => feature.includes('OBJ')));
 });
+
+
+test('Persona human foundation records verified deployment and live asset identity', () => {
+  const persona = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.match(persona.verificationEvidence, /e4bcb71a217f293876c03c95ab98d7e09e81d02d/);
+  assert.match(persona.verificationEvidence, /42769111188/);
+  assert.match(persona.verificationEvidence, /6,667,684-byte assets\/human\/foundation.glb byte-match/);
+});
