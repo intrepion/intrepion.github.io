@@ -222,7 +222,7 @@ test('Fluxgrove includes verified publication and truthful procedural scope', as
 const creativeScopes = [
   ['blender', 'Kata Formyard', /40 objects/, /OBJ/],
   ['zbrush', 'Kata Claywell', /1,962 vertices/, /fixed-topology/],
-  ['character-creator-5', 'Kata Persona Forge', /segmented stylized character/, /static poses/],
+  ['character-creator-5', 'Kata Persona Forge', /stylized procedural human figure/, /static poses/],
   ['substance-3d-painter', 'Kata Patina Lab', /not a physically based renderer/, /sphere-only/],
   ['maya', 'Kata Kinframe', /2D FK puppet/, /2D forward-kinematic/],
   ['cinema-4d', 'Kata Orbitweave', /Canvas 2D orthographic/, /3D coordinates/]
@@ -234,16 +234,35 @@ for (const [slug, title, scope, description] of creativeScopes) {
     assert.match(app.projectNotes.join(' '), scope);
     assert.match(app.description, description);
     assert.notEqual(app.description, app.tagline);
-    assert.equal(app.screenshots.length, 2);
-    assert.ok(app.screenshots.every(shot => shot.file.endsWith('.png')));
+    const revised = ['character-creator-5', 'maya'].includes(slug);
+    assert.equal(app.screenshots.length, slug === 'maya' ? 1 : 2);
+    assert.ok(app.screenshots.every(shot => shot.file.endsWith(revised ? '.jpg' : '.png')));
     for (const shot of app.screenshots) {
       const bytes = await readFile(new URL(`../public${shot.file}`, import.meta.url));
-      assert.equal(bytes.subarray(1,4).toString(), 'PNG');
-      assert.deepEqual([bytes.readUInt32BE(16), bytes.readUInt32BE(20)], [shot.width, shot.height]);
+      if (revised) {
+        assert.deepEqual([...bytes.subarray(0,3)], [0xff,0xd8,0xff]);
+        let dimensions;
+        for (let offset = 2; offset < bytes.length;) {
+          assert.equal(bytes[offset], 0xff);
+          const marker = bytes[offset + 1];
+          const length = bytes.readUInt16BE(offset + 2);
+          if ([0xc0,0xc1,0xc2].includes(marker)) {
+            dimensions = [bytes.readUInt16BE(offset + 7), bytes.readUInt16BE(offset + 5)];
+            break;
+          }
+          offset += length + 2;
+        }
+        assert.deepEqual(dimensions, [shot.width, shot.height]);
+      } else {
+        assert.equal(bytes.subarray(1,4).toString(), 'PNG');
+        assert.deepEqual([bytes.readUInt32BE(16), bytes.readUInt32BE(20)], [shot.width, shot.height]);
+      }
     }
     assert.ok(app.screenshots.every(shot => /localhost HTTP capture/.test(shot.source)));
-    assert.match(app.screenshots[1].source, /iframe/);
-    assert.match(app.screenshots[1].source, /not a physical-device test/);
+    if (!revised) {
+      assert.match(app.screenshots[1].source, /iframe/);
+      assert.match(app.screenshots[1].source, /not a physical-device test/);
+    }
     assert.match(app.verificationEvidence, /native OS file pickers and downloaded-file round trips are not verified/);
     await validateApps([app]);
   });
@@ -260,5 +279,28 @@ test('six creative releases record their final verified publication', () => {
     assert.equal(app.verified, '2026-11-10');
     assert.ok(app.verificationEvidence.includes(head));
     assert.ok(app.verificationEvidence.includes(run));
+  }
+});
+
+
+test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
+  const persona = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['anatomy-desktop.jpg', 'anatomy-face.jpg']);
+  assert.ok(persona.projectNotes.some(note => note.includes('WebGL/GPU rendering and low-powered-device performance remain unverified')));
+  const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
+  assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
+  assert.match(kinframe.screenshots[0].source, /test-only pose sheet, not the production editor UI/);
+  assert.ok(kinframe.projectNotes.some(note => note.includes('Existing autosaves remain unchanged')));
+});
+
+test('revised Persona Forge and Kinframe releases have verified exact commit evidence', () => {
+  for (const [inspiration, sha, run] of [
+    ['Character Creator 5', '2e26ad7bcb5721adcb191f8db5c96273b84dac7f', '42760407167'],
+    ['Autodesk Maya', '4d2e94fa76dfaeb02b1745085d25fee6dc075b42', '42760341280']
+  ]) {
+    const app = apps.find(app => app.inspiration === inspiration);
+    assert.ok(app.verificationEvidence.includes(sha));
+    assert.ok(app.verificationEvidence.includes(run));
+    assert.ok(app.screenshots.every(shot => shot.source.includes('not exact deployed-build provenance')));
   }
 });

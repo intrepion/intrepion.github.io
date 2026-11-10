@@ -469,10 +469,11 @@
     "category": "3D & Animation",
     "tagline": "A character, from the inside out.",
     "features": [
-      "Original procedural 3D character mesh",
+      "Procedural human figure with smooth shading",
       "Six proportion controls",
       "Three archetypes and hairstyles",
       "Four static poses",
+      "Body and face camera views",
       "Orbit camera",
       "Forty-edit undo and redo",
       "OBJ vertex-color geometry export",
@@ -482,39 +483,40 @@
     ],
     "id": "kata-app-inspired-by-character-creator-5-codex-dot",
     "inspiration": "Character Creator 5",
-    "description": "A stylized character workshop. Shape a segmented 3D figure with six proportion controls, hairstyles, colors and static poses, then export a preview, OBJ or editable project.",
+    "description": "A stylized character workshop. Shape a procedural human figure with six proportion controls, hairstyles, colors and static poses, then export a preview, OBJ or editable project.",
     "status": "live",
     "repo": "https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot",
     "launch": "https://intrepion.github.io/kata-app-inspired-by-character-creator-5-codex-dot/",
     "verified": "2026-11-10",
     "projectNotes": [
       "Inspired by Character Creator 5. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
-      "A segmented stylized character built from ellipsoids and capsule-like limbs, rendered with Canvas 2D triangles. Static poses reposition geometry; there is no skinning, rigging, facial animation, clothing simulation, external mesh import or Reallusion format support.",
-      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+      "A stylized procedural human figure with separate surface sections and a depth-tested renderer, not a scan or photoreal digital human. Extreme morphs or bends can still reveal seams. Static poses reposition geometry; there is no skinning, rigging, facial animation, clothing simulation, external mesh import or Reallusion format support. OBJ exports independent RGB-colored triangles; importing applications may need to recalculate normals.",
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones.",
+      "The software depth-buffer renderer was browser-tested. WebGL/GPU rendering and low-powered-device performance remain unverified. Existing version-1 projects retain their parameters and regenerate the revised geometry."
     ],
     "screenshots": [
       {
-        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/desktop.png",
-        "alt": "Kata Persona Forge desktop workbench.",
-        "caption": "Desktop workbench.",
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/anatomy-desktop.jpg",
+        "alt": "Kata Persona Forge body view with revised human proportions and smooth shading.",
+        "caption": "Revised body view with anatomical proportions and smooth shading.",
         "width": 1180,
-        "height": 920,
+        "height": 763,
         "capturedAt": "2026-11-10",
-        "sha256": "870982ed1888f80a83c2859c4a3086e18575b1c65787d3e57957e8559c9ee338",
-        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
+        "sha256": "0cf24df83fe49f7c113cac61bea1768ad519c2982a96aac5b906c4c521348329",
+        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/. Recorded in docs/QA-ANATOMY.md on 2026-11-10. Local pre-publication capture of the anatomy revision, not exact deployed-build provenance. Original file: anatomy-desktop.jpg. Browser viewport capture."
       },
       {
-        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/narrow.png",
-        "alt": "Kata Persona Forge narrow responsive workbench.",
-        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width.",
-        "width": 390,
+        "file": "/screenshots/apps/kata-app-inspired-by-character-creator-5-codex-dot/anatomy-face.jpg",
+        "alt": "Kata Persona Forge face view showing the revised facial anatomy.",
+        "caption": "Face view of the revised procedural character.",
+        "width": 1165,
         "height": 753,
         "capturedAt": "2026-11-10",
-        "sha256": "bc5a7d1b3e05a6abc62520d2416d372896d2c48a518b45d88de2ac3b23558926",
-        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture cropped to the app iframe; saved image pixel dimensions may differ from CSS layout width."
+        "sha256": "2f120353eb88e3d546d146e08c96c51a09670d4576193bd3bb3e07fb080e0dc6",
+        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4186/ from this app’s docs/screenshots/. Recorded in docs/QA-ANATOMY.md on 2026-11-10. Local pre-publication capture of the anatomy revision, not exact deployed-build provenance. Original file: anatomy-face.jpg. Browser viewport capture."
       }
     ],
-    "verificationEvidence": "Initial tested runtime commit b6ed1a3a64bc1b9dad4e9f924dfa6d94e5b245cb passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42748710341 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 9 Node tests, build and 16 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 3826ab42c349f15d40dfd9cc3fcc66753addd272 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42749030109 ; runtime unchanged from the initially tested release. Public browser smoke loaded the character workshop; additional interaction verification is not claimed. On localhost, normal native typing followed by Tab updated the heading and autosave; the Pilot preset loaded Orion and expected proportions. A programmatic-fill event mismatch was not an app defect."
+    "verificationEvidence": "Initial tested runtime commit b6ed1a3a64bc1b9dad4e9f924dfa6d94e5b245cb passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42748710341 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 9 Node tests, build and 16 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 3826ab42c349f15d40dfd9cc3fcc66753addd272 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42749030109 ; runtime unchanged from the initially tested release. Public browser smoke loaded the character workshop; additional interaction verification is not claimed. On localhost, normal native typing followed by Tab updated the heading and autosave; the Pilot preset loaded Orion and expected proportions. A programmatic-fill event mismatch was not an app defect. Anatomy revision 2e26ad7bcb5721adcb191f8db5c96273b84dac7f passed checks, build and Pages deployment in https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42760407167 . Public source assets byte-match the tested tree; live body and face views were browser-verified. Local revision QA: 17 Node tests, 19 browser assertions, build and diff checks passed. Software depth-buffer rendering was exercised; GPU/WebGL rendering remains unverified. New screenshots are original local pre-publication anatomy captures."
   },
   {
     "title": "Kata Patina Lab",
@@ -574,6 +576,7 @@
     "tagline": "Small moves. Big character.",
     "features": [
       "12-channel 2D FK puppet",
+      "Grounded profile walk and staged wave presets",
       "Full-pose keyframes",
       "Smooth, linear and hold interpolation",
       "Ghost poses and timeline playback",
@@ -592,31 +595,22 @@
     "projectNotes": [
       "Inspired by Autodesk Maya. Original independent educational kata, without affiliation, endorsement or proprietary file compatibility.",
       "A fixed 12-channel 2D FK puppet, not a 3D rigging application. Full-pose keys support Smooth, Linear and Hold interpolation. No IK, skinning, arbitrary skeletons, editable tangents, Maya files, FBX, video or audio export.",
-      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones."
+      "Work stays in your browser. Autosave is best effort; download editable project backups. Undo history does not survive reload. Narrow-layout checks use desktop-browser iframes, not physical phones.",
+      "The revised Little steps preset uses a profile walk with grounded stance and 97 editable FK keys; Hello, world uses anticipation, a bent-elbow wave, and settle. Existing autosaves remain unchanged: choose either preset to load the revised motion. Manual pose edits can still move feet off the ground; there is no heel/toe-roll, wrist or finger articulation."
     ],
     "screenshots": [
       {
-        "file": "/screenshots/apps/kata-app-inspired-by-maya-codex-dot/desktop.png",
-        "alt": "Kata Kinframe desktop workbench.",
-        "caption": "Desktop workbench.",
+        "file": "/screenshots/apps/kata-app-inspired-by-maya-codex-dot/motion-review.jpg",
+        "alt": "Kata Kinframe motion review with eight app-rendered walk and wave phases.",
+        "caption": "Eight app-rendered phases of the revised walk and wave, captured from the local motion-review page.",
         "width": 1165,
-        "height": 1012,
+        "height": 841,
         "capturedAt": "2026-11-10",
-        "sha256": "8de139da85b80371e8436061ee5140c781e2aea917249885319cd3e1f01c3669",
-        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/desktop.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. Desktop workbench."
-      },
-      {
-        "file": "/screenshots/apps/kata-app-inspired-by-maya-codex-dot/narrow.png",
-        "alt": "Kata Kinframe narrow responsive workbench.",
-        "caption": "390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background.",
-        "width": 1165,
-        "height": 1700,
-        "capturedAt": "2026-11-10",
-        "sha256": "1ad8b9351316606f2106aaedf075cc29ed93c9442548b5632ac315e2a4bdb591",
-        "source": "Actual Chromium localhost HTTP capture from this app's docs/screenshots/narrow.png, recorded in docs/QA.md on 2026-11-10. Local pre-publication app capture, not exact deployed-build provenance. 390 CSS-pixel-wide app iframe in a desktop browser; not a physical-device test. Capture includes the centered test wrapper and surrounding background."
+        "sha256": "49c5aa1390bb0600315112fb2ed5ad0f44e9e90f2f3928431b7bff78cc909647",
+        "source": "Actual Chromium localhost HTTP capture at http://127.0.0.1:4313/tests/motion.html. Original docs/screenshots/motion-review.jpg, recorded in docs/QA.md on 2026-11-10. Local pre-publication motion-review capture, not exact deployed-build provenance. The review page is a test-only pose sheet, not the production editor UI."
       }
     ],
-    "verificationEvidence": "Initial tested runtime commit 489adff8319c13bde5612bd6ca4d7a466958e692 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42748749104 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 10 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 074d6fc60ea86078fc7abdc1395203c54006fce4 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42749049119 ; runtime unchanged from the initially tested release. Public browser smoke loaded the animation workshop and moved to frame 96."
+    "verificationEvidence": "Initial tested runtime commit 489adff8319c13bde5612bd6ca4d7a466958e692 passed GitHub Actions checks, build and Pages deployment: https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42748749104 . Successful run and exact SHA independently verified through GitHub on 2026-11-10. Local docs/QA.md records syntax checks, 10 Node tests, build and 22 Chromium browser assertions passing on 2026-11-10. Import/export harnesses inspect generated Blobs and use synthetic files; native OS file pickers and downloaded-file round trips are not verified. Desktop and 390px iframe layouts inspected. No physical-device, broad cross-browser or assistive-technology audit claimed. Final documentation/metadata commit 074d6fc60ea86078fc7abdc1395203c54006fce4 passed checks, build and deployment at https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42749049119 ; runtime unchanged from the initially tested release. Public browser smoke loaded the animation workshop and moved to frame 96. Motion revision 4d2e94fa76dfaeb02b1745085d25fee6dc075b42 passed checks, build and Pages deployment in https://github.com/intrepion/kata-app-inspired-by-maya-codex-dot/actions/runs/42760341280 . Public index, model, app and CSS bytes match the tested build. Live browser checks loaded the revised 13-key wave and 97-key profile walk and verified playback. Local revision QA: 16 model tests, 31 browser assertions, build and diff checks passed. Motion-review screenshot is an original local pre-publication pose sheet; the test-only review page is excluded from the deployed app."
   },
   {
     "title": "Kata Orbitweave",
