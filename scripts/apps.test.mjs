@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 6);
+  assert.equal(count.total, 7);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -165,7 +165,7 @@ test('three approved apps have verified publication links and release evidence',
     ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
     ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
   ];
-  assert.equal(apps.filter(app => app.status === 'live').length, 6);
+  assert.equal(apps.filter(app => app.status === 'live').length, 7);
   for (const [id, title, sha, run] of expected) {
     const app = apps.find(app => app.id === id);
     assert.equal(app.title, title);
@@ -202,4 +202,18 @@ test('two desktop screenshots get equal columns without stretching portrait prev
   const css = await read('../src/styles/collections.css');
   assert.match(page, /app\.screenshots\.every\(shot => shot\.width >= 800\)/);
   assert.match(css, /app-screenshot-grid\.app-screenshot-pair\{grid-template-columns:1fr 1fr\}/);
+});
+
+
+test('Fluxgrove includes verified publication and truthful procedural scope', async () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-houdini-codex-dot');
+  assert.ok(app);
+  assert.equal(app.title, 'Kata Fluxgrove');
+  assert.equal(app.status, 'live');
+  assert.match(app.verificationEvidence, /045a75ec46b7d70fd39ff10c9a871e04282f4f60/);
+  assert.match(app.verificationEvidence, /42740821668/);
+  assert.equal(app.screenshots.length, 2);
+  assert.match(app.screenshots[1].caption, /390 CSS-pixel-wide/);
+  assert.ok(app.projectNotes.some(note => note.includes('not a branching node graph or a physical simulation')));
+  await validateApps([app]);
 });

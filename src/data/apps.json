@@ -307,5 +307,56 @@
       }
     ],
     "verificationEvidence": "Published commit eb983976824eb1167122acafe0f98206399d7870 passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-krita-codex-dot/actions/runs/42738675983 . All ten checked live assets returned HTTP 200 and matched the final dist bytes, including HTML, CSS, four JS modules, icon, manifest, and both screenshots. Seventeen Node tests and the build passed on the Mac and in CI; the earlier local Chromium engine suite passed twelve tests. Live Chrome rendered the landscape, presets, and layers, and Help opened and closed. Physical pen, pressure, and touch hardware remain untested. Gallery screenshots are genuine local pre-publication captures, not a claim of exact deployed-build provenance."
+  },
+  {
+    "id": "kata-app-inspired-by-houdini-codex-dot",
+    "title": "Kata Fluxgrove",
+    "inspiration": "Houdini",
+    "category": "Art & Design",
+    "tagline": "Small rules. Wild possibilities.",
+    "description": "An original procedural point-art workbench inspired by Houdini. Build an editable chain of deformations, explore animated seeded forms, and export a favorite frame.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-houdini-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-houdini-codex-dot/",
+    "verified": "2026-11-10",
+    "features": [
+      "Seeded torus, sphere, helix, and grid sources",
+      "Five reorderable and bypassable deformation operators",
+      "Orbitable 3D point-art view",
+      "Eight-second animation timeline",
+      "Four color stories",
+      "30-step undo and redo",
+      "Validated project save and open",
+      "1600 × 1000 PNG export",
+      "Best-effort local autosave"
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-houdini-codex-dot/fluxgrove-desktop.jpg",
+        "alt": "Kata Fluxgrove desktop workbench with Ember bloom points, a selected Turbulence operator, and the editable node chain.",
+        "caption": "Ember bloom in the desktop workbench.",
+        "width": 1165,
+        "height": 753,
+        "capturedAt": "2026-11-10",
+        "sha256": "5dea09d094753c8d59d916424fe0de76976428df9083ea2677212c0532ab717a",
+        "source": "Original Chromium/CUA screenshot from the running HTTP app at http://127.0.0.1:4173/. Captured during the pre-publication QA recorded in the app docs/QA.md. Native viewport screenshot, not a full-page image."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-houdini-codex-dot/fluxgrove-narrow.jpg",
+        "alt": "Kata Fluxgrove responsive workbench shown in two 390px-wide views, with the point scene on the left and operator controls on the right.",
+        "caption": "Two genuine 390 CSS-pixel-wide views show the workbench and lower inspector; not a physical-device test.",
+        "width": 1180,
+        "height": 763,
+        "capturedAt": "2026-11-10",
+        "sha256": "55c81004430eb3f48bf94e7ef0ddf6a715f1d7d6d5f9438aa7f1153865680d42",
+        "source": "Original Chromium/CUA screenshot from the running HTTP app at http://127.0.0.1:4173/. Captured during the pre-publication QA recorded in the app docs/QA.md. Responsive harness embeds two 390px views; not a direct phone screenshot or physical-device test."
+      }
+    ],
+    "verificationEvidence": "Remote main 045a75ec46b7d70fd39ff10c9a871e04282f4f60 and successful Verify and deploy Fluxgrove run https://github.com/intrepion/kata-app-inspired-by-houdini-codex-dot/actions/runs/42740821668 were verified on 2026-11-10. CI syntax checks, 20 unit tests, build, and Pages deployment succeeded. Prior localhost QA recorded 15 browser tests, native project save/reopen, PNG download dimensions, and 390px layout checks in docs/QA.md. Public Chromium browser smoke verification passed: the point scene rendered and selecting Tidal threads changed title, point count to 3,800, operator chain, and palette.",
+    "projectNotes": [
+      "Inspired by Houdini’s procedural workflows. This is an original independent learning project, with no SideFX affiliation or endorsement and no Houdini file compatibility.",
+      "The editable recipe is a sequential chain of point deformations, not a branching node graph or a physical simulation. No fluids, smoke, rigid-body solver, mesh export, or video export is included.",
+      "Projects stay in the browser. Autosave is best-effort storage for one study; download project files for durable backups. Camera projection is orthographic and PNG export is a still image."
+    ]
   }
 ]
