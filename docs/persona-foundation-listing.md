@@ -30,3 +30,14 @@ Both original files contain JPEG bytes despite their `.png` names. The gallery p
 The publishing task verified runtime `e4bcb71a217f293876c03c95ab98d7e09e81d02d` on remote main. [GitHub Actions run 42769111188](https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42769111188) completed both check-and-build and Pages deployment successfully. Live `index.html`, `src/human-renderer.js` and the 6,667,684-byte `assets/human/foundation.glb` byte-match the tested local production build. This records publication and byte identity, not a new live-browser interaction claim.
 
 This record was prepared before Tool Shed publication. Consult the repository’s GitHub Actions history for the deployment status of the listing commit.
+
+
+## Height, waist and pose correction release
+
+Prepared November 10, 2026. Release commit `c0e7c43fb0b8667c206f899b306ca6caf3afa05d` has the same tree (`e693bce64e4d197e3ece5034f7265ae43b0c0201`) as tested local commit `742e11ed1a15f2f55567c0ad08aff66517c496d8`. [GitHub Actions run 42778360348](https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42778360348) passed check-and-build and Pages deployment for this exact release. All 46 live deployed files returned HTTP 200 and SHA-256 byte-matched the tested production build with zero mismatches, including the updated GLB. The root launch URL also returned HTTP 200. Publication evidence is recorded in the app checkout’s `artifacts/DEFORMATION-PUBLICATION-VERIFICATION.json`. This confirms deployment and byte identity; it does not claim new hardware WebGL or live-browser interaction coverage.
+
+The correction fixes visible height changes with stable foot anchoring, shirt/trouser waist clearance and shoulder/elbow deformation in the static poses. The listing now distinguishes ten appearance morph targets from three additional pose corrective morphs. Pose correction remains approximate at appearance extremes; this is not cloth simulation or arbitrary-pose collision handling.
+
+Local verification passed 38 Node tests, production build, Blender asset/pose/roundtrip checks, 43 visual comparisons, browser save/import/undo and narrow-layout checks, and actual browser-exported GLB inspection in Blender. Detailed evidence and limits are in the app's `docs/QA-DEFORMATION.md`. The updated `assets/human/foundation.glb` is 7,391,544 bytes; SHA-256: `2fbaf1f7f6807327b034fff330d077319f33dfb45b7b607abc1960421a1e4191`.
+
+The software preview was tested. Hardware WebGL remains unverified, and the intermittent browser error-9 cause is unconfirmed. Existing body and face gallery images and their historical local-capture provenance are preserved unchanged. No new screenshots or unrelated catalog entries changed.

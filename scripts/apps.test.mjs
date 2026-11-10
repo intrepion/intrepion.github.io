@@ -310,7 +310,7 @@ test('Persona human foundation describes rigged exports and approximate migratio
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
   const notes = persona.projectNotes.join(' ');
   assert.match(notes, /CC0 anatomical adult/);
-  assert.match(notes, /ten morph targets/);
+  assert.match(notes, /ten appearance morph targets plus three pose corrective morphs/);
   assert.match(notes, /Version-1 migration is explicitly approximate/);
   assert.match(notes, /Blender 4.3.2/);
   assert.match(notes, /zero errors and four documented warnings/);
@@ -325,4 +325,16 @@ test('Persona human foundation records verified deployment and live asset identi
   assert.match(persona.verificationEvidence, /e4bcb71a217f293876c03c95ab98d7e09e81d02d/);
   assert.match(persona.verificationEvidence, /42769111188/);
   assert.match(persona.verificationEvidence, /6,667,684-byte assets\/human\/foundation.glb byte-match/);
+});
+
+
+test('Persona deformation correction records scope and preserves historical screenshots', () => {
+  const persona = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.match(persona.projectNotes.join(' '), /Pose correctives preserve joint volume but remain approximate/);
+  assert.match(persona.verificationEvidence, /c0e7c43fb0b8667c206f899b306ca6caf3afa05d/);
+  assert.match(persona.verificationEvidence, /7,391,544 bytes/);
+  assert.match(persona.verificationEvidence, /43 visual comparisons/);
+  assert.match(persona.verificationEvidence, /hardware WebGL remains unverified/);
+  assert.match(persona.verificationEvidence, /error-9 cause is unconfirmed/);
+  assert.ok(persona.screenshots.every(shot => shot.source.includes('Local pre-publication capture')));
 });
