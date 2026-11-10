@@ -449,3 +449,9 @@ test('Persona blink and gaze listing preserves prototype and export limits', () 
   assert.match(shot.caption, /test-only rendered comparison sheet, not the production editor UI/);
   assert.match(shot.source, /Apple M1 hardware WebGL/);
 });
+
+
+test('Persona blink publication evidence distinguishes sampled files from live UI checks', () => {
+  const evidence = apps.find(app => app.inspiration === 'Character Creator 5').verificationEvidence;
+  for (const expected of [/7f578afa16a1e0bf89280e2739077a1bae784806/, /42826109720/, /96 tests/, /all 12 selected public files/, /not a complete deployment-file audit or new live UI interaction/, /642dc95643eca689266fce489bc87ac65377529af77c2e522c0326d87a9d79ab/]) assert.match(evidence, expected);
+});
