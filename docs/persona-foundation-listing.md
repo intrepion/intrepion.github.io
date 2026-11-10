@@ -29,4 +29,4 @@ Both original files contain JPEG bytes despite their `.png` names. The gallery p
 
 The publishing task verified runtime `e4bcb71a217f293876c03c95ab98d7e09e81d02d` on remote main. [GitHub Actions run 42769111188](https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42769111188) completed both check-and-build and Pages deployment successfully. Live `index.html`, `src/human-renderer.js` and the 6,667,684-byte `assets/human/foundation.glb` byte-match the tested local production build. This records publication and byte identity, not a new live-browser interaction claim.
 
-The Tool Shed listing itself has not been pushed or deployed.
+This record was prepared before Tool Shed publication. Consult the repository’s GitHub Actions history for the deployment status of the listing commit.
