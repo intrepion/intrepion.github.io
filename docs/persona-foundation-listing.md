@@ -19,7 +19,7 @@ Both original files contain JPEG bytes despite their `.png` names. The gallery p
 ## Gallery verification
 
 - `npm run check`: 26 Astro files; zero errors, warnings or hints. All catalog and screenshot validation passed.
-- `npm test`: all 61 tests passed, including actual JPEG signatures, dimensions and screenshot hashes.
+- `npm test`: all 62 tests passed, including actual JPEG signatures, dimensions and screenshot hashes.
 - `npm run build`: 276 pages and 4,490 internal route, anchor and asset references passed.
 - Local production page reviewed in Chromium over `http://127.0.0.1:4394/`. Both screenshots loaded at their recorded 1165 × 753 dimensions and the desktop two-column image layout was visually reviewed.
 - Detail-to-Tool Shed navigation, Back/Forward and dark-theme persistence through reload passed. A 375px desktop-browser iframe had matching 360px document and scroll widths after the scrollbar, with no horizontal overflow. This is not a physical-device test.
