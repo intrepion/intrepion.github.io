@@ -235,11 +235,11 @@ for (const [slug, title, scope, description] of creativeScopes) {
     assert.match(app.description, description);
     assert.notEqual(app.description, app.tagline);
     const revised = ['character-creator-5', 'maya'].includes(slug);
-    assert.equal(app.screenshots.length, slug === 'maya' ? 1 : 2);
-    assert.ok(app.screenshots.every(shot => shot.file.endsWith(revised ? '.jpg' : '.png')));
+    assert.equal(app.screenshots.length, slug === 'character-creator-5' ? 3 : slug === 'maya' ? 1 : 2);
+    assert.ok(app.screenshots.every((shot, index) => shot.file.endsWith(slug === 'character-creator-5' && index === 0 ? '.png' : revised ? '.jpg' : '.png')));
     for (const shot of app.screenshots) {
       const bytes = await readFile(new URL(`../public${shot.file}`, import.meta.url));
-      if (revised) {
+      if (revised && shot.file.endsWith('.jpg')) {
         assert.deepEqual([...bytes.subarray(0,3)], [0xff,0xd8,0xff]);
         let dimensions;
         for (let offset = 2; offset < bytes.length;) {
@@ -285,7 +285,7 @@ test('six creative releases record their final verified publication', () => {
 
 test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-distinct-faces.png', 'persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
   assert.ok(persona.projectNotes.some(note => note.includes('Other GPU/browser combinations and low-powered-device performance remain unverified')));
   const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
   assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
@@ -310,7 +310,7 @@ test('Persona human foundation describes rigged exports and approximate migratio
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
   const notes = persona.projectNotes.join(' ');
   assert.match(notes, /CC0 anatomical adult/);
-  assert.match(notes, /ten appearance morph targets plus three pose corrective morphs/);
+  assert.match(notes, /twenty-eight appearance morph targets plus three pose corrective morphs/);
   assert.match(notes, /Version-1 migration is explicitly approximate/);
   assert.match(notes, /Blender 4.3.2/);
   assert.match(notes, /zero errors and four documented warnings/);
@@ -385,6 +385,26 @@ test('Persona portrait release records hardware provenance and truthful visual l
   assert.match(app.verificationEvidence,/42793477651/);
   assert.match(app.projectNotes.join(' '),/not a photorealistic production groom/);
   assert.match(app.projectNotes.join(' '),/synthetic detail and tints of one diffuse skin source/);
-  assert.ok(app.screenshots.every(shot=>shot.source.includes('cf82a4d2dbc41509d413662829e15246d574c45d7f4d33412ecf7bb053206b0b')));
-  assert.deepEqual(app.screenshots.map(shot=>[shot.width,shot.height]),[[1133,1003],[1133,1003]]);
+  assert.ok(app.screenshots.slice(1).every(shot=>shot.source.includes('cf82a4d2dbc41509d413662829e15246d574c45d7f4d33412ecf7bb053206b0b')));
+  assert.deepEqual(app.screenshots.slice(1).map(shot=>[shot.width,shot.height]),[[1133,1003],[1133,1003]]);
+});
+
+
+test('Persona distinct faces retain the original portrait and truthful comparison provenance', () => {
+  const app = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.match(app.description, /three distinct adult face presets, nine additional fitted face controls/);
+  assert.match(app.features.join(' '), /Twenty-eight editable appearance morph targets/);
+  assert.match(app.projectNotes.join(' '), /Angular\/Vale, Rounded\/Marlowe and Long\/Ellis/);
+  assert.match(app.projectNotes.join(' '), /preserved Explorer, Pilot and Botanist/);
+  assert.match(app.projectNotes.join(' '), /approximately 23 MB/);
+  assert.match(app.verificationEvidence, /d5e31df0d2f030ab1d15534d981a72dabdd4a5dc/);
+  assert.match(app.verificationEvidence, /42803638969/);
+  assert.match(app.verificationEvidence, /all 52 deployed files/);
+  const [matrix, workspace, face] = app.screenshots;
+  assert.deepEqual([matrix.width, matrix.height], [1056, 1096]);
+  assert.equal(matrix.sha256, '72da775ccd2859af761ffdb2748929fe01056435a79f3b7aa995304e2886d380');
+  assert.match(matrix.caption, /test-only rendered comparison sheet, not the production editor UI/);
+  assert.match(matrix.source, /http:\/\/127\.0\.0\.1:4193\/tests\/distinct-faces\.html/);
+  assert.equal(workspace.sha256, '1023ca67d4673e076602fb98c36054ef3131aecd8e773c97d4e6b8b55fc1383f');
+  assert.equal(face.sha256, '1f843aa76773f898a6b67d8d1b88126f283eeb9dab4e73b70639b709cfa68f79');
 });
