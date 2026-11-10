@@ -874,5 +874,56 @@
       "Independent learning project inspired by QuickBASIC 4.5. Not a DOS emulator, Microsoft product, or compatible QuickBASIC compiler.",
       "Supports a documented scalar BASIC subset. No arrays, SUB/FUNCTION, file I/O, sound, or executable compilation."
     ]
+  },
+  {
+    "id": "kata-app-inspired-by-hspice-codex-dot",
+    "title": "Kata Voltbench",
+    "inspiration": "HSPICE",
+    "category": "Electronics",
+    "tagline": "Small circuits. Clear insights.",
+    "description": "Explore ideal linear circuits with SPICE-style netlists, DC operating points, source sweeps, AC magnitude and phase, and transient waveforms. An independent educational workbench inspired by HSPICE.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-hspice-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-hspice-codex-dot/",
+    "verified": "2026-11-10",
+    "verificationEvidence": "Published commit 766d64801109e5cb4ce76c7de85288da7743c5bb passed check-and-build and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-hspice-codex-dot/actions/runs/42857292361 . Public Chrome checks verified the default RC transient with 1,501 samples, AC magnitude and phase with 201 samples, and voltage-divider DC results of 5 V and 2.5 V. The gallery screenshots are reviewed local pre-publication captures, not public-site captures.",
+    "features": [
+      "Five editable example circuits",
+      "Ideal R, C, L, V and I devices",
+      "DC bias and source sweeps",
+      "AC magnitude and phase",
+      "Backward-Euler transients",
+      "Node connectivity map",
+      "Local autosave and JSON project import/export",
+      "SPICE-style text import/export",
+      "CSV export"
+    ],
+    "projectNotes": [
+      "Independent educational project inspired by HSPICE. This is not an HSPICE binary, an official Synopsys product, or a compatible signoff engine.",
+      "Supports a focused linear R/C/L circuit subset with independent voltage and current sources. No transistor or diode models; no claim of full SPICE or HSPICE netlist compatibility.",
+      "Results are for learning and exploration, not production circuit verification."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-hspice-codex-dot/voltbench-desktop.jpg",
+        "alt": "Kata Voltbench desktop workbench showing an RC low-pass circuit, input pulse and capacitor transient waveforms, editable components and operating point.",
+        "caption": "RC low-pass filter transient response in the desktop workbench.",
+        "width": 1133,
+        "height": 1005,
+        "capturedAt": "2026-11-10T16:19:30Z",
+        "sha256": "000a216c2622b9ab921c2bc15fca964244b001860916dbb8419d27291a7366b9",
+        "source": "Original unedited full-page Chrome/CUA screenshot at http://127.0.0.1:5193/. Default 1148 × 623 CSS-pixel viewport. Capture excludes the scrollbar. Local unpublished app; visually reviewed. Capture timestamp is approximate."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-hspice-codex-dot/voltbench-narrow.jpg",
+        "alt": "Kata Voltbench narrow layout showing a series RLC resonator, AC magnitude response with V(in) hidden, component values and operating point.",
+        "caption": "RLC resonance AC response in a 390 CSS-pixel-wide responsive layout.",
+        "width": 375,
+        "height": 1805,
+        "capturedAt": "2026-11-10T16:19:00Z",
+        "sha256": "560c583510489fa1af2f8956ff4a0a50052cde8c70c42e0429bb49b6c7421407",
+        "source": "Original unedited full-page Chrome/CUA screenshot at http://127.0.0.1:5193/. Explicit 390 × 844 CSS-pixel viewport; responsive browser review, not a physical-device test. Capture excludes the scrollbar. Local unpublished app; visually reviewed. Capture timestamp is approximate."
+      }
+    ]
   }
 ]

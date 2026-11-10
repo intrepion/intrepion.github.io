@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 16);
+  assert.equal(count.total, 17);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -475,4 +475,34 @@ test('Persona expressions preserve prior eye posing and honest export limits', (
 test('Persona expression publication distinguishes sampled deployment verification', () => {
   const evidence = apps.find(app => app.inspiration === 'Character Creator 5').verificationEvidence;
   for (const expected of [/af1477d0b3ca356294efece7a1ab2873e2bcf8d9/, /42836128612/, /10 selected public files/, /106 Node tests/, /not a complete deployment audit or new public-browser interaction coverage/]) assert.match(evidence, expected);
+});
+
+
+test('Voltbench is a verified linear-circuit learning app with explicit limits', async () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-hspice-codex-dot');
+  assert.equal(app.title, 'Kata Voltbench');
+  assert.equal(app.inspiration, 'HSPICE');
+  assert.equal(app.category, 'Electronics');
+  assert.equal(app.status, 'live');
+  assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
+  assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
+  assert.equal(app.verified, '2026-11-10');
+  assert.match(app.verificationEvidence, /766d64801109e5cb4ce76c7de85288da7743c5bb/);
+  assert.match(app.verificationEvidence, /42857292361/);
+  assert.match(app.description, /educational workbench/);
+  assert.match(app.features.join(' '), /DC bias/);
+  assert.match(app.features.join(' '), /AC magnitude and phase/);
+  assert.match(app.projectNotes.join(' '), /No transistor or diode models/);
+  assert.match(app.projectNotes.join(' '), /not an HSPICE binary/);
+  assert.match(app.projectNotes.join(' '), /not production circuit verification/);
+  await validateApps([app]);
+});
+
+
+test('Voltbench screenshots retain reviewed local capture provenance', () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-hspice-codex-dot');
+  assert.equal(app.tagline, 'Small circuits. Clear insights.');
+  assert.deepEqual(app.screenshots.map(shot => [shot.width, shot.height]), [[1133, 1005], [375, 1805]]);
+  assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:5193/') && shot.source.includes('timestamp is approximate')));
+  assert.match(app.screenshots[1].source, /not a physical-device test/);
 });
