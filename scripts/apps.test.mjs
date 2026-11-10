@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 1);
+  assert.equal(count.total, 2);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -78,7 +78,7 @@ test('Sound Lab includes two intact and truthfully labeled local screenshots', a
   assert.match(app.screenshots[1].source, /not a physical-device test/);
   await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],sha256:'0'.repeat(64)}]}]), /Screenshot hash mismatch/);
   await assert.rejects(validateApps([{...app,screenshots:[{...app.screenshots[0],alt:''}]}]), /description and source/);
-  assert.match(await read('../src/pages/apps/[app].astro'), /jsfxr preset files are not compatible/);
+  assert.ok(app.projectNotes.some(note => note.includes('jsfxr preset files are not compatible')));
 });
 
 
@@ -88,4 +88,42 @@ test('published Sound Lab links point to the verified app and repository', () =>
   assert.equal(apps[0].repo, 'https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].verified, '2026-11-09');
   assert.match(apps[0].verificationEvidence, /42713404377/);
+});
+
+
+test('each app supplies its own attribution and compatibility notes', async () => {
+  for (const app of apps) {
+    assert.ok(app.projectNotes.some(note => note.includes(app.inspiration)));
+    await assert.rejects(validateApps([{...app, projectNotes:[]}]), /Missing project notes/);
+  }
+  const page = await read('../src/pages/apps/[app].astro');
+  assert.match(page, /Inside \{app\.title\}/);
+  assert.match(page, /app\.projectNotes\.map/);
+  assert.doesNotMatch(page, /jsfxr|Inside the Sound Lab/);
+});
+
+
+test('Wave Room is a separate Audacity-inspired single-clip editor', () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-audacity-codex-dot');
+  assert.ok(app);
+  assert.equal(app.title, 'Kata Wave Room');
+  assert.equal(app.inspiration, 'Audacity');
+  assert.match(app.description, /mono or stereo clip/);
+  assert.ok(app.projectNotes.some(note => note.includes('one audio clip at a time')));
+  assert.ok(app.projectNotes.every(note => !/jsfxr|Sound Lab/.test(note)));
+});
+
+
+test('Wave Room has matching public links and intact local screenshot provenance', async () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-audacity-codex-dot');
+  assert.equal(app.status, 'live');
+  assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
+  assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
+  assert.equal(app.verified, '2026-11-10');
+  assert.equal(app.screenshots.length, 2);
+  assert.deepEqual(app.screenshots.map(shot => [shot.width,shot.height]), [[1133,1203],[375,1536]]);
+  assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4174/')));
+  assert.ok(app.screenshots.every(shot => shot.source.includes('before final selection/playback')));
+  assert.match(app.screenshots[1].source, /not a physical-device test/);
+  await validateApps([app]);
 });

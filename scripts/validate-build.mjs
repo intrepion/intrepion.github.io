@@ -28,5 +28,6 @@ for (const [path,html] of documents) {
   }
   assert.equal([...html.matchAll(/<h1(?:\s|>)/g)].length, 1, `Expected one h1: ${path}`);
 }
-for (const path of ['index.html','arcade/index.html','tools/index.html','apps/kata-app-inspired-by-jsfxr-codex-dot/index.html']) assert.ok(documents.has(join(root,path)), `Missing collection route: ${path}`);
+const apps = JSON.parse(await readFile(new URL('../src/data/apps.json', import.meta.url), 'utf8'));
+for (const path of ['index.html','arcade/index.html','tools/index.html', ...apps.map(app => `apps/${app.id}/index.html`)]) assert.ok(documents.has(join(root,path)), `Missing collection route: ${path}`);
 console.log(`Built site valid: ${documents.size} HTML pages, ${checked} local route/anchor/asset references.`);

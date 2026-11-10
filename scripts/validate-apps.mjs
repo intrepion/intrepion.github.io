@@ -12,6 +12,7 @@ export async function validateApps(apps, publicRoot = new URL('../public/', impo
     for (const key of ['title', 'inspiration', 'category', 'tagline', 'description']) assert.ok(typeof app[key] === 'string' && app[key].trim(), `Missing ${key}: ${app.id}`);
     assert.ok(['preview', 'live'].includes(app.status), `Invalid app status: ${app.id}`);
     assert.ok(Array.isArray(app.features) && app.features.length && app.features.every(s => typeof s === 'string' && s.trim()), `Missing features: ${app.id}`);
+    assert.ok(Array.isArray(app.projectNotes) && app.projectNotes.length && app.projectNotes.every(s => typeof s === 'string' && s.trim()), `Missing project notes: ${app.id}`);
     if (app.repo !== null) assert.equal(app.repo, `https://github.com/intrepion/${app.id}`, 'App repository must match its ID');
     if (app.status === 'preview') {
       assert.equal(app.launch, null, 'Preview apps cannot have an unverified launch link');

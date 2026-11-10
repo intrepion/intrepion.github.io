@@ -42,6 +42,60 @@
         "source": "Original Chromium/CUA full-page capture at http://127.0.0.1:4173/, viewport 500 CSS px; not a physical-device test. Captured before the noise-only control fix included in f972f1e84e5e53e6577e4bde3926cd5c420231cf."
       }
     ],
-    "verificationEvidence": "Published commit 9b7d672be819a4bef334263c5185d20bf8efe5e4 via https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot/actions/runs/42713404377 . At 2026-11-09T22:37:46.832Z, public index.html, styles.css, src/app.js, src/synth.js, and app.json returned HTTP 200 and matched the final dist bytes. Both public screenshots also matched their saved hashes. Twelve tests, CI, local HTTP playback, export, JSON round-trip, and responsive checks passed."
+    "verificationEvidence": "Published commit 9b7d672be819a4bef334263c5185d20bf8efe5e4 via https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot/actions/runs/42713404377 . At 2026-11-09T22:37:46.832Z, public index.html, styles.css, src/app.js, src/synth.js, and app.json returned HTTP 200 and matched the final dist bytes. Both public screenshots also matched their saved hashes. Twelve tests, CI, local HTTP playback, export, JSON round-trip, and responsive checks passed.",
+    "projectNotes": [
+      "Inspired by jsfxr’s playful approach to sound design. This is an original learning project, not an official jsfxr app or a claim of feature-for-feature compatibility.",
+      "Editable settings use Kata Sound Lab’s own JSON format. jsfxr preset files are not compatible."
+    ]
+  },
+  {
+    "id": "kata-app-inspired-by-audacity-codex-dot",
+    "title": "Kata Wave Room",
+    "inspiration": "Audacity",
+    "category": "Audio",
+    "tagline": "Make room for the good parts.",
+    "description": "An original audio-editing workbench inspired by Audacity. Open a mono or stereo clip, select the parts you want to shape, and export your edit as a WAV.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-audacity-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-audacity-codex-dot/",
+    "verified": "2026-11-10",
+    "features": [
+      "Mono and stereo audio import",
+      "Precise waveform selection",
+      "Trim, delete, and silence",
+      "Fade in and fade out",
+      "Reverse, normalize, and gain",
+      "Undo and redo",
+      "Loop playback and waveform zoom",
+      "WAV export · 16-bit PCM"
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-audacity-codex-dot/kata-wave-room-desktop.jpg",
+        "alt": "Kata Wave Room desktop editor with stereo waveform, selected audio range, editing controls and WAV export",
+        "caption": "Daylight study with a six-second selection in the desktop layout.",
+        "width": 1133,
+        "height": 1203,
+        "capturedAt": "2026-11-10T00:07:53.637326+00:00",
+        "sha256": "8df4ac233ea6b532fc7dfcac7b1971d5896020b8e0d682df3237f0cd02066d1f",
+        "source": "Original Chrome/CUA full-page capture at http://127.0.0.1:4174/. Default connected browser viewport; screenshot is 1133 × 1203 pixels. Local pre-publication app; captured before final selection/playback edge-case patches. No image editing."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-audacity-codex-dot/kata-wave-room-mobile.jpg",
+        "alt": "Kata Wave Room mobile editor with stereo waveform, selected audio range, editing controls and WAV export",
+        "caption": "Daylight study with a six-second selection in the 390 CSS-pixel-wide responsive layout.",
+        "width": 375,
+        "height": 1536,
+        "capturedAt": "2026-11-10T00:08:11.462202+00:00",
+        "sha256": "f9afbaf0ca04e41300b99665c0eefa2eacec202c2c07e5f28c9f71108e644e56",
+        "source": "Original Chrome/CUA full-page capture at http://127.0.0.1:4174/. Viewport 390 × 844 CSS px; not a physical-device test. Local pre-publication app; captured before final selection/playback edge-case patches. No image editing."
+      }
+    ],
+    "verificationEvidence": "Published commit 7daf800fbd3799a3a701549fcc9786b909bd1368 passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-audacity-codex-dot/actions/runs/42726970027 . Public src/app.js SHA-256 matched the final source (60c973d0b6983ebc5de0959ef9eb145319ef20ec06ff57b47b1978835467d58a). Live Chrome rendered the app and verified a 2–8 second trim and Undo. Thirty-two automated tests and the static build passed. Local HTTP QA covered selection, edits, playback, zoom, replacement confirmation, and responsive layouts. End-to-end file import was blocked by browser local-file permissions; native download completion was not independently verified. Screenshot provenance remains local, before the final edge-case fixes.",
+    "projectNotes": [
+      "Inspired by Audacity’s hands-on approach to audio editing. This is an independent learning project, not an official Audacity app or a claim of feature-for-feature compatibility.",
+      "This first version edits one audio clip at a time. It does not offer Audacity’s full multitrack workspace, plugin system, or project-file compatibility.",
+      "Audio stays in your browser tab. Export your edits before closing or reloading. Import supports files up to 25 MB and three minutes, in formats your browser can decode."
+    ]
   }
 ]

@@ -21,5 +21,6 @@ export interface AppEntry {
   verified: string | null;
   verificationEvidence: string | null;
   features: string[];
+  projectNotes: string[];
   screenshots: AppScreenshot[];
 }
