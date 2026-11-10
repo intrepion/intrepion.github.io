@@ -235,8 +235,8 @@ for (const [slug, title, scope, description] of creativeScopes) {
     assert.match(app.description, description);
     assert.notEqual(app.description, app.tagline);
     const revised = ['character-creator-5', 'maya'].includes(slug);
-    assert.equal(app.screenshots.length, slug === 'character-creator-5' ? 4 : slug === 'maya' ? 1 : 2);
-    assert.ok(app.screenshots.every((shot, index) => shot.file.endsWith(slug === 'character-creator-5' && index < 2 ? '.png' : revised ? '.jpg' : '.png')));
+    assert.equal(app.screenshots.length, slug === 'character-creator-5' ? 5 : slug === 'maya' ? 1 : 2);
+    assert.ok(app.screenshots.every((shot, index) => shot.file.endsWith(slug === 'character-creator-5' && index < 3 ? '.png' : revised ? '.jpg' : '.png')));
     for (const shot of app.screenshots) {
       const bytes = await readFile(new URL(`../public${shot.file}`, import.meta.url));
       if (revised && shot.file.endsWith('.jpg')) {
@@ -285,7 +285,7 @@ test('six creative releases record their final verified publication', () => {
 
 test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-skirt-comparison.png', 'persona-distinct-faces.png', 'persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-blink-gaze.png', 'persona-skirt-comparison.png', 'persona-distinct-faces.png', 'persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
   assert.ok(persona.projectNotes.some(note => note.includes('Other GPU/browser combinations and low-powered-device performance remain unverified')));
   const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
   assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
@@ -385,14 +385,14 @@ test('Persona portrait release records hardware provenance and truthful visual l
   assert.match(app.verificationEvidence,/42793477651/);
   assert.match(app.projectNotes.join(' '),/not a photorealistic production groom/);
   assert.match(app.projectNotes.join(' '),/synthetic detail and tints of one diffuse skin source/);
-  assert.ok(app.screenshots.slice(2).every(shot=>shot.source.includes('cf82a4d2dbc41509d413662829e15246d574c45d7f4d33412ecf7bb053206b0b')));
-  assert.deepEqual(app.screenshots.slice(2).map(shot=>[shot.width,shot.height]),[[1133,1003],[1133,1003]]);
+  assert.ok(app.screenshots.slice(3).every(shot=>shot.source.includes('cf82a4d2dbc41509d413662829e15246d574c45d7f4d33412ecf7bb053206b0b')));
+  assert.deepEqual(app.screenshots.slice(3).map(shot=>[shot.width,shot.height]),[[1133,1003],[1133,1003]]);
 });
 
 
 test('Persona distinct faces retain the original portrait and truthful comparison provenance', () => {
   const app = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.match(app.description, /distinct adult face presets/);
+  assert.match(app.description, /distinct adult faces/);
   assert.match(app.features.join(' '), /Nine additional fitted face controls/);
   assert.match(app.features.join(' '), /Twenty-eight editable appearance morph targets/);
   assert.match(app.projectNotes.join(' '), /Angular\/Vale, Rounded\/Marlowe and Long\/Ellis/);
@@ -401,7 +401,7 @@ test('Persona distinct faces retain the original portrait and truthful compariso
   assert.match(app.verificationEvidence, /d5e31df0d2f030ab1d15534d981a72dabdd4a5dc/);
   assert.match(app.verificationEvidence, /42803638969/);
   assert.match(app.verificationEvidence, /all 52 deployed files/);
-  const [, matrix, workspace, face] = app.screenshots;
+  const [, , matrix, workspace, face] = app.screenshots;
   assert.deepEqual([matrix.width, matrix.height], [1056, 1096]);
   assert.equal(matrix.sha256, '72da775ccd2859af761ffdb2748929fe01056435a79f3b7aa995304e2886d380');
   assert.match(matrix.caption, /test-only rendered comparison sheet, not the production editor UI/);
@@ -413,7 +413,7 @@ test('Persona distinct faces retain the original portrait and truthful compariso
 
 test('Persona skirt milestone adds an optional auxiliary garment rig without losing faces', () => {
   const app = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.match(app.description, /optional A-line skirt with garment-only bones and hem sway/);
+  assert.match(app.description, /optional rigged A-line skirt/);
   assert.ok(app.features.includes('Optional original A-line skirt with nine garment-only auxiliary bones'));
   assert.ok(app.features.includes('Hem-sway control, body-build fit morphs and editable garment export'));
   assert.ok(app.features.includes('Three distinct adult face presets plus the preserved original three'));
@@ -425,7 +425,7 @@ test('Persona skirt milestone adds an optional auxiliary garment rig without los
   assert.match(app.verificationEvidence, /599524fb3e55d89f1d87d57394debaf5bb23aad0/);
   assert.match(app.verificationEvidence, /42813572579/);
   assert.match(app.verificationEvidence, /all 54 deployed files/);
-  const skirt = app.screenshots[0];
+  const skirt = app.screenshots[1];
   assert.match(skirt.file, /persona-skirt-comparison\.png$/);
   assert.deepEqual([skirt.width, skirt.height], [960, 970]);
   assert.equal(skirt.sha256, '73c9672bfae1c4f7e4ea4883b24eaef242bb2867e9e75299aee743c18f4b55c4');
@@ -433,4 +433,19 @@ test('Persona skirt milestone adds an optional auxiliary garment rig without los
   assert.match(skirt.source, /http:\/\/127\.0\.0\.1:4194\/tests\/skirt\.html/);
   assert.match(skirt.source, /Apple M1 hardware WebGL/);
   assert.match(skirt.source, /Local pre-publication capture/);
+});
+
+
+test('Persona blink and gaze listing preserves prototype and export limits', () => {
+  const app = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.match(app.description, /independent blink and gaze controls/);
+  assert.ok(app.features.includes('Independent anatomical left/right blink controls with neutral reset'));
+  const notes = app.projectNotes.join(' ');
+  for (const limit of [/eye-only morph posing/, /no mouth expressions, lip-sync, automatic blink timing/i, /heavy or stretched at extreme identity/, /fitted to the saved identity/, /changing identity in Blender may require refitting/]) assert.match(notes, limit);
+  assert.doesNotMatch(notes, /No facial animation, face rig|No facial expressions or animation were added/);
+  const shot = app.screenshots[0];
+  assert.match(shot.file, /persona-blink-gaze\.png$/);
+  assert.deepEqual([shot.width, shot.height], [1320, 1820]);
+  assert.match(shot.caption, /test-only rendered comparison sheet, not the production editor UI/);
+  assert.match(shot.source, /Apple M1 hardware WebGL/);
 });
