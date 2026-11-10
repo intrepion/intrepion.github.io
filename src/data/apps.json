@@ -148,5 +148,164 @@
       }
     ],
     "verificationEvidence": "Published commit e95dd05be59ab83a4e8c0af4761933cc812e3e7e passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-aseprite-codex-dot/actions/runs/42732061963 . The initial release returned HTTP 200 and all six served app files matched the verified local build; the final release changes only metadata and QA notes, not runtime assets. Live Chrome also verified the original demo rendering and animation play/pause with frame advancement and no console errors. Fifteen automated tests and the static build passed. Local HTTP browser QA covered drawing, undo/redo, layers, animation, responsive layout, downloaded PNG and sprite-sheet exports, editable JSON round-trip, PNG import, and autosave reload. Screenshots are unedited local pre-publication captures, not exact deployed-build provenance. No physical-device or full cross-browser audit is claimed."
+  },
+  {
+    "id": "kata-app-inspired-by-fl-studio-codex-dot",
+    "title": "Kata Pulse Foundry",
+    "inspiration": "FL Studio",
+    "category": "Audio",
+    "tagline": "Four voices. Sixteen steps. Your next little obsession.",
+    "description": "A small, local-first drum sequencer. Build a four-voice loop, adjust its tempo, and save a WAV or editable project.",
+    "status": "preview",
+    "repo": null,
+    "launch": null,
+    "verified": null,
+    "features": [
+      "Four synthesized drum voices",
+      "16-step sequencer",
+      "Play/stop and 60–180 BPM tempo",
+      "Per-voice level and mute",
+      "Two starter loops and a blank loop",
+      "WAV export",
+      "JSON project import/export",
+      "Local autosave",
+      "Undo and redo",
+      "Keyboard grid navigation"
+    ],
+    "projectNotes": [
+      "Inspired by FL Studio’s step-sequencing workflow. This is an independent learning project, not an official FL Studio app or a claim of full feature compatibility.",
+      "This first version is a four-voice, 16-step drum sequencer. It does not include a piano roll, arrangement timeline, recording, plugins, MIDI, or FLP project support.",
+      "WAV exports contain one bar plus a 0.6-second sound tail, rather than a seamless looping WAV. Editable projects use this app’s own JSON format.",
+      "Loops stay in your browser. Local autosave is best effort; download project backups for important work. Physical phones and hardware listening have not been tested."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-fl-studio-codex-dot/pulse-foundry-desktop.jpg",
+        "alt": "Kata Pulse Foundry desktop four-voice step sequencer with transport, starter loops, and output controls",
+        "caption": "Midnight circuit starter loop, stopped at step one.",
+        "width": 1165,
+        "height": 1122,
+        "capturedAt": "2026-11-10T00:34:57.111570+00:00",
+        "sha256": "38ec05ea5a5e836a5d94f0690687141884b1333e69a75f3dc0e8fe5e8fd79640",
+        "source": "Chromium via CUA, genuine full-page browser capture; original JPEG bytes, no image editing. Source: http://127.0.0.1:4173/ Unpublished local prototype."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-fl-studio-codex-dot/pulse-foundry-mobile.jpg",
+        "alt": "Kata Pulse Foundry narrow-screen layout with a horizontally scrollable four-voice step sequencer",
+        "caption": "Midnight circuit starter loop, stopped at step one. Narrow browser layout; scroll the rack to see all 16 steps.",
+        "width": 485,
+        "height": 1559,
+        "capturedAt": "2026-11-10T00:34:57.117465+00:00",
+        "sha256": "e8921aebf13f249f03c2311cd8d624fb77b7c6f1d0e33df39886e438a177fd2f",
+        "source": "Chromium via CUA, genuine full-page browser capture; original JPEG bytes, no image editing. Source: http://127.0.0.1:4173/ Unpublished local prototype. Resized browser viewport, not a physical-phone test."
+      }
+    ],
+    "verificationEvidence": null
+  },
+  {
+    "id": "kata-app-inspired-by-reaper-codex-dot",
+    "title": "Trackstead",
+    "inspiration": "REAPER",
+    "category": "Audio",
+    "tagline": "A place for sound to take shape.",
+    "description": "A local-first multitrack audio sketchbook: arrange, trim and split clips, balance tracks, capture an opt-in mic take, save projects, and export stereo WAV.",
+    "status": "preview",
+    "repo": null,
+    "launch": null,
+    "verified": null,
+    "features": [
+      "Nondestructive multitrack arrangement",
+      "Clip trim, split, duplicate, and fades",
+      "Per-track gain, pan, mute, and solo",
+      "Undo and redo",
+      "Audio import",
+      "Opt-in microphone recording · hardware untested",
+      "Embedded-audio project save/open",
+      "Stereo WAV export · 44.1 kHz / 16-bit"
+    ],
+    "projectNotes": [
+      "Inspired by REAPER’s linear, nondestructive multitrack workflow, with an original interface and demo audio. This independent learning project is not affiliated with Cockos or REAPER.",
+      "Arrange up to 12 tracks, 120 clips, and five minutes of audio. There is no MIDI, plugin hosting, time stretching, live input monitoring, or REAPER .rpp project compatibility.",
+      "Microphone recording is opt-in and has not been tested with real microphone hardware. Mobile/touch interaction and cross-browser behavior remain unverified; this prototype is intended for desktop use.",
+      "Save your project before closing or reloading: Trackstead has no autosave. Projects embed audio in the app’s own format. Audio stays in your browser."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-reaper-codex-dot/trackstead-session.jpg",
+        "alt": "Trackstead desktop multitrack editor with four waveform tracks, clip inspector, and stereo mixer",
+        "caption": "Evening furniture: the original four-track, six-clip demo.",
+        "width": 1165,
+        "height": 997,
+        "capturedAt": "2026-11-10",
+        "sha256": "263164d1bd47e6faade1c1dc85befc45e92f745a76bdd2a861a7feca191ae193",
+        "source": "Real full-page browser screenshots; no compositing or generated UI. Source: http://127.0.0.1:4173/ Unpublished local prototype. Desktop capture, not mobile testing. Microphone access was not requested."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-reaper-codex-dot/trackstead-editing.jpg",
+        "alt": "Trackstead desktop multitrack editor with four waveform tracks, clip inspector, and stereo mixer with trimmed clip and armed indicator",
+        "caption": "Clip timing and fades in the inspector. The armed indicator is UI only; no microphone was accessed.",
+        "width": 1165,
+        "height": 997,
+        "capturedAt": "2026-11-10",
+        "sha256": "854a6912d73908dd6bd0a57128fc94706fec819f0ae8a1aab16639c4b1835a14",
+        "source": "Real full-page browser screenshots; no compositing or generated UI. Source: http://127.0.0.1:4173/ Unpublished local prototype. Desktop capture, not mobile testing. Microphone access was not requested."
+      }
+    ],
+    "verificationEvidence": null
+  },
+  {
+    "id": "kata-app-inspired-by-krita-codex-dot",
+    "title": "Kata Mosslight",
+    "inspiration": "Krita",
+    "category": "Art & Design",
+    "tagline": "A little room to create.",
+    "description": "A quiet digital painting studio with expressive brushes, real paint layers, and a meadow waiting for your first mark.",
+    "status": "preview",
+    "repo": null,
+    "launch": null,
+    "verified": null,
+    "features": [
+      "Five continuous brush presets",
+      "Eraser and color sampler",
+      "Pen pressure when supported",
+      "Mirrored strokes and smoothing",
+      "Eight raster layers with opacity and blend modes",
+      "Layer reorder, rename, duplicate and clear",
+      "20-step undo/redo",
+      "Editable project import/export",
+      "Flattened PNG export",
+      "Local autosave",
+      "Image import",
+      "Keyboard painting controls"
+    ],
+    "projectNotes": [
+      "Inspired by Krita’s digital-painting workflow. This independent learning project uses original interface artwork and a layered meadow study; it is not an official Krita app or a claim of full feature compatibility.",
+      "This first version uses a fixed 1200 × 900 canvas and up to eight raster layers. It does not support Krita .kra or PSD files, animation, masks, transforms, or physical pigment simulation.",
+      "Pen pressure is supported where the browser provides it, but physical pen, pressure, and touch hardware have not been tested. The narrow capture shows a 390 × 844 iframe viewport, not a physical phone.",
+      "Paintings stay in your browser. Autosave uses one local slot shared by tabs and depends on browser storage. Keep editable project downloads as backups; PNG exports flatten the layers."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-krita-codex-dot/mosslight-desktop.jpg",
+        "alt": "Kata Mosslight desktop painting studio with the original layered meadow, brush library, palette, and layer controls",
+        "caption": "The quiet hour: original four-layer meadow study.",
+        "width": 1165,
+        "height": 869,
+        "capturedAt": "2026-11-10",
+        "sha256": "7a05e9a780f2b0dad8b470913d75930f4e066fa9c932728dd28321274ddf218c",
+        "source": "Authentic Chromium browser screenshot from http://127.0.0.1:4173/. Unpublished local prototype; unedited desktop capture. Capture date is recorded in docs/QA.md; exact time was not recorded."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-krita-codex-dot/mosslight-narrow.jpg",
+        "alt": "Kata Mosslight narrow painting view with meadow canvas and beginning of the brush and color panels",
+        "caption": "The same app inside a 390 × 844 iframe viewport; this image shows the top portion, not the full scrolled page.",
+        "width": 392,
+        "height": 846,
+        "capturedAt": "2026-11-10",
+        "sha256": "61f27b339b76b146557a06e87ef88ea97487b796f3c273593b4116894e00658e",
+        "source": "Authentic browser capture of the app in a 390 × 844 iframe at http://127.0.0.1:4173/. Unpublished local prototype; no image editing. Screenshot includes the iframe boundary. Not a physical-phone or full-page capture. Capture date is recorded in docs/QA.md; exact time was not recorded."
+      }
+    ],
+    "verificationEvidence": null
   }
 ]

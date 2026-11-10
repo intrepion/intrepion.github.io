@@ -7,3 +7,7 @@
 
 /* Give each app its own space as the Tool Shed grows. */
 .tool-card+.tool-card{margin-top:24px}
+
+/* Two desktop captures share equal space; portrait previews retain their existing layout. */
+.app-screenshot-grid.app-screenshot-pair{grid-template-columns:1fr 1fr}.app-screenshot-pair figure:nth-child(2){max-width:none}
+@media(max-width:700px){.app-screenshot-grid.app-screenshot-pair{grid-template-columns:1fr}}

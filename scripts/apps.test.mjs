@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 3);
+  assert.equal(count.total, 6);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -156,4 +156,43 @@ test('Pixel Loom has verified public links and intact local screenshots', async 
   assert.ok(app.screenshots.every(shot => shot.source.includes('pre-publication')));
   assert.match(app.screenshots[1].source, /not a physical-device test/);
   await validateApps([app]);
+});
+
+
+test('three new local prototypes stay unpublished with no invented destinations', async () => {
+  const previews = apps.filter(app => app.status === 'preview');
+  assert.deepEqual(previews.map(app => app.title), ['Kata Pulse Foundry', 'Trackstead', 'Kata Mosslight']);
+  assert.equal(apps.filter(app => app.status === 'live').length, 3);
+  for (const app of previews) {
+    assert.equal(app.repo, null);
+    assert.equal(app.launch, null);
+    assert.equal(app.verified, null);
+    assert.equal(app.verificationEvidence, null);
+    assert.equal(app.screenshots.length, 2);
+    assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4173/')));
+  }
+  await validateApps(previews);
+});
+
+
+test('prototype notes distinguish workflows, file formats, and untested hardware', () => {
+  const pulse = apps.find(app => app.inspiration === 'FL Studio');
+  const track = apps.find(app => app.inspiration === 'REAPER');
+  const moss = apps.find(app => app.inspiration === 'Krita');
+  assert.ok(pulse.projectNotes.some(note => note.includes('0.6-second sound tail')));
+  assert.ok(pulse.projectNotes.some(note => note.includes('FLP')));
+  assert.ok(track.projectNotes.some(note => note.includes('no autosave')));
+  assert.ok(track.projectNotes.some(note => note.includes('real microphone hardware')));
+  assert.ok(moss.projectNotes.some(note => note.includes('physical pen')));
+  assert.ok(moss.projectNotes.some(note => note.includes('1200 × 900')));
+  assert.match(track.screenshots[1].caption, /no microphone was accessed/);
+  assert.match(moss.screenshots[1].source, /Not a physical-phone or full-page capture/);
+});
+
+
+test('two desktop screenshots get equal columns without stretching portrait previews', async () => {
+  const page = await read('../src/pages/apps/[app].astro');
+  const css = await read('../src/styles/collections.css');
+  assert.match(page, /app\.screenshots\.every\(shot => shot\.width >= 800\)/);
+  assert.match(css, /app-screenshot-grid\.app-screenshot-pair\{grid-template-columns:1fr 1fr\}/);
 });
