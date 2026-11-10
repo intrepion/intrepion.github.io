@@ -156,10 +156,10 @@
     "category": "Audio",
     "tagline": "Four voices. Sixteen steps. Your next little obsession.",
     "description": "A small, local-first drum sequencer. Build a four-voice loop, adjust its tempo, and save a WAV or editable project.",
-    "status": "preview",
-    "repo": null,
-    "launch": null,
-    "verified": null,
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-fl-studio-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-fl-studio-codex-dot/",
+    "verified": "2026-11-10",
     "features": [
       "Four synthesized drum voices",
       "16-step sequencer",
@@ -200,7 +200,7 @@
         "source": "Chromium via CUA, genuine full-page browser capture; original JPEG bytes, no image editing. Source: http://127.0.0.1:4173/ Unpublished local prototype. Resized browser viewport, not a physical-phone test."
       }
     ],
-    "verificationEvidence": null
+    "verificationEvidence": "Published commit 3eca42123c77aba11c298acce6ddc1b8a14e55d1 passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-fl-studio-codex-dot/actions/runs/42738753303 . All served source files, assets, manifest, and screenshots returned HTTP 200 and matched the final dist bytes. Forty automated tests, syntax checks, and the build passed locally and in CI. Live Chrome rendering, step toggle, Undo, Play, and Stop passed. Physical-phone, Safari/Firefox, screen-reader, and human hardware-listening checks remain untested. Gallery screenshots are genuine local pre-publication captures, not a claim of exact deployed-build provenance."
   },
   {
     "id": "kata-app-inspired-by-reaper-codex-dot",
@@ -209,10 +209,10 @@
     "category": "Audio",
     "tagline": "A place for sound to take shape.",
     "description": "A local-first multitrack audio sketchbook: arrange, trim and split clips, balance tracks, capture an opt-in mic take, save projects, and export stereo WAV.",
-    "status": "preview",
-    "repo": null,
-    "launch": null,
-    "verified": null,
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-reaper-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-reaper-codex-dot/",
+    "verified": "2026-11-10",
     "features": [
       "Nondestructive multitrack arrangement",
       "Clip trim, split, duplicate, and fades",
@@ -251,7 +251,7 @@
         "source": "Real full-page browser screenshots; no compositing or generated UI. Source: http://127.0.0.1:4173/ Unpublished local prototype. Desktop capture, not mobile testing. Microphone access was not requested."
       }
     ],
-    "verificationEvidence": null
+    "verificationEvidence": "Published commit e0f8e53f550bb9848edfbae6f5777a9684293aa4 passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-reaper-codex-dot/actions/runs/42738671042 . Public index.html and all four JS/CSS runtime assets returned HTTP 200 and matched the final build bytes. Thirty automated tests and the build passed locally and in CI. Live Chrome rendering, playback clock, numeric trim from 20 to 18 seconds, and Undo to 20 seconds passed. Real microphone hardware, touch devices, and broad cross-browser behavior remain unverified. Gallery screenshots are genuine local pre-publication captures, not a claim of exact deployed-build provenance."
   },
   {
     "id": "kata-app-inspired-by-krita-codex-dot",
@@ -260,10 +260,10 @@
     "category": "Art & Design",
     "tagline": "A little room to create.",
     "description": "A quiet digital painting studio with expressive brushes, real paint layers, and a meadow waiting for your first mark.",
-    "status": "preview",
-    "repo": null,
-    "launch": null,
-    "verified": null,
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-krita-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-krita-codex-dot/",
+    "verified": "2026-11-10",
     "features": [
       "Five continuous brush presets",
       "Eraser and color sampler",
@@ -306,6 +306,6 @@
         "source": "Authentic browser capture of the app in a 390 × 844 iframe at http://127.0.0.1:4173/. Unpublished local prototype; no image editing. Screenshot includes the iframe boundary. Not a physical-phone or full-page capture. Capture date is recorded in docs/QA.md; exact time was not recorded."
       }
     ],
-    "verificationEvidence": null
+    "verificationEvidence": "Published commit eb983976824eb1167122acafe0f98206399d7870 passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-krita-codex-dot/actions/runs/42738675983 . All ten checked live assets returned HTTP 200 and matched the final dist bytes, including HTML, CSS, four JS modules, icon, manifest, and both screenshots. Seventeen Node tests and the build passed on the Mac and in CI; the earlier local Chromium engine suite passed twelve tests. Live Chrome rendered the landscape, presets, and layers, and Help opened and closed. Physical pen, pressure, and touch hardware remain untested. Gallery screenshots are genuine local pre-publication captures, not a claim of exact deployed-build provenance."
   }
 ]

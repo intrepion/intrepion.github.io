@@ -159,19 +159,26 @@ test('Pixel Loom has verified public links and intact local screenshots', async 
 });
 
 
-test('three new local prototypes stay unpublished with no invented destinations', async () => {
-  const previews = apps.filter(app => app.status === 'preview');
-  assert.deepEqual(previews.map(app => app.title), ['Kata Pulse Foundry', 'Trackstead', 'Kata Mosslight']);
-  assert.equal(apps.filter(app => app.status === 'live').length, 3);
-  for (const app of previews) {
-    assert.equal(app.repo, null);
-    assert.equal(app.launch, null);
-    assert.equal(app.verified, null);
-    assert.equal(app.verificationEvidence, null);
+test('three approved apps have verified publication links and release evidence', async () => {
+  const expected = [
+    ['kata-app-inspired-by-fl-studio-codex-dot', 'Kata Pulse Foundry', '3eca42123c77aba11c298acce6ddc1b8a14e55d1', '42738753303'],
+    ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
+    ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
+  ];
+  assert.equal(apps.filter(app => app.status === 'live').length, 6);
+  for (const [id, title, sha, run] of expected) {
+    const app = apps.find(app => app.id === id);
+    assert.equal(app.title, title);
+    assert.equal(app.status, 'live');
+    assert.equal(app.repo, `https://github.com/intrepion/${id}`);
+    assert.equal(app.launch, `https://intrepion.github.io/${id}/`);
+    assert.equal(app.verified, '2026-11-10');
+    assert.ok(app.verificationEvidence.includes(sha));
+    assert.ok(app.verificationEvidence.includes(run));
     assert.equal(app.screenshots.length, 2);
     assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4173/')));
+    await validateApps([app]);
   }
-  await validateApps(previews);
 });
 
 

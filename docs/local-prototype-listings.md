@@ -1,8 +1,8 @@
 # Three local Tool Shed previews
 
-Prepared November 10, 2026, for review only. No repository was created, pushed, or deployed as part of this task. The public Tool Shed is unchanged.
+Historical review record: prepared November 10, 2026, before publication was authorized. No repository was created, pushed, or deployed during that initial preparation. The apps were subsequently approved and published; see [the publication record](creative-apps-publication.md).
 
-The isolated branch adds **Kata Pulse Foundry** (FL Studio-inspired sequencing), **Trackstead** (REAPER-inspired multitrack arrangement), and **Kata Mosslight** (Krita-inspired painting). All three use `preview` status, null repository/launch/verification fields, and explicit unpublished labels. Existing Sound Lab, Wave Room, and Pixel Loom catalog records and all 149 games are unchanged.
+The isolated branch adds **Kata Pulse Foundry** (FL Studio-inspired sequencing), **Trackstead** (REAPER-inspired multitrack arrangement), and **Kata Mosslight** (Krita-inspired painting). At the initial review stage all three used `preview` status, null repository/launch/verification fields, and explicit unpublished labels. Existing Sound Lab, Wave Room, and Pixel Loom catalog records and all 149 games are unchanged.
 
 ## Review pages
 
