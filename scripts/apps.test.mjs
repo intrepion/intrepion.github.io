@@ -165,7 +165,7 @@ test('three approved apps have verified publication links and release evidence',
     ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
     ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
   ];
-  assert.equal(apps.filter(app => app.status === 'live').length, 16);
+  assert.equal(apps.filter(app => app.status === 'live').length, 17);
   for (const [id, title, sha, run] of expected) {
     const app = apps.find(app => app.id === id);
     assert.equal(app.title, title);
