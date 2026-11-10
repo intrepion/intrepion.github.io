@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 13);
+  assert.equal(count.total, 16);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -165,7 +165,7 @@ test('three approved apps have verified publication links and release evidence',
     ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
     ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
   ];
-  assert.equal(apps.filter(app => app.status === 'live').length, 13);
+  assert.equal(apps.filter(app => app.status === 'live').length, 16);
   for (const [id, title, sha, run] of expected) {
     const app = apps.find(app => app.id === id);
     assert.equal(app.title, title);
@@ -285,8 +285,8 @@ test('six creative releases record their final verified publication', () => {
 
 test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-foundation-desktop.jpg', 'persona-foundation-face.jpg']);
-  assert.ok(persona.projectNotes.some(note => note.includes('WebGL/GPU rendering and low-powered-device performance remain unverified')));
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
+  assert.ok(persona.projectNotes.some(note => note.includes('Other GPU/browser combinations and low-powered-device performance remain unverified')));
   const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
   assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
   assert.match(kinframe.screenshots[0].source, /test-only pose sheet, not the production editor UI/);
@@ -301,7 +301,7 @@ test('revised Persona Forge and Kinframe releases have verified exact commit evi
     const app = apps.find(app => app.inspiration === inspiration);
     assert.ok(app.verificationEvidence.includes(sha));
     assert.ok(app.verificationEvidence.includes(run));
-    assert.ok(app.screenshots.every(shot => shot.source.includes('not exact deployed-build provenance')));
+    if (inspiration === 'Autodesk Maya') assert.ok(app.screenshots.every(shot => shot.source.includes('not exact deployed-build provenance')));
   }
 });
 
@@ -314,7 +314,7 @@ test('Persona human foundation describes rigged exports and approximate migratio
   assert.match(notes, /Version-1 migration is explicitly approximate/);
   assert.match(notes, /Blender 4.3.2/);
   assert.match(notes, /zero errors and four documented warnings/);
-  assert.ok(persona.screenshots.every(shot => shot.source.includes('same-human software preview')));
+  assert.ok(persona.screenshots.every(shot => shot.source.includes('Apple M1 hardware WebGL')));
   assert.ok(persona.features.some(feature => feature.includes('rigged GLB')));
   assert.ok(!persona.features.some(feature => feature.includes('OBJ')));
 });
@@ -328,7 +328,7 @@ test('Persona human foundation records verified deployment and live asset identi
 });
 
 
-test('Persona deformation correction records scope and preserves historical screenshots', () => {
+test('Persona deformation correction retains historical scope evidence', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
   assert.match(persona.projectNotes.join(' '), /Pose correctives preserve joint volume but remain approximate/);
   assert.match(persona.verificationEvidence, /c0e7c43fb0b8667c206f899b306ca6caf3afa05d/);
@@ -353,4 +353,38 @@ test('Persona waist repair records precise shading verification and limits', () 
   assert.match(persona.verificationEvidence, /Hardware WebGL shadows remain unverified/);
   assert.match(persona.verificationEvidence, /docs\/QA-WAIST.md/);
   assert.ok(persona.screenshots.every(shot => shot.source.includes('Local pre-publication capture')));
+});
+
+
+test('worldbuilding and BASIC apps have verified destinations and distinct scope', async () => {
+  const scopes = [
+    ['tiled', 'Tilehaven', 'Tiled', /finite orthogonal/i, /native Tiled/],
+    ['trenchbroom', 'Kata Brushkeep', 'TrenchBroom', /axis-aligned cuboid/i, /experimental/i],
+    ['quickbasic-45', 'Bytewell', 'QuickBASIC 4.5', /BASIC subset/, /No arrays/]
+  ];
+  for (const [slug,title,inspiration,scope,limit] of scopes) {
+    const id = `kata-app-inspired-by-${slug}-codex-dot`;
+    const app=apps.find(item=>item.id===id);
+    assert.equal(app.title,title); assert.equal(app.inspiration,inspiration);
+    assert.equal(app.status,'live');
+    assert.equal(app.launch,`https://intrepion.github.io/${id}/`);
+    assert.equal(app.repo,`https://github.com/intrepion/${id}`);
+    assert.match(app.verificationEvidence,/[a-f0-9]{40}/);
+    assert.match(app.projectNotes.join(' '),scope);
+    assert.match(app.projectNotes.join(' '),limit);
+    assert.equal(app.screenshots.length,2);
+    assert.ok(app.screenshots.every(shot=>shot.source.includes('http://127.0.0.1:4173/')));
+    await validateApps([app]);
+  }
+});
+
+
+test('Persona portrait release records hardware provenance and truthful visual limits', () => {
+  const app=apps.find(app=>app.inspiration==='Character Creator 5');
+  assert.match(app.verificationEvidence,/3a5fb77d854274e9796b81278798954fc69abfb2/);
+  assert.match(app.verificationEvidence,/42793477651/);
+  assert.match(app.projectNotes.join(' '),/not a photorealistic production groom/);
+  assert.match(app.projectNotes.join(' '),/synthetic detail and tints of one diffuse skin source/);
+  assert.ok(app.screenshots.every(shot=>shot.source.includes('cf82a4d2dbc41509d413662829e15246d574c45d7f4d33412ecf7bb053206b0b')));
+  assert.deepEqual(app.screenshots.map(shot=>[shot.width,shot.height]),[[1133,1003],[1133,1003]]);
 });
