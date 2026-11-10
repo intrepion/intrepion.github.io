@@ -97,5 +97,56 @@
       "This first version edits one audio clip at a time. It does not offer Audacity’s full multitrack workspace, plugin system, or project-file compatibility.",
       "Audio stays in your browser tab. Export your edits before closing or reloading. Import supports files up to 25 MB and three minutes, in formats your browser can decode."
     ]
+  },
+  {
+    "id": "kata-app-inspired-by-aseprite-codex-dot",
+    "title": "Pixel Loom",
+    "inspiration": "Aseprite",
+    "category": "Graphics",
+    "tagline": "A little world, one pixel at a time.",
+    "description": "A local-first pixel-art and flipbook editor. Draw on transparent layers, animate small sprites, and export PNG frames or sprite sheets.",
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-aseprite-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-aseprite-codex-dot/",
+    "verified": "2026-11-10",
+    "features": [
+      "Pencil, eraser, fill, and picker",
+      "Line and rectangle tools",
+      "Transparent layers with opacity",
+      "Undo and redo",
+      "32-frame flipbooks and onion skin",
+      "Project save/open and browser autosave",
+      "PNG import",
+      "PNG frames and sprite-sheet export"
+    ],
+    "projectNotes": [
+      "Inspired by Aseprite’s pixel-art and animation workflow. This is an independent learning project, not an official Aseprite app or a claim of feature-for-feature compatibility.",
+      "Editable projects use Pixel Loom’s own JSON format. Aseprite project files, GIF/APNG export, selections, and variable frame timing are not supported.",
+      "Create canvases up to 128 × 128 pixels with up to 12 layers and 32 frames, within a total limit of two million stored cells.",
+      "Artwork stays in your browser. Download editable project backups for important work; browser autosave is best effort and can be lost if storage is cleared."
+    ],
+    "screenshots": [
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-aseprite-codex-dot/pixel-loom-desktop.jpg",
+        "alt": "Pixel Loom desktop workbench showing the original Mosslight cottage pixel-art demo, tools, layers and flipbook",
+        "caption": "Original three-layer, four-frame demo in the desktop workbench.",
+        "width": 1165,
+        "height": 961,
+        "capturedAt": "2026-11-10T00:48:18.480564+00:00",
+        "sha256": "08a36f94fea78d182e31870244a3c19e3e0d970e8d3bf25083668a5ee2ffa6fc",
+        "source": "Original Chromium/CUA full-page capture from http://127.0.0.1:4173/. Desktop layout. Unedited local pre-publication screenshot; does not claim exact deployed-build provenance."
+      },
+      {
+        "file": "/screenshots/apps/kata-app-inspired-by-aseprite-codex-dot/pixel-loom-mobile.jpg",
+        "alt": "Pixel Loom mobile workbench showing the original Mosslight cottage pixel-art demo, tools, layers and flipbook",
+        "caption": "Original three-layer, four-frame demo in the 500 CSS-pixel-wide responsive layout.",
+        "width": 485,
+        "height": 1417,
+        "capturedAt": "2026-11-10T00:48:18.482180+00:00",
+        "sha256": "2d5e2be3238eb505f8dca05b9d6abfe4f1b968d0b5643026a26638017130dddd",
+        "source": "Original Chromium/CUA full-page capture from http://127.0.0.1:4173/. Viewport 500 CSS px; not a physical-device test. Unedited local pre-publication screenshot; does not claim exact deployed-build provenance."
+      }
+    ],
+    "verificationEvidence": "Published commit e95dd05be59ab83a4e8c0af4761933cc812e3e7e passed checks and Pages deployment at https://github.com/intrepion/kata-app-inspired-by-aseprite-codex-dot/actions/runs/42732061963 . The initial release returned HTTP 200 and all six served app files matched the verified local build; the final release changes only metadata and QA notes, not runtime assets. Live Chrome also verified the original demo rendering and animation play/pause with frame advancement and no console errors. Fifteen automated tests and the static build passed. Local HTTP browser QA covered drawing, undo/redo, layers, animation, responsive layout, downloaded PNG and sprite-sheet exports, editable JSON round-trip, PNG import, and autosave reload. Screenshots are unedited local pre-publication captures, not exact deployed-build provenance. No physical-device or full cross-browser audit is claimed."
   }
 ]

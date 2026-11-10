@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 2);
+  assert.equal(count.total, 3);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -124,6 +124,36 @@ test('Wave Room has matching public links and intact local screenshot provenance
   assert.deepEqual(app.screenshots.map(shot => [shot.width,shot.height]), [[1133,1203],[375,1536]]);
   assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4174/')));
   assert.ok(app.screenshots.every(shot => shot.source.includes('before final selection/playback')));
+  assert.match(app.screenshots[1].source, /not a physical-device test/);
+  await validateApps([app]);
+});
+
+
+test('Pixel Loom has its own Aseprite-inspired graphics entry and honest compatibility limits', () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-aseprite-codex-dot');
+  assert.ok(app);
+  assert.equal(app.title, 'Pixel Loom');
+  assert.equal(app.inspiration, 'Aseprite');
+  assert.equal(app.category, 'Graphics');
+  assert.match(app.description, /pixel-art and flipbook editor/);
+  assert.ok(app.features.includes('PNG frames and sprite-sheet export'));
+  assert.ok(app.projectNotes.some(note => note.includes('Aseprite project files, GIF/APNG export, selections, and variable frame timing are not supported')));
+  assert.ok(app.projectNotes.every(note => !/Audacity|jsfxr|Sound Lab|Wave Room/.test(note)));
+});
+
+
+test('Pixel Loom has verified public links and intact local screenshots', async () => {
+  const app = apps.find(app => app.id === 'kata-app-inspired-by-aseprite-codex-dot');
+  assert.equal(app.status, 'live');
+  assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
+  assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
+  assert.equal(app.verified, '2026-11-10');
+  assert.match(app.verificationEvidence, /e95dd05be59ab83a4e8c0af4761933cc812e3e7e/);
+  assert.match(app.verificationEvidence, /42732061963/);
+  assert.equal(app.screenshots.length, 2);
+  assert.deepEqual(app.screenshots.map(shot => [shot.width,shot.height]), [[1165,961],[485,1417]]);
+  assert.ok(app.screenshots.every(shot => shot.source.includes('http://127.0.0.1:4173/')));
+  assert.ok(app.screenshots.every(shot => shot.source.includes('pre-publication')));
   assert.match(app.screenshots[1].source, /not a physical-device test/);
   await validateApps([app]);
 });
