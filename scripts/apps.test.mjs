@@ -338,3 +338,19 @@ test('Persona deformation correction records scope and preserves historical scre
   assert.match(persona.verificationEvidence, /error-9 cause is unconfirmed/);
   assert.ok(persona.screenshots.every(shot => shot.source.includes('Local pre-publication capture')));
 });
+
+
+test('Persona waist repair records precise shading verification and limits', () => {
+  const persona = apps.find(app => app.inspiration === 'Character Creator 5');
+  assert.match(persona.verificationEvidence, /d8a302a6bc9aea10869d96f4f0d14b668f821830/);
+  assert.match(persona.verificationEvidence, /ef437bacbb00960092da3ae23abecb1b0b02b8e6/);
+  assert.match(persona.verificationEvidence, /42784499699/);
+  assert.match(persona.verificationEvidence, /44 Node tests/);
+  assert.match(persona.verificationEvidence, /All 48 deployed files returned HTTP 200/);
+  assert.match(persona.verificationEvidence, /7,393,700 bytes/);
+  assert.match(persona.verificationEvidence, /324895581787a5fd189862c4e28d725cf508fc107d01cd027e93fc28fe74fc78/);
+  assert.match(persona.verificationEvidence, /supersedes the earlier overly broad software-preview claim/);
+  assert.match(persona.verificationEvidence, /Hardware WebGL shadows remain unverified/);
+  assert.match(persona.verificationEvidence, /docs\/QA-WAIST.md/);
+  assert.ok(persona.screenshots.every(shot => shot.source.includes('Local pre-publication capture')));
+});

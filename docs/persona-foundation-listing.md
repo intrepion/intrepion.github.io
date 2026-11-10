@@ -41,3 +41,14 @@ The correction fixes visible height changes with stable foot anchoring, shirt/tr
 Local verification passed 38 Node tests, production build, Blender asset/pose/roundtrip checks, 43 visual comparisons, browser save/import/undo and narrow-layout checks, and actual browser-exported GLB inspection in Blender. Detailed evidence and limits are in the app's `docs/QA-DEFORMATION.md`. The updated `assets/human/foundation.glb` is 7,391,544 bytes; SHA-256: `2fbaf1f7f6807327b034fff330d077319f33dfb45b7b607abc1960421a1e4191`.
 
 The software preview was tested. Hardware WebGL remains unverified, and the intermittent browser error-9 cause is unconfirmed. Existing body and face gallery images and their historical local-capture provenance are preserved unchanged. No new screenshots or unrelated catalog entries changed.
+
+
+## Waist seam and shading repair
+
+Prepared November 10, 2026. Release `d8a302a6bc9aea10869d96f4f0d14b668f821830` has tree `ef437bacbb00960092da3ae23abecb1b0b02b8e6`, identical to tested local revision `41c867f`. [GitHub Actions run 42784499699](https://github.com/intrepion/kata-app-inspired-by-character-creator-5-codex-dot/actions/runs/42784499699) passed check-and-build and Pages deployment for this release.
+
+The repair replaces folded/coplanar shirt-hem topology and fixes CPU fallback shading that masked authored normals. Localhost captures reproduced the reported fluted shading before the repair and its absence afterward across body builds and poses. Verification passed 44 Node tests, the Python sleeve-boundary test, Blender source/GLB checks and actual browser-export checks.
+
+The app's `docs/QA-WAIST.md` corrects the earlier overly broad software-preview claim. A clean software preview alone did not validate the authored normals or hardware rendering; geometry, normals and each rendering path require separate checks. Hardware WebGL shadows remain unverified. Existing gallery screenshots and the launch URL are unchanged. No unrelated listings changed.
+
+All 48 deployed files returned HTTP 200 and SHA-256 byte-matched the approved tested production build with zero mismatches. The updated foundation.glb is 7,393,700 bytes with SHA-256 324895581787a5fd189862c4e28d725cf508fc107d01cd027e93fc28fe74fc78. The root launch URL returned HTTP 200. This verifies deployment and byte identity, not new live-browser interaction or hardware WebGL coverage. Publication evidence is recorded in the app checkout’s `artifacts/WAIST-PUBLICATION-VERIFICATION.json`.
