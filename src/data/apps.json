@@ -974,11 +974,11 @@
     ],
     "id": "kata-app-inspired-by-reblium-codex-dot",
     "inspiration": "Reblium",
-    "status": "preview",
-    "repo": null,
-    "launch": null,
-    "verified": null,
-    "verificationEvidence": null,
+    "status": "live",
+    "repo": "https://github.com/intrepion/kata-app-inspired-by-reblium-codex-dot",
+    "launch": "https://intrepion.github.io/kata-app-inspired-by-reblium-codex-dot/",
+    "verified": "2026-11-11",
+    "verificationEvidence": "Published commit d843c284fb49f6414443045a1306726e7909d00e passed build and deploy in https://github.com/intrepion/kata-app-inspired-by-reblium-codex-dot/actions/runs/42983419436 . The public app returned HTTP 200 and all 12 tested deployed files matched local dist bytes: HTML, CSS, favicon, app.json, LICENSE, three source modules, two Three.js modules and two screenshots. Local check/build and 33 model tests passed. Local browser Comb, undo/redo, layer hiding, presets, JSON import and autosave restore were verified. Native JSON, PNG and OBJ download completion remains unverified; screenshots retain their local capture provenance. Public Chrome smoke verified visible mannequin/strands, Soft bob preset, Undo restoring Side sweep, and the Tool Shed backlink; no app errors were observed.",
     "screenshots": [
       {
         "width": 1133,

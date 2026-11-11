@@ -165,7 +165,7 @@ test('three approved apps have verified publication links and release evidence',
     ['kata-app-inspired-by-reaper-codex-dot', 'Trackstead', 'e0f8e53f550bb9848edfbae6f5777a9684293aa4', '42738671042'],
     ['kata-app-inspired-by-krita-codex-dot', 'Kata Mosslight', 'eb983976824eb1167122acafe0f98206399d7870', '42738675983']
   ];
-  assert.equal(apps.filter(app => app.status === 'live').length, 17);
+  assert.equal(apps.filter(app => app.status === 'live').length, 18);
   for (const [id, title, sha, run] of expected) {
     const app = apps.find(app => app.id === id);
     assert.equal(app.title, title);
@@ -535,12 +535,17 @@ test('Persona refined hair publication records exact release and verification sc
 });
 
 
-test('Strandloom remains an unpublished independent grooming study', async () => {
+test('Strandloom publication preserves independent grooming scope', async () => {
   const app = apps.find(a => a.inspiration === 'Reblium');
   assert.equal(app.title, 'Kata Strandloom');
   assert.equal(app.category, '3D & Animation');
-  assert.equal(app.status, 'preview');
-  for (const key of ['repo', 'launch', 'verified', 'verificationEvidence']) assert.equal(app[key], null);
+  assert.equal(app.status, 'live');
+  assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
+  assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
+  assert.equal(app.verified, '2026-11-11');
+  assert.match(app.verificationEvidence, /d843c284fb49f6414443045a1306726e7909d00e/);
+  assert.match(app.verificationEvidence, /42983419436/);
+  assert.match(app.verificationEvidence, /12 tested deployed files/);
   assert.equal(app.screenshots.length, 2);
   assert.deepEqual(app.screenshots.map(s => [s.width, s.height]), [[1133,1032],[375,2083]]);
   assert.ok(app.screenshots.every(s => s.source.includes('http://127.0.0.1:5197/') && s.source.includes('no editing')));
