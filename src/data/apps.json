@@ -953,5 +953,59 @@
         "source": "Original unedited full-page Chrome/CUA screenshot at http://127.0.0.1:5193/. Explicit 390 × 844 CSS-pixel viewport; responsive browser review, not a physical-device test. Capture excludes the scrollbar. Local unpublished app; visually reviewed. Capture timestamp is approximate."
       }
     ]
+  },
+  {
+    "title": "Kata Strandloom",
+    "category": "3D & Animation",
+    "tagline": "Shape a strand. Find a style.",
+    "description": "An original local-first 3D hair-grooming study with procedural strands, hands-on brushes and reversible layers on a simple mannequin.",
+    "features": [
+      "Four original procedural strand presets",
+      "200–1,800 editable 3D strands",
+      "Comb, length and smooth brushes",
+      "Radius, strength, root lock and mirror controls",
+      "Eight reversible groom layers",
+      "Root-to-tip colors and shape controls",
+      "Orbit, zoom and front/side/back views",
+      "24-edit undo and redo",
+      "Validated JSON project backups and import",
+      "Best-effort local autosave",
+      "PNG viewport and OBJ polyline export"
+    ],
+    "id": "kata-app-inspired-by-reblium-codex-dot",
+    "inspiration": "Reblium",
+    "status": "preview",
+    "repo": null,
+    "launch": null,
+    "verified": null,
+    "verificationEvidence": null,
+    "screenshots": [
+      {
+        "width": 1133,
+        "height": 1032,
+        "alt": "Kata Strandloom desktop studio with original mannequin, side-swept procedural strands, two groom layers and shape controls.",
+        "caption": "Side sweep with two reversible layers in the desktop studio.",
+        "capturedAt": "2026-11-11T04:35:27.579045+00:00",
+        "sha256": "6865de2e49cd36f6ef1dc59ac86addec875d2b9ea56f49ac96ba25ebb87c7fed",
+        "file": "/screenshots/apps/kata-app-inspired-by-reblium-codex-dot/desktop.jpg",
+        "source": "Chrome on macOS via CUA. Genuine full-page JPEG browser capture; no editing. Local pre-publication capture at http://127.0.0.1:5197/ Desktop full-page screenshot."
+      },
+      {
+        "width": 375,
+        "height": 2083,
+        "alt": "Kata Strandloom narrow layout with the 3D strand preview above presets, layers and shape controls.",
+        "caption": "390 CSS-pixel responsive layout, tested in desktop Chrome, not a physical phone.",
+        "capturedAt": "2026-11-11T04:35:20.371483+00:00",
+        "sha256": "241b81561798d1252045e620497bcfc205eaa4ce017fe2ac87bc3234bc56ac3d",
+        "file": "/screenshots/apps/kata-app-inspired-by-reblium-codex-dot/narrow.jpg",
+        "source": "Chrome on macOS via CUA. Genuine full-page JPEG browser capture; no editing. Local pre-publication capture at http://127.0.0.1:5197/ 390 × 844 CSS-pixel viewport; not a physical-device test."
+      }
+    ],
+    "projectNotes": [
+      "Inspired by Reblium’s hair-grooming workflow. This is an independent original learning project, not an official Reblium product or feature-for-feature recreation. No Reblium or Persona Forge assets are included.",
+      "Stylized procedural mannequin and strand study, not photorealistic hair or rigged humans. Approximate collisions, crossing strands and sparse scalp coverage remain limitations.",
+      "No MetaHuman integration, production hair cards, Alembic or FBX. OBJ export contains untextured polylines; no Blender/DCC import has been verified.",
+      "JSON uses Strandloom’s own format. Native JSON import and local autosave restore were checked; completed native JSON, PNG and OBJ download bytes remain unverified. Length and Smooth are model-tested, but their native drag gestures have not been independently checked."
+    ]
   }
 ]

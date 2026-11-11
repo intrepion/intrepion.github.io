@@ -8,7 +8,7 @@ const games = JSON.parse(await read('../src/data/games.json'));
 
 test('Tool Shed has its own catalog, separate from all 149 games', async () => {
   const count = await validateApps(apps);
-  assert.equal(count.total, 17);
+  assert.equal(count.total, 18);
   assert.equal(apps[0].id, 'kata-app-inspired-by-jsfxr-codex-dot');
   assert.equal(apps[0].title, 'Kata Sound Lab');
   assert.equal(apps[0].inspiration, 'jsfxr');
@@ -532,4 +532,20 @@ test('Persona refined hair retains exact reviewed capture and honest export limi
 test('Persona refined hair publication records exact release and verification scope', () => {
   const evidence = apps.find(a => a.inspiration === 'Character Creator 5').verificationEvidence;
   for (const expected of [/828fd66bef459dbd60ad9857417b58e2bc8be7ec/, /42944441906/, /all 97 deployed files/, /76,894,407 bytes/, /128 final tests/, /no public screenshot visual review is claimed/]) assert.match(evidence, expected);
+});
+
+
+test('Strandloom remains an unpublished independent grooming study', async () => {
+  const app = apps.find(a => a.inspiration === 'Reblium');
+  assert.equal(app.title, 'Kata Strandloom');
+  assert.equal(app.category, '3D & Animation');
+  assert.equal(app.status, 'preview');
+  for (const key of ['repo', 'launch', 'verified', 'verificationEvidence']) assert.equal(app[key], null);
+  assert.equal(app.screenshots.length, 2);
+  assert.deepEqual(app.screenshots.map(s => [s.width, s.height]), [[1133,1032],[375,2083]]);
+  assert.ok(app.screenshots.every(s => s.source.includes('http://127.0.0.1:5197/') && s.source.includes('no editing')));
+  assert.match(app.screenshots[1].source, /not a physical-device test/);
+  assert.match(app.features.join(' '), /Eight reversible groom layers/);
+  for (const limit of [/not photorealistic/, /No MetaHuman/, /untextured polylines/, /download bytes remain unverified/]) assert.match(app.projectNotes.join(' '), limit);
+  await validateApps([app]);
 });
