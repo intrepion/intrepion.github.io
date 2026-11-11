@@ -235,8 +235,8 @@ for (const [slug, title, scope, description] of creativeScopes) {
     assert.match(app.description, description);
     assert.notEqual(app.description, app.tagline);
     const revised = ['character-creator-5', 'maya'].includes(slug);
-    assert.equal(app.screenshots.length, slug === 'character-creator-5' ? 7 : slug === 'maya' ? 1 : 2);
-    assert.ok(app.screenshots.every((shot, index) => shot.file.endsWith(slug === 'character-creator-5' && index < 5 ? '.png' : revised ? '.jpg' : '.png')));
+    assert.equal(app.screenshots.length, slug === 'character-creator-5' ? 8 : slug === 'maya' ? 1 : 2);
+    assert.ok(app.screenshots.every((shot, index) => shot.file.endsWith(slug === 'character-creator-5' && index < 6 ? '.png' : revised ? '.jpg' : '.png')));
     for (const shot of app.screenshots) {
       const bytes = await readFile(new URL(`../public${shot.file}`, import.meta.url));
       if (revised && shot.file.endsWith('.jpg')) {
@@ -276,7 +276,7 @@ test('six creative releases record their final verified publication', () => {
     assert.equal(app.status, 'live');
     assert.equal(app.repo, `https://github.com/intrepion/${app.id}`);
     assert.equal(app.launch, `https://intrepion.github.io/${app.id}/`);
-    assert.equal(app.verified, '2026-11-10');
+    assert.equal(app.verified, app.inspiration === 'Character Creator 5' ? '2026-11-11' : '2026-11-10');
     assert.ok(app.verificationEvidence.includes(head));
     assert.ok(app.verificationEvidence.includes(run));
   }
@@ -285,7 +285,7 @@ test('six creative releases record their final verified publication', () => {
 
 test('Persona Forge and Kinframe revision captures retain accurate scope', () => {
   const persona = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-skin-closeup.png', 'persona-expressions.png', 'persona-blink-gaze.png', 'persona-skirt-comparison.png', 'persona-distinct-faces.png', 'persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
+  assert.deepEqual(persona.screenshots.map(shot => shot.file.split('/').pop()), ['persona-hair-edges-closeup.png', 'persona-skin-closeup.png', 'persona-expressions.png', 'persona-blink-gaze.png', 'persona-skirt-comparison.png', 'persona-distinct-faces.png', 'persona-portrait-workspace.jpg', 'persona-portrait-face.jpg']);
   assert.ok(persona.projectNotes.some(note => note.includes('Other GPU/browser combinations and low-powered-device performance remain unverified')));
   const kinframe = apps.find(app => app.inspiration === 'Autodesk Maya');
   assert.match(kinframe.screenshots[0].file, /motion-review\.jpg$/);
@@ -438,7 +438,7 @@ test('Persona skirt milestone adds an optional auxiliary garment rig without los
 
 test('Persona blink and gaze listing preserves prototype and export limits', () => {
   const app = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.match(app.description, /independent blink and gaze/);
+  assert.match(app.description, /blink and gaze/);
   assert.ok(app.features.includes('Independent anatomical left/right blink controls with neutral reset'));
   const notes = app.projectNotes.join(' ');
   for (const limit of [/eye-only morph posing/, /no lip-sync, automatic blink timing/i, /heavy or stretched at extreme identity/, /fitted to the saved identity/, /changing identity in Blender may require refitting/]) assert.match(notes, limit);
@@ -459,10 +459,11 @@ test('Persona blink publication evidence distinguishes sampled files from live U
 
 test('Persona expressions preserve prior eye posing and honest export limits', () => {
   const app = apps.find(app => app.inspiration === 'Character Creator 5');
-  assert.match(app.description, /adjustable smile, frown and brow expressions/);
+  assert.match(app.description, /adjustable expressions/);
+  assert.match(app.features.join(' '), /closed-mouth smile, frown and brow expressions/);
   assert.ok(app.features.includes('Four original editable expression targets on the human and fitted brows'));
   for (const pattern of [/Opposing controls subtract/, /old projects load neutral/, /no mouth interior, teeth, tongue, jaw opening/, /Blender edits do not automatically recompute smile squint/, /Targets fit the saved identity/]) assert.match(app.projectNotes.join(' '), pattern);
-  assert.equal(app.screenshots.length, 7);
+  assert.equal(app.screenshots.length, 8);
   const shot = app.screenshots.find(s=>s.file.endsWith('persona-expressions.png'));
   assert.match(shot.file, /persona-expressions\.png$/);
   assert.equal(shot.sha256, '821c6fa722d366fea27566afb00cd4014a57232918032b8d0a2a90a8d804cb1f');
@@ -508,6 +509,27 @@ test('Voltbench screenshots retain reviewed local capture provenance', () => {
 });
 
 
-test('Persona regional skin advertises exact reviewed image and portable PBR limits',async()=>{const app=apps.find(a=>a.inspiration==='Character Creator 5');assert.match(app.description,/regional skin/);assert.match(app.features.join(' '),/2048px.*roughness/);assert.match(app.projectNotes.join(' '),/not a fully photorealistic scan/);assert.match(app.projectNotes.join(' '),/browser backlight does not transfer/);assert.match(app.projectNotes.join(' '),/Subsurface and Transmission Weight remain zero/);const shot=app.screenshots[0];assert.match(shot.file,/persona-skin-closeup\.png$/);assert.deepEqual([shot.width,shot.height],[1120,1510]);assert.match(shot.source,/localhost HTTP capture.*Apple M1 hardware WebGL/);await validateApps([app]);});
+test('Persona regional skin advertises exact reviewed image and portable PBR limits',async()=>{const app=apps.find(a=>a.inspiration==='Character Creator 5');assert.match(app.description,/regional skin/);assert.match(app.features.join(' '),/2048px.*roughness/);assert.match(app.projectNotes.join(' '),/not a fully photorealistic scan/);assert.match(app.projectNotes.join(' '),/browser backlight does not transfer/);assert.match(app.projectNotes.join(' '),/Subsurface and Transmission Weight remain zero/);const shot=app.screenshots.find(s=>s.file.endsWith('persona-skin-closeup.png'));assert.match(shot.file,/persona-skin-closeup\.png$/);assert.deepEqual([shot.width,shot.height],[1120,1510]);assert.match(shot.source,/localhost HTTP capture.*Apple M1 hardware WebGL/);await validateApps([app]);});
 
 test('Persona skin release records exact successful deployment and complete file verification',()=>{const e=apps.find(a=>a.inspiration==='Character Creator 5').verificationEvidence;for(const p of [/d689681b16eddbd461946f270baded35166d1516/,/42922954421/,/all 72 deployed files/,/50,217,037 bytes/,/not new public-browser interactions/,/not the browser backlight shader/])assert.match(e,p);});
+
+
+test('Persona refined hair retains exact reviewed capture and honest export limits', async () => {
+  const app = apps.find(a => a.inspiration === 'Character Creator 5');
+  assert.match(app.description, /layered Blender hair-card crop/);
+  assert.match(app.features.join(' '), /435 guide curves/);
+  const shot = app.screenshots[0];
+  assert.match(shot.file, /persona-hair-edges-closeup\.png$/);
+  assert.deepEqual([shot.width, shot.height], [1120, 1504]);
+  assert.equal(shot.sha256, '343aaf72ab54abe282fd2744ef03be7d7f45fb80749627c71e19ad672ad46bc4');
+  assert.match(shot.source, /Previous cards are left, refined edges right/);
+  assert.match(shot.source, /not the production editor UI or a public-site browser capture/);
+  for (const pattern of [/28 identity morph targets/, /crown arcs, rear layering and a cap-like look remain/, /no demonstrated speed improvement/, /roundtrip excludes animation/]) assert.match(app.projectNotes.join(' '), pattern);
+  await validateApps([app]);
+});
+
+
+test('Persona refined hair publication records exact release and verification scope', () => {
+  const evidence = apps.find(a => a.inspiration === 'Character Creator 5').verificationEvidence;
+  for (const expected of [/828fd66bef459dbd60ad9857417b58e2bc8be7ec/, /42944441906/, /all 97 deployed files/, /76,894,407 bytes/, /128 final tests/, /no public screenshot visual review is claimed/]) assert.match(evidence, expected);
+});
